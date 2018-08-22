@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Regression on Paul&#39;s Blog</title>
+    <link>/tags/regression/</link>
+    <description>Recent content in Regression on Paul&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    
+	<atom:link href="/tags/regression/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Intervalos de Confianza</title>
+      <link>/post/2015/07/23/intervalos-de-confianza/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2015/07/23/intervalos-de-confianza/</guid>
+      <description>Supongamos que estamos buscando conocer cual es el promedio de la densidad de madera de todas las especies arboreas conocidas para la ciencia. Para este ejemplo generaremos datos referentes a la dencidad de madera para las especies arboreas, tambien asumiremos que estas se distribuyen de forma normal. Tomaremos informacion de los trabajos de Zanne, A.E et,al. 2009 y Beech, E. et,al. 2017.
+set.seed(2017-12-17)#Numero de especies arboreas conocidas aprox. 60 000.</description>
+    </item>
+    
+  </channel>
+</rss>
