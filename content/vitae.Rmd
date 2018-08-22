@@ -1,0 +1,96 @@
+---
+title: "Curriculum Vitae"
+slug: "/content/vitae/"
+disable_comments: true
+---
+# Paul Efren Santos Andrade
+
+
+## Contac Information:
+
+- **Email** paulefrens@gmail.com
+
+-  **Twitter** [PaulEfrenSantos](https://twitter.com/PaulEfrenSantos)
+ 
+## Interests
+
+ - Open Science.
+ - Data Managing.
+ - Data visualization.
+ - Plant Ecology.
+ - Functional Traits.
+ - Remote sensing.
+
+
+
+## EDUCATION: 
+
+ 
+- 2014  **Bachelor on Biological Science**. Universidad Nacional San Antonio Abad del Cusco. 
+ 
+- 2016   **Biologist**. Universidad Nacional San Antonio Abad del Cusco. 
+
+ 
+## POST GRADUATE COURSES: 
+
+ 
+- 2013 **Why and how to measure functional characters of plants? - A practical introduction**, University of Oxford and Núcleo Diversus. 
+
+- 2018 **lnternational Plant Functional Traits Course (PFTC3)**, University of Bergen, Norway, and the University of Arizona , USA.
+ 
+ 
+## LANGUAGE: 
+ 
+- **Spoken**: Spanish; English (Intermediate level). 
+
+ 
+- **Computer**: R: Data science; Matlab – básic; Microsoft Office.
+
+ 
+## COLLABORATION - MENTORED: 
+ 
+ 
+- Co supervisor of undergraduate students: **"Effect of Thermal, Hydric and Translocation Variations of Grassland Ecosystem Plots on Co2 Flows at Parque Nacional del Manu”**. Universidad Nacional San Antonio Abad del Cusco.
+
+
+## PRESENTATIONS EXPERIENCE:
+ 
+ 
+- Universidad Nacional San Antonio Abad del Cusco – ExpoBio Cusco 2017: **Caracteres Funcionales? Que? Como? y Por qué? (Plants Functional traits)**. Oral presentation. 
+
+- Universidad Nacional San Antonio Abad del Cusco. Instructor for: **Introduction to Data Science – Programming with R**. Short Course. February 2018. 
+
+
+## PUBLICATIONS:
+
+ 
+- Christopher E. Doughty, P.E. Santos-Andrade, et.al. [**Can leaf spectroscopy predict leaf and forest traits along a Peruvian tropical forest elevation gradients?**](https://docs.wixstatic.com/ugd/935b97_cb0feea4423e4ee0828fd63c37f37473.pdf) 2017 JGR Biogeosciences.
+
+
+
+## EXPERIENCE:
+ 
+ 
+- Zoological Society of Frankfurt - Ayuda para la Vida Silvestre Amenazada,
+Development of **Pre-professional Practices**. Between September 2012 and December 2012. 
+ 
+ 
+- School of Geo Sciences the University of Edinburgh. **"Respiration of soil with the Multiplexer Licor along a gradient of elevation of the Andes to the Amazon"**. From June 2011 to December 2012. 
+
+- Institute of Biological and Environmental Sciences University of Aberdeen. **“Are tropical uplands regional hotspots of methane and nitrous oxide?”**. From October 2010 a June 2013. 
+ 
+- Environmental Change Institute University of Oxford – Instituto de Ciencias de la Naturaleza Territorio y Energía Renovables Pontificia Universidad Católica del Perú. **Proyecto RAINFOR – Traits (CHAMBASA Project - CHallenging Attempt to Measure Biotic Attributes along the Slope of the Andes)**. From April 2013 to November 2013. 
+ 
+- Environmental Change Institute University of Oxford – University of Leeds. **“T- Forces: Changes of tropical forests in the land system”**. From June 2014 to October 2014. 
+
+- Department of Environment, Earth & Ecosystems Centre for Earth, Planetary, Space & Astronomical Research (CEPSAR) The Open University. **“Evaluate the contribution of tree- stem CH4 and N2O emissions to the total ecosystem emissions from a range of tropical rainforests on the south-eastern slopes of the Andes”**.  From March 2015 to May 2015. 
+ 
+- Environmental Change Institute University of Oxford – University of Leeds – James Cook University of Australia. **“T- Forces: Changes of tropical forests in the land system”**. From June 2015 to October 2015. 
+ 
+- University of Miami - Department of Biology. **“Factors that influence the dynamics and location of the forest line between the forest and the Puna on Parque Nacional del Manu – Peru at Acjanaco, Qurqurpampa and Tres Cruces (4ta Period)”**. From November 2013 to September 2015. 
+ 
+- University of Miami - Department of Biology. **“Vulnerability to forest drought dominated by Bamboo: Detection with remote sensing and functional adaptation of the plant community in the Amazon - Andean gradient compared to forest without bamboo”**. From June to July 2016 and June to August 2017. 
+
+# Internship
+
+- [**Rocky Mountain Biological Lab with Brian Enquist's lab**](https://www.uib.no/en/rg/EECRG/106077/rocky-mountain-biological-lab),part of TraitTrain project from the University of Bergen and the University of Arizona. June to August - 2018.
