@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+blogdown
+Thumbs.db #instead.DS_Store # if a windows user, 
+public/ # if using Netlify
