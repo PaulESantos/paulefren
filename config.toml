@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "Paul's Blog"
+title = " The Paul Efren's Notes..."
 theme = "hugo-ivy"
 googleAnalytics = ""
 disqusShortname = "Paul E."
@@ -33,7 +33,7 @@ footnotereturnlinkcontents = "↩"
   #  url = "/index.xml"
 
 [params]
-    description = "An space for Plant Ecology - R - DataScience - ...."
+    description = "An space for Plant Ecology - R - DataScience..."
     footer = "&copy; Paul Efren Santos Andrade 2018 | [Github](https://github.com/PaulESantos) | [Twitter](https://twitter.com/PaulEfrenSantos)"
     
     
