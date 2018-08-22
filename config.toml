@@ -1,9 +1,9 @@
 baseurl = "/"
 languageCode = "en-us"
-title = " The Paul Efren's Notes..."
+title = " Paul Efren's..."
 theme = "hugo-ivy"
 googleAnalytics = ""
-disqusShortname = "Paul E."
+disqusShortname = "Paul Efren notes..."
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
