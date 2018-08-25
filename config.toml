@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = " Paul Efren's..."
+title = " Paul Efren..."
 theme = "hugo-ivy"
 googleAnalytics = ""
 disqusShortname = "Paul Efren notes..."
@@ -33,9 +33,8 @@ footnotereturnlinkcontents = "↩"
   #  url = "/index.xml"
 
 [params]
-    description = "An space for Plant Ecology - R - DataScience..."
-    footer = "&copy; Paul Efren Santos Andrade 2018 | [Github](https://github.com/PaulESantos) | [Twitter](https://twitter.com/PaulEfrenSantos)"
-    
+    description = "An space for R - DataScience for Biology..."
+    footer = "&copy; PaulESA 2018 | [Github](https://github.com/PaulESantos) | [Twitter](https://twitter.com/PaulEfrenSantos) |Powered by the [Ivy theme](https://ivy.yihui.name/) for [Hugo](https://gohugo.io/)"
     
     
     

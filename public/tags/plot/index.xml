@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Plot on  Paul Efren&#39;s...</title>
+    <title>Plot on  Paul Efren...</title>
     <link>/tags/plot/</link>
-    <description>Recent content in Plot on  Paul Efren&#39;s...</description>
+    <description>Recent content in Plot on  Paul Efren...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 23 Aug 2018 00:00:00 +0000</lastBuildDate>
@@ -17,8 +17,8 @@
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/2018/08/23/intervalos-de-confianza/</guid>
-      <description>Supongamos que estamos buscando conocer cual es el promedio de la densidad de madera de todas las especies arboreas conocidas para la ciencia. Para este ejemplo generaremos datos referentes a la dencidad de madera para las especies arboreas tomaremos informacion de los trabajos de Zanne, A.E et,al. 2009 y Beech, E. et,al. 2017.
-set.seed(2017-12-17)#Numero de especies arboreas conocidas aprox. 60 000. Beech, E. #et,al. 2017.#Promedio y desviaci?n estandar de la densidad de madera, 0.</description>
+      <description>Acá mostrare una adaptación de uno de los primeros blogs con contenido de R que revise escrito por Sean Kross1.
+Imagina que estás buscando estimar el promedio de una alguna característica de una población.Conformada por 100 000 individuos.set.seed(2016-05-04)poblacion &amp;lt;- data_frame( individuo = seq(1,100000),caracteristica = runif(100000))IndividuoCaracteristicaIndividuoCaracteristica10.6770751999950.268584520.2718245999960.</description>
     </item>
     
   </channel>

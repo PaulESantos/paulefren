@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on  Paul Efren&#39;s...</title>
+    <title>Categories on  Paul Efren...</title>
     <link>/categories/</link>
-    <description>Recent content in Categories on  Paul Efren&#39;s...</description>
+    <description>Recent content in Categories on  Paul Efren...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
@@ -13,18 +13,9 @@
     <item>
       <title>Example</title>
       <link>/categories/example/</link>
-      <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 22 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>/categories/example/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>/categories/hugo/</link>
-      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/hugo/</guid>
       <description></description>
     </item>
     

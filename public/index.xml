@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on  Paul Efren&#39;s...</title>
+    <title>Home on  Paul Efren...</title>
     <link>/</link>
-    <description>Recent content in Home on  Paul Efren&#39;s...</description>
+    <description>Recent content in Home on  Paul Efren...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 23 Aug 2018 00:00:00 +0000</lastBuildDate>
@@ -17,8 +17,8 @@
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/2018/08/23/intervalos-de-confianza/</guid>
-      <description>Supongamos que estamos buscando conocer cual es el promedio de la densidad de madera de todas las especies arboreas conocidas para la ciencia. Para este ejemplo generaremos datos referentes a la dencidad de madera para las especies arboreas tomaremos informacion de los trabajos de Zanne, A.E et,al. 2009 y Beech, E. et,al. 2017.
-set.seed(2017-12-17)#Numero de especies arboreas conocidas aprox. 60 000. Beech, E. #et,al. 2017.#Promedio y desviaci?n estandar de la densidad de madera, 0.</description>
+      <description>Acá mostrare una adaptación de uno de los primeros blogs con contenido de R que revise escrito por Sean Kross1.
+Imagina que estás buscando estimar el promedio de una alguna característica de una población.Conformada por 100 000 individuos.set.seed(2016-05-04)poblacion &amp;lt;- data_frame( individuo = seq(1,100000),caracteristica = runif(100000))IndividuoCaracteristicaIndividuoCaracteristica10.6770751999950.268584520.2718245999960.</description>
     </item>
     
     <item>
@@ -27,48 +27,18 @@ set.seed(2017-12-17)#Numero de especies arboreas conocidas aprox. 60 000. Beech
       <pubDate>Wed, 22 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>Hi! I&amp;rsquo; m Paul, a plant ecologist, and data enthusiast. I graduated in Biology at the Universidad Nacional de San Antonio Abad del Cusco - Peru.
-I work in tropical ecology area since undergraduate, I developed my pre-professional practices with Frankfurt Zoological Society Peru. A year after I had the opportunity to collaborate with the Andes Biodiversity and Ecosystem Research Group ABERG. Since these time I&amp;rsquo;m part of the team of Peruvian student and research assistants of the ABERG projects that are carried out along the elevation transect in Manu National Park-Peru and surroundings.</description>
+      <description>Hi! I&amp;rsquo;m Paul, a plant ecologist, and data enthusiast. I am a biologist from the Universidad Nacional de San Antonio Abad del Cusco - Peru.
+I have worked in tropical forest ecology since 2003. I have gained experience in conservation projects with Frankfurt Zoological Society Peru. I also have collaborate extensively with the Andes Biodiversity and Ecosystem Research Group for over 5 years. ABERG working in the Andes and Amazon regions of Peru such as Manu National Park-Peru and surroundings.</description>
     </item>
     
     <item>
-      <title>Another Note on A blogdown Tutorial</title>
-      <link>/note/2017/06/14/another-note/</link>
-      <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
+      <title>Blogdown Tutorial.</title>
+      <link>/note/2018/08/22/another-note/</link>
+      <pubDate>Wed, 22 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/note/2017/06/14/another-note/</guid>
-      <description>I just discovered an awesome tutorial on blogdown written by Alison. I have to admit this is the best blogdown tutorial I have seen so far.</description>
-    </item>
-    
-    <item>
-      <title>A Quick Note on Two Beautiful Websites</title>
-      <link>/note/2017/06/13/a-quick-note/</link>
-      <pubDate>Tue, 13 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/note/2017/06/13/a-quick-note/</guid>
-      <description>To me, the two most impressive websites based on blogdown are:
- Rob J Hyndman&amp;rsquo;s personal website. Live Free or Dichotomize by Lucy and Nick et al.  I&amp;rsquo;m sure there will be more.</description>
-    </item>
-    
-    <item>
-      <title>A Plain Markdown Post</title>
-      <link>/post/2016/02/14/a-plain-markdown-post/</link>
-      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2016/02/14/a-plain-markdown-post/</guid>
-      <description>This sample post is mainly for blogdown users. If you do not use blogdown, you can skip the first section.
-1. Markdown or R Markdown This is a post written in plain Markdown (*.md) instead of R Markdown (*.Rmd). The major differences are:
- You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (```{r}); A plain Markdown post is rendered through Blackfriday, and an R Markdown document is compiled by rmarkdown and Pandoc.</description>
-    </item>
-    
-    <item>
-      <title>Lorem Ipsum</title>
-      <link>/post/2015/07/23/lorem-ipsum/</link>
-      <pubDate>Thu, 23 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2015/07/23/lorem-ipsum/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Quisque mattis volutpat lorem vitae feugiat.</description>
+      <guid>/note/2018/08/22/another-note/</guid>
+      <description>Este sitio fue construido siguiendo los tutoriales escritos por:
+ Allison Hill Up and running with blogdown .   Amber Thomas Making a Website Using Blogdown, Hugo, and GitHub pages.   Emi Tanaka Blinging up your website built with hugo via blogdown R package.  </description>
     </item>
     
     <item>

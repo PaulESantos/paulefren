@@ -1,0 +1,143 @@
+---
+title: "Intervalos de Confianza"
+author: "Paul Efren Santos Andrade"
+date: 2018-08-23
+categories: ["R"]
+tags: ["R Markdown", "plot"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+library(tidyverse)
+library(knitr)
+library(infer)
+```
+
+Acá mostrare una adaptación de uno de los primeros blogs con contenido de R que revise escrito por **Sean Kross**[^note]. 
+
+- Imagina que estás buscando estimar  el promedio de una alguna característica de una población.
+
+
+```{r echo=FALSE}
+a <- data_frame(x = sample(c(1:1000), 500) , y = sample(c(1:1000), 500),
+           sample = factor(rep(1:20,each = 25)))
+
+plot(a$x, a$y, ylab = "", xlab = "", axes = FALSE) 
+```
+
+ - Conformada por 100 000 individuos. 
+
+```{r }
+set.seed(2016-05-04)
+poblacion <- data_frame( individuo = seq(1,100000),
+                         caracteristica = runif(100000))
+```
+
+```{r echo=FALSE}
+bind_cols(head(poblacion), tail(poblacion)) %>% 
+  kable(col.names = c(individuo = "Individuo", caracteristica = "Caracteristica", individuo1 = "Individuo", caracteristica1 = "Caracteristica"))
+```
+
+- Lo que estamos buscando es determinar el promedio  real de esta población **`r mean(poblacion$caracteristica)`**.
+
+- Pero normalmente no podemos medir cada uno de los individuos de esta población. Entonces recurrimos a tomar muestras:
+
+```{r}
+muestra <- poblacion %>% sample_n(100) 
+```
+
+```{r echo=FALSE}
+bind_cols(head(muestra), tail(muestra)) %>% 
+  kable(col.names = c(individuo = "Individuo", caracteristica = "Caracteristica", individuo1 = "Individuo", caracteristica1 = "Caracteristica"))
+```
+
+- Ahora con esta muestra podemos construir el **intervalo de confianza** al  95%:
+
+```{r eval=FALSE}
+# Funcion 
+ci <- function(x) {
+  ci <- 1.96 * (sd(x)/sqrt(length(x)))
+  return(ci) 
+}
+
+muestra %>% 
+  summarise(
+    Lim_inf = mean(caracteristica) - ci(caracteristica),
+    Promedio = mean(caracteristica),
+    Lim_sup = mean(caracteristica) + ci(caracteristica))
+```
+
+```{r echo=FALSE}
+# Funcion para calcular el intervalo de confianza al 95%.
+ci <- function(x) {
+  ci <- 1.96 * (sd(x)/sqrt(length(x)))
+  return(ci) 
+}
+
+muestra %>% 
+  summarise(
+    Lim_inf = mean(caracteristica) - ci(caracteristica),
+    Promedio = mean(caracteristica),
+    Lim_sup = mean(caracteristica) + ci(caracteristica)) %>%
+    kable()
+```
+
+- Intervalo de confianza?
+Si tomamos varias muestras de una población, el promedio real de esta debería ser contenido por el intervalo de confianza de la muestra.
+
+Tomemos 10000 muestras de la población.
+
+
+```{r eval=FALSE}
+poblacion %>% 
+  rep_sample_n(size = 100, reps = 10000) %>% 
+  group_by(replicate) %>% 
+  summarise(ci = ci(caracteristica),
+            mean = mean(caracteristica))
+```
+
+```{r echo=FALSE}
+replicas <- poblacion %>% 
+  rep_sample_n(size = 100, reps = 10000) %>% 
+  group_by(replicate) %>% 
+  summarise( prom = mean(caracteristica),
+            lim_inf = prom - ci(caracteristica),
+            lim_sup = prom + ci(caracteristica))
+bind_rows(head(replicas), tail(replicas)) %>% 
+  kable(col.names = c(replicate = "Replica",prom = "Promedio", lim_inf = "Lim_inf.", lim_sup= "Lim_sup."))
+```
+
+- Cual es el porcentaje de muestras que capturan el promedio real de la población?
+
+```{r eval=FALSE}
+replicas %>%
+  mutate(prom_real =
+        case_when(lim_inf < 0.4994207 & 0.4994207<lim_sup ~ 1, TRUE ~ 0)) %>% summarise(mean(prom_real))
+```
+
+```{r echo=FALSE}
+pr <- replicas %>%
+  mutate(prom_real =
+        case_when(lim_inf < 0.4994207 & 0.4994207<lim_sup ~ 1, TRUE ~ 0)) %>% summarise(mean(prom_real))
+```
+
+- El **`r signif(pr, 2)`** porciento de las muestras captura el promedio real de la población. 
+
+- Visualización grafica de los intervalos de confianza.
+
+
+```{r}
+replicas %>% 
+  sample_n(100) %>% 
+  ggplot(aes(replicate, prom))+
+  geom_pointrange(aes(ymin =lim_inf, ymax =lim_sup), 
+                  size = 0, color = "#1B7837")+
+  theme_bw()+
+  geom_hline(yintercept = mean(poblacion$caracteristica),
+             color = "red", size = 1.2)+
+  labs(x = "Replicas",
+       y = "")
+```
+
+[^note]: Basado en **A Short Intro to Confidence Intervals** por [Sean Kross](http://seankross.com/).
+
