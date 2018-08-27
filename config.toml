@@ -1,4 +1,4 @@
-baseurl = "https://http://paulefrensa.rbind.io/"
+baseurl = "https://paulefrensa.rbind.io/"
 languageCode = "en-us"
 title = " Paul Efren..."
 theme = "hugo-ivy"
