@@ -19,8 +19,7 @@ disable_comments: true
  - Data visualization.
  - Plant Ecology.
  - Functional Traits.
- - Remote sensing.
-
+ 
 
 
 ## EDUCATION: 

@@ -13,7 +13,7 @@ I have worked in tropical forest ecology since 2003. I have gained experience in
 
 CHAMBASA project from [GEM-Trait](http://www.yadvindermalhi.org/projects.html) is one of my favorite research experiences, and it's topic that was covered really captured my interest and give me really nice opportunities. I complete my degree in Biology using leaf level spectral data from this project.
 
-Also, I had the opportunity to collaborate with some mammals ecology project, working with the **Giant otther** (Pteronura brasiliensis) and **Black caiman** (Melanosuchus niger) a few years ago, and more recently with **Andean bear** (Tremarctos ornatus) ecology. 
+Also, I had the opportunity to collaborate with some mammals ecology project, working with the **Giant otther** (Pteronura brasiliensis), **Black caiman** (Melanosuchus niger), and more recently with **Andean bear** (Tremarctos ornatus) ecology. 
 
 ![](/chambasa.jpg)
 ---
@@ -27,7 +27,7 @@ Vengo trabajando en el área de ecología tropical desde mis estudios universita
 
 El proyecto **CHAMBASA** de [GEM-Trait](http://www.yadvindermalhi.org/projects.html) es una de mis experiencias de investigación favoritas, el tema que se cubrió realmente capturo mi interés y me abrió las puertas a un camino muy interesante en mi formación académica. Pude desarrollar mi tesis de licenciatura en Biología utilizando datos espectrales a nivel de hoja que colecte durante este proyecto.
 
-Además, tuve la oportunidad de colaborar con proyectos de ecología de mamíferos, trabajando con  **Lobo de Rio** (Pteronura brasiliensis) y **Caimán negro** (Melanosuchus niger) hace unos años cuando comenzaba con este camino y más recientemente  he formado parte de un proyecto que estudia la ecología del **Oso de anteojos**(Tremarctos ornatus).
+Además, tuve la oportunidad de colaborar con proyectos de ecología de mamíferos, trabajando con  **Lobo de Rio** (Pteronura brasiliensis), **Caimán negro** (Melanosuchus niger) y más recientemente  he formado parte de un proyecto que estudia la ecología del **Oso de anteojos**(Tremarctos ornatus).
 
 ![](/trasn_elevation.png)
 **Gradiente de altitudinal del  Parque Nacional del Manu**

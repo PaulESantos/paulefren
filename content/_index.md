@@ -11,6 +11,6 @@ My name is Paul. You can know more about me on the [about](/about/) and [my vita
 
 You can visit the list page of a single section, at [posts](/post/), or [note](/note/).
 
-Hola soy Paul Efren. Puedes obtener más información de mi persona revisando este enlace [about] (/about/) y leyendo mi [cv](/content/viate/). A través de este blog intento compartir material que cobra temas de estadística básica, manejo y visualización de datos utilizando el lenguaje de programación de [R](https://cran.r-project.org/bin/windows/base/) y las herramientas del [RStudio](https://www.rstudio.com/).
+Hola soy Paul Efren. Puedes obtener más información de mi persona revisando este enlace [about] (/about/) y leyendo mi [cv](/content/vitae/). A través de este blog intento compartir material que cobra temas de estadística básica, manejo y visualización de datos utilizando el lenguaje de programación [R](https://cran.r-project.org/bin/windows/base/) y las herramientas de [RStudio](https://www.rstudio.com/).
 
 Iré agregando material cada 15 días.
