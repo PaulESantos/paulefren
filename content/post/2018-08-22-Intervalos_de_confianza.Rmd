@@ -112,13 +112,15 @@ bind_rows(head(replicas), tail(replicas)) %>%
 ```{r eval=FALSE}
 replicas %>%
   mutate(prom_real =
-        case_when(lim_inf < 0.4994207 & 0.4994207<lim_sup ~ 1, TRUE ~ 0)) %>% summarise(mean(prom_real))
+        case_when(lim_inf < 0.4994207 & 0.4994207<lim_sup ~ 1, TRUE ~ 0)) %>%
+  summarise(mean(prom_real))
 ```
 
 ```{r echo=FALSE}
 pr <- replicas %>%
   mutate(prom_real =
-        case_when(lim_inf < 0.4994207 & 0.4994207<lim_sup ~ 1, TRUE ~ 0)) %>% summarise(mean(prom_real))
+        case_when(lim_inf < 0.4994207 & 0.4994207<lim_sup ~ 1, TRUE ~ 0)) %>% 
+  summarise(mean(prom_real))
 ```
 
 - El **`r signif(pr, 2)`** porciento de las muestras captura el promedio real de la población. 
