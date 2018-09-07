@@ -6,17 +6,17 @@
     <description>Recent content in Notes on  Paul Efren...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/note/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blogdown Tutorial.</title>
-      <link>/note/2018/08/22/another-note/</link>
-      <pubDate>Wed, 22 Aug 2018 00:00:00 +0000</pubDate>
+      <link>/note/2018/09/07/another-note/</link>
+      <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/note/2018/08/22/another-note/</guid>
+      <guid>/note/2018/09/07/another-note/</guid>
       <description>Este sitio fue construido siguiendo los tutoriales escritos por:
  Allison Hill Up and running with blogdown .   Amber Thomas Making a Website Using Blogdown, Hugo, and GitHub pages.   Emi Tanaka Blinging up your website built with hugo via blogdown R package.  </description>
     </item>

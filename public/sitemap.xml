@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/2018/08/23/intervalos-de-confianza/</loc>
-    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+    <loc>/note/2018/09/07/another-note/</loc>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018/09/07/intervalos-de-confianza/</loc>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/about/</loc>
-    <lastmod>2018-08-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/note/2018/08/22/another-note/</loc>
     <lastmod>2018-08-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -28,54 +28,54 @@
   
   <url>
     <loc>/categories/example/</loc>
-    <lastmod>2018-08-22T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/note/</loc>
-    <lastmod>2018-08-22T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/plot/</loc>
-    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/r/</loc>
-    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/r-markdown/</loc>
-    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/tutorial/</loc>
-    <lastmod>2018-08-22T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
