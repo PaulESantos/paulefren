@@ -13,7 +13,9 @@ library(knitr)
 library(infer)
 ```
 
-Acá mostrare una adaptación con **tidyverse**[^note1]de uno de los primeros blogs con contenido de R que revise escrito por **Sean Kross**[^note2]. 
+This is a modification of a blog written by **Sean Kross**[^note1], using **tidyverse**[^note2].
+
+Esta es una modificación de un blog escrito por **Sean Kross**[^note1], utilizando **tidyverse**[^note2].
 
 - Imagina que estás buscando estimar  el promedio de una alguna característica de una población.
 
@@ -142,6 +144,7 @@ replicas %>%
 ```
 
 
-[^note1]: [Tidyverse](https://www.tidyverse.org/).
-[^note2]: Basado en **A Short Intro to Confidence Intervals** por [Sean Kross](http://seankross.com/).
 
+
+[^note1]: Basado en **A Short Intro to Confidence Intervals** por [Sean Kross](http://seankross.com/).
+[^note2]: [Tidyverse](https://www.tidyverse.org/).
