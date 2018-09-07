@@ -1,7 +1,7 @@
 ---
 title: "Intervalos de Confianza"
 author: "Paul Efren Santos Andrade"
-date: 2018-08-23
+date: 2018-09-07
 categories: ["R"]
 tags: ["R Markdown", "plot"]
 ---
