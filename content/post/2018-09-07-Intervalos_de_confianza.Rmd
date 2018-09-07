@@ -13,6 +13,7 @@ library(knitr)
 library(infer)
 ```
 
+
 This is a modification of a blog written by **Sean Kross**, using **tidyverse**.
 
 Esta es una modificación de un blog escrito por **Sean Kross**[^note1], utilizando **tidyverse**[^note2].
@@ -144,7 +145,6 @@ replicas %>%
 ```
 
 
-
-
 [^note1]: Basado en **A Short Intro to Confidence Intervals** por [Sean Kross](http://seankross.com/).
+
 [^note2]: [Tidyverse](https://www.tidyverse.org/).
