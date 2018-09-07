@@ -17,8 +17,9 @@
       <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/2018/09/07/intervalos-de-confianza/</guid>
-      <description>Acá mostrare una adaptación con tidyverse1de uno de los primeros blogs con contenido de R que revise escrito por Sean Kross2.
-Imagina que estás buscando estimar el promedio de una alguna característica de una población.Conformada por 100 000 individuos.set.seed(2016-05-04)poblacion &amp;lt;- data_frame( individuo = seq(1,100000),caracteristica = runif(100000))IndividuoCaracteristicaIndividuoCaracteristica10.6770751999950.268584520.2718245999960.</description>
+      <description>This is a modification of a blog written by Sean Kross, using tidyverse.
+Esta es una modificación de un blog escrito por Sean Kross1, utilizando tidyverse2.
+Imagina que estás buscando estimar el promedio de una alguna característica de una población.Conformada por 100 000 individuos.set.seed(2016-05-04)poblacion &amp;lt;- data_frame( individuo = seq(1,100000),caracteristica = runif(100000))IndividuoCaracteristicaIndividuoCaracteristica10.6770751999950.</description>
     </item>
     
   </channel>

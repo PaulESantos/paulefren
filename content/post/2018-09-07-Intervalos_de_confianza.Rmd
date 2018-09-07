@@ -13,7 +13,7 @@ library(knitr)
 library(infer)
 ```
 
-This is a modification of a blog written by **Sean Kross**[^note1], using **tidyverse**[^note2].
+This is a modification of a blog written by **Sean Kross**, using **tidyverse**.
 
 Esta es una modificación de un blog escrito por **Sean Kross**[^note1], utilizando **tidyverse**[^note2].
 
