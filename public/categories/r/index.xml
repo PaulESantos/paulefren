@@ -6,10 +6,20 @@
     <description>Recent content in R on  Paul Efren...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Curvas de acumulación de especies</title>
+      <link>/post/2018/09/22/curvas-de-acumulaci%C3%B3n-de-especies/</link>
+      <pubDate>Sat, 22 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/09/22/curvas-de-acumulaci%C3%B3n-de-especies/</guid>
+      <description>Esta nos muestra el número de especies acumuladas conforme se incrementa el área de estudio (Unidad de esfuerzo), así el número de especies se incrementara hasta un punto en el cual no se registraran muevas especies.
+La paqueteria:Los paquetes o librerías permiten ampliar las capacidades de R para cumplir determinadas tareas. vegan provee herramientas básicas para el análisis de diversidad en estudios de ecología de comunidades. tidyverse proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.</description>
+    </item>
     
     <item>
       <title>Intervalos de Confianza</title>
