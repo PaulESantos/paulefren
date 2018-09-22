@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Intervalos de Confianza -  Paul Efren...</title>
+    <meta property="og:title" content="Intervalos de Confianza -  Paul Efren...">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    
+      
+      <meta property="description" content="This is a modification of a blog written by Sean Kross, using tidyverse.
+Esta es una modificación de un blog escrito por Sean Kross1, utilizando tidyverse2.
+[&amp;hellip;] [&amp;hellip;] set.seed(2016-05-04) &amp;hellip;">
+      <meta property="og:description" content="This is a modification of a blog written by Sean Kross, using tidyverse.
+Esta es una modificación de un blog escrito por Sean Kross1, utilizando tidyverse2.
+[&amp;hellip;] [&amp;hellip;] set.seed(2016-05-04) &amp;hellip;">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/"> Paul Efren...</a></h1>
+
+<p class="tagline">An space for R - DataScience for Biology...</p>
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/">Home</a></li>
+  
+  <li><a href="/about/">About</a></li>
+  
+  <li><a href="/categories/">Categories</a></li>
+  
+  <li><a href="/tags/">Tags</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>Intervalos de Confianza</h1>
+
+<h3>Paul Efren Santos Andrade
+  /  2018-09-07</h3>
+<hr>
+
+
+      </header>
+
+
+
+<p>This is a modification of a blog written by <strong>Sean Kross</strong>, using <strong>tidyverse</strong>.</p>
+<p>Esta es una modificación de un blog escrito por <strong>Sean Kross</strong><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>, utilizando <strong>tidyverse</strong><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
+<ul>
+<li>Imagina que estás buscando estimar el promedio de una alguna característica de una población.</li>
+</ul>
+<p><img src="/post/2018-09-07-Intervalos_de_confianza_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<ul>
+<li>Conformada por 100 000 individuos.</li>
+</ul>
+<pre class="r"><code>set.seed(2016-05-04)
+poblacion &lt;- data_frame( individuo = seq(1,100000),
+                         caracteristica = runif(100000))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Individuo</th>
+<th align="right">Caracteristica</th>
+<th align="right">Individuo</th>
+<th align="right">Caracteristica</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">0.6770751</td>
+<td align="right">99995</td>
+<td align="right">0.2685845</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">0.2718245</td>
+<td align="right">99996</td>
+<td align="right">0.6156618</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">0.1031951</td>
+<td align="right">99997</td>
+<td align="right">0.5487510</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">0.6260607</td>
+<td align="right">99998</td>
+<td align="right">0.9394554</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">0.4148852</td>
+<td align="right">99999</td>
+<td align="right">0.2003218</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="right">0.1208850</td>
+<td align="right">100000</td>
+<td align="right">0.3245546</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Lo que estamos buscando es determinar el promedio real de esta población <strong>0.4994207</strong>.</p></li>
+<li><p>Pero normalmente no podemos medir cada uno de los individuos de esta población. Entonces recurrimos a tomar muestras:</p></li>
+</ul>
+<pre class="r"><code>muestra &lt;- poblacion %&gt;% sample_n(100) </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Individuo</th>
+<th align="right">Caracteristica</th>
+<th align="right">Individuo</th>
+<th align="right">Caracteristica</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">35615</td>
+<td align="right">0.8432771</td>
+<td align="right">46467</td>
+<td align="right">0.3239921</td>
+</tr>
+<tr class="even">
+<td align="right">39573</td>
+<td align="right">0.1031897</td>
+<td align="right">37849</td>
+<td align="right">0.1318304</td>
+</tr>
+<tr class="odd">
+<td align="right">20293</td>
+<td align="right">0.0256345</td>
+<td align="right">51620</td>
+<td align="right">0.8140491</td>
+</tr>
+<tr class="even">
+<td align="right">24971</td>
+<td align="right">0.4679286</td>
+<td align="right">58111</td>
+<td align="right">0.1603601</td>
+</tr>
+<tr class="odd">
+<td align="right">49940</td>
+<td align="right">0.1825075</td>
+<td align="right">73669</td>
+<td align="right">0.6941355</td>
+</tr>
+<tr class="even">
+<td align="right">41016</td>
+<td align="right">0.5984844</td>
+<td align="right">80515</td>
+<td align="right">0.1561754</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Ahora con esta muestra podemos construir el <strong>intervalo de confianza</strong> al 95%:</li>
+</ul>
+<pre class="r"><code># Funcion 
+ci &lt;- function(x) {
+  ci &lt;- 1.96 * (sd(x)/sqrt(length(x)))
+  return(ci) 
+}
+
+muestra %&gt;% 
+  summarise(
+    Lim_inf = mean(caracteristica) - ci(caracteristica),
+    Promedio = mean(caracteristica),
+    Lim_sup = mean(caracteristica) + ci(caracteristica))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Lim_inf</th>
+<th align="right">Promedio</th>
+<th align="right">Lim_sup</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">0.4272098</td>
+<td align="right">0.4861666</td>
+<td align="right">0.5451233</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Intervalo de confianza?
+Si tomamos varias muestras de una población, el promedio real de esta debería ser contenido por el intervalo de confianza de la muestra.</li>
+</ul>
+<p>Tomemos 10000 muestras de la población.</p>
+<pre class="r"><code>poblacion %&gt;% 
+  rep_sample_n(size = 100, reps = 10000) %&gt;% 
+  group_by(replicate) %&gt;% 
+  summarise(ci = ci(caracteristica),
+            mean = mean(caracteristica))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Replica</th>
+<th align="right">Promedio</th>
+<th align="right">Lim_inf.</th>
+<th align="right">Lim_sup.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">0.5307512</td>
+<td align="right">0.4751697</td>
+<td align="right">0.5863327</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">0.4812784</td>
+<td align="right">0.4242176</td>
+<td align="right">0.5383393</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">0.5157841</td>
+<td align="right">0.4547610</td>
+<td align="right">0.5768072</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">0.5381850</td>
+<td align="right">0.4807046</td>
+<td align="right">0.5956653</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">0.4940284</td>
+<td align="right">0.4402182</td>
+<td align="right">0.5478385</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="right">0.5054807</td>
+<td align="right">0.4523920</td>
+<td align="right">0.5585694</td>
+</tr>
+<tr class="odd">
+<td align="right">9995</td>
+<td align="right">0.4516500</td>
+<td align="right">0.3985059</td>
+<td align="right">0.5047941</td>
+</tr>
+<tr class="even">
+<td align="right">9996</td>
+<td align="right">0.4659221</td>
+<td align="right">0.4077211</td>
+<td align="right">0.5241232</td>
+</tr>
+<tr class="odd">
+<td align="right">9997</td>
+<td align="right">0.4911695</td>
+<td align="right">0.4347661</td>
+<td align="right">0.5475728</td>
+</tr>
+<tr class="even">
+<td align="right">9998</td>
+<td align="right">0.4470487</td>
+<td align="right">0.3898829</td>
+<td align="right">0.5042144</td>
+</tr>
+<tr class="odd">
+<td align="right">9999</td>
+<td align="right">0.5274931</td>
+<td align="right">0.4705851</td>
+<td align="right">0.5844011</td>
+</tr>
+<tr class="even">
+<td align="right">10000</td>
+<td align="right">0.4439522</td>
+<td align="right">0.3892858</td>
+<td align="right">0.4986186</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Cual es el porcentaje de muestras que capturan el promedio real de la población?</li>
+</ul>
+<pre class="r"><code>replicas %&gt;%
+  mutate(prom_real =
+        case_when(lim_inf &lt; 0.4994207 &amp; 0.4994207&lt;lim_sup ~ 1, TRUE ~ 0)) %&gt;%
+  summarise(mean(prom_real))</code></pre>
+<ul>
+<li><p>El <strong>0.95</strong> porciento de las muestras captura el promedio real de la población.</p></li>
+<li><p>Visualización grafica de los intervalos de confianza.</p></li>
+</ul>
+<pre class="r"><code>replicas %&gt;% 
+  sample_n(100) %&gt;% 
+  ggplot(aes(replicate, prom))+
+  geom_pointrange(aes(ymin =lim_inf, ymax =lim_sup), 
+                  size = 0, color = &quot;#1B7837&quot;)+
+  theme_bw()+
+  geom_hline(yintercept = mean(poblacion$caracteristica),
+             color = &quot;red&quot;, size = 1.2)+
+  labs(x = &quot;Replicas&quot;,
+       y = &quot;&quot;)</code></pre>
+<p><img src="/post/2018-09-07-Intervalos_de_confianza_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Basado en <strong>A Short Intro to Confidence Intervals</strong> por <a href="http://seankross.com/">Sean Kross</a>.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p><a href="https://www.tidyverse.org/">Tidyverse</a>.<a href="#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev"></span>
+  <span class="nav-next"></span>
+</nav>
+
+
+
+<section class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var disqus_js = '//Paul Efren notes....disqus.com/embed.js';
+    var d = document, s = d.createElement('script');
+    s.src = disqus_js; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+<script src="//yihui.name/js/math-code.js"></script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">&copy; PaulESA 2018 | <a href="https://github.com/PaulESantos">Github</a> | <a href="https://twitter.com/PaulEfrenSantos">Twitter</a> |Powered by the <a href="https://ivy.yihui.name/">Ivy theme</a> for <a href="https://gohugo.io/">Hugo</a></div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

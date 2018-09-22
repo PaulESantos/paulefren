@@ -1,0 +1,178 @@
+---
+title: "Curvas de acumulación de especies"
+author: "Paul Efren Santos Andrade"
+date: 2018-09-22
+categories: ["R"]
+tags: ["Dataviz", "Plant diversity"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+library(tidyverse)
+library(knitr)
+library(infer)
+```
+
+
+Esta nos muestra el número de especies acumuladas conforme se incrementa el área de estudio (Unidad de esfuerzo), así el número de especies se incrementara hasta un punto en el cual no se registraran muevas especies.
+
+
+## La paqueteria:
+
+Los paquetes o librerías permiten ampliar las capacidades de R para cumplir determinadas tareas. *vegan*  provee herramientas básicas para el análisis de diversidad en estudios de ecología de comunidades. *tidyverse* proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.
+
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
+library(vegan)
+library(tidyverse)
+```
+
+
+## La base de datos:
+
+Utilizaremos la base de datos BCI esta contiene los resultados del inventario de especies en 50 parcelas de una hectárea. Esta base de datos es parte del paquete vegan, lo cual nos permite la reproductibilidad del tutorial.
+
+```{r}
+data("BCI")
+```
+
+Para conocer más sobre esta base de datos:
+
+```{r, echo=TRUE}
+#?BCI
+```
+
+
+## Conociendo nuestros datos:
+
+El comando *dim()* nos permite conocer la dimencion de nuestra base de datos. En este ejemplo, podemos conocer el  número de parcelas y el  número  total de especies.
+
+```{r, echo=TRUE}
+dim(BCI)
+```
+
+R nos permite examinar partes específicas de nuestra base de datos (*subsetting*), esta tarea puede realizarse mediante los operadores: Corchete cuadrado *[índice_fila,índice_columna]* o Signo dolar *base_datos$nombre_variable*.
+
+El siguiente código nos permite evaluar la información de cierto grupo de parcelas:
+
+Recupera los datos correspondientes a las cinco primeras especies de la parcela número "1".
+
+```{r, echo=TRUE}
+BCI[1,1:5] 
+```
+
+Recupera los datos de las cinco primeras especies en las parcelas "1, 2, 3, 4 y 5".
+
+```{r}
+BCI[1:5,1:5]
+
+```
+
+
+Con las siguientes líneas podemos examinar la información de especies específicas. El siguiente codino nos permitira evaluar los datos correspondientes a la espeecie *Acalypha.diversifolia* que ocupa la tercera columna de la base de datos:
+
+Selección mediante índices:
+
+```{r, echo=TRUE}
+BCI[,3]
+```
+
+Selección por nombre:
+
+```{r}
+BCI$Acalypha.diversifolia
+```
+
+Comparando ambos métodos: 
+
+```{r}
+BCI[,3] == BCI$Acalypha.diversifolia
+```
+
+
+También podemos evaluar la información de grupos de especies: 
+
+Recupera la información de las especies ubicadas entre las primeras cinco columnas y las parcelas *1,2,3,4,5*:
+
+```{r, echo=TRUE}
+BCI[1:5,1:5] 
+```
+
+De esta forma se puede recuperar la información  de especies especificas.
+
+```{r, echo=TRUE}
+
+BCI[1:5, c("Vachellia.melanoceras", "Acalypha.diversifolia", "Acalypha.macrostachya")] 
+```
+
+## Información adicional:
+
+Mediante el siguiente código podemos conocer el número total de individuos por cada parcela:
+
+```{r, echo=TRUE}
+apply(BCI, 1, sum)
+```
+
+Y el número total de individuos por especie: 
+
+```{r, echo=TRUE}
+apply(BCI, 2, sum)[1:10]
+```
+
+## Como construir la curva de acumulación: 
+
+### vegan
+
+La función `specaccum()` del paquete *vegan*, permite estimar las curvas de acumulación de especies. Esta función necesita como argumento primario la base de datos. 
+
+```{r, echo=TRUE}
+curva <- specaccum(BCI)
+```
+
+El grafico que buscamos se obtiene mediante el siguiente código: 
+
+```{r, echo=TRUE}
+plot(curva)
+```
+
+### tidyverse - ggplot2
+
+Podemos producir un gráfico de calidad con la ayuda de las funciones del paquete `ggplot2–Elegant Graphics for Data Analysis`. Para cumplir esta tarea es necesario construir una base de datos nueva recuperando información resultante de la función `speccacum()`, estos resultados serán asignados como *curva*.
+
+
+```{r, echo=TRUE}
+
+curva <- data_frame(parcela = curva$sites,
+                    riqueza = curva$richness,
+                    des_sta = curva$sd) 
+curva
+```
+
+Una vez construida la base de datos podemos construir el grafico de la curva de acumulación mediante el siguiente código: 
+
+```{r, echo=TRUE}
+curva %>% 
+ ggplot(aes(parcela, riqueza))+
+  geom_line(linetype = 1, size = .5, color = "red") +
+  geom_errorbar(aes(ymin = riqueza - des_sta, ymax = riqueza + des_sta),
+                width = 0, size = 1)+
+   geom_point(color = "red", size = 1.5)+
+   theme_bw()+
+   scale_y_continuous(name = "Número de especies")+
+   scale_x_continuous(name = "Unidad de esfuerzo")+
+   theme(axis.text.x  = element_text(angle = 0, 
+                                     vjust = 0.5, size = 14),
+         axis.text.y.left  = element_text(angle = 0, 
+                                     vjust = 0.5, size = 14),
+         axis.title.y = element_text(size = 18),
+         axis.title.x = element_text(size = 18),
+         legend.background = element_blank(),
+         legend.key = element_blank(),
+         legend.title = element_text(size=12, face="bold"),
+         plot.title = element_text(hjust = .5, 
+                                   face = "bold", size = 21),
+         legend.justification=c(0,1), 
+         legend.position=c(.8, 1))+
+   labs( color = "", fill="")+
+   ggtitle("Curva de acumulación")
+```
+
