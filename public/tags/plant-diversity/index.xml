@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on  Paul Efren...</title>
-    <link>/categories/r/</link>
-    <description>Recent content in R on  Paul Efren...</description>
+    <title>Plant diversity on  Paul Efren...</title>
+    <link>/tags/plant-diversity/</link>
+    <description>Recent content in Plant diversity on  Paul Efren...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 22 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/plant-diversity/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,17 +19,6 @@
       <guid>/post/2018/09/22/curvas-de-acumulaci%C3%B3n-de-especies/</guid>
       <description>Esta nos muestra el número de especies acumuladas conforme se incrementa el área de estudio (Unidad de esfuerzo), así el número de especies se incrementara hasta un punto en el cual no se registraran muevas especies.
 La paqueteria:Los paquetes o librerías permiten ampliar las capacidades de R para cumplir determinadas tareas. vegan provee herramientas básicas para el análisis de diversidad en estudios de ecología de comunidades. tidyverse proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.</description>
-    </item>
-    
-    <item>
-      <title>Intervalos de Confianza</title>
-      <link>/post/2018/09/07/intervalos-de-confianza/</link>
-      <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018/09/07/intervalos-de-confianza/</guid>
-      <description>This is a modification of a blog written by Sean Kross, using tidyverse.
-Esta es una modificación de un blog escrito por Sean Kross1, utilizando tidyverse2.
-Imagina que estás buscando estimar el promedio de una alguna característica de una población.Conformada por 100 000 individuos.set.seed(2016-05-04)poblacion &amp;lt;- data_frame( individuo = seq(1,100000),caracteristica = runif(100000))IndividuoCaracteristicaIndividuoCaracteristica10.6770751999950.</description>
     </item>
     
   </channel>
