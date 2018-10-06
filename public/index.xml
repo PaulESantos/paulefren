@@ -6,10 +6,20 @@
     <description>Recent content in Home on  Paul Efren...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Índice Valor Importancia</title>
+      <link>/post/2018/10/05/%C3%ADndice-valor-importancia/</link>
+      <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/10/05/%C3%ADndice-valor-importancia/</guid>
+      <description>Los paquetes en R:tidyverse proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.#install.packages(&amp;quot;tidyverse&amp;quot;)#install.packages(&amp;quot;knitr&amp;quot;)library(tidyverse)library(knitr)La base de datos:Para reproducir el presente podrás acceder a la base de datos desde el siguiente enlace: (data)
+ParcelaEspecieDAPArea basal1Alchornea.costaricensis50.57758665.79081Alchornea.costaricensis54.47329319.69411Alseis.</description>
+    </item>
     
     <item>
       <title>Curvas de acumulación de especies</title>

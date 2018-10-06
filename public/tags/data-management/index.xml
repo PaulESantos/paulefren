@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dataviz on  Paul Efren...</title>
-    <link>/tags/dataviz/</link>
-    <description>Recent content in Dataviz on  Paul Efren...</description>
+    <title>Data management on  Paul Efren...</title>
+    <link>/tags/data-management/</link>
+    <description>Recent content in Data management on  Paul Efren...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Oct 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/dataviz/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/data-management/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       <guid>/post/2018/10/05/%C3%ADndice-valor-importancia/</guid>
       <description>Los paquetes en R:tidyverse proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.#install.packages(&amp;quot;tidyverse&amp;quot;)#install.packages(&amp;quot;knitr&amp;quot;)library(tidyverse)library(knitr)La base de datos:Para reproducir el presente podrás acceder a la base de datos desde el siguiente enlace: (data)
 ParcelaEspecieDAPArea basal1Alchornea.costaricensis50.57758665.79081Alchornea.costaricensis54.47329319.69411Alseis.</description>
-    </item>
-    
-    <item>
-      <title>Curvas de acumulación de especies</title>
-      <link>/post/2018/09/22/curvas-de-acumulaci%C3%B3n-de-especies/</link>
-      <pubDate>Sat, 22 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018/09/22/curvas-de-acumulaci%C3%B3n-de-especies/</guid>
-      <description>Esta nos muestra el número de especies acumuladas conforme se incrementa el área de estudio (Unidad de esfuerzo), así el número de especies se incrementara hasta un punto en el cual no se registraran muevas especies.
-La paqueteria:Los paquetes o librerías permiten ampliar las capacidades de R para cumplir determinadas tareas. vegan provee herramientas básicas para el análisis de diversidad en estudios de ecología de comunidades. tidyverse proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.</description>
     </item>
     
   </channel>
