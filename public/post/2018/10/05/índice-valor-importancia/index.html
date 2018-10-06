@@ -110,38 +110,38 @@ library(knitr)</code></pre>
 <tr class="odd">
 <td align="left">1</td>
 <td align="left">Alchornea.costaricensis</td>
-<td align="right">26.71627</td>
-<td align="right">275.6897</td>
+<td align="right">57.69480</td>
+<td align="right">2029.2463</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
 <td align="left">Alchornea.costaricensis</td>
-<td align="right">35.44420</td>
-<td align="right">413.9882</td>
+<td align="right">28.89024</td>
+<td align="right">2142.3876</td>
 </tr>
 <tr class="odd">
 <td align="left">1</td>
 <td align="left">Alseis.blackiana</td>
-<td align="right">20.50222</td>
-<td align="right">2805.2816</td>
+<td align="right">22.05828</td>
+<td align="right">1138.6161</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
 <td align="left">Alseis.blackiana</td>
-<td align="right">39.37345</td>
-<td align="right">1615.9506</td>
+<td align="right">27.41493</td>
+<td align="right">598.3209</td>
 </tr>
 <tr class="odd">
 <td align="left">1</td>
 <td align="left">Alseis.blackiana</td>
-<td align="right">42.68518</td>
-<td align="right">387.9823</td>
+<td align="right">49.55051</td>
+<td align="right">1128.3429</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
 <td align="left">Alseis.blackiana</td>
-<td align="right">57.63242</td>
-<td align="right">159.0262</td>
+<td align="right">30.04707</td>
+<td align="right">2848.7462</td>
 </tr>
 </tbody>
 </table>
@@ -153,59 +153,182 @@ library(knitr)</code></pre>
 <pre class="r"><code>dim(data)
 ## [1] 21457     4</code></pre>
 <p>El comando <em>head()</em> nos permitirá revisar la información contenida en las primeras seis filas de nuestra base de datos.</p>
-<pre class="r"><code>head(data)
-## # A tibble: 6 x 4
-##   parcela especies                  dap a_basal
-##   &lt;chr&gt;   &lt;chr&gt;                   &lt;dbl&gt;   &lt;dbl&gt;
-## 1 1       Alchornea.costaricensis  26.7    276.
-## 2 1       Alchornea.costaricensis  35.4    414.
-## 3 1       Alseis.blackiana         20.5   2805.
-## 4 1       Alseis.blackiana         39.4   1616.
-## 5 1       Alseis.blackiana         42.7    388.
-## 6 1       Alseis.blackiana         57.6    159.</code></pre>
+<pre class="r"><code>head(data)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">parcela</th>
+<th align="left">especies</th>
+<th align="right">dap</th>
+<th align="right">a_basal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alchornea.costaricensis</td>
+<td align="right">57.69480</td>
+<td align="right">2029.2463</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alchornea.costaricensis</td>
+<td align="right">28.89024</td>
+<td align="right">2142.3876</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">22.05828</td>
+<td align="right">1138.6161</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">27.41493</td>
+<td align="right">598.3209</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">49.55051</td>
+<td align="right">1128.3429</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">30.04707</td>
+<td align="right">2848.7462</td>
+</tr>
+</tbody>
+</table>
 <p>Mientras el comando <em>tail()</em> nos permitirá evaluar la información contenida en las últimas seis filas del dataframe.</p>
-<pre class="r"><code>tail(data)
-## # A tibble: 6 x 4
-##   parcela especies                  dap a_basal
-##   &lt;chr&gt;   &lt;chr&gt;                   &lt;dbl&gt;   &lt;dbl&gt;
-## 1 9       Zanthoxylum.ekmanii      41.2    836.
-## 2 9       Zanthoxylum.juniperinum  32.0   1287.
-## 3 9       Zanthoxylum.panamense    16.4    319.
-## 4 9       Zanthoxylum.panamense    33.2   1387.
-## 5 9       Zanthoxylum.panamense    25.7   2706.
-## 6 9       Zanthoxylum.panamense    20.3   1759.</code></pre>
+<pre class="r"><code>tail(data)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">parcela</th>
+<th align="left">especies</th>
+<th align="right">dap</th>
+<th align="right">a_basal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">9</td>
+<td align="left">Zanthoxylum.ekmanii</td>
+<td align="right">46.62384</td>
+<td align="right">840.1377</td>
+</tr>
+<tr class="even">
+<td align="left">9</td>
+<td align="left">Zanthoxylum.juniperinum</td>
+<td align="right">29.61227</td>
+<td align="right">148.8391</td>
+</tr>
+<tr class="odd">
+<td align="left">9</td>
+<td align="left">Zanthoxylum.panamense</td>
+<td align="right">28.29867</td>
+<td align="right">604.7351</td>
+</tr>
+<tr class="even">
+<td align="left">9</td>
+<td align="left">Zanthoxylum.panamense</td>
+<td align="right">10.40789</td>
+<td align="right">322.5846</td>
+</tr>
+<tr class="odd">
+<td align="left">9</td>
+<td align="left">Zanthoxylum.panamense</td>
+<td align="right">26.65742</td>
+<td align="right">2252.1100</td>
+</tr>
+<tr class="even">
+<td align="left">9</td>
+<td align="left">Zanthoxylum.panamense</td>
+<td align="right">19.03174</td>
+<td align="right">721.0169</td>
+</tr>
+</tbody>
+</table>
 <p>Si buscamos conocer cuáles son las observaciones que corresponden a la sub parcela número 1 podemos hacerlo con el siguiente código:</p>
-<pre class="r"><code>data[which(data$parcela == 1),]
-## # A tibble: 448 x 4
-##    parcela especies                  dap a_basal
-##    &lt;chr&gt;   &lt;chr&gt;                   &lt;dbl&gt;   &lt;dbl&gt;
-##  1 1       Alchornea.costaricensis  26.7    276.
-##  2 1       Alchornea.costaricensis  35.4    414.
-##  3 1       Alseis.blackiana         20.5   2805.
-##  4 1       Alseis.blackiana         39.4   1616.
-##  5 1       Alseis.blackiana         42.7    388.
-##  6 1       Alseis.blackiana         57.6    159.
-##  7 1       Alseis.blackiana         37.2    535.
-##  8 1       Alseis.blackiana         26.0   1181.
-##  9 1       Alseis.blackiana         59.2   1438.
-## 10 1       Alseis.blackiana         13.2   2161.
-## # ... with 438 more rows</code></pre>
+<pre class="r"><code>data[which(data$parcela == 1),]</code></pre>
 <p>Podemos conseguir el mismo resultado con la función <em>filter()</em> del paquete <em>dplyr</em>:</p>
-<pre class="r"><code>data %&gt;% filter(parcela == 1)
-## # A tibble: 448 x 4
-##    parcela especies                  dap a_basal
-##    &lt;chr&gt;   &lt;chr&gt;                   &lt;dbl&gt;   &lt;dbl&gt;
-##  1 1       Alchornea.costaricensis  26.7    276.
-##  2 1       Alchornea.costaricensis  35.4    414.
-##  3 1       Alseis.blackiana         20.5   2805.
-##  4 1       Alseis.blackiana         39.4   1616.
-##  5 1       Alseis.blackiana         42.7    388.
-##  6 1       Alseis.blackiana         57.6    159.
-##  7 1       Alseis.blackiana         37.2    535.
-##  8 1       Alseis.blackiana         26.0   1181.
-##  9 1       Alseis.blackiana         59.2   1438.
-## 10 1       Alseis.blackiana         13.2   2161.
-## # ... with 438 more rows</code></pre>
+<pre class="r"><code>data %&gt;%
+  filter(parcela == 1)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">parcela</th>
+<th align="left">especies</th>
+<th align="right">dap</th>
+<th align="right">a_basal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alchornea.costaricensis</td>
+<td align="right">57.69480</td>
+<td align="right">2029.2463</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alchornea.costaricensis</td>
+<td align="right">28.89024</td>
+<td align="right">2142.3876</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">22.05828</td>
+<td align="right">1138.6161</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">27.41493</td>
+<td align="right">598.3209</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">49.55051</td>
+<td align="right">1128.3429</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">30.04707</td>
+<td align="right">2848.7462</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">16.58617</td>
+<td align="right">593.5815</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">35.59809</td>
+<td align="right">1660.1799</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">24.76400</td>
+<td align="right">533.5131</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">50.78258</td>
+<td align="right">550.8660</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="indice-de-valor-de-importancia" class="section level2">
 <h2>Índice de valor de importancia:</h2>
@@ -222,10 +345,7 @@ library(knitr)</code></pre>
   n_individuos = n(),# número de individuos de la especie &quot;i&quot;.
   n_suplot = n_distinct(parcela),#número de sub parcelas en las que esta presente la especie.
   area_basal = sum(a_basal)# area basal total de la especie &quot;i&quot;.
-  ) %&gt;% 
-  head() %&gt;% 
-  kable(col.names = c(&quot;Especie&quot;, &quot;Indi. por especie&quot;,
-                      &quot;Frecuencia&quot;, &quot;Area basal&quot;))</code></pre>
+  )</code></pre>
 <table>
 <thead>
 <tr class="header">
@@ -240,37 +360,37 @@ library(knitr)</code></pre>
 <td align="left">Abarema.macradenia</td>
 <td align="right">1</td>
 <td align="right">1</td>
-<td align="right">2687.272</td>
+<td align="right">1835.193</td>
 </tr>
 <tr class="even">
 <td align="left">Acalypha.diversifolia</td>
 <td align="right">2</td>
 <td align="right">2</td>
-<td align="right">3909.738</td>
+<td align="right">3618.969</td>
 </tr>
 <tr class="odd">
 <td align="left">Acalypha.macrostachya</td>
 <td align="right">1</td>
 <td align="right">1</td>
-<td align="right">1117.559</td>
+<td align="right">1374.567</td>
 </tr>
 <tr class="even">
 <td align="left">Adelia.triloba</td>
 <td align="right">92</td>
 <td align="right">27</td>
-<td align="right">130097.928</td>
+<td align="right">143844.043</td>
 </tr>
 <tr class="odd">
 <td align="left">Aegiphila.panamensis</td>
 <td align="right">23</td>
 <td align="right">18</td>
-<td align="right">33763.474</td>
+<td align="right">34653.185</td>
 </tr>
 <tr class="even">
 <td align="left">Alchornea.costaricensis</td>
 <td align="right">156</td>
 <td align="right">44</td>
-<td align="right">244575.097</td>
+<td align="right">230023.555</td>
 </tr>
 </tbody>
 </table>
@@ -305,11 +425,7 @@ library(knitr)</code></pre>
          dom_rela = (area_basal/sum(area_basal))*100) %&gt;% 
   rowwise() %&gt;% 
   mutate(ivi = (sum(dens_rela, frec_rela, dom_rela)/3)) %&gt;% 
-  arrange(desc(ivi)) %&gt;% 
-  select(-c(2:4)) %&gt;% 
-  head(n = 10) %&gt;% 
-  kable(col.names = c(&quot;Especie&quot;, &quot;DR&quot;,
-                      &quot;FR&quot;, &quot;DmR&quot;, &quot;IVI&quot;))</code></pre>
+  arrange(desc(ivi)) </code></pre>
 <table>
 <thead>
 <tr class="header">
@@ -325,71 +441,71 @@ library(knitr)</code></pre>
 <td align="left">Faramea.occidentalis</td>
 <td align="right">8.002051</td>
 <td align="right">1.101564</td>
-<td align="right">8.007589</td>
-<td align="right">5.703735</td>
+<td align="right">8.080456</td>
+<td align="right">5.728024</td>
 </tr>
 <tr class="even">
 <td align="left">Trichilia.tuberculata</td>
 <td align="right">7.834273</td>
 <td align="right">1.101564</td>
-<td align="right">7.890119</td>
-<td align="right">5.608652</td>
+<td align="right">7.776874</td>
+<td align="right">5.570904</td>
 </tr>
 <tr class="odd">
 <td align="left">Alseis.blackiana</td>
 <td align="right">4.581256</td>
 <td align="right">1.101564</td>
-<td align="right">4.595098</td>
-<td align="right">3.425973</td>
+<td align="right">4.577024</td>
+<td align="right">3.419948</td>
 </tr>
 <tr class="even">
 <td align="left">Oenocarpus.mapora</td>
 <td align="right">3.672461</td>
 <td align="right">1.101564</td>
-<td align="right">3.606960</td>
-<td align="right">2.793662</td>
+<td align="right">3.775808</td>
+<td align="right">2.849945</td>
 </tr>
 <tr class="odd">
 <td align="left">Poulsenia.armata</td>
 <td align="right">3.518665</td>
 <td align="right">1.013439</td>
-<td align="right">3.562171</td>
-<td align="right">2.698092</td>
+<td align="right">3.411621</td>
+<td align="right">2.647908</td>
 </tr>
 <tr class="even">
 <td align="left">Quararibea.asterolepis</td>
 <td align="right">3.374190</td>
 <td align="right">1.079533</td>
-<td align="right">3.337020</td>
-<td align="right">2.596915</td>
+<td align="right">3.304689</td>
+<td align="right">2.586137</td>
 </tr>
 <tr class="odd">
 <td align="left">Hirtella.triandra</td>
 <td align="right">3.173789</td>
 <td align="right">1.101564</td>
-<td align="right">3.234475</td>
-<td align="right">2.503276</td>
+<td align="right">3.143366</td>
+<td align="right">2.472907</td>
 </tr>
 <tr class="even">
 <td align="left">Gustavia.superba</td>
 <td align="right">3.001352</td>
 <td align="right">1.079533</td>
-<td align="right">3.000993</td>
-<td align="right">2.360626</td>
+<td align="right">3.010481</td>
+<td align="right">2.363788</td>
 </tr>
 <tr class="odd">
 <td align="left">Virola.sebifera</td>
 <td align="right">2.875519</td>
 <td align="right">1.035470</td>
-<td align="right">2.877160</td>
-<td align="right">2.262716</td>
+<td align="right">2.877306</td>
+<td align="right">2.262765</td>
 </tr>
 <tr class="even">
 <td align="left">Protium.tenuifolium</td>
 <td align="right">1.775644</td>
 <td align="right">1.101564</td>
-<td align="right">1.845366</td>
-<td align="right">1.574191</td>
+<td align="right">1.834988</td>
+<td align="right">1.570732</td>
 </tr>
 </tbody>
 </table>
@@ -403,8 +519,7 @@ library(knitr)</code></pre>
 </ul>
 <pre class="r"><code>data %&gt;% summarise(Dap_min = min(dap),
                    Dap_max = max(dap),
-                   Ramgo = Dap_max - Dap_min) %&gt;% 
-  kable()</code></pre>
+                   Ramgo = Dap_max - Dap_min) </code></pre>
 <table>
 <thead>
 <tr class="header">
@@ -415,9 +530,9 @@ library(knitr)</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right">10.0057</td>
-<td align="right">59.99975</td>
-<td align="right">49.99405</td>
+<td align="right">10.00113</td>
+<td align="right">59.99775</td>
+<td align="right">49.99662</td>
 </tr>
 </tbody>
 </table>
@@ -471,11 +586,7 @@ clase_diametrica &lt;- data %&gt;%
       dap &gt;= 40 &amp; dap &lt; 50 ~ &quot;Clase_4&quot;,
       dap &gt;= 50 &amp; dap &lt; 60 ~ &quot;Clase_5&quot;,
       is.na(dap) ~ &quot;sin DAP&quot; ))
-
-## Retorna las diez primeras observaciones del nuevo dataframe.
-clase_diametrica %&gt;% 
-  head(n = 10) %&gt;% 
-  kable(col.names = c(&quot;Sub parcela&quot;,&quot;Especie&quot;, &quot;DAP&quot;, &quot;Area basal&quot;, &quot;Clase diametrica&quot;))</code></pre>
+</code></pre>
 <table>
 <thead>
 <tr class="header">
@@ -490,72 +601,72 @@ clase_diametrica %&gt;%
 <tr class="odd">
 <td align="left">1</td>
 <td align="left">Alchornea.costaricensis</td>
-<td align="right">26.71627</td>
-<td align="right">275.6897</td>
-<td align="left">Clase_2</td>
+<td align="right">57.69480</td>
+<td align="right">2029.2463</td>
+<td align="left">Clase_5</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
 <td align="left">Alchornea.costaricensis</td>
-<td align="right">35.44420</td>
-<td align="right">413.9882</td>
-<td align="left">Clase_3</td>
+<td align="right">28.89024</td>
+<td align="right">2142.3876</td>
+<td align="left">Clase_2</td>
 </tr>
 <tr class="odd">
 <td align="left">1</td>
 <td align="left">Alseis.blackiana</td>
-<td align="right">20.50222</td>
-<td align="right">2805.2816</td>
+<td align="right">22.05828</td>
+<td align="right">1138.6161</td>
 <td align="left">Clase_2</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
 <td align="left">Alseis.blackiana</td>
-<td align="right">39.37345</td>
-<td align="right">1615.9506</td>
-<td align="left">Clase_3</td>
+<td align="right">27.41493</td>
+<td align="right">598.3209</td>
+<td align="left">Clase_2</td>
 </tr>
 <tr class="odd">
 <td align="left">1</td>
 <td align="left">Alseis.blackiana</td>
-<td align="right">42.68518</td>
-<td align="right">387.9823</td>
+<td align="right">49.55051</td>
+<td align="right">1128.3429</td>
 <td align="left">Clase_4</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
 <td align="left">Alseis.blackiana</td>
-<td align="right">57.63242</td>
-<td align="right">159.0262</td>
-<td align="left">Clase_5</td>
-</tr>
-<tr class="odd">
-<td align="left">1</td>
-<td align="left">Alseis.blackiana</td>
-<td align="right">37.15254</td>
-<td align="right">534.5996</td>
+<td align="right">30.04707</td>
+<td align="right">2848.7462</td>
 <td align="left">Clase_3</td>
 </tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">16.58617</td>
+<td align="right">593.5815</td>
+<td align="left">Clase_1</td>
+</tr>
 <tr class="even">
 <td align="left">1</td>
 <td align="left">Alseis.blackiana</td>
-<td align="right">25.97152</td>
-<td align="right">1180.8221</td>
-<td align="left">Clase_2</td>
+<td align="right">35.59809</td>
+<td align="right">1660.1799</td>
+<td align="left">Clase_3</td>
 </tr>
 <tr class="odd">
 <td align="left">1</td>
 <td align="left">Alseis.blackiana</td>
-<td align="right">59.21471</td>
-<td align="right">1437.9734</td>
-<td align="left">Clase_5</td>
+<td align="right">24.76400</td>
+<td align="right">533.5131</td>
+<td align="left">Clase_2</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
 <td align="left">Alseis.blackiana</td>
-<td align="right">13.21607</td>
-<td align="right">2161.2440</td>
-<td align="left">Clase_1</td>
+<td align="right">50.78258</td>
+<td align="right">550.8660</td>
+<td align="left">Clase_5</td>
 </tr>
 </tbody>
 </table>
@@ -568,9 +679,7 @@ group_by(diam_class) %&gt;%
   summarise(min = min(dap),
             max = max(dap), 
             rango =max- min,
-            n = n()) %&gt;% 
-  kable(col.names = c(&quot;Clase diametrica&quot;, &quot;Min_DAP&quot;, &quot;Max_DAP&quot;,
-                      &quot;Rango&quot;, &quot;N_individuos&quot;))</code></pre>
+            n = n()) </code></pre>
 <table>
 <thead>
 <tr class="header">
@@ -584,38 +693,38 @@ group_by(diam_class) %&gt;%
 <tbody>
 <tr class="odd">
 <td align="left">Clase_1</td>
-<td align="right">10.00570</td>
-<td align="right">19.99238</td>
-<td align="right">9.986687</td>
-<td align="right">4219</td>
+<td align="right">10.00113</td>
+<td align="right">19.99977</td>
+<td align="right">9.998643</td>
+<td align="right">4267</td>
 </tr>
 <tr class="even">
 <td align="left">Clase_2</td>
-<td align="right">20.00126</td>
-<td align="right">29.99945</td>
-<td align="right">9.998190</td>
-<td align="right">4230</td>
+<td align="right">20.00399</td>
+<td align="right">29.99906</td>
+<td align="right">9.995073</td>
+<td align="right">4247</td>
 </tr>
 <tr class="odd">
 <td align="left">Clase_3</td>
-<td align="right">30.00320</td>
-<td align="right">39.99680</td>
-<td align="right">9.993599</td>
-<td align="right">4393</td>
+<td align="right">30.00028</td>
+<td align="right">39.99972</td>
+<td align="right">9.999440</td>
+<td align="right">4409</td>
 </tr>
 <tr class="even">
 <td align="left">Clase_4</td>
-<td align="right">40.00100</td>
-<td align="right">49.99987</td>
-<td align="right">9.998860</td>
-<td align="right">4342</td>
+<td align="right">40.00213</td>
+<td align="right">49.99789</td>
+<td align="right">9.995763</td>
+<td align="right">4189</td>
 </tr>
 <tr class="odd">
 <td align="left">Clase_5</td>
-<td align="right">50.00355</td>
-<td align="right">59.99975</td>
-<td align="right">9.996199</td>
-<td align="right">4273</td>
+<td align="right">50.00282</td>
+<td align="right">59.99775</td>
+<td align="right">9.994927</td>
+<td align="right">4345</td>
 </tr>
 </tbody>
 </table>
@@ -643,7 +752,7 @@ group_by(diam_class) %&gt;%
   labs(x = &quot;Clase Diametrica&quot;, 
        y = &quot;Número de individuos&quot;,
        title = &quot;Estructura Dimétrica&quot;)</code></pre>
-<p><img src="/post/2018-10-05-indice_valor_importancia_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><img src="/post/2018-10-05-indice_valor_importancia_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
 </div>
 
 
