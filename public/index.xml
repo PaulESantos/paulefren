@@ -17,8 +17,8 @@
       <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/2018/10/05/%C3%ADndice-valor-importancia/</guid>
-      <description>Los paquetes en R:tidyverse proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.#install.packages(&amp;quot;tidyverse&amp;quot;)#install.packages(&amp;quot;knitr&amp;quot;)library(tidyverse)library(knitr)La base de datos:Para reproducir el presente podrás acceder a la base de datos desde el siguiente enlace: (data)
-ParcelaEspecieDAPArea basal1Alchornea.costaricensis50.57758665.79081Alchornea.costaricensis54.47329319.69411Alseis.</description>
+      <description>Los paquetes en R:tidyverse proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.#install.packages(&amp;quot;tidyverse&amp;quot;)#install.packages(&amp;quot;knitr&amp;quot;)library(tidyverse)library(knitr)La base de datos:Para este ejemplo modificamos la información de la base de datos BCI del paquete vegan.
+ParcelaEspecieDAPArea basal1Alchornea.costaricensis44.82466888.32171Alchornea.costaricensis36.36620526.65891Alseis.</description>
     </item>
     
     <item>

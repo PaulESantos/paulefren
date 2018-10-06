@@ -15,8 +15,8 @@
 
     
       
-      <meta property="description" content="#install.packages(&amp;quot;tidyverse&amp;quot;)#install.packages(&amp;quot;knitr&amp;quot;)library(tidyverse)library(knitr)La base de datos:Para reproducir el presente podrás acceder a la base de datos desde &amp;hellip;">
-      <meta property="og:description" content="#install.packages(&amp;quot;tidyverse&amp;quot;)#install.packages(&amp;quot;knitr&amp;quot;)library(tidyverse)library(knitr)La base de datos:Para reproducir el presente podrás acceder a la base de datos desde &amp;hellip;">
+      <meta property="description" content="#install.packages(&amp;quot;tidyverse&amp;quot;)#install.packages(&amp;quot;knitr&amp;quot;)library(tidyverse)library(knitr)La base de datos:Para este ejemplo modificamos la información de la base de datos BCI &amp;hellip;">
+      <meta property="og:description" content="#install.packages(&amp;quot;tidyverse&amp;quot;)#install.packages(&amp;quot;knitr&amp;quot;)library(tidyverse)library(knitr)La base de datos:Para este ejemplo modificamos la información de la base de datos BCI &amp;hellip;">
       
     
 
@@ -96,7 +96,7 @@ library(knitr)</code></pre>
 </div>
 <div id="la-base-de-datos" class="section level2">
 <h2>La base de datos:</h2>
-<p>Para reproducir el presente podrás acceder a la base de datos desde el siguiente enlace: <a href="https://github.com/PaulESantos/tutoriales/blob/master/ivi_data.csv">(data)</a></p>
+<p>Para este ejemplo modificamos la información de la base de datos <strong>BCI</strong> del paquete <code>vegan</code>.</p>
 <table>
 <thead>
 <tr class="header">
@@ -110,38 +110,38 @@ library(knitr)</code></pre>
 <tr class="odd">
 <td align="left">1</td>
 <td align="left">Alchornea.costaricensis</td>
-<td align="right">50.57758</td>
-<td align="right">665.7908</td>
+<td align="right">26.71627</td>
+<td align="right">275.6897</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
 <td align="left">Alchornea.costaricensis</td>
-<td align="right">54.47329</td>
-<td align="right">319.6941</td>
+<td align="right">35.44420</td>
+<td align="right">413.9882</td>
 </tr>
 <tr class="odd">
 <td align="left">1</td>
 <td align="left">Alseis.blackiana</td>
-<td align="right">19.93999</td>
-<td align="right">1464.5249</td>
+<td align="right">20.50222</td>
+<td align="right">2805.2816</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
 <td align="left">Alseis.blackiana</td>
-<td align="right">31.63839</td>
-<td align="right">2446.4033</td>
+<td align="right">39.37345</td>
+<td align="right">1615.9506</td>
 </tr>
 <tr class="odd">
 <td align="left">1</td>
 <td align="left">Alseis.blackiana</td>
-<td align="right">49.06112</td>
-<td align="right">376.0982</td>
+<td align="right">42.68518</td>
+<td align="right">387.9823</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
 <td align="left">Alseis.blackiana</td>
-<td align="right">12.38637</td>
-<td align="right">1750.7328</td>
+<td align="right">57.63242</td>
+<td align="right">159.0262</td>
 </tr>
 </tbody>
 </table>
@@ -157,54 +157,54 @@ library(knitr)</code></pre>
 ## # A tibble: 6 x 4
 ##   parcela especies                  dap a_basal
 ##   &lt;chr&gt;   &lt;chr&gt;                   &lt;dbl&gt;   &lt;dbl&gt;
-## 1 1       Alchornea.costaricensis  50.6    666.
-## 2 1       Alchornea.costaricensis  54.5    320.
-## 3 1       Alseis.blackiana         19.9   1465.
-## 4 1       Alseis.blackiana         31.6   2446.
-## 5 1       Alseis.blackiana         49.1    376.
-## 6 1       Alseis.blackiana         12.4   1751.</code></pre>
+## 1 1       Alchornea.costaricensis  26.7    276.
+## 2 1       Alchornea.costaricensis  35.4    414.
+## 3 1       Alseis.blackiana         20.5   2805.
+## 4 1       Alseis.blackiana         39.4   1616.
+## 5 1       Alseis.blackiana         42.7    388.
+## 6 1       Alseis.blackiana         57.6    159.</code></pre>
 <p>Mientras el comando <em>tail()</em> nos permitirá evaluar la información contenida en las últimas seis filas del dataframe.</p>
 <pre class="r"><code>tail(data)
 ## # A tibble: 6 x 4
 ##   parcela especies                  dap a_basal
 ##   &lt;chr&gt;   &lt;chr&gt;                   &lt;dbl&gt;   &lt;dbl&gt;
-## 1 9       Zanthoxylum.ekmanii      23.1   2737.
-## 2 9       Zanthoxylum.juniperinum  35.6   2043.
-## 3 9       Zanthoxylum.panamense    54.0    886.
-## 4 9       Zanthoxylum.panamense    32.0    899.
-## 5 9       Zanthoxylum.panamense    35.3   2331.
-## 6 9       Zanthoxylum.panamense    19.2   2853.</code></pre>
+## 1 9       Zanthoxylum.ekmanii      41.2    836.
+## 2 9       Zanthoxylum.juniperinum  32.0   1287.
+## 3 9       Zanthoxylum.panamense    16.4    319.
+## 4 9       Zanthoxylum.panamense    33.2   1387.
+## 5 9       Zanthoxylum.panamense    25.7   2706.
+## 6 9       Zanthoxylum.panamense    20.3   1759.</code></pre>
 <p>Si buscamos conocer cuáles son las observaciones que corresponden a la sub parcela número 1 podemos hacerlo con el siguiente código:</p>
 <pre class="r"><code>data[which(data$parcela == 1),]
 ## # A tibble: 448 x 4
 ##    parcela especies                  dap a_basal
 ##    &lt;chr&gt;   &lt;chr&gt;                   &lt;dbl&gt;   &lt;dbl&gt;
-##  1 1       Alchornea.costaricensis  50.6    666.
-##  2 1       Alchornea.costaricensis  54.5    320.
-##  3 1       Alseis.blackiana         19.9   1465.
-##  4 1       Alseis.blackiana         31.6   2446.
-##  5 1       Alseis.blackiana         49.1    376.
-##  6 1       Alseis.blackiana         12.4   1751.
-##  7 1       Alseis.blackiana         47.7   2652.
-##  8 1       Alseis.blackiana         42.7    817.
-##  9 1       Alseis.blackiana         25.7   1424.
-## 10 1       Alseis.blackiana         27.2   1444.
+##  1 1       Alchornea.costaricensis  26.7    276.
+##  2 1       Alchornea.costaricensis  35.4    414.
+##  3 1       Alseis.blackiana         20.5   2805.
+##  4 1       Alseis.blackiana         39.4   1616.
+##  5 1       Alseis.blackiana         42.7    388.
+##  6 1       Alseis.blackiana         57.6    159.
+##  7 1       Alseis.blackiana         37.2    535.
+##  8 1       Alseis.blackiana         26.0   1181.
+##  9 1       Alseis.blackiana         59.2   1438.
+## 10 1       Alseis.blackiana         13.2   2161.
 ## # ... with 438 more rows</code></pre>
 <p>Podemos conseguir el mismo resultado con la función <em>filter()</em> del paquete <em>dplyr</em>:</p>
 <pre class="r"><code>data %&gt;% filter(parcela == 1)
 ## # A tibble: 448 x 4
 ##    parcela especies                  dap a_basal
 ##    &lt;chr&gt;   &lt;chr&gt;                   &lt;dbl&gt;   &lt;dbl&gt;
-##  1 1       Alchornea.costaricensis  50.6    666.
-##  2 1       Alchornea.costaricensis  54.5    320.
-##  3 1       Alseis.blackiana         19.9   1465.
-##  4 1       Alseis.blackiana         31.6   2446.
-##  5 1       Alseis.blackiana         49.1    376.
-##  6 1       Alseis.blackiana         12.4   1751.
-##  7 1       Alseis.blackiana         47.7   2652.
-##  8 1       Alseis.blackiana         42.7    817.
-##  9 1       Alseis.blackiana         25.7   1424.
-## 10 1       Alseis.blackiana         27.2   1444.
+##  1 1       Alchornea.costaricensis  26.7    276.
+##  2 1       Alchornea.costaricensis  35.4    414.
+##  3 1       Alseis.blackiana         20.5   2805.
+##  4 1       Alseis.blackiana         39.4   1616.
+##  5 1       Alseis.blackiana         42.7    388.
+##  6 1       Alseis.blackiana         57.6    159.
+##  7 1       Alseis.blackiana         37.2    535.
+##  8 1       Alseis.blackiana         26.0   1181.
+##  9 1       Alseis.blackiana         59.2   1438.
+## 10 1       Alseis.blackiana         13.2   2161.
 ## # ... with 438 more rows</code></pre>
 </div>
 <div id="indice-de-valor-de-importancia" class="section level2">
@@ -240,37 +240,37 @@ library(knitr)</code></pre>
 <td align="left">Abarema.macradenia</td>
 <td align="right">1</td>
 <td align="right">1</td>
-<td align="right">2031.085</td>
+<td align="right">2687.272</td>
 </tr>
 <tr class="even">
 <td align="left">Acalypha.diversifolia</td>
 <td align="right">2</td>
 <td align="right">2</td>
-<td align="right">3887.615</td>
+<td align="right">3909.738</td>
 </tr>
 <tr class="odd">
 <td align="left">Acalypha.macrostachya</td>
 <td align="right">1</td>
 <td align="right">1</td>
-<td align="right">2043.908</td>
+<td align="right">1117.559</td>
 </tr>
 <tr class="even">
 <td align="left">Adelia.triloba</td>
 <td align="right">92</td>
 <td align="right">27</td>
-<td align="right">136279.696</td>
+<td align="right">130097.928</td>
 </tr>
 <tr class="odd">
 <td align="left">Aegiphila.panamensis</td>
 <td align="right">23</td>
 <td align="right">18</td>
-<td align="right">34489.622</td>
+<td align="right">33763.474</td>
 </tr>
 <tr class="even">
 <td align="left">Alchornea.costaricensis</td>
 <td align="right">156</td>
 <td align="right">44</td>
-<td align="right">228653.199</td>
+<td align="right">244575.097</td>
 </tr>
 </tbody>
 </table>
@@ -325,71 +325,71 @@ library(knitr)</code></pre>
 <td align="left">Faramea.occidentalis</td>
 <td align="right">8.002051</td>
 <td align="right">1.101564</td>
-<td align="right">8.158547</td>
-<td align="right">5.754054</td>
+<td align="right">8.007589</td>
+<td align="right">5.703735</td>
 </tr>
 <tr class="even">
 <td align="left">Trichilia.tuberculata</td>
 <td align="right">7.834273</td>
 <td align="right">1.101564</td>
-<td align="right">7.882899</td>
-<td align="right">5.606245</td>
+<td align="right">7.890119</td>
+<td align="right">5.608652</td>
 </tr>
 <tr class="odd">
 <td align="left">Alseis.blackiana</td>
 <td align="right">4.581256</td>
 <td align="right">1.101564</td>
-<td align="right">4.710207</td>
-<td align="right">3.464342</td>
+<td align="right">4.595098</td>
+<td align="right">3.425973</td>
 </tr>
 <tr class="even">
 <td align="left">Oenocarpus.mapora</td>
 <td align="right">3.672461</td>
 <td align="right">1.101564</td>
-<td align="right">3.742946</td>
-<td align="right">2.838990</td>
+<td align="right">3.606960</td>
+<td align="right">2.793662</td>
 </tr>
 <tr class="odd">
 <td align="left">Poulsenia.armata</td>
 <td align="right">3.518665</td>
 <td align="right">1.013439</td>
-<td align="right">3.376952</td>
-<td align="right">2.636352</td>
+<td align="right">3.562171</td>
+<td align="right">2.698092</td>
 </tr>
 <tr class="even">
 <td align="left">Quararibea.asterolepis</td>
 <td align="right">3.374190</td>
 <td align="right">1.079533</td>
-<td align="right">3.411299</td>
-<td align="right">2.621674</td>
+<td align="right">3.337020</td>
+<td align="right">2.596915</td>
 </tr>
 <tr class="odd">
 <td align="left">Hirtella.triandra</td>
 <td align="right">3.173789</td>
 <td align="right">1.101564</td>
-<td align="right">3.245208</td>
-<td align="right">2.506854</td>
+<td align="right">3.234475</td>
+<td align="right">2.503276</td>
 </tr>
 <tr class="even">
 <td align="left">Gustavia.superba</td>
 <td align="right">3.001352</td>
 <td align="right">1.079533</td>
-<td align="right">3.008583</td>
-<td align="right">2.363156</td>
+<td align="right">3.000993</td>
+<td align="right">2.360626</td>
 </tr>
 <tr class="odd">
 <td align="left">Virola.sebifera</td>
 <td align="right">2.875519</td>
 <td align="right">1.035470</td>
-<td align="right">2.934457</td>
-<td align="right">2.281815</td>
+<td align="right">2.877160</td>
+<td align="right">2.262716</td>
 </tr>
 <tr class="even">
-<td align="left">Tetragastris.panamensis</td>
-<td align="right">1.766323</td>
+<td align="left">Protium.tenuifolium</td>
+<td align="right">1.775644</td>
 <td align="right">1.101564</td>
-<td align="right">1.779014</td>
-<td align="right">1.548967</td>
+<td align="right">1.845366</td>
+<td align="right">1.574191</td>
 </tr>
 </tbody>
 </table>
@@ -415,9 +415,9 @@ library(knitr)</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right">10.00131</td>
-<td align="right">59.99695</td>
-<td align="right">49.99564</td>
+<td align="right">10.0057</td>
+<td align="right">59.99975</td>
+<td align="right">49.99405</td>
 </tr>
 </tbody>
 </table>
@@ -490,72 +490,72 @@ clase_diametrica %&gt;%
 <tr class="odd">
 <td align="left">1</td>
 <td align="left">Alchornea.costaricensis</td>
-<td align="right">50.57758</td>
-<td align="right">665.7908</td>
-<td align="left">Clase_5</td>
+<td align="right">26.71627</td>
+<td align="right">275.6897</td>
+<td align="left">Clase_2</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
 <td align="left">Alchornea.costaricensis</td>
-<td align="right">54.47329</td>
-<td align="right">319.6941</td>
-<td align="left">Clase_5</td>
-</tr>
-<tr class="odd">
-<td align="left">1</td>
-<td align="left">Alseis.blackiana</td>
-<td align="right">19.93999</td>
-<td align="right">1464.5249</td>
-<td align="left">Clase_1</td>
-</tr>
-<tr class="even">
-<td align="left">1</td>
-<td align="left">Alseis.blackiana</td>
-<td align="right">31.63839</td>
-<td align="right">2446.4033</td>
+<td align="right">35.44420</td>
+<td align="right">413.9882</td>
 <td align="left">Clase_3</td>
 </tr>
 <tr class="odd">
 <td align="left">1</td>
 <td align="left">Alseis.blackiana</td>
-<td align="right">49.06112</td>
-<td align="right">376.0982</td>
+<td align="right">20.50222</td>
+<td align="right">2805.2816</td>
+<td align="left">Clase_2</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">39.37345</td>
+<td align="right">1615.9506</td>
+<td align="left">Clase_3</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">42.68518</td>
+<td align="right">387.9823</td>
 <td align="left">Clase_4</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
 <td align="left">Alseis.blackiana</td>
-<td align="right">12.38637</td>
-<td align="right">1750.7328</td>
+<td align="right">57.63242</td>
+<td align="right">159.0262</td>
+<td align="left">Clase_5</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">37.15254</td>
+<td align="right">534.5996</td>
+<td align="left">Clase_3</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">25.97152</td>
+<td align="right">1180.8221</td>
+<td align="left">Clase_2</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">59.21471</td>
+<td align="right">1437.9734</td>
+<td align="left">Clase_5</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">13.21607</td>
+<td align="right">2161.2440</td>
 <td align="left">Clase_1</td>
-</tr>
-<tr class="odd">
-<td align="left">1</td>
-<td align="left">Alseis.blackiana</td>
-<td align="right">47.66016</td>
-<td align="right">2651.6161</td>
-<td align="left">Clase_4</td>
-</tr>
-<tr class="even">
-<td align="left">1</td>
-<td align="left">Alseis.blackiana</td>
-<td align="right">42.68574</td>
-<td align="right">816.6082</td>
-<td align="left">Clase_4</td>
-</tr>
-<tr class="odd">
-<td align="left">1</td>
-<td align="left">Alseis.blackiana</td>
-<td align="right">25.65789</td>
-<td align="right">1424.4538</td>
-<td align="left">Clase_2</td>
-</tr>
-<tr class="even">
-<td align="left">1</td>
-<td align="left">Alseis.blackiana</td>
-<td align="right">27.23087</td>
-<td align="right">1444.1023</td>
-<td align="left">Clase_2</td>
 </tr>
 </tbody>
 </table>
@@ -584,38 +584,38 @@ group_by(diam_class) %&gt;%
 <tbody>
 <tr class="odd">
 <td align="left">Clase_1</td>
-<td align="right">10.00131</td>
-<td align="right">19.99720</td>
-<td align="right">9.995886</td>
-<td align="right">4345</td>
+<td align="right">10.00570</td>
+<td align="right">19.99238</td>
+<td align="right">9.986687</td>
+<td align="right">4219</td>
 </tr>
 <tr class="even">
 <td align="left">Clase_2</td>
-<td align="right">20.00609</td>
-<td align="right">29.99670</td>
-<td align="right">9.990607</td>
-<td align="right">4232</td>
+<td align="right">20.00126</td>
+<td align="right">29.99945</td>
+<td align="right">9.998190</td>
+<td align="right">4230</td>
 </tr>
 <tr class="odd">
 <td align="left">Clase_3</td>
-<td align="right">30.00252</td>
-<td align="right">39.99906</td>
-<td align="right">9.996543</td>
-<td align="right">4299</td>
+<td align="right">30.00320</td>
+<td align="right">39.99680</td>
+<td align="right">9.993599</td>
+<td align="right">4393</td>
 </tr>
 <tr class="even">
 <td align="left">Clase_4</td>
-<td align="right">40.00103</td>
-<td align="right">49.99942</td>
-<td align="right">9.998390</td>
-<td align="right">4314</td>
+<td align="right">40.00100</td>
+<td align="right">49.99987</td>
+<td align="right">9.998860</td>
+<td align="right">4342</td>
 </tr>
 <tr class="odd">
 <td align="left">Clase_5</td>
-<td align="right">50.00096</td>
-<td align="right">59.99695</td>
-<td align="right">9.995989</td>
-<td align="right">4267</td>
+<td align="right">50.00355</td>
+<td align="right">59.99975</td>
+<td align="right">9.996199</td>
+<td align="right">4273</td>
 </tr>
 </tbody>
 </table>

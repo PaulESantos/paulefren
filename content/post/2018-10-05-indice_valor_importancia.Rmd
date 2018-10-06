@@ -31,7 +31,7 @@ library(knitr)
 
 ## La base de datos:
 
-Para reproducir el presente podrás acceder a la base de datos desde el siguiente enlace: [(data)](https://github.com/PaulESantos/tutoriales/blob/master/ivi_data.csv)
+Para este ejemplo modificamos la información  de la base de datos **BCI** del paquete `vegan`.
 
 ```{r, echo=FALSE, include=FALSE}
 a <- BCI %>%
