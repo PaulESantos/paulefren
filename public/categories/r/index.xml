@@ -23,13 +23,23 @@ Uno de los primeros pasos cuando tenemos nuestros datos en R es evaluar la estru
     </item>
     
     <item>
+      <title>Data Wrangling Part 2</title>
+      <link>/post/2018/11/12/data-wrangling-part-2/</link>
+      <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/11/12/data-wrangling-part-2/</guid>
+      <description>La base de datos:Continuaremos usando trabajando con la base de datos msleep, para facilitar la reproductibilidad y experimentacion del codigo.
+library(tidyverse)glimpse(msleep)## Observations: 83## Variables: 11## $ name &amp;lt;chr&amp;gt; &amp;quot;Cheetah&amp;quot;, &amp;quot;Owl monkey&amp;quot;, &amp;quot;Mountain beaver&amp;quot;, &amp;quot;Grea...## $ genus &amp;lt;chr&amp;gt; &amp;quot;Acinonyx&amp;quot;, &amp;quot;Aotus&amp;quot;, &amp;quot;Aplodontia&amp;quot;, &amp;quot;Blarina&amp;quot;, &amp;quot;Bo...## $ vore &amp;lt;chr&amp;gt; &amp;quot;carni&amp;quot;, &amp;quot;omni&amp;quot;, &amp;quot;herbi&amp;quot;, &amp;quot;omni&amp;quot;, &amp;quot;herbi&amp;quot;, &amp;quot;herbi...## $ order &amp;lt;chr&amp;gt; &amp;quot;Carnivora&amp;quot;, &amp;quot;Primates&amp;quot;, &amp;quot;Rodentia&amp;quot;, &amp;quot;Soricomorph...## $ conservation &amp;lt;chr&amp;gt; &amp;quot;lc&amp;quot;, NA, &amp;quot;nt&amp;quot;, &amp;quot;lc&amp;quot;, &amp;quot;domesticated&amp;quot;, NA, &amp;quot;vu&amp;quot;, N.</description>
+    </item>
+    
+    <item>
       <title>Índice Valor Importancia</title>
       <link>/post/2018/10/05/%C3%ADndice-valor-importancia/</link>
       <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/2018/10/05/%C3%ADndice-valor-importancia/</guid>
       <description>Los paquetes en R:tidyverse proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.#install.packages(&amp;quot;tidyverse&amp;quot;)#install.packages(&amp;quot;knitr&amp;quot;)library(tidyverse)library(knitr)La base de datos:Para este ejemplo modificamos la información de la base de datos BCI del paquete vegan.
-ParcelaEspecieDAPArea basal1Alchornea.costaricensis57.694802029.24631Alchornea.costaricensis28.890242142.38761Alseis.</description>
+ParcelaEspecieDAPArea basal1Alchornea.costaricensis24.059572642.40891Alchornea.costaricensis55.007832532.62621Alseis.</description>
     </item>
     
     <item>
