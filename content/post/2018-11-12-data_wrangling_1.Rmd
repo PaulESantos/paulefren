@@ -1,0 +1,407 @@
+---
+title: "Data Wrangling Part 1"
+subtitle: "Selección de Columnas"
+author: "Paul Efren Santos Andrade"
+date: 2018-11-12
+categories: ["R"]
+tags: ["R Markdown", "Data management"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+library(tidyverse)
+library(knitr)
+library(infer)
+```
+
+## La base de datos:
+
+La base de datos que usaremos es **msleep** es pate del paquete **ggplot2**, trabajar con esta permitirá que el código puede ser reproducido con facilidad.
+
+Para conocer más de acerca de la base de datos **msleep**, se puede consultar [(pdf)](http://www.pnas.org/content/pnas/104/3/1051.full.pdf) o se puede obtener la ayuda de R **?msleep**
+
+Uno de los primeros pasos cuando tenemos nuestros datos en R es evaluar la estructura de nuestra base de datos: 
+
+```{r eval=FALSE}
+glimpse(msleep)
+```
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+glimpse(msleep)
+```
+
+## **select()**
+
+- Seleccionar una columna:
+
+Para seleccionar columnas solo necesitas incluir el nombre de la **variable** en la  función **select(---)**. 
+
+```{r eval=FALSE}
+msleep %>% 
+  select(name) 
+```
+
+```{r, echo=FALSE}
+msleep %>% 
+  select(name) %>% 
+  head() %>% 
+  kable()
+```
+
+- Multiples columnas: 
+
+Esta función nos permite recuperar también múltiples columnas, el orden en el que los nombres de estas sean ingresados determinara el orden en el resultado.
+
+```{r eval=FALSE}
+msleep %>%
+  select(name, genus, sleep_total, awake) 
+```
+
+```{r echo=FALSE}
+msleep %>%
+  select(name, genus, sleep_total, awake) %>% 
+  head() %>% 
+  kable()
+```
+
+- Secuencias:
+
+Se puede recuperar múltiples columnas sucesivas con la ayuda del operador **:**. Considerando la siguiente estructura: **columna_inicial:columna_final**.
+
+
+```{r eval=FALSE}
+msleep %>%
+  select(name:conservation) 
+```
+
+```{r echo=FALSE}
+msleep %>%
+  select(name:conservation) %>%
+  head() %>% 
+  kable()
+```
+
+
+- Otra opción es **ignorar columnas especificas o secuencias**, esto se puede lograr con la ayuda del operador **-**, el cual se antepone al nombre de la **columna(as)** que se desea ignorar. 
+
+```{r eval=FALSE}
+msleep %>% 
+  select(-conservation, -(sleep_total:awake))
+```
+
+
+```{r echo=FALSE}
+msleep %>% 
+  select(-conservation, -(sleep_total:awake)) %>%
+  head() %>% 
+  kable()
+```
+
+
+Es posible deseleccionar una secuencia completa y recuperar una columna que esté incluida en esta. 
+
+- El siguiente ejemplo deselecciona la secuencia de columnas comprendidas entre **name** y **awake**, pero recupera la columna **conservation**. Esta opción solo funciona si se incluye el nombre de la columna a recuperar en la misma acción que elimina las otras columnas.
+
+
+```{r  eval=FALSE}
+msleep %>%
+  select(-(name:awake), conservation) 
+```
+
+
+```{r echo=FALSE}
+msleep %>%
+  select(-(name:awake), conservation) %>%
+  head() %>% 
+  kable()
+```
+
+## **one_of()**:
+
+- Esta función requiere de preparación, es posible que cuando la base de datos contenga un gran número de variables estas mantengan alguna relación que nos permita agruparlas. 
+
+La base de datos **msleep** se conforma de `r ncol(msleep)` variables:
+
+
+```{r eval=FALSE}
+# Variables categóricas.
+classification_info <- c("name", "genus", "vore", "order", "conservation")
+
+# Variables Numéricas, relacionadas al tiempo de sueño. 
+sleep_cols <- c("sleep_total", "sleep_rem", "sleep_cycle")
+
+# Variables Numéricas, relacionadas con el peso.
+weight_cols <- c("brainwt", "bodywt")
+
+```
+
+```{r echo=FALSE}
+# Variables categóricas.
+classification_info <- c("name", "genus", "vore", "order", "conservation")
+
+# Variables Numéricas, relacionadas al tiempo de sueño. 
+sleep_cols <- c("sleep_total", "sleep_rem", "sleep_cycle")
+
+# Variables Numéricas, relacionadas con el peso.
+weight_cols <- c("brainwt", "bodywt")
+```
+
+
+La función `one_of()`,nos permitirá evitar los errores al digitar los nombres de las variables en múltiples ocasiones, con la siguiente formula: `select(one_of(variable))`.
+
+El argumento *variable* es el vector que creamos agrupando las variables.
+
+
+
+```{r eval=FALSE}
+msleep %>%
+  select(one_of(sleep_cols))
+```
+
+```{r echo=FALSE}
+msleep %>%
+  select(one_of(sleep_cols)) %>% 
+  head() %>% 
+  kable()
+```
+
+
+## **Selección de columnas, usando parte  de los  nombres**
+
+Si la base de datos está conformada por muchas columnas cuyos nombres tienen estructuras similares, puedes usar funciones de selección parcial: `starts_with()`, `ends_with()` or `contains()` en conjunto con *select()* dependiendo de lo que buscas recuperar.
+
+
+```{r eval=FALSE}
+msleep %>%
+  select(name, starts_with("sleep")) 
+```
+
+```{r echo=FALSE}
+msleep %>%
+  select(name, starts_with("sleep")) %>% 
+  head() %>% 
+  kable()
+```
+
+
+```{r eval=FALSE}
+msleep %>%
+  select(contains("eep"), ends_with("wt")) 
+```
+
+```{r echo=FALSE}
+msleep %>%
+  select(contains("eep"), ends_with("wt")) %>% 
+  head() %>% 
+  kable()
+```
+
+
+```{r eval=FALSE}
+msleep %>%
+  select(name, ends_with("e"))
+```
+
+```{r echo=FALSE}
+msleep %>%
+  select(name, ends_with("e")) %>% 
+  head() %>% 
+  kable()
+```
+
+
+# **Selección con base en el tipo datos**
+
+La función `select_if` permite usar funciones `is.numeric`, `is.integer`, `is.double`, `is.logical`, `is.factor`. Por ejemplo deseas recuperar todas las columnas de tipo carácter (secuencias de texto) puedes usar `select_if(is.character)`.
+
+Si la base de datos contiene columnas de tipo `date`, será necesario usar funciones del paquete **lubridate** como `is.Date` o `is.POSIXt`.
+
+```{r eval=FALSE}
+msleep %>%
+  select_if(is.numeric) 
+```
+
+
+```{r echo=FALSE}
+msleep %>%
+  select_if(is.numeric) %>% 
+  head() %>% 
+  kable()
+```
+
+
+También puedes seleccionar columnas usando negaciones, pero será necesario añadir el operador tilde *~*.
+
+```{r eval=FALSE}
+msleep %>%
+  select_if(~!is.numeric(.)) 
+```
+
+```{r echo=FALSE}
+msleep %>%
+  select_if(~!is.numeric(.)) %>% 
+  head() %>% 
+  kable()
+```
+
+
+## **Selección de columnas usando expresiones lógicas**
+
+`select_if` permite seleccionar columnas con base en cualquier función lógica, no únicamente con base el tipo de datos. Así es posible seleccionar todas las columnas con un promedio mayor a 500. Para evitar errores será necesario seleccionar primero solo las columnas de tipo numérico.
+
+Se debe tomar en cuenta que `mean > 500` no es una función, para que esta sea una función se debe anteponer el operador tilde `~`, para que esta sea reconocido como una función.
+
+
+```{r eval=FALSE}
+msleep %>%
+  select_if(~is.numeric(.)) %>%
+  select_if(~mean(., na.rm=TRUE) > 10)
+```
+
+```{r echo=FALSE}
+msleep %>%
+  select_if(~is.numeric(.)) %>%
+  select_if(~mean(., na.rm=TRUE) > 10) %>% 
+  head() %>% 
+  kable()
+```
+
+
+- **n_distinct()**
+
+Una función muy útil para `select_if()` es `n_distinct()`, esta función permite conocer el cuantos elementos diferentes están presentes en una columna. Para recuperar las columnas que tienen menos de 10 elementos distintos usaremos `~n_distinct(.) < 10` como argumento de la función select_if. Dado que `n_distinct(.) < 10` no es una función, es necesario anteponer el operador *~*.
+
+```{r eval=FALSE}
+msleep %>%
+  select_if(~n_distinct(.) < 10)
+```
+
+```{r echo=FALSE}
+msleep %>%
+  select_if(~n_distinct(.) < 10) %>% 
+  head() %>% 
+  kable()
+```
+
+
+## **Reordenamiento de Columnas**
+
+Podemos usar `select()` para reordenar columnas. El orden en el cual incluyas los nombres en esta función determina su orden final.
+
+```{r eval=FALSE}
+msleep %>%
+  select(conservation, sleep_total, name)
+```
+
+```{r echo=FALSE}
+msleep %>%
+  select(conservation, sleep_total, name) %>% 
+  head() %>% 
+  kable()
+```
+
+- **everything()**
+
+Si deseas mover solo algunas columnas hacia el frente, puedes usar `everything()` después de estas y esto añadirá las columnas restantes al final.
+
+```{r eval=FALSE}
+msleep %>%
+  select(conservation, sleep_total, everything())
+```
+
+```{r echo=FALSE}
+msleep %>%
+  select(conservation, sleep_total, everything()) %>% 
+  head() %>% 
+  kable()
+```
+
+## **Modificando los nombres de las columnas**
+
+En ocasiones es necesario modificar los nombres de las columnas.
+
+**Cambiar el nombre de las columnas**
+
+- `select()` permite modificar el nombre de las columnas .
+
+```{r eval=FALSE}
+msleep %>%
+  select(animal = name, sleep_total, riesgo = conservation) 
+```
+
+```{r echo=FALSE}
+msleep %>%
+  select(animal = name, sleep_total, riesgo = conservation) %>%
+  head(n = 4) %>% 
+  kable()
+```
+
+- Si deseas conservar todas las columnas se puede usar la función `rename()`.
+
+```{r eval=FALSE}
+msleep %>% 
+  rename(animal = name, extinction_threat = conservation) 
+```
+
+```{r echo=FALSE}
+msleep %>% 
+  rename(animal = name, extinction_threat = conservation) %>%
+  head(n = 4) %>% 
+  kable()
+```
+
+**Modificando el nombre de todas las columnas**
+
+- **select_all()**
+
+La función `select_all()` permite modificar todos los nombres de las columnas, usando como argumento otra función.
+
+Mediante la función `toupper()`se puede modificar el nombre de las columnas con letras **mayúscula** y la función `tolower()` modifica el nombre de las columnas en letras **minúsculas**.
+
+```{r eval=FALSE}
+msleep %>%
+  select_all(toupper)
+```
+
+
+```{r echo=FALSE}
+msleep %>%
+  select_all(toupper) %>% 
+  head(n = 4 ) %>% 
+  kable()
+```
+
+## **Pasar los nombres de las filas a una columna**
+
+
+Algunos `dataframes` tienen nombres para cada una de las columnas que no se reconocen como una columna en su estructura. Un ejemplo es la base de datos **mtcars**. 
+
+```{r eval=FALSE}
+ mtcars %>%
+  head() 
+```
+
+   
+```{r echo=FALSE}
+ mtcars %>%
+  head() %>% 
+  kable()
+```
+
+La función `rownames_to_column()` permite recuperar estos nombres he incluirlos creando una nueva columna.
+
+```{r eval=FALSE}
+ mtcars %>%
+   rownames_to_column("car_model") 
+```
+
+```{r echo=FALSE}
+ mtcars %>%
+   rownames_to_column("car_model") %>% 
+  head() %>% 
+  kable()
+```
+
+## Referencias:
+
+1. Basado en el tutorial de [Suzan Baert](https://suzan.rbind.io/2018/01/dplyr-tutorial-1/): **Data Wrangling Part 1: Basic to Advanced Ways to Select Columns**

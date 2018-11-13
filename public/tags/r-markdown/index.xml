@@ -6,10 +6,21 @@
     <description>Recent content in R Markdown on  Paul Efren...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r-markdown/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Data Wrangling Part 1</title>
+      <link>/post/2018/11/12/data-wrangling-part-1/</link>
+      <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/11/12/data-wrangling-part-1/</guid>
+      <description>La base de datos:La base de datos que usaremos es msleep es pate del paquete ggplot2, trabajar con esta permitirá que el código puede ser reproducido con facilidad.
+Para conocer más de acerca de la base de datos msleep, se puede consultar (pdf) o se puede obtener la ayuda de R ?msleep
+Uno de los primeros pasos cuando tenemos nuestros datos en R es evaluar la estructura de nuestra base de datos:</description>
+    </item>
     
     <item>
       <title>Intervalos de Confianza</title>
