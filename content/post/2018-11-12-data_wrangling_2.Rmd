@@ -2,15 +2,19 @@
 title: "Data Wrangling Part 2"
 subtitle: "Ordenando las columnas en forma adecuada"
 author: "Paul Efren Santos Andrade"
-date: 2018-11-13
-output: html_document
+date: 2018-11-12
+categories: ["R"]
+tags: ["R Markdown", "Data management"]
 ---
 
+
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(collapse = TRUE)
 library(tidyverse)
 library(knitr)
+library(infer)
 ```
+
 
 ## La base de datos:
 
