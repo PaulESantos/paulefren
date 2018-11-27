@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Data Wrangling Part 4 - Agrupamiento y tablas resumen  -  Paul Efren...</title>
+    <meta property="og:title" content="Data Wrangling Part 4 -  Paul Efren...">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    
+      
+      <meta property="description" content="Continuamos trabajando con el data.frame msleep, siempre con la intención de permitir la reproductibilidad del código.
+glimpse(msleep)## Observations: 83## Variables: 11## $ name &amp;lt;chr&amp;gt; &amp;hellip;">
+      <meta property="og:description" content="Continuamos trabajando con el data.frame msleep, siempre con la intención de permitir la reproductibilidad del código.
+glimpse(msleep)## Observations: 83## Variables: 11## $ name &amp;lt;chr&amp;gt; &amp;hellip;">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/"> Paul Efren...</a></h1>
+
+<p class="tagline">An space for R - DataScience for Biology...</p>
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/">Home</a></li>
+  
+  <li><a href="/about/">About</a></li>
+  
+  <li><a href="/categories/">Categories</a></li>
+  
+  <li><a href="/tags/">Tags</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>Data Wrangling Part 4</h1>
+<h1><span class="subtitle">Agrupamiento y tablas resumen</span></h1>
+<h3>Paul Efren Santos Andrade
+  /  2018-11-26</h3>
+<hr>
+
+
+      </header>
+
+
+
+<div id="la-base-de-datos" class="section level2">
+<h2>La base de datos</h2>
+<p>Continuamos trabajando con el data.frame <strong>msleep</strong>, siempre con la intención de permitir la reproductibilidad del código.</p>
+<pre class="r"><code>glimpse(msleep)</code></pre>
+<pre><code>## Observations: 83
+## Variables: 11
+## $ name         &lt;chr&gt; &quot;Cheetah&quot;, &quot;Owl monkey&quot;, &quot;Mountain beaver&quot;, &quot;Grea...
+## $ genus        &lt;chr&gt; &quot;Acinonyx&quot;, &quot;Aotus&quot;, &quot;Aplodontia&quot;, &quot;Blarina&quot;, &quot;Bo...
+## $ vore         &lt;chr&gt; &quot;carni&quot;, &quot;omni&quot;, &quot;herbi&quot;, &quot;omni&quot;, &quot;herbi&quot;, &quot;herbi...
+## $ order        &lt;chr&gt; &quot;Carnivora&quot;, &quot;Primates&quot;, &quot;Rodentia&quot;, &quot;Soricomorph...
+## $ conservation &lt;chr&gt; &quot;lc&quot;, NA, &quot;nt&quot;, &quot;lc&quot;, &quot;domesticated&quot;, NA, &quot;vu&quot;, N...
+## $ sleep_total  &lt;dbl&gt; 12.1, 17.0, 14.4, 14.9, 4.0, 14.4, 8.7, 7.0, 10.1...
+## $ sleep_rem    &lt;dbl&gt; NA, 1.8, 2.4, 2.3, 0.7, 2.2, 1.4, NA, 2.9, NA, 0....
+## $ sleep_cycle  &lt;dbl&gt; NA, NA, NA, 0.1333333, 0.6666667, 0.7666667, 0.38...
+## $ awake        &lt;dbl&gt; 11.9, 7.0, 9.6, 9.1, 20.0, 9.6, 15.3, 17.0, 13.9,...
+## $ brainwt      &lt;dbl&gt; NA, 0.01550, NA, 0.00029, 0.42300, NA, NA, NA, 0....
+## $ bodywt       &lt;dbl&gt; 50.000, 0.480, 1.350, 0.019, 600.000, 3.850, 20.4...</code></pre>
+</div>
+<div id="recuento-de-eventos" class="section level2">
+<h2>Recuento de eventos:</h2>
+<ul>
+<li><strong>Número de observaciónes</strong>:</li>
+</ul>
+<p>Determinar el número de observaciones para cada uno de los niveles de una variable específica, es una tarea que puede ser completada fácilmente con la función <code>count()</code>.
+Uno de los argumentos útiles de esta función es: <code>sort = TRUE</code>, el cual nos permite ordenar los resultados en forma decreciente:</p>
+<pre class="r"><code>msleep %&gt;% 
+  count(order, sort = TRUE)</code></pre>
+<pre class="r"><code>msleep %&gt;% 
+  count(order, sort = TRUE) %&gt;% 
+  head(n = 10) %&gt;% 
+  kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">order</th>
+<th align="right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Rodentia</td>
+<td align="right">22</td>
+</tr>
+<tr class="even">
+<td align="left">Carnivora</td>
+<td align="right">12</td>
+</tr>
+<tr class="odd">
+<td align="left">Primates</td>
+<td align="right">12</td>
+</tr>
+<tr class="even">
+<td align="left">Artiodactyla</td>
+<td align="right">6</td>
+</tr>
+<tr class="odd">
+<td align="left">Soricomorpha</td>
+<td align="right">5</td>
+</tr>
+<tr class="even">
+<td align="left">Cetacea</td>
+<td align="right">3</td>
+</tr>
+<tr class="odd">
+<td align="left">Hyracoidea</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td align="left">Perissodactyla</td>
+<td align="right">3</td>
+</tr>
+<tr class="odd">
+<td align="left">Chiroptera</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="left">Cingulata</td>
+<td align="right">2</td>
+</tr>
+</tbody>
+</table>
+<p>La función <strong>count()</strong> puede actuar sobre múltiples variables, el siguiente ejemplo cuenta el número de observaciones para cada uno de los niveles de las variables <strong>order</strong> y <strong>vore</strong>:</p>
+<pre class="r"><code>msleep %&gt;% 
+  count(order, vore, sort = TRUE)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">order</th>
+<th align="left">vore</th>
+<th align="right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Rodentia</td>
+<td align="left">herbi</td>
+<td align="right">16</td>
+</tr>
+<tr class="even">
+<td align="left">Carnivora</td>
+<td align="left">carni</td>
+<td align="right">12</td>
+</tr>
+<tr class="odd">
+<td align="left">Primates</td>
+<td align="left">omni</td>
+<td align="right">10</td>
+</tr>
+<tr class="even">
+<td align="left">Artiodactyla</td>
+<td align="left">herbi</td>
+<td align="right">5</td>
+</tr>
+<tr class="odd">
+<td align="left">Cetacea</td>
+<td align="left">carni</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td align="left">Perissodactyla</td>
+<td align="left">herbi</td>
+<td align="right">3</td>
+</tr>
+<tr class="odd">
+<td align="left">Rodentia</td>
+<td align="left">NA</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td align="left">Soricomorpha</td>
+<td align="left">omni</td>
+<td align="right">3</td>
+</tr>
+<tr class="odd">
+<td align="left">Chiroptera</td>
+<td align="left">insecti</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="left">Hyracoidea</td>
+<td align="left">herbi</td>
+<td align="right">2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Adjuntando el número de observaciones en una nueva columna:</strong></li>
+</ul>
+<p>Si el interés es solo conocer el número total de observaciones en el data.frame, la función <strong>tally()</strong> puede ayudar con esta tarea. Esta función es homologa con <strong>nrow()</strong>.Esta función no puede ser utilizada sobre variables específicas.</p>
+<pre class="r"><code>msleep %&gt;% 
+  tally()
+---
+msleep %&gt;% 
+  nrow()</code></pre>
+<ul>
+<li>tally()</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">83</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>nrow()</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="right">x</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">83</td>
+</tr>
+</tbody>
+</table>
+<p>La función <strong>add_tally()</strong> crea una nueva columna con el número total de observaciones, semejante a <strong>mutate(n = n())</strong>.</p>
+<pre class="r"><code>msleep %&gt;% 
+  select(1:3) %&gt;% 
+  add_tally()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">genus</th>
+<th align="left">vore</th>
+<th align="right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Cheetah</td>
+<td align="left">Acinonyx</td>
+<td align="left">carni</td>
+<td align="right">83</td>
+</tr>
+<tr class="even">
+<td align="left">Owl monkey</td>
+<td align="left">Aotus</td>
+<td align="left">omni</td>
+<td align="right">83</td>
+</tr>
+<tr class="odd">
+<td align="left">Mountain beaver</td>
+<td align="left">Aplodontia</td>
+<td align="left">herbi</td>
+<td align="right">83</td>
+</tr>
+<tr class="even">
+<td align="left">Greater short-tailed shrew</td>
+<td align="left">Blarina</td>
+<td align="left">omni</td>
+<td align="right">83</td>
+</tr>
+<tr class="odd">
+<td align="left">Cow</td>
+<td align="left">Bos</td>
+<td align="left">herbi</td>
+<td align="right">83</td>
+</tr>
+<tr class="even">
+<td align="left">Three-toed sloth</td>
+<td align="left">Bradypus</td>
+<td align="left">herbi</td>
+<td align="right">83</td>
+</tr>
+</tbody>
+</table>
+<p>La función <strong>add_count()</strong> toma como argumento una variable y crea una nueva columna con el número de observaciones para cada uno de sus niveles:</p>
+<pre class="r"><code>msleep %&gt;% 
+  select(name:vore) %&gt;% 
+  add_count(vore)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">genus</th>
+<th align="left">vore</th>
+<th align="right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Cheetah</td>
+<td align="left">Acinonyx</td>
+<td align="left">carni</td>
+<td align="right">19</td>
+</tr>
+<tr class="even">
+<td align="left">Owl monkey</td>
+<td align="left">Aotus</td>
+<td align="left">omni</td>
+<td align="right">20</td>
+</tr>
+<tr class="odd">
+<td align="left">Mountain beaver</td>
+<td align="left">Aplodontia</td>
+<td align="left">herbi</td>
+<td align="right">32</td>
+</tr>
+<tr class="even">
+<td align="left">Greater short-tailed shrew</td>
+<td align="left">Blarina</td>
+<td align="left">omni</td>
+<td align="right">20</td>
+</tr>
+<tr class="odd">
+<td align="left">Cow</td>
+<td align="left">Bos</td>
+<td align="left">herbi</td>
+<td align="right">32</td>
+</tr>
+<tr class="even">
+<td align="left">Three-toed sloth</td>
+<td align="left">Bradypus</td>
+<td align="left">herbi</td>
+<td align="right">32</td>
+</tr>
+<tr class="odd">
+<td align="left">Northern fur seal</td>
+<td align="left">Callorhinus</td>
+<td align="left">carni</td>
+<td align="right">19</td>
+</tr>
+<tr class="even">
+<td align="left">Vesper mouse</td>
+<td align="left">Calomys</td>
+<td align="left">NA</td>
+<td align="right">7</td>
+</tr>
+<tr class="odd">
+<td align="left">Dog</td>
+<td align="left">Canis</td>
+<td align="left">carni</td>
+<td align="right">19</td>
+</tr>
+<tr class="even">
+<td align="left">Roe deer</td>
+<td align="left">Capreolus</td>
+<td align="left">herbi</td>
+<td align="right">32</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="summarise---summarize" class="section level2">
+<h2>summarise() - summarize()</h2>
+<ul>
+<li><p><strong>Construyendo tablas de resumen</strong></p></li>
+<li><p>Nota: Algunas de las funciones en <strong>dplyr()</strong> son nombradas tanto en <strong>Ingles Americano</strong> como <strong>Ingles Británico</strong>. Así la función <strong>summarise()</strong> es equivalente a <strong>summarize()</strong>.</p></li>
+</ul>
+<p>Como ya observamos líneas antes; si el interés es conocer el número de observaciones, la función <code>count()</code> puede cumplir esa tarea. Pero si buscamos conocer el promedio, la suma, el mínimo, el máximo y el número de observaciones necesitaremos apoyarnos en otra función. La función <em>summarize()</em> permitirá alcanzar este objetivo. Esta función necesita como argumentos:</p>
+<ol style="list-style-type: decimal">
+<li>El nombre de la nueva columna.</li>
+<li>El operador de asignación igual <code>(&quot;=&quot;)</code>.</li>
+<li>La función que se desea aplicar sobre la variable.</li>
+</ol>
+<p><strong>data_frame %&gt;%
+summarise(nombre_columna = función(variable))</strong></p>
+<p>Es posible utilizar múltiples funciones, una seguida de otra:</p>
+<pre class="r"><code>msleep %&gt;% 
+  summarise(n = n(),
+            promedio = mean(sleep_total),
+            maximo = max(sleep_total))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">n</th>
+<th align="right">promedio</th>
+<th align="right">maximo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">83</td>
+<td align="right">10.43373</td>
+<td align="right">19.9</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="group_by" class="section level2">
+<h2>group_by()</h2>
+<p>En muchas oportunidades es necesario realizar un cambio en nuestra unidad de análisis, a fin de conocer los valores totales para cada uno de los niveles de una <strong>variable categórica</strong>. Para cumplir con esta tarea es necesario complementar el poder de la función <strong>summarize()</strong> con la función <strong>group_by()</strong>, esta permite modificar la unidad de análisis.</p>
+<p>Es posible utilizar más de una variable como argumento de la función <strong>group_by()</strong>.</p>
+<pre class="r"><code>msleep %&gt;% 
+  group_by(vore) %&gt;% 
+  summarise(n = n(),
+            average = mean(sleep_total), 
+            maximum = max(sleep_total))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">vore</th>
+<th align="right">n</th>
+<th align="right">average</th>
+<th align="right">maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">carni</td>
+<td align="right">19</td>
+<td align="right">10.378947</td>
+<td align="right">19.4</td>
+</tr>
+<tr class="even">
+<td align="left">herbi</td>
+<td align="right">32</td>
+<td align="right">9.509375</td>
+<td align="right">16.6</td>
+</tr>
+<tr class="odd">
+<td align="left">insecti</td>
+<td align="right">5</td>
+<td align="right">14.940000</td>
+<td align="right">19.9</td>
+</tr>
+<tr class="even">
+<td align="left">omni</td>
+<td align="right">20</td>
+<td align="right">10.925000</td>
+<td align="right">18.0</td>
+</tr>
+<tr class="odd">
+<td align="left">NA</td>
+<td align="right">7</td>
+<td align="right">10.185714</td>
+<td align="right">13.7</td>
+</tr>
+</tbody>
+</table>
+<p><strong>summarise()</strong> puede utilizar como argumento cualquier función que resuma en un valor una característica de un grupo de observaciones:</p>
+<ul>
+<li><p><code>n()</code> - determina el número de observaciones para cada uno de los niveles de una variable, <strong>No es necesario especificar un argumento</strong>.</p></li>
+<li><p><code>n_distinct(variable)</code> - determina el número de observaciones o niveles únicos de una <strong>variable</strong>.</p></li>
+<li><p><code>sum(variable)</code> suma, <code>max(variable)</code> máximo, <code>min(variable)</code> mínimo , …</p></li>
+<li><p><code>mean(variable)</code>, <code>median(variable)</code>, <code>sd(variable)</code>, <code>IQR(variable)</code>, …</p></li>
+</ul>
+<p>El ejemplo siguiente calcula el promedio de la variable <strong>sleep_total</strong> y lo divide por <strong>24</strong>, permitiéndonos determinar la proporción de horas de sueño por día. Esto para cada uno de los niveles de la variable <strong>vore</strong>.</p>
+<pre class="r"><code>msleep %&gt;% 
+  group_by(vore) %&gt;% 
+  summarise(avg_sleep_day = mean(sleep_total)/24)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">vore</th>
+<th align="right">avg_sleep_day</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">carni</td>
+<td align="right">0.4324561</td>
+</tr>
+<tr class="even">
+<td align="left">herbi</td>
+<td align="right">0.3962240</td>
+</tr>
+<tr class="odd">
+<td align="left">insecti</td>
+<td align="right">0.6225000</td>
+</tr>
+<tr class="even">
+<td align="left">omni</td>
+<td align="right">0.4552083</td>
+</tr>
+<tr class="odd">
+<td align="left">NA</td>
+<td align="right">0.4244048</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="variantes-de-la-funcion-summarize" class="section level2">
+<h2><strong>Variantes de la función summarize()</strong></h2>
+<p>Al igual que las funciónes <strong>filter(), select() y mutate())</strong>; <strong>summarise()</strong> tiene tres variantes que permiten trabajar sobre multiples columnas con un solo comando:</p>
+<div id="summarise_all" class="section level3">
+<h3>summarise_all()</h3>
+<p>Esta requiere como argumento una función conglomerante, la cual actuara sobre los elementos de una columna.</p>
+<p>El siguiente ejemplo calcula el promedio de cada una de las columnas, en ocasiones será necesario incluir como argumento <strong>na.rm = TRUE</strong> para ignorar las observaciones con valores <strong>NA</strong>.</p>
+<ul>
+<li>Sin considerar el argumento <strong>na.rm</strong></li>
+</ul>
+<pre class="r"><code>msleep %&gt;% 
+   select_if( is.numeric) %&gt;%  
+   summarise_all(mean) </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">sleep_total</th>
+<th align="right">sleep_rem</th>
+<th align="right">sleep_cycle</th>
+<th align="right">awake</th>
+<th align="right">brainwt</th>
+<th align="right">bodywt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">10.43373</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">13.56747</td>
+<td align="right">NA</td>
+<td align="right">166.1363</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Ignorando los valores <strong>NA</strong></li>
+</ul>
+<pre class="r"><code>msleep %&gt;% 
+   select_if( is.numeric) %&gt;%  
+   summarise_all(mean, narm = TRUE) </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">sleep_total</th>
+<th align="right">sleep_rem</th>
+<th align="right">sleep_cycle</th>
+<th align="right">awake</th>
+<th align="right">brainwt</th>
+<th align="right">bodywt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">10.43373</td>
+<td align="right">1.87541</td>
+<td align="right">0.4395833</td>
+<td align="right">13.56747</td>
+<td align="right">0.2815814</td>
+<td align="right">166.1363</td>
+</tr>
+</tbody>
+</table>
+<p>Utilizando las funciones <strong>group_by()</strong> y <strong>summarize()</strong>. El siguiente ejemplo retorna el promedio de todas las variables para cada uno de los niveles de la variable <strong>vore</strong>.</p>
+<pre class="r"><code>msleep %&gt;% 
+  group_by(vore) %&gt;% 
+  summarise_all(mean, na.rm = TRUE) %&gt;% 
+  select(-c(2:5))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">vore</th>
+<th align="right">sleep_total</th>
+<th align="right">sleep_rem</th>
+<th align="right">sleep_cycle</th>
+<th align="right">awake</th>
+<th align="right">brainwt</th>
+<th align="right">bodywt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">carni</td>
+<td align="right">10.378947</td>
+<td align="right">2.290000</td>
+<td align="right">0.3733333</td>
+<td align="right">13.62632</td>
+<td align="right">0.0792556</td>
+<td align="right">90.75111</td>
+</tr>
+<tr class="even">
+<td align="left">herbi</td>
+<td align="right">9.509375</td>
+<td align="right">1.366667</td>
+<td align="right">0.4180556</td>
+<td align="right">14.49062</td>
+<td align="right">0.6215975</td>
+<td align="right">366.87725</td>
+</tr>
+<tr class="odd">
+<td align="left">insecti</td>
+<td align="right">14.940000</td>
+<td align="right">3.525000</td>
+<td align="right">0.1611111</td>
+<td align="right">9.06000</td>
+<td align="right">0.0215500</td>
+<td align="right">12.92160</td>
+</tr>
+<tr class="even">
+<td align="left">omni</td>
+<td align="right">10.925000</td>
+<td align="right">1.955556</td>
+<td align="right">0.5924242</td>
+<td align="right">13.07500</td>
+<td align="right">0.1457312</td>
+<td align="right">12.71800</td>
+</tr>
+<tr class="odd">
+<td align="left">NA</td>
+<td align="right">10.185714</td>
+<td align="right">1.880000</td>
+<td align="right">0.1833333</td>
+<td align="right">13.81429</td>
+<td align="right">0.0076260</td>
+<td align="right">0.85800</td>
+</tr>
+</tbody>
+</table>
+<p>El argumento utilizado como instrucción para generar agrupar (resumir las observaciones) tiene que ser una función. Cuando no se tenga una función predeterminada en el ambiente de R o como parte de un paquete, es posible construir una función anónima.</p>
+<p>El siguiente ejemplo incremente en 5 al promedio de cada una de las columnas del data.frame. La función anónima que nos permita cumplir esta tarea puede ser construida de las siguientes formas: <strong>funs(mean(., na.rm = TRUE) + 5)</strong>, o : <strong>~mean(., na.rm = TRUE) + 5</strong>.</p>
+<pre class="r"><code>msleep %&gt;%
+  group_by(vore) %&gt;% 
+  summarise_all(~mean(., na.rm = TRUE) + 5) </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">vore</th>
+<th align="right">sleep_total</th>
+<th align="right">sleep_rem</th>
+<th align="right">sleep_cycle</th>
+<th align="right">awake</th>
+<th align="right">brainwt</th>
+<th align="right">bodywt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">carni</td>
+<td align="right">15.37895</td>
+<td align="right">7.290000</td>
+<td align="right">5.373333</td>
+<td align="right">18.62632</td>
+<td align="right">5.079256</td>
+<td align="right">95.75111</td>
+</tr>
+<tr class="even">
+<td align="left">herbi</td>
+<td align="right">14.50938</td>
+<td align="right">6.366667</td>
+<td align="right">5.418056</td>
+<td align="right">19.49063</td>
+<td align="right">5.621598</td>
+<td align="right">371.87725</td>
+</tr>
+<tr class="odd">
+<td align="left">insecti</td>
+<td align="right">19.94000</td>
+<td align="right">8.525000</td>
+<td align="right">5.161111</td>
+<td align="right">14.06000</td>
+<td align="right">5.021550</td>
+<td align="right">17.92160</td>
+</tr>
+<tr class="even">
+<td align="left">omni</td>
+<td align="right">15.92500</td>
+<td align="right">6.955556</td>
+<td align="right">5.592424</td>
+<td align="right">18.07500</td>
+<td align="right">5.145731</td>
+<td align="right">17.71800</td>
+</tr>
+<tr class="odd">
+<td align="left">NA</td>
+<td align="right">15.18571</td>
+<td align="right">6.880000</td>
+<td align="right">5.183333</td>
+<td align="right">18.81429</td>
+<td align="right">5.007626</td>
+<td align="right">5.85800</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="summarise_if" class="section level3">
+<h3>summarise_if()</h3>
+<p>Esta función necesita dos argumentos:</p>
+<ul>
+<li><p>Primero necesitamos información referente a las columnas que serán considerada. Esta información es obtenida mediante una función cuyos resultados son valores boléanos (<strong>TRUE, FALSE</strong>). Los funciones más frecuentes: <code>is.numeric</code>, <code>is.integer</code>, <code>is.double</code>, <code>is.logical</code>, <code>is.factor</code>, <code>lubridate::is.POSIXt</code> o <code>lubridate::is.Date</code>.</p></li>
+<li><p>Segundo, es necesaria una función conglomerante predeterminada (mean, sum, …) o una función anónima construida con mediante la función <strong>funs()</strong> o el operador <strong>~</strong>.</p></li>
+</ul>
+<p>El ejemplo retorna el promedio de todas las variables numéricas agrupadas mediante la variable <code>vore</code>:</p>
+<pre class="r"><code>msleep %&gt;% 
+  group_by(vore) %&gt;% 
+  summarise_if(is.numeric, mean, na.rm=TRUE)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">vore</th>
+<th align="right">sleep_total</th>
+<th align="right">sleep_rem</th>
+<th align="right">sleep_cycle</th>
+<th align="right">awake</th>
+<th align="right">brainwt</th>
+<th align="right">bodywt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">carni</td>
+<td align="right">10.378947</td>
+<td align="right">2.290000</td>
+<td align="right">0.3733333</td>
+<td align="right">13.62632</td>
+<td align="right">0.0792556</td>
+<td align="right">90.75111</td>
+</tr>
+<tr class="even">
+<td align="left">herbi</td>
+<td align="right">9.509375</td>
+<td align="right">1.366667</td>
+<td align="right">0.4180556</td>
+<td align="right">14.49062</td>
+<td align="right">0.6215975</td>
+<td align="right">366.87725</td>
+</tr>
+<tr class="odd">
+<td align="left">insecti</td>
+<td align="right">14.940000</td>
+<td align="right">3.525000</td>
+<td align="right">0.1611111</td>
+<td align="right">9.06000</td>
+<td align="right">0.0215500</td>
+<td align="right">12.92160</td>
+</tr>
+<tr class="even">
+<td align="left">omni</td>
+<td align="right">10.925000</td>
+<td align="right">1.955556</td>
+<td align="right">0.5924242</td>
+<td align="right">13.07500</td>
+<td align="right">0.1457312</td>
+<td align="right">12.71800</td>
+</tr>
+<tr class="odd">
+<td align="left">NA</td>
+<td align="right">10.185714</td>
+<td align="right">1.880000</td>
+<td align="right">0.1833333</td>
+<td align="right">13.81429</td>
+<td align="right">0.0076260</td>
+<td align="right">0.85800</td>
+</tr>
+</tbody>
+</table>
+<p>Uno de los puntos débiles de las funciones conglomerantes es que podemos estar expuestos a confusión, al no saber qué información es la que se obtiene como resultado. Afortunadamente la función <code>rename_*()</code> nos permite renombrar el nombre de cada una de las columnas:</p>
+<pre class="r"><code>msleep %&gt;% 
+  group_by(vore) %&gt;% 
+  summarise_if(is.numeric, mean, na.rm=TRUE) %&gt;% 
+  rename_if(is.numeric, ~paste0(&quot;promedio_&quot;, .))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">vore</th>
+<th align="right">promedio_sleep_total</th>
+<th align="right">promedio_sleep_rem</th>
+<th align="right">promedio_sleep_cycle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">carni</td>
+<td align="right">10.378947</td>
+<td align="right">2.290000</td>
+<td align="right">0.3733333</td>
+</tr>
+<tr class="even">
+<td align="left">herbi</td>
+<td align="right">9.509375</td>
+<td align="right">1.366667</td>
+<td align="right">0.4180556</td>
+</tr>
+<tr class="odd">
+<td align="left">insecti</td>
+<td align="right">14.940000</td>
+<td align="right">3.525000</td>
+<td align="right">0.1611111</td>
+</tr>
+<tr class="even">
+<td align="left">omni</td>
+<td align="right">10.925000</td>
+<td align="right">1.955556</td>
+<td align="right">0.5924242</td>
+</tr>
+<tr class="odd">
+<td align="left">NA</td>
+<td align="right">10.185714</td>
+<td align="right">1.880000</td>
+<td align="right">0.1833333</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="summarise_at" class="section level3">
+<h3>summarise_at()</h3>
+<p>Esta variante también requiere de dos argumentos:</p>
+<ol style="list-style-type: decimal">
+<li><p>El nombre de las columnas que serán consideradas, estas deberán estar incluidos como argumentos de la función <strong>vars()</strong>.</p></li>
+<li><p>Adicionalmente, es necesario indicar cual será la función conglomerante que actuara sobre las variables seleccionadas.</p></li>
+</ol>
+<p>El ejemplo siguiente proporciona como resultado el promedio de los valores de las columnas cuyos nombres contengan la palabra <strong>sleep</strong> y también renombran estas columnas <strong>promedio_variable</strong> para clarificar la información:</p>
+<pre class="r"><code>msleep %&gt;%
+  group_by(vore) %&gt;% 
+  summarise_at(vars(contains(&quot;sleep&quot;)), mean, na.rm=TRUE) %&gt;%
+  rename_at(vars(contains(&quot;sleep&quot;)), ~paste0(&quot;promedio_&quot;, .))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">vore</th>
+<th align="right">promedio_sleep_total</th>
+<th align="right">promedio_sleep_rem</th>
+<th align="right">promedio_sleep_cycle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">carni</td>
+<td align="right">10.378947</td>
+<td align="right">2.290000</td>
+<td align="right">0.3733333</td>
+</tr>
+<tr class="even">
+<td align="left">herbi</td>
+<td align="right">9.509375</td>
+<td align="right">1.366667</td>
+<td align="right">0.4180556</td>
+</tr>
+<tr class="odd">
+<td align="left">insecti</td>
+<td align="right">14.940000</td>
+<td align="right">3.525000</td>
+<td align="right">0.1611111</td>
+</tr>
+<tr class="even">
+<td align="left">omni</td>
+<td align="right">10.925000</td>
+<td align="right">1.955556</td>
+<td align="right">0.5924242</td>
+</tr>
+<tr class="odd">
+<td align="left">NA</td>
+<td align="right">10.185714</td>
+<td align="right">1.880000</td>
+<td align="right">0.1833333</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="ordenamiento-de-filas" class="section level3">
+<h3>Ordenamiento de filas</h3>
+<p>En muchas oportunidades es útil que nuestras tablas de resumen estén ordenadas, la función <strong>arrange()</strong> nos permite cumplir con esta tarea. El resultado de esta función ordena los valores en forma ascendente, pero es posible también ordenarlos de forma descendente incluyendo la función <strong>desc()</strong>:</p>
+<p>Ordenando variables numéricas:<br />
+<strong>arrange(sleep_total)</strong> Ordena los tiempo en forma ascendente:</p>
+<pre class="r"><code>msleep %&gt;% 
+  group_by(vore) %&gt;% 
+  summarise(avg_sleep = mean(sleep_total)) %&gt;% 
+  arrange(avg_sleep)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">vore</th>
+<th align="right">avg_sleep</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">herbi</td>
+<td align="right">9.509375</td>
+</tr>
+<tr class="even">
+<td align="left">NA</td>
+<td align="right">10.185714</td>
+</tr>
+<tr class="odd">
+<td align="left">carni</td>
+<td align="right">10.378947</td>
+</tr>
+<tr class="even">
+<td align="left">omni</td>
+<td align="right">10.925000</td>
+</tr>
+<tr class="odd">
+<td align="left">insecti</td>
+<td align="right">14.940000</td>
+</tr>
+</tbody>
+</table>
+<p>El resultado opuesto puede ser obtenido mediante:</p>
+<pre class="r"><code>msleep %&gt;% 
+  group_by(vore) %&gt;% 
+  summarise(avg_sleep = mean(sleep_total)) %&gt;% 
+  arrange(avg_sleep)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">vore</th>
+<th align="right">avg_sleep</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">herbi</td>
+<td align="right">9.509375</td>
+</tr>
+<tr class="even">
+<td align="left">NA</td>
+<td align="right">10.185714</td>
+</tr>
+<tr class="odd">
+<td align="left">carni</td>
+<td align="right">10.378947</td>
+</tr>
+<tr class="even">
+<td align="left">omni</td>
+<td align="right">10.925000</td>
+</tr>
+<tr class="odd">
+<td align="left">insecti</td>
+<td align="right">14.940000</td>
+</tr>
+</tbody>
+</table>
+<p>Si los datos están siendo analizados en función de los niveles de alguna variable específica, es posible ordenarlos agregando el argumento <strong>.by_group = TRUE</strong> a la función <strong>arrange()</strong>:</p>
+<pre class="r"><code>msleep %&gt;% 
+  select(vore, sleep_total) %&gt;% 
+  group_by(vore) %&gt;% 
+  arrange(desc(sleep_total), .by_group = TRUE)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">vore</th>
+<th align="right">sleep_total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">carni</td>
+<td align="right">19.4</td>
+</tr>
+<tr class="even">
+<td align="left">carni</td>
+<td align="right">17.4</td>
+</tr>
+<tr class="odd">
+<td align="left">carni</td>
+<td align="right">15.8</td>
+</tr>
+<tr class="even">
+<td align="left">carni</td>
+<td align="right">14.5</td>
+</tr>
+<tr class="odd">
+<td align="left">carni</td>
+<td align="right">13.5</td>
+</tr>
+<tr class="even">
+<td align="left">carni</td>
+<td align="right">12.5</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th align="left">vore</th>
+<th align="right">sleep_total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">herbi</td>
+<td align="right">16.6</td>
+</tr>
+<tr class="even">
+<td align="left">herbi</td>
+<td align="right">15.9</td>
+</tr>
+<tr class="odd">
+<td align="left">herbi</td>
+<td align="right">15.8</td>
+</tr>
+<tr class="even">
+<td align="left">herbi</td>
+<td align="right">14.9</td>
+</tr>
+<tr class="odd">
+<td align="left">herbi</td>
+<td align="right">14.6</td>
+</tr>
+<tr class="even">
+<td align="left">herbi</td>
+<td align="right">14.4</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Trabajando con partes de nuestro data.frame</strong></li>
+</ul>
+<p>En algunos casos nuestro objetivo es trabajar con partes de nuestros datos, algunas de las funciones que nos ayudaran con esta tarea:</p>
+</div>
+<div id="los-n-valores-mas-altos-y-bajos" class="section level3">
+<h3>Los <strong>n</strong> valores más altos y bajos:</h3>
+<p>Si deseas conocer los <strong>5</strong> valores más altos del promedio de la variable <strong>sleep_total</strong></p>
+<pre class="r"><code>msleep %&gt;% 
+  group_by(order) %&gt;% 
+  summarise(average = mean(sleep_total)) %&gt;% 
+  top_n(5) %&gt;% 
+  arrange(desc(average))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">order</th>
+<th align="right">average</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Chiroptera</td>
+<td align="right">19.80</td>
+</tr>
+<tr class="even">
+<td align="left">Didelphimorphia</td>
+<td align="right">18.70</td>
+</tr>
+<tr class="odd">
+<td align="left">Cingulata</td>
+<td align="right">17.75</td>
+</tr>
+<tr class="even">
+<td align="left">Afrosoricida</td>
+<td align="right">15.60</td>
+</tr>
+<tr class="odd">
+<td align="left">Pilosa</td>
+<td align="right">14.40</td>
+</tr>
+</tbody>
+</table>
+<p>Los <code>5</code> valores más bajos pueden ser recuperados con la ayuda de: <code>top_n(-5)</code>:</p>
+<pre class="r"><code>msleep %&gt;% 
+  group_by(order) %&gt;% 
+  summarise(average = mean(sleep_total)) %&gt;% 
+  top_n(-5) %&gt;% 
+  arrange(desc(average))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">order</th>
+<th align="right">average</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Hyracoidea</td>
+<td align="right">5.666667</td>
+</tr>
+<tr class="even">
+<td align="left">Artiodactyla</td>
+<td align="right">4.516667</td>
+</tr>
+<tr class="odd">
+<td align="left">Cetacea</td>
+<td align="right">4.500000</td>
+</tr>
+<tr class="even">
+<td align="left">Proboscidea</td>
+<td align="right">3.600000</td>
+</tr>
+<tr class="odd">
+<td align="left">Perissodactyla</td>
+<td align="right">3.466667</td>
+</tr>
+</tbody>
+</table>
+<p>Si tienes más de una columna, es posible agregar como argumento el nombre de la variable de la cual se quiere recuperar la información:</p>
+<pre class="r"><code>msleep %&gt;% 
+  group_by(order) %&gt;% 
+  summarise(average_sleep = mean(sleep_total),
+            max_sleep = max(sleep_total)) %&gt;% 
+  top_n(5, average_sleep)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">order</th>
+<th align="right">average_sleep</th>
+<th align="right">max_sleep</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Afrosoricida</td>
+<td align="right">15.60</td>
+<td align="right">15.6</td>
+</tr>
+<tr class="even">
+<td align="left">Chiroptera</td>
+<td align="right">19.80</td>
+<td align="right">19.9</td>
+</tr>
+<tr class="odd">
+<td align="left">Cingulata</td>
+<td align="right">17.75</td>
+<td align="right">18.1</td>
+</tr>
+<tr class="even">
+<td align="left">Didelphimorphia</td>
+<td align="right">18.70</td>
+<td align="right">19.4</td>
+</tr>
+<tr class="odd">
+<td align="left">Pilosa</td>
+<td align="right">14.40</td>
+<td align="right">14.4</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="muestreo-aleatoria-de-filas" class="section level3">
+<h3>Muestreo aleatoria de filas:</h3>
+<p>Mediante la función <strong>sample_n()</strong> es posible tomar una muestra aleatoria de <strong>n</strong> filas de nuestro data.frame.</p>
+<pre class="r"><code>msleep %&gt;% 
+  sample_n(6) %&gt;% 
+  select_if(is.character)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">genus</th>
+<th align="left">vore</th>
+<th align="left">order</th>
+<th align="left">conservation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Patas monkey</td>
+<td align="left">Erythrocebus</td>
+<td align="left">omni</td>
+<td align="left">Primates</td>
+<td align="left">lc</td>
+</tr>
+<tr class="even">
+<td align="left">Donkey</td>
+<td align="left">Equus</td>
+<td align="left">herbi</td>
+<td align="left">Perissodactyla</td>
+<td align="left">domesticated</td>
+</tr>
+<tr class="odd">
+<td align="left">Arctic fox</td>
+<td align="left">Vulpes</td>
+<td align="left">carni</td>
+<td align="left">Carnivora</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Vesper mouse</td>
+<td align="left">Calomys</td>
+<td align="left">NA</td>
+<td align="left">Rodentia</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Degu</td>
+<td align="left">Octodon</td>
+<td align="left">herbi</td>
+<td align="left">Rodentia</td>
+<td align="left">lc</td>
+</tr>
+<tr class="even">
+<td align="left">Golden hamster</td>
+<td align="left">Mesocricetus</td>
+<td align="left">herbi</td>
+<td align="left">Rodentia</td>
+<td align="left">en</td>
+</tr>
+</tbody>
+</table>
+<p>Una variante de esta función nos permite recuperar una fracción de las filas del data.frame, <strong>sample_frac()</strong>. El siguiente ejemplo recupera el <strong>10%</strong> de las filas de nuestra base de datos.</p>
+<pre class="r"><code>msleep %&gt;% 
+  sample_frac(.1) %&gt;% 
+  select_if(is.numeric)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">sleep_total</th>
+<th align="right">sleep_rem</th>
+<th align="right">sleep_cycle</th>
+<th align="right">awake</th>
+<th align="right">brainwt</th>
+<th align="right">bodywt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">3.5</td>
+<td align="right">0.4</td>
+<td align="right">NA</td>
+<td align="right">20.50</td>
+<td align="right">NA</td>
+<td align="right">86.000</td>
+</tr>
+<tr class="even">
+<td align="right">2.7</td>
+<td align="right">0.1</td>
+<td align="right">NA</td>
+<td align="right">21.35</td>
+<td align="right">NA</td>
+<td align="right">800.000</td>
+</tr>
+<tr class="odd">
+<td align="right">3.3</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">20.70</td>
+<td align="right">5.7120</td>
+<td align="right">6654.000</td>
+</tr>
+<tr class="even">
+<td align="right">8.9</td>
+<td align="right">2.6</td>
+<td align="right">0.2333333</td>
+<td align="right">15.10</td>
+<td align="right">0.0025</td>
+<td align="right">0.104</td>
+</tr>
+<tr class="odd">
+<td align="right">16.6</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">7.40</td>
+<td align="right">0.0057</td>
+<td align="right">0.920</td>
+</tr>
+<tr class="even">
+<td align="right">8.7</td>
+<td align="right">1.4</td>
+<td align="right">0.3833333</td>
+<td align="right">15.30</td>
+<td align="right">NA</td>
+<td align="right">20.490</td>
+</tr>
+<tr class="odd">
+<td align="right">17.4</td>
+<td align="right">3.1</td>
+<td align="right">0.3833333</td>
+<td align="right">6.60</td>
+<td align="right">0.0108</td>
+<td align="right">3.500</td>
+</tr>
+<tr class="even">
+<td align="right">7.0</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">17.00</td>
+<td align="right">NA</td>
+<td align="right">0.045</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="filas-especificas" class="section level3">
+<h3>Filas específicas:</h3>
+<p>Las funciones <strong>head()</strong> y <strong>tail()</strong> permiten recuperar las <strong>6</strong> primeras y últimas filas del data.frame, respectivamente. Esto puede ser modificado usando como argumento <strong>n = x</strong> en ambas funciones.</p>
+<p>Si deseamos examinar filas de la parte media de nuestro dataframe la función <strong>slice()</strong> nos permite recuperar estas filas. El ejemplo muestra cono recuperar las filas <strong>50</strong> a la <strong>55</strong>.</p>
+<pre class="r"><code>msleep %&gt;% 
+  slice(50:55) %&gt;% 
+  select(- c(2:5))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="right">sleep_total</th>
+<th align="right">sleep_rem</th>
+<th align="right">sleep_cycle</th>
+<th align="right">awake</th>
+<th align="right">brainwt</th>
+<th align="right">bodywt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Chimpanzee</td>
+<td align="right">9.7</td>
+<td align="right">1.4</td>
+<td align="right">1.4166667</td>
+<td align="right">14.3</td>
+<td align="right">0.4400</td>
+<td align="right">52.200</td>
+</tr>
+<tr class="even">
+<td align="left">Tiger</td>
+<td align="right">15.8</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">8.2</td>
+<td align="right">NA</td>
+<td align="right">162.564</td>
+</tr>
+<tr class="odd">
+<td align="left">Jaguar</td>
+<td align="right">10.4</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">13.6</td>
+<td align="right">0.1570</td>
+<td align="right">100.000</td>
+</tr>
+<tr class="even">
+<td align="left">Lion</td>
+<td align="right">13.5</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">10.5</td>
+<td align="right">NA</td>
+<td align="right">161.499</td>
+</tr>
+<tr class="odd">
+<td align="left">Baboon</td>
+<td align="right">9.4</td>
+<td align="right">1.0</td>
+<td align="right">0.6666667</td>
+<td align="right">14.6</td>
+<td align="right">0.1800</td>
+<td align="right">25.235</td>
+</tr>
+<tr class="even">
+<td align="left">Desert hedgehog</td>
+<td align="right">10.3</td>
+<td align="right">2.7</td>
+<td align="right">NA</td>
+<td align="right">13.7</td>
+<td align="right">0.0024</td>
+<td align="right">0.550</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="referencias" class="section level2">
+<h2>Referencias:</h2>
+<ol style="list-style-type: decimal">
+<li>Basado en el tutorial de <a href="https://suzan.rbind.io/2018/04/dplyr-tutorial-4/">Suzan Baert</a>: <strong>Data Wrangling Part 4: Summarizing and slicing your data</strong></li>
+</ol>
+</div>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev">&larr; <a href="/post/2018/11/21/data-wrangling-part-3/">Data Wrangling Part 3</a></span>
+  <span class="nav-next"></span>
+</nav>
+
+
+
+<section class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var disqus_js = '//Paul Efren notes....disqus.com/embed.js';
+    var d = document, s = d.createElement('script');
+    s.src = disqus_js; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+<script src="//yihui.name/js/math-code.js"></script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">&copy; PaulESA 2018 | <a href="https://github.com/PaulESantos">Github</a> | <a href="https://twitter.com/PaulEfrenSantos">Twitter</a> |Powered by the <a href="https://ivy.yihui.name/">Ivy theme</a> for <a href="https://gohugo.io/">Hugo</a></div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+
