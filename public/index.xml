@@ -29,7 +29,7 @@ glimpse(msleep)## Observations: 83## Variables: 11## $ name &amp;lt;chr&amp;g
       <guid>/post/2018/11/21/data-wrangling-part-3/</guid>
       <description>Esta es la tercera parte de la serie Data Wrangling.
 Las librerias:library(tidyverse)La base de datos:Continuaremos trabajando con la información contenida en la base de datos msleep. Con la finalidad de facilitar la reproductibilidad del código usado en este tutorial.
-data(&amp;quot;msleep&amp;quot;)glimpse(msleep)## Observations: 83## Variables: 11## $ name &amp;lt;chr&amp;gt; &amp;quot;Cheetah&amp;quot;, &amp;quot;Owl monkey&amp;quot;, &amp;quot;Mountain beaver&amp;quot;, &amp;quot;Grea...## $ genus &amp;lt;chr&amp;gt; &amp;quot;Acinonyx&amp;quot;, &amp;quot;Aotus&amp;quot;, &amp;quot;Aplodontia&amp;quot;, &amp;quot;Blarina&amp;quot;, &amp;quot;Bo...## $ vore &amp;lt;chr&amp;gt; &amp;quot;carni&amp;quot;, &amp;quot;omni&amp;quot;, &amp;quot;herbi&amp;quot;, &amp;quot;omni&amp;quot;, &amp;quot;herbi&amp;quot;, &amp;quot;herbi.</description>
+data(&amp;quot;msleep&amp;quot;)glimpse(msleep)## Observations: 83## Variables: 11## $ name &amp;lt;chr&amp;gt; &amp;quot;Cheetah&amp;quot;, &amp;quot;Owl monkey&amp;quot;, &amp;quot;Mountain beaver&amp;quot;, &amp;quot;Grea...## $ genus &amp;lt;chr&amp;gt; &amp;quot;Acinonyx&amp;quot;, &amp;quot;Aotus&amp;quot;, &amp;quot;Aplodontia&amp;quot;, &amp;quot;Blarina&amp;quot;, &amp;quot;Bo.</description>
     </item>
     
     <item>
@@ -60,7 +60,7 @@ library(tidyverse)glimpse(msleep)## Observations: 83## Variables: 11## $ nam
       
       <guid>/post/2018/10/05/%C3%ADndice-valor-importancia/</guid>
       <description>Los paquetes en R:tidyverse proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.#install.packages(&amp;quot;tidyverse&amp;quot;)#install.packages(&amp;quot;knitr&amp;quot;)library(tidyverse)library(knitr)La base de datos:Para este ejemplo modificamos la información de la base de datos BCI del paquete vegan.
-ParcelaEspecieDAPArea basal1Alchornea.costaricensis24.059572642.40891Alchornea.costaricensis55.007832532.62621Alseis.</description>
+ParcelaEspecieDAPArea basal1Alchornea.costaricensis58.203991537.50701Alchornea.costaricensis34.17312628.70201Alseis.</description>
     </item>
     
     <item>
@@ -91,7 +91,7 @@ La paqueteria:Los paquetes o librerías permiten ampliar las capacidades de R p
       <guid>/post/2018/09/07/intervalos-de-confianza/</guid>
       <description>This is a modification of a blog written by Sean Kross, using tidyverse.
 Esta es una modificación de un blog escrito por Sean Kross1, utilizando tidyverse2.
-Imagina que estás buscando estimar el promedio de una alguna característica de una población.Conformada por 100 000 individuos.set.seed(2016-05-04)poblacion &amp;lt;- data_frame( individuo = seq(1,100000),caracteristica = runif(100000))IndividuoCaracteristicaIndividuoCaracteristica10.6770751999950.</description>
+Imagina que estás buscando estimar el promedio de una alguna característica de una población.Conformada por 100 000 individuos.set.seed(2016-05-04)poblacion &amp;lt;- data_frame( individuo = seq(1,100000),caracteristica = runif(100000))IndividuoCaracteristicaIndividuoCaracteristica10.</description>
     </item>
     
     <item>
@@ -114,7 +114,7 @@ I have worked in tropical forest ecology since 2013. I have gained experience in
 Twitter PaulEfrenSantos
 InterestsOpen Science.Data Managing.Data visualization.Plant Ecology.Functional Traits.EDUCATION:2014 Bachelor on Biological Science. Universidad Nacional San Antonio Abad del Cusco.
 2016 Biologist. Universidad Nacional San Antonio Abad del Cusco.
-POST GRADUATE COURSES:2013 Why and how to measure functional characters of plants? - A practical introduction, University of Oxford and Núcleo Diversus.</description>
+POST GRADUATE COURSES:2013 Why and how to measure functional characters of plants?</description>
     </item>
     
   </channel>

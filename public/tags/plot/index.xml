@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Plot on  Paul Efren...</title>
+    <title>plot on  Paul Efren...</title>
     <link>/tags/plot/</link>
-    <description>Recent content in Plot on  Paul Efren...</description>
+    <description>Recent content in plot on  Paul Efren...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 07 Sep 2018 00:00:00 +0000</lastBuildDate>
@@ -19,7 +19,7 @@
       <guid>/post/2018/09/07/intervalos-de-confianza/</guid>
       <description>This is a modification of a blog written by Sean Kross, using tidyverse.
 Esta es una modificación de un blog escrito por Sean Kross1, utilizando tidyverse2.
-Imagina que estás buscando estimar el promedio de una alguna característica de una población.Conformada por 100 000 individuos.set.seed(2016-05-04)poblacion &amp;lt;- data_frame( individuo = seq(1,100000),caracteristica = runif(100000))IndividuoCaracteristicaIndividuoCaracteristica10.6770751999950.</description>
+Imagina que estás buscando estimar el promedio de una alguna característica de una población.Conformada por 100 000 individuos.set.seed(2016-05-04)poblacion &amp;lt;- data_frame( individuo = seq(1,100000),caracteristica = runif(100000))IndividuoCaracteristicaIndividuoCaracteristica10.</description>
     </item>
     
   </channel>
