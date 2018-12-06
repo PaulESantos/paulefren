@@ -1,0 +1,2035 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 3.2.0">
+  <meta name="generator" content="Hugo 0.52" />
+  <meta name="author" content="Paul Efren Santos Andrade">
+
+  
+  
+  
+  
+    
+  
+  <meta name="description" content="La base de datos:La base de datos que usaremos es msleep es pate del paquete ggplot2, trabajar con esta permitirá que el código puede ser reproducido con facilidad.
+Para conocer más de acerca de la base de datos msleep, se puede consultar (pdf) o se puede obtener la ayuda de R ?msleep
+Uno de los primeros pasos cuando tenemos nuestros datos en R es evaluar la estructura de nuestra base de datos:">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/2018-11-12-data_wrangling_1/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#328cc1">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="DataScience &amp; Biology">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="DataScience &amp; Biology">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/2018-11-12-data_wrangling_1/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@@PaulEfrenSantos">
+  <meta property="twitter:creator" content="@@PaulEfrenSantos">
+  
+  <meta property="og:site_name" content="DataScience &amp; Biology">
+  <meta property="og:url" content="/post/2018-11-12-data_wrangling_1/">
+  <meta property="og:title" content="Data Wrangling Part 1 | DataScience &amp; Biology">
+  <meta property="og:description" content="La base de datos:La base de datos que usaremos es msleep es pate del paquete ggplot2, trabajar con esta permitirá que el código puede ser reproducido con facilidad.
+Para conocer más de acerca de la base de datos msleep, se puede consultar (pdf) o se puede obtener la ayuda de R ?msleep
+Uno de los primeros pasos cuando tenemos nuestros datos en R es evaluar la estructura de nuestra base de datos:"><meta property="og:image" content="/img/paul_efren.JPG">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-11-12T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-11-12T00:00:00&#43;00:00">
+  
+
+  
+
+  <link rel="stylesheet" href="/css/custom.css" />
+
+
+  <title>Data Wrangling Part 1 | DataScience &amp; Biology</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">DataScience &amp; Biology</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#publications_selected">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#cv">
+            
+            <span>CV</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Data Wrangling Part 1</h1>
+
+  
+  <p class="page-subtitle">Selección de Columnas</p>
+  
+
+  
+    
+
+<div class="article-metadata">
+
+  
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Paul Efren Santos Andrade">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="2018-11-12 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    <time datetime="2018-11-12 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+      Nov 12, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Paul Efren Santos Andrade">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    9 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/post/2018-11-12-data_wrangling_1/#disqus_thread"></a>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    
+    <a href="/categories/r/">R</a>
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Data%20Wrangling%20Part%201&amp;url=%2fpost%2f2018-11-12-data_wrangling_1%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2f2018-11-12-data_wrangling_1%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2f2018-11-12-data_wrangling_1%2f&amp;title=Data%20Wrangling%20Part%201"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2f2018-11-12-data_wrangling_1%2f&amp;title=Data%20Wrangling%20Part%201"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Data%20Wrangling%20Part%201&amp;body=%2fpost%2f2018-11-12-data_wrangling_1%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+
+<div id="la-base-de-datos" class="section level2">
+<h2>La base de datos:</h2>
+<p>La base de datos que usaremos es <strong>msleep</strong> es pate del paquete <strong>ggplot2</strong>, trabajar con esta permitirá que el código puede ser reproducido con facilidad.</p>
+<p>Para conocer más de acerca de la base de datos <strong>msleep</strong>, se puede consultar <a href="http://www.pnas.org/content/pnas/104/3/1051.full.pdf">(pdf)</a> o se puede obtener la ayuda de R <strong>?msleep</strong></p>
+<p>Uno de los primeros pasos cuando tenemos nuestros datos en R es evaluar la estructura de nuestra base de datos:</p>
+<pre class="r"><code>glimpse(msleep)</code></pre>
+<pre><code>## Observations: 83
+## Variables: 11
+## $ name         &lt;chr&gt; &quot;Cheetah&quot;, &quot;Owl monkey&quot;, &quot;Mountain beaver&quot;, &quot;Grea...
+## $ genus        &lt;chr&gt; &quot;Acinonyx&quot;, &quot;Aotus&quot;, &quot;Aplodontia&quot;, &quot;Blarina&quot;, &quot;Bo...
+## $ vore         &lt;chr&gt; &quot;carni&quot;, &quot;omni&quot;, &quot;herbi&quot;, &quot;omni&quot;, &quot;herbi&quot;, &quot;herbi...
+## $ order        &lt;chr&gt; &quot;Carnivora&quot;, &quot;Primates&quot;, &quot;Rodentia&quot;, &quot;Soricomorph...
+## $ conservation &lt;chr&gt; &quot;lc&quot;, NA, &quot;nt&quot;, &quot;lc&quot;, &quot;domesticated&quot;, NA, &quot;vu&quot;, N...
+## $ sleep_total  &lt;dbl&gt; 12.1, 17.0, 14.4, 14.9, 4.0, 14.4, 8.7, 7.0, 10.1...
+## $ sleep_rem    &lt;dbl&gt; NA, 1.8, 2.4, 2.3, 0.7, 2.2, 1.4, NA, 2.9, NA, 0....
+## $ sleep_cycle  &lt;dbl&gt; NA, NA, NA, 0.1333333, 0.6666667, 0.7666667, 0.38...
+## $ awake        &lt;dbl&gt; 11.9, 7.0, 9.6, 9.1, 20.0, 9.6, 15.3, 17.0, 13.9,...
+## $ brainwt      &lt;dbl&gt; NA, 0.01550, NA, 0.00029, 0.42300, NA, NA, NA, 0....
+## $ bodywt       &lt;dbl&gt; 50.000, 0.480, 1.350, 0.019, 600.000, 3.850, 20.4...</code></pre>
+</div>
+<div id="select" class="section level2">
+<h2><strong>select()</strong></h2>
+<ul>
+<li>Seleccionar una columna:</li>
+</ul>
+<p>Para seleccionar columnas solo necesitas incluir el nombre de la <strong>variable</strong> en la función <strong>select(—)</strong>.</p>
+<pre class="r"><code>msleep %&gt;% 
+  select(name) </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Cheetah</td>
+</tr>
+<tr class="even">
+<td align="left">Owl monkey</td>
+</tr>
+<tr class="odd">
+<td align="left">Mountain beaver</td>
+</tr>
+<tr class="even">
+<td align="left">Greater short-tailed shrew</td>
+</tr>
+<tr class="odd">
+<td align="left">Cow</td>
+</tr>
+<tr class="even">
+<td align="left">Three-toed sloth</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Multiples columnas:</li>
+</ul>
+<p>Esta función nos permite recuperar también múltiples columnas, el orden en el que los nombres de estas sean ingresados determinara el orden en el resultado.</p>
+<pre class="r"><code>msleep %&gt;%
+  select(name, genus, sleep_total, awake) </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">genus</th>
+<th align="right">sleep_total</th>
+<th align="right">awake</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Cheetah</td>
+<td align="left">Acinonyx</td>
+<td align="right">12.1</td>
+<td align="right">11.9</td>
+</tr>
+<tr class="even">
+<td align="left">Owl monkey</td>
+<td align="left">Aotus</td>
+<td align="right">17.0</td>
+<td align="right">7.0</td>
+</tr>
+<tr class="odd">
+<td align="left">Mountain beaver</td>
+<td align="left">Aplodontia</td>
+<td align="right">14.4</td>
+<td align="right">9.6</td>
+</tr>
+<tr class="even">
+<td align="left">Greater short-tailed shrew</td>
+<td align="left">Blarina</td>
+<td align="right">14.9</td>
+<td align="right">9.1</td>
+</tr>
+<tr class="odd">
+<td align="left">Cow</td>
+<td align="left">Bos</td>
+<td align="right">4.0</td>
+<td align="right">20.0</td>
+</tr>
+<tr class="even">
+<td align="left">Three-toed sloth</td>
+<td align="left">Bradypus</td>
+<td align="right">14.4</td>
+<td align="right">9.6</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Secuencias:</li>
+</ul>
+<p>Se puede recuperar múltiples columnas sucesivas con la ayuda del operador <strong>:</strong>. Considerando la siguiente estructura: <strong>columna_inicial:columna_final</strong>.</p>
+<pre class="r"><code>msleep %&gt;%
+  select(name:conservation) </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">genus</th>
+<th align="left">vore</th>
+<th align="left">order</th>
+<th align="left">conservation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Cheetah</td>
+<td align="left">Acinonyx</td>
+<td align="left">carni</td>
+<td align="left">Carnivora</td>
+<td align="left">lc</td>
+</tr>
+<tr class="even">
+<td align="left">Owl monkey</td>
+<td align="left">Aotus</td>
+<td align="left">omni</td>
+<td align="left">Primates</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Mountain beaver</td>
+<td align="left">Aplodontia</td>
+<td align="left">herbi</td>
+<td align="left">Rodentia</td>
+<td align="left">nt</td>
+</tr>
+<tr class="even">
+<td align="left">Greater short-tailed shrew</td>
+<td align="left">Blarina</td>
+<td align="left">omni</td>
+<td align="left">Soricomorpha</td>
+<td align="left">lc</td>
+</tr>
+<tr class="odd">
+<td align="left">Cow</td>
+<td align="left">Bos</td>
+<td align="left">herbi</td>
+<td align="left">Artiodactyla</td>
+<td align="left">domesticated</td>
+</tr>
+<tr class="even">
+<td align="left">Three-toed sloth</td>
+<td align="left">Bradypus</td>
+<td align="left">herbi</td>
+<td align="left">Pilosa</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Otra opción es <strong>ignorar columnas especificas o secuencias</strong>, esto se puede lograr con la ayuda del operador <strong>-</strong>, el cual se antepone al nombre de la <strong>columna(as)</strong> que se desea ignorar.</li>
+</ul>
+<pre class="r"><code>msleep %&gt;% 
+  select(-conservation, -(sleep_total:awake))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">genus</th>
+<th align="left">vore</th>
+<th align="left">order</th>
+<th align="right">brainwt</th>
+<th align="right">bodywt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Cheetah</td>
+<td align="left">Acinonyx</td>
+<td align="left">carni</td>
+<td align="left">Carnivora</td>
+<td align="right">NA</td>
+<td align="right">50.000</td>
+</tr>
+<tr class="even">
+<td align="left">Owl monkey</td>
+<td align="left">Aotus</td>
+<td align="left">omni</td>
+<td align="left">Primates</td>
+<td align="right">0.01550</td>
+<td align="right">0.480</td>
+</tr>
+<tr class="odd">
+<td align="left">Mountain beaver</td>
+<td align="left">Aplodontia</td>
+<td align="left">herbi</td>
+<td align="left">Rodentia</td>
+<td align="right">NA</td>
+<td align="right">1.350</td>
+</tr>
+<tr class="even">
+<td align="left">Greater short-tailed shrew</td>
+<td align="left">Blarina</td>
+<td align="left">omni</td>
+<td align="left">Soricomorpha</td>
+<td align="right">0.00029</td>
+<td align="right">0.019</td>
+</tr>
+<tr class="odd">
+<td align="left">Cow</td>
+<td align="left">Bos</td>
+<td align="left">herbi</td>
+<td align="left">Artiodactyla</td>
+<td align="right">0.42300</td>
+<td align="right">600.000</td>
+</tr>
+<tr class="even">
+<td align="left">Three-toed sloth</td>
+<td align="left">Bradypus</td>
+<td align="left">herbi</td>
+<td align="left">Pilosa</td>
+<td align="right">NA</td>
+<td align="right">3.850</td>
+</tr>
+</tbody>
+</table>
+<p>Es posible deseleccionar una secuencia completa y recuperar una columna que esté incluida en esta.</p>
+<ul>
+<li>El siguiente ejemplo deselecciona la secuencia de columnas comprendidas entre <strong>name</strong> y <strong>awake</strong>, pero recupera la columna <strong>conservation</strong>. Esta opción solo funciona si se incluye el nombre de la columna a recuperar en la misma acción que elimina las otras columnas.</li>
+</ul>
+<pre class="r"><code>msleep %&gt;%
+  select(-(name:awake), conservation) </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">brainwt</th>
+<th align="right">bodywt</th>
+<th align="left">conservation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">NA</td>
+<td align="right">50.000</td>
+<td align="left">lc</td>
+</tr>
+<tr class="even">
+<td align="right">0.01550</td>
+<td align="right">0.480</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="right">NA</td>
+<td align="right">1.350</td>
+<td align="left">nt</td>
+</tr>
+<tr class="even">
+<td align="right">0.00029</td>
+<td align="right">0.019</td>
+<td align="left">lc</td>
+</tr>
+<tr class="odd">
+<td align="right">0.42300</td>
+<td align="right">600.000</td>
+<td align="left">domesticated</td>
+</tr>
+<tr class="even">
+<td align="right">NA</td>
+<td align="right">3.850</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="one_of" class="section level2">
+<h2><strong>one_of()</strong>:</h2>
+<ul>
+<li>Esta función requiere de preparación, es posible que cuando la base de datos contenga un gran número de variables estas mantengan alguna relación que nos permita agruparlas.</li>
+</ul>
+<p>La base de datos <strong>msleep</strong> se conforma de 11 variables:</p>
+<pre class="r"><code># Variables categóricas.
+classification_info &lt;- c(&quot;name&quot;, &quot;genus&quot;, &quot;vore&quot;, &quot;order&quot;, &quot;conservation&quot;)
+
+# Variables Numéricas, relacionadas al tiempo de sueño. 
+sleep_cols &lt;- c(&quot;sleep_total&quot;, &quot;sleep_rem&quot;, &quot;sleep_cycle&quot;)
+
+# Variables Numéricas, relacionadas con el peso.
+weight_cols &lt;- c(&quot;brainwt&quot;, &quot;bodywt&quot;)
+</code></pre>
+<p>La función <code>one_of()</code>,nos permitirá evitar los errores al digitar los nombres de las variables en múltiples ocasiones, con la siguiente formula: <code>select(one_of(variable))</code>.</p>
+<p>El argumento <em>variable</em> es el vector que creamos agrupando las variables.</p>
+<pre class="r"><code>msleep %&gt;%
+  select(one_of(sleep_cols))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">sleep_total</th>
+<th align="right">sleep_rem</th>
+<th align="right">sleep_cycle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">12.1</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="right">17.0</td>
+<td align="right">1.8</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="right">14.4</td>
+<td align="right">2.4</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="right">14.9</td>
+<td align="right">2.3</td>
+<td align="right">0.1333333</td>
+</tr>
+<tr class="odd">
+<td align="right">4.0</td>
+<td align="right">0.7</td>
+<td align="right">0.6666667</td>
+</tr>
+<tr class="even">
+<td align="right">14.4</td>
+<td align="right">2.2</td>
+<td align="right">0.7666667</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="seleccion-de-columnas-usando-parte-de-los-nombres" class="section level2">
+<h2><strong>Selección de columnas, usando parte de los nombres</strong></h2>
+<p>Si la base de datos está conformada por muchas columnas cuyos nombres tienen estructuras similares, puedes usar funciones de selección parcial: <code>starts_with()</code>, <code>ends_with()</code> or <code>contains()</code> en conjunto con <em>select()</em> dependiendo de lo que buscas recuperar.</p>
+<pre class="r"><code>msleep %&gt;%
+  select(name, starts_with(&quot;sleep&quot;)) </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="right">sleep_total</th>
+<th align="right">sleep_rem</th>
+<th align="right">sleep_cycle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Cheetah</td>
+<td align="right">12.1</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Owl monkey</td>
+<td align="right">17.0</td>
+<td align="right">1.8</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Mountain beaver</td>
+<td align="right">14.4</td>
+<td align="right">2.4</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Greater short-tailed shrew</td>
+<td align="right">14.9</td>
+<td align="right">2.3</td>
+<td align="right">0.1333333</td>
+</tr>
+<tr class="odd">
+<td align="left">Cow</td>
+<td align="right">4.0</td>
+<td align="right">0.7</td>
+<td align="right">0.6666667</td>
+</tr>
+<tr class="even">
+<td align="left">Three-toed sloth</td>
+<td align="right">14.4</td>
+<td align="right">2.2</td>
+<td align="right">0.7666667</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>msleep %&gt;%
+  select(contains(&quot;eep&quot;), ends_with(&quot;wt&quot;)) </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">sleep_total</th>
+<th align="right">sleep_rem</th>
+<th align="right">sleep_cycle</th>
+<th align="right">brainwt</th>
+<th align="right">bodywt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">12.1</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">50.000</td>
+</tr>
+<tr class="even">
+<td align="right">17.0</td>
+<td align="right">1.8</td>
+<td align="right">NA</td>
+<td align="right">0.01550</td>
+<td align="right">0.480</td>
+</tr>
+<tr class="odd">
+<td align="right">14.4</td>
+<td align="right">2.4</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">1.350</td>
+</tr>
+<tr class="even">
+<td align="right">14.9</td>
+<td align="right">2.3</td>
+<td align="right">0.1333333</td>
+<td align="right">0.00029</td>
+<td align="right">0.019</td>
+</tr>
+<tr class="odd">
+<td align="right">4.0</td>
+<td align="right">0.7</td>
+<td align="right">0.6666667</td>
+<td align="right">0.42300</td>
+<td align="right">600.000</td>
+</tr>
+<tr class="even">
+<td align="right">14.4</td>
+<td align="right">2.2</td>
+<td align="right">0.7666667</td>
+<td align="right">NA</td>
+<td align="right">3.850</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>msleep %&gt;%
+  select(name, ends_with(&quot;e&quot;))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">vore</th>
+<th align="right">sleep_cycle</th>
+<th align="right">awake</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Cheetah</td>
+<td align="left">carni</td>
+<td align="right">NA</td>
+<td align="right">11.9</td>
+</tr>
+<tr class="even">
+<td align="left">Owl monkey</td>
+<td align="left">omni</td>
+<td align="right">NA</td>
+<td align="right">7.0</td>
+</tr>
+<tr class="odd">
+<td align="left">Mountain beaver</td>
+<td align="left">herbi</td>
+<td align="right">NA</td>
+<td align="right">9.6</td>
+</tr>
+<tr class="even">
+<td align="left">Greater short-tailed shrew</td>
+<td align="left">omni</td>
+<td align="right">0.1333333</td>
+<td align="right">9.1</td>
+</tr>
+<tr class="odd">
+<td align="left">Cow</td>
+<td align="left">herbi</td>
+<td align="right">0.6666667</td>
+<td align="right">20.0</td>
+</tr>
+<tr class="even">
+<td align="left">Three-toed sloth</td>
+<td align="left">herbi</td>
+<td align="right">0.7666667</td>
+<td align="right">9.6</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="seleccion-con-base-en-el-tipo-datos" class="section level1">
+<h1><strong>Selección con base en el tipo datos</strong></h1>
+<p>La función <code>select_if</code> permite usar funciones <code>is.numeric</code>, <code>is.integer</code>, <code>is.double</code>, <code>is.logical</code>, <code>is.factor</code>. Por ejemplo deseas recuperar todas las columnas de tipo carácter (secuencias de texto) puedes usar <code>select_if(is.character)</code>.</p>
+<p>Si la base de datos contiene columnas de tipo <code>date</code>, será necesario usar funciones del paquete <strong>lubridate</strong> como <code>is.Date</code> o <code>is.POSIXt</code>.</p>
+<pre class="r"><code>msleep %&gt;%
+  select_if(is.numeric) </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">sleep_total</th>
+<th align="right">sleep_rem</th>
+<th align="right">sleep_cycle</th>
+<th align="right">awake</th>
+<th align="right">brainwt</th>
+<th align="right">bodywt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">12.1</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">11.9</td>
+<td align="right">NA</td>
+<td align="right">50.000</td>
+</tr>
+<tr class="even">
+<td align="right">17.0</td>
+<td align="right">1.8</td>
+<td align="right">NA</td>
+<td align="right">7.0</td>
+<td align="right">0.01550</td>
+<td align="right">0.480</td>
+</tr>
+<tr class="odd">
+<td align="right">14.4</td>
+<td align="right">2.4</td>
+<td align="right">NA</td>
+<td align="right">9.6</td>
+<td align="right">NA</td>
+<td align="right">1.350</td>
+</tr>
+<tr class="even">
+<td align="right">14.9</td>
+<td align="right">2.3</td>
+<td align="right">0.1333333</td>
+<td align="right">9.1</td>
+<td align="right">0.00029</td>
+<td align="right">0.019</td>
+</tr>
+<tr class="odd">
+<td align="right">4.0</td>
+<td align="right">0.7</td>
+<td align="right">0.6666667</td>
+<td align="right">20.0</td>
+<td align="right">0.42300</td>
+<td align="right">600.000</td>
+</tr>
+<tr class="even">
+<td align="right">14.4</td>
+<td align="right">2.2</td>
+<td align="right">0.7666667</td>
+<td align="right">9.6</td>
+<td align="right">NA</td>
+<td align="right">3.850</td>
+</tr>
+</tbody>
+</table>
+<p>También puedes seleccionar columnas usando negaciones, pero será necesario añadir el operador tilde <em>~</em>.</p>
+<pre class="r"><code>msleep %&gt;%
+  select_if(~!is.numeric(.)) </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">genus</th>
+<th align="left">vore</th>
+<th align="left">order</th>
+<th align="left">conservation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Cheetah</td>
+<td align="left">Acinonyx</td>
+<td align="left">carni</td>
+<td align="left">Carnivora</td>
+<td align="left">lc</td>
+</tr>
+<tr class="even">
+<td align="left">Owl monkey</td>
+<td align="left">Aotus</td>
+<td align="left">omni</td>
+<td align="left">Primates</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Mountain beaver</td>
+<td align="left">Aplodontia</td>
+<td align="left">herbi</td>
+<td align="left">Rodentia</td>
+<td align="left">nt</td>
+</tr>
+<tr class="even">
+<td align="left">Greater short-tailed shrew</td>
+<td align="left">Blarina</td>
+<td align="left">omni</td>
+<td align="left">Soricomorpha</td>
+<td align="left">lc</td>
+</tr>
+<tr class="odd">
+<td align="left">Cow</td>
+<td align="left">Bos</td>
+<td align="left">herbi</td>
+<td align="left">Artiodactyla</td>
+<td align="left">domesticated</td>
+</tr>
+<tr class="even">
+<td align="left">Three-toed sloth</td>
+<td align="left">Bradypus</td>
+<td align="left">herbi</td>
+<td align="left">Pilosa</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+<div id="seleccion-de-columnas-usando-expresiones-logicas" class="section level2">
+<h2><strong>Selección de columnas usando expresiones lógicas</strong></h2>
+<p><code>select_if</code> permite seleccionar columnas con base en cualquier función lógica, no únicamente con base el tipo de datos. Así es posible seleccionar todas las columnas con un promedio mayor a 500. Para evitar errores será necesario seleccionar primero solo las columnas de tipo numérico.</p>
+<p>Se debe tomar en cuenta que <code>mean &gt; 500</code> no es una función, para que esta sea una función se debe anteponer el operador tilde <code>~</code>, para que esta sea reconocido como una función.</p>
+<pre class="r"><code>msleep %&gt;%
+  select_if(~is.numeric(.)) %&gt;%
+  select_if(~mean(., na.rm=TRUE) &gt; 10)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">sleep_total</th>
+<th align="right">awake</th>
+<th align="right">bodywt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">12.1</td>
+<td align="right">11.9</td>
+<td align="right">50.000</td>
+</tr>
+<tr class="even">
+<td align="right">17.0</td>
+<td align="right">7.0</td>
+<td align="right">0.480</td>
+</tr>
+<tr class="odd">
+<td align="right">14.4</td>
+<td align="right">9.6</td>
+<td align="right">1.350</td>
+</tr>
+<tr class="even">
+<td align="right">14.9</td>
+<td align="right">9.1</td>
+<td align="right">0.019</td>
+</tr>
+<tr class="odd">
+<td align="right">4.0</td>
+<td align="right">20.0</td>
+<td align="right">600.000</td>
+</tr>
+<tr class="even">
+<td align="right">14.4</td>
+<td align="right">9.6</td>
+<td align="right">3.850</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>n_distinct()</strong></li>
+</ul>
+<p>Una función muy útil para <code>select_if()</code> es <code>n_distinct()</code>, esta función permite conocer el cuantos elementos diferentes están presentes en una columna. Para recuperar las columnas que tienen menos de 10 elementos distintos usaremos <code>~n_distinct(.) &lt; 10</code> como argumento de la función select_if. Dado que <code>n_distinct(.) &lt; 10</code> no es una función, es necesario anteponer el operador <em>~</em>.</p>
+<pre class="r"><code>msleep %&gt;%
+  select_if(~n_distinct(.) &lt; 10)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">vore</th>
+<th align="left">conservation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">carni</td>
+<td align="left">lc</td>
+</tr>
+<tr class="even">
+<td align="left">omni</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">herbi</td>
+<td align="left">nt</td>
+</tr>
+<tr class="even">
+<td align="left">omni</td>
+<td align="left">lc</td>
+</tr>
+<tr class="odd">
+<td align="left">herbi</td>
+<td align="left">domesticated</td>
+</tr>
+<tr class="even">
+<td align="left">herbi</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="reordenamiento-de-columnas" class="section level2">
+<h2><strong>Reordenamiento de Columnas</strong></h2>
+<p>Podemos usar <code>select()</code> para reordenar columnas. El orden en el cual incluyas los nombres en esta función determina su orden final.</p>
+<pre class="r"><code>msleep %&gt;%
+  select(conservation, sleep_total, name)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">conservation</th>
+<th align="right">sleep_total</th>
+<th align="left">name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">lc</td>
+<td align="right">12.1</td>
+<td align="left">Cheetah</td>
+</tr>
+<tr class="even">
+<td align="left">NA</td>
+<td align="right">17.0</td>
+<td align="left">Owl monkey</td>
+</tr>
+<tr class="odd">
+<td align="left">nt</td>
+<td align="right">14.4</td>
+<td align="left">Mountain beaver</td>
+</tr>
+<tr class="even">
+<td align="left">lc</td>
+<td align="right">14.9</td>
+<td align="left">Greater short-tailed shrew</td>
+</tr>
+<tr class="odd">
+<td align="left">domesticated</td>
+<td align="right">4.0</td>
+<td align="left">Cow</td>
+</tr>
+<tr class="even">
+<td align="left">NA</td>
+<td align="right">14.4</td>
+<td align="left">Three-toed sloth</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>everything()</strong></li>
+</ul>
+<p>Si deseas mover solo algunas columnas hacia el frente, puedes usar <code>everything()</code> después de estas y esto añadirá las columnas restantes al final.</p>
+<pre class="r"><code>msleep %&gt;%
+  select(conservation, sleep_total, everything())</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">conservation</th>
+<th align="right">sleep_total</th>
+<th align="left">name</th>
+<th align="left">genus</th>
+<th align="left">vore</th>
+<th align="left">order</th>
+<th align="right">sleep_rem</th>
+<th align="right">sleep_cycle</th>
+<th align="right">awake</th>
+<th align="right">brainwt</th>
+<th align="right">bodywt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">lc</td>
+<td align="right">12.1</td>
+<td align="left">Cheetah</td>
+<td align="left">Acinonyx</td>
+<td align="left">carni</td>
+<td align="left">Carnivora</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">11.9</td>
+<td align="right">NA</td>
+<td align="right">50.000</td>
+</tr>
+<tr class="even">
+<td align="left">NA</td>
+<td align="right">17.0</td>
+<td align="left">Owl monkey</td>
+<td align="left">Aotus</td>
+<td align="left">omni</td>
+<td align="left">Primates</td>
+<td align="right">1.8</td>
+<td align="right">NA</td>
+<td align="right">7.0</td>
+<td align="right">0.01550</td>
+<td align="right">0.480</td>
+</tr>
+<tr class="odd">
+<td align="left">nt</td>
+<td align="right">14.4</td>
+<td align="left">Mountain beaver</td>
+<td align="left">Aplodontia</td>
+<td align="left">herbi</td>
+<td align="left">Rodentia</td>
+<td align="right">2.4</td>
+<td align="right">NA</td>
+<td align="right">9.6</td>
+<td align="right">NA</td>
+<td align="right">1.350</td>
+</tr>
+<tr class="even">
+<td align="left">lc</td>
+<td align="right">14.9</td>
+<td align="left">Greater short-tailed shrew</td>
+<td align="left">Blarina</td>
+<td align="left">omni</td>
+<td align="left">Soricomorpha</td>
+<td align="right">2.3</td>
+<td align="right">0.1333333</td>
+<td align="right">9.1</td>
+<td align="right">0.00029</td>
+<td align="right">0.019</td>
+</tr>
+<tr class="odd">
+<td align="left">domesticated</td>
+<td align="right">4.0</td>
+<td align="left">Cow</td>
+<td align="left">Bos</td>
+<td align="left">herbi</td>
+<td align="left">Artiodactyla</td>
+<td align="right">0.7</td>
+<td align="right">0.6666667</td>
+<td align="right">20.0</td>
+<td align="right">0.42300</td>
+<td align="right">600.000</td>
+</tr>
+<tr class="even">
+<td align="left">NA</td>
+<td align="right">14.4</td>
+<td align="left">Three-toed sloth</td>
+<td align="left">Bradypus</td>
+<td align="left">herbi</td>
+<td align="left">Pilosa</td>
+<td align="right">2.2</td>
+<td align="right">0.7666667</td>
+<td align="right">9.6</td>
+<td align="right">NA</td>
+<td align="right">3.850</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="modificando-los-nombres-de-las-columnas" class="section level2">
+<h2><strong>Modificando los nombres de las columnas</strong></h2>
+<p>En ocasiones es necesario modificar los nombres de las columnas.</p>
+<p><strong>Cambiar el nombre de las columnas</strong></p>
+<ul>
+<li><code>select()</code> permite modificar el nombre de las columnas .</li>
+</ul>
+<pre class="r"><code>msleep %&gt;%
+  select(animal = name, sleep_total, riesgo = conservation) </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">animal</th>
+<th align="right">sleep_total</th>
+<th align="left">riesgo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Cheetah</td>
+<td align="right">12.1</td>
+<td align="left">lc</td>
+</tr>
+<tr class="even">
+<td align="left">Owl monkey</td>
+<td align="right">17.0</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Mountain beaver</td>
+<td align="right">14.4</td>
+<td align="left">nt</td>
+</tr>
+<tr class="even">
+<td align="left">Greater short-tailed shrew</td>
+<td align="right">14.9</td>
+<td align="left">lc</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Si deseas conservar todas las columnas se puede usar la función <code>rename()</code>.</li>
+</ul>
+<pre class="r"><code>msleep %&gt;% 
+  rename(animal = name, extinction_threat = conservation) </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">animal</th>
+<th align="left">genus</th>
+<th align="left">vore</th>
+<th align="left">order</th>
+<th align="left">extinction_threat</th>
+<th align="right">sleep_total</th>
+<th align="right">sleep_rem</th>
+<th align="right">sleep_cycle</th>
+<th align="right">awake</th>
+<th align="right">brainwt</th>
+<th align="right">bodywt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Cheetah</td>
+<td align="left">Acinonyx</td>
+<td align="left">carni</td>
+<td align="left">Carnivora</td>
+<td align="left">lc</td>
+<td align="right">12.1</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">11.9</td>
+<td align="right">NA</td>
+<td align="right">50.000</td>
+</tr>
+<tr class="even">
+<td align="left">Owl monkey</td>
+<td align="left">Aotus</td>
+<td align="left">omni</td>
+<td align="left">Primates</td>
+<td align="left">NA</td>
+<td align="right">17.0</td>
+<td align="right">1.8</td>
+<td align="right">NA</td>
+<td align="right">7.0</td>
+<td align="right">0.01550</td>
+<td align="right">0.480</td>
+</tr>
+<tr class="odd">
+<td align="left">Mountain beaver</td>
+<td align="left">Aplodontia</td>
+<td align="left">herbi</td>
+<td align="left">Rodentia</td>
+<td align="left">nt</td>
+<td align="right">14.4</td>
+<td align="right">2.4</td>
+<td align="right">NA</td>
+<td align="right">9.6</td>
+<td align="right">NA</td>
+<td align="right">1.350</td>
+</tr>
+<tr class="even">
+<td align="left">Greater short-tailed shrew</td>
+<td align="left">Blarina</td>
+<td align="left">omni</td>
+<td align="left">Soricomorpha</td>
+<td align="left">lc</td>
+<td align="right">14.9</td>
+<td align="right">2.3</td>
+<td align="right">0.1333333</td>
+<td align="right">9.1</td>
+<td align="right">0.00029</td>
+<td align="right">0.019</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Modificando el nombre de todas las columnas</strong></p>
+<ul>
+<li><strong>select_all()</strong></li>
+</ul>
+<p>La función <code>select_all()</code> permite modificar todos los nombres de las columnas, usando como argumento otra función.</p>
+<p>Mediante la función <code>toupper()</code>se puede modificar el nombre de las columnas con letras <strong>mayúscula</strong> y la función <code>tolower()</code> modifica el nombre de las columnas en letras <strong>minúsculas</strong>.</p>
+<pre class="r"><code>msleep %&gt;%
+  select_all(toupper)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">NAME</th>
+<th align="left">GENUS</th>
+<th align="left">VORE</th>
+<th align="left">ORDER</th>
+<th align="left">CONSERVATION</th>
+<th align="right">SLEEP_TOTAL</th>
+<th align="right">SLEEP_REM</th>
+<th align="right">SLEEP_CYCLE</th>
+<th align="right">AWAKE</th>
+<th align="right">BRAINWT</th>
+<th align="right">BODYWT</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Cheetah</td>
+<td align="left">Acinonyx</td>
+<td align="left">carni</td>
+<td align="left">Carnivora</td>
+<td align="left">lc</td>
+<td align="right">12.1</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">11.9</td>
+<td align="right">NA</td>
+<td align="right">50.000</td>
+</tr>
+<tr class="even">
+<td align="left">Owl monkey</td>
+<td align="left">Aotus</td>
+<td align="left">omni</td>
+<td align="left">Primates</td>
+<td align="left">NA</td>
+<td align="right">17.0</td>
+<td align="right">1.8</td>
+<td align="right">NA</td>
+<td align="right">7.0</td>
+<td align="right">0.01550</td>
+<td align="right">0.480</td>
+</tr>
+<tr class="odd">
+<td align="left">Mountain beaver</td>
+<td align="left">Aplodontia</td>
+<td align="left">herbi</td>
+<td align="left">Rodentia</td>
+<td align="left">nt</td>
+<td align="right">14.4</td>
+<td align="right">2.4</td>
+<td align="right">NA</td>
+<td align="right">9.6</td>
+<td align="right">NA</td>
+<td align="right">1.350</td>
+</tr>
+<tr class="even">
+<td align="left">Greater short-tailed shrew</td>
+<td align="left">Blarina</td>
+<td align="left">omni</td>
+<td align="left">Soricomorpha</td>
+<td align="left">lc</td>
+<td align="right">14.9</td>
+<td align="right">2.3</td>
+<td align="right">0.1333333</td>
+<td align="right">9.1</td>
+<td align="right">0.00029</td>
+<td align="right">0.019</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="pasar-los-nombres-de-las-filas-a-una-columna" class="section level2">
+<h2><strong>Pasar los nombres de las filas a una columna</strong></h2>
+<p>Algunos <code>dataframes</code> tienen nombres para cada una de las columnas que no se reconocen como una columna en su estructura. Un ejemplo es la base de datos <strong>mtcars</strong>.</p>
+<pre class="r"><code> mtcars %&gt;%
+  head() </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">mpg</th>
+<th align="right">cyl</th>
+<th align="right">disp</th>
+<th align="right">hp</th>
+<th align="right">drat</th>
+<th align="right">wt</th>
+<th align="right">qsec</th>
+<th align="right">vs</th>
+<th align="right">am</th>
+<th align="right">gear</th>
+<th align="right">carb</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mazda RX4</td>
+<td align="right">21.0</td>
+<td align="right">6</td>
+<td align="right">160</td>
+<td align="right">110</td>
+<td align="right">3.90</td>
+<td align="right">2.620</td>
+<td align="right">16.46</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td>Mazda RX4 Wag</td>
+<td align="right">21.0</td>
+<td align="right">6</td>
+<td align="right">160</td>
+<td align="right">110</td>
+<td align="right">3.90</td>
+<td align="right">2.875</td>
+<td align="right">17.02</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td>Datsun 710</td>
+<td align="right">22.8</td>
+<td align="right">4</td>
+<td align="right">108</td>
+<td align="right">93</td>
+<td align="right">3.85</td>
+<td align="right">2.320</td>
+<td align="right">18.61</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td>Hornet 4 Drive</td>
+<td align="right">21.4</td>
+<td align="right">6</td>
+<td align="right">258</td>
+<td align="right">110</td>
+<td align="right">3.08</td>
+<td align="right">3.215</td>
+<td align="right">19.44</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td>Hornet Sportabout</td>
+<td align="right">18.7</td>
+<td align="right">8</td>
+<td align="right">360</td>
+<td align="right">175</td>
+<td align="right">3.15</td>
+<td align="right">3.440</td>
+<td align="right">17.02</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td>Valiant</td>
+<td align="right">18.1</td>
+<td align="right">6</td>
+<td align="right">225</td>
+<td align="right">105</td>
+<td align="right">2.76</td>
+<td align="right">3.460</td>
+<td align="right">20.22</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">1</td>
+</tr>
+</tbody>
+</table>
+<p>La función <code>rownames_to_column()</code> permite recuperar estos nombres he incluirlos creando una nueva columna.</p>
+<pre class="r"><code> mtcars %&gt;%
+   rownames_to_column(&quot;car_model&quot;) </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">car_model</th>
+<th align="right">mpg</th>
+<th align="right">cyl</th>
+<th align="right">disp</th>
+<th align="right">hp</th>
+<th align="right">drat</th>
+<th align="right">wt</th>
+<th align="right">qsec</th>
+<th align="right">vs</th>
+<th align="right">am</th>
+<th align="right">gear</th>
+<th align="right">carb</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Mazda RX4</td>
+<td align="right">21.0</td>
+<td align="right">6</td>
+<td align="right">160</td>
+<td align="right">110</td>
+<td align="right">3.90</td>
+<td align="right">2.620</td>
+<td align="right">16.46</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td align="left">Mazda RX4 Wag</td>
+<td align="right">21.0</td>
+<td align="right">6</td>
+<td align="right">160</td>
+<td align="right">110</td>
+<td align="right">3.90</td>
+<td align="right">2.875</td>
+<td align="right">17.02</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="left">Datsun 710</td>
+<td align="right">22.8</td>
+<td align="right">4</td>
+<td align="right">108</td>
+<td align="right">93</td>
+<td align="right">3.85</td>
+<td align="right">2.320</td>
+<td align="right">18.61</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left">Hornet 4 Drive</td>
+<td align="right">21.4</td>
+<td align="right">6</td>
+<td align="right">258</td>
+<td align="right">110</td>
+<td align="right">3.08</td>
+<td align="right">3.215</td>
+<td align="right">19.44</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left">Hornet Sportabout</td>
+<td align="right">18.7</td>
+<td align="right">8</td>
+<td align="right">360</td>
+<td align="right">175</td>
+<td align="right">3.15</td>
+<td align="right">3.440</td>
+<td align="right">17.02</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="left">Valiant</td>
+<td align="right">18.1</td>
+<td align="right">6</td>
+<td align="right">225</td>
+<td align="right">105</td>
+<td align="right">2.76</td>
+<td align="right">3.460</td>
+<td align="right">20.22</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="referencias" class="section level2">
+<h2>Referencias:</h2>
+<ol style="list-style-type: decimal">
+<li>Basado en el tutorial de <a href="https://suzan.rbind.io/2018/01/dplyr-tutorial-1/">Suzan Baert</a>: <strong>Data Wrangling Part 1: Basic to Advanced Ways to Select Columns</strong></li>
+</ol>
+</div>
+</div>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/r-markdown/">R Markdown</a>
+  
+  <a class="badge badge-light" href="/tags/data-management/">Data management</a>
+  
+</div>
+
+
+
+    
+
+
+
+
+
+
+<div class="media author-card" itemscope itemtype="http://schema.org/Person">
+  
+  <img class="portrait mr-3" src="/img/paul_efren.JPG" itemprop="image" alt="Avatar">
+  
+  <div class="media-body">
+    <h5 class="card-title" itemprop="name"><a href="/">Paul Efren Santos Andrade</a></h5>
+    <h6 class="card-subtitle">Plant ecology and R programming</h6>
+    
+    <ul class="network-icon" aria-hidden="true">
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="/#contact" >
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://twitter.com/PaulEfrenSantos" target="_blank" rel="noopener">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://github.com/PaulESantos" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/post/2018-11-12-data_wrangling_2/">Data Wrangling Part 2</a></li>
+        
+        <li><a href="/post/2018-10-05-indice_valor_importancia/">Índice Valor Importancia</a></li>
+        
+        <li><a href="/post/2018-09-07-intervalos_de_confianza/">Intervalos de Confianza</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-paulefrensa-rbind-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+  <p class="powered-by">
+    <a href="/privacy/">Privacy Policy</a>
+  </p>
+  
+
+  <p class="powered-by">
+    &copy; 2018 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+    <script id="dsq-count-scr" src="//https-paulefrensa-rbind-io.disqus.com/count.js" async></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.d037ee5294b166a79dec317c58aea9cc.js"></script>
+
+    
+
+  </body>
+</html>
+

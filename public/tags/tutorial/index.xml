@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tutorial on  Paul Efren...</title>
+    <title>Tutorial on DataScience &amp; Biology</title>
     <link>/tags/tutorial/</link>
-    <description>Recent content in Tutorial on  Paul Efren...</description>
+    <description>Recent content in Tutorial on DataScience &amp; Biology</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Fri, 07 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +14,10 @@
     
     <item>
       <title>Blogdown Tutorial.</title>
-      <link>/note/2018/09/07/another-note/</link>
+      <link>/note/another-note/</link>
       <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/note/2018/09/07/another-note/</guid>
+      <guid>/note/another-note/</guid>
       <description>Este sitio fue construido siguiendo los tutoriales escritos por:
  Allison Hill Up and running with blogdown .   Amber Thomas Making a Website Using Blogdown, Hugo, and GitHub pages.   Emi Tanaka Blinging up your website built with hugo via blogdown R package.  </description>
     </item>

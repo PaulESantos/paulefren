@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 3.2.0">
+  <meta name="generator" content="Hugo 0.52" />
+  <meta name="author" content="Paul Efren Santos Andrade">
+
+  
+  
+  
+  
+    
+  
+  <meta name="description" content="Los paquetes en R:tidyverse proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.#install.packages(&quot;tidyverse&quot;)#install.packages(&quot;knitr&quot;)library(tidyverse)library(knitr)La base de datos:Para este ejemplo modificamos la información de la base de datos BCI del paquete vegan.
+ParcelaEspecieDAPArea basal1Alchornea.costaricensis56.399951004.7131Alchornea.costaricensis25.324471404.4771Alseis.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/2018-10-05-indice_valor_importancia/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#328cc1">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="DataScience &amp; Biology">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="DataScience &amp; Biology">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/2018-10-05-indice_valor_importancia/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@@PaulEfrenSantos">
+  <meta property="twitter:creator" content="@@PaulEfrenSantos">
+  
+  <meta property="og:site_name" content="DataScience &amp; Biology">
+  <meta property="og:url" content="/post/2018-10-05-indice_valor_importancia/">
+  <meta property="og:title" content="Índice Valor Importancia | DataScience &amp; Biology">
+  <meta property="og:description" content="Los paquetes en R:tidyverse proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.#install.packages(&quot;tidyverse&quot;)#install.packages(&quot;knitr&quot;)library(tidyverse)library(knitr)La base de datos:Para este ejemplo modificamos la información de la base de datos BCI del paquete vegan.
+ParcelaEspecieDAPArea basal1Alchornea.costaricensis56.399951004.7131Alchornea.costaricensis25.324471404.4771Alseis."><meta property="og:image" content="/img/paul_efren.JPG">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-10-05T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-10-05T00:00:00&#43;00:00">
+  
+
+  
+
+  <link rel="stylesheet" href="/css/custom.css" />
+
+
+  <title>Índice Valor Importancia | DataScience &amp; Biology</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">DataScience &amp; Biology</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#publications_selected">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#cv">
+            
+            <span>CV</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Índice Valor Importancia</h1>
+
+  
+
+  
+    
+
+<div class="article-metadata">
+
+  
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Paul Efren Santos Andrade">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="2018-10-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    <time datetime="2018-10-05 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+      Oct 5, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Paul Efren Santos Andrade">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/post/2018-10-05-indice_valor_importancia/#disqus_thread"></a>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    
+    <a href="/categories/r/">R</a>
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=%c3%8dndice%20Valor%20Importancia&amp;url=%2fpost%2f2018-10-05-indice_valor_importancia%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2f2018-10-05-indice_valor_importancia%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2f2018-10-05-indice_valor_importancia%2f&amp;title=%c3%8dndice%20Valor%20Importancia"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2f2018-10-05-indice_valor_importancia%2f&amp;title=%c3%8dndice%20Valor%20Importancia"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=%c3%8dndice%20Valor%20Importancia&amp;body=%2fpost%2f2018-10-05-indice_valor_importancia%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+
+<div id="los-paquetes-en-r" class="section level2">
+<h2>Los paquetes en R:</h2>
+<ul>
+<li><em>tidyverse</em> proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.</li>
+</ul>
+<pre class="r"><code>#install.packages(&quot;tidyverse&quot;)
+#install.packages(&quot;knitr&quot;)
+library(tidyverse)
+library(knitr)</code></pre>
+</div>
+<div id="la-base-de-datos" class="section level2">
+<h2>La base de datos:</h2>
+<p>Para este ejemplo modificamos la información de la base de datos <strong>BCI</strong> del paquete <code>vegan</code>.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Parcela</th>
+<th align="left">Especie</th>
+<th align="right">DAP</th>
+<th align="right">Area basal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alchornea.costaricensis</td>
+<td align="right">56.39995</td>
+<td align="right">1004.713</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alchornea.costaricensis</td>
+<td align="right">25.32447</td>
+<td align="right">1404.477</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">34.04346</td>
+<td align="right">2840.730</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">39.22115</td>
+<td align="right">1124.208</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">36.58114</td>
+<td align="right">1923.634</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">21.53010</td>
+<td align="right">1021.429</td>
+</tr>
+</tbody>
+</table>
+<p>Estos datos fueron generados aleatoriamente para este ejemplo, no corresponden a ningún inventario real. Se toma como modelo la información colectada en una parcela de 1ha; dividida en 25 sub parcelas, en las cuales se tiene el registro de cada uno de los individuos encontrados en esta e identificados a nivel de especie.</p>
+</div>
+<div id="conociendo-nuestros-datos" class="section level2">
+<h2>Conociendo nuestros datos:</h2>
+<p>Una vez que tenemos los datos en R es necesario revisar algunas características básicas de estos; el comando <em>dim()</em>, nos permite conocer el número de observaciones y variables que contiene el <em>dataframe</em>.</p>
+<pre class="r"><code>dim(data)
+## [1] 21457     4</code></pre>
+<p>El comando <em>head()</em> nos permitirá revisar la información contenida en las primeras seis filas de nuestra base de datos.</p>
+<pre class="r"><code>head(data)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">parcela</th>
+<th align="left">especies</th>
+<th align="right">dap</th>
+<th align="right">a_basal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alchornea.costaricensis</td>
+<td align="right">56.39995</td>
+<td align="right">1004.713</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alchornea.costaricensis</td>
+<td align="right">25.32447</td>
+<td align="right">1404.477</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">34.04346</td>
+<td align="right">2840.730</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">39.22115</td>
+<td align="right">1124.208</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">36.58114</td>
+<td align="right">1923.634</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">21.53010</td>
+<td align="right">1021.429</td>
+</tr>
+</tbody>
+</table>
+<p>Mientras el comando <em>tail()</em> nos permitirá evaluar la información contenida en las últimas seis filas del dataframe.</p>
+<pre class="r"><code>tail(data)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">parcela</th>
+<th align="left">especies</th>
+<th align="right">dap</th>
+<th align="right">a_basal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">9</td>
+<td align="left">Zanthoxylum.ekmanii</td>
+<td align="right">45.84835</td>
+<td align="right">2320.6018</td>
+</tr>
+<tr class="even">
+<td align="left">9</td>
+<td align="left">Zanthoxylum.juniperinum</td>
+<td align="right">25.39313</td>
+<td align="right">1176.1165</td>
+</tr>
+<tr class="odd">
+<td align="left">9</td>
+<td align="left">Zanthoxylum.panamense</td>
+<td align="right">14.44984</td>
+<td align="right">234.7000</td>
+</tr>
+<tr class="even">
+<td align="left">9</td>
+<td align="left">Zanthoxylum.panamense</td>
+<td align="right">59.23022</td>
+<td align="right">789.8905</td>
+</tr>
+<tr class="odd">
+<td align="left">9</td>
+<td align="left">Zanthoxylum.panamense</td>
+<td align="right">48.92563</td>
+<td align="right">2651.4837</td>
+</tr>
+<tr class="even">
+<td align="left">9</td>
+<td align="left">Zanthoxylum.panamense</td>
+<td align="right">29.58426</td>
+<td align="right">2284.8186</td>
+</tr>
+</tbody>
+</table>
+<p>Si buscamos conocer cuáles son las observaciones que corresponden a la sub parcela número 1 podemos hacerlo con el siguiente código:</p>
+<pre class="r"><code>data[which(data$parcela == 1),]</code></pre>
+<p>Podemos conseguir el mismo resultado con la función <em>filter()</em> del paquete <em>dplyr</em>:</p>
+<pre class="r"><code>data %&gt;%
+  filter(parcela == 1)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">parcela</th>
+<th align="left">especies</th>
+<th align="right">dap</th>
+<th align="right">a_basal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alchornea.costaricensis</td>
+<td align="right">56.39995</td>
+<td align="right">1004.713</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alchornea.costaricensis</td>
+<td align="right">25.32447</td>
+<td align="right">1404.477</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">34.04346</td>
+<td align="right">2840.730</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">39.22115</td>
+<td align="right">1124.208</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">36.58114</td>
+<td align="right">1923.634</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">21.53010</td>
+<td align="right">1021.429</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">47.25786</td>
+<td align="right">2649.098</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">24.78828</td>
+<td align="right">2559.781</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">56.76481</td>
+<td align="right">1358.285</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">52.20535</td>
+<td align="right">169.278</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="indice-de-valor-de-importancia" class="section level2">
+<h2>Índice de valor de importancia:</h2>
+<p>Las comunidades vegetales están compuestas por un grupo de especies, cada una con una abundancia diferente. Todas las especies compiten por acceder a recursos (agua, luz, CO2, etc.), las especies que mejor aprovechen estos recursos serán las que dominen la comunidad, determinando su estructura. La forma como estas aprovechen la energía del sistema nos permitirá conocer el comportamiento ecológico de la comunidad, esto se puede realizar mediante el cálculo de los valores de importancia de cada especie.</p>
+<p>El índice de valor de inportancia (<code>IVI</code>) define como de las especies presentes en la comunidad contribuyen en el carácter y estructura de un ecosistema <a href="http://cescos.fau.edu/gawliklab/papers/CottamGandJTCurtis1956.pdf">(Cottam y Curtis,1956)</a>. Este valor se obtiene mediante la sumatoria de la frecuencia relativa, la densidad relativa y la dominancia relativa.</p>
+<div id="densidad-y-frecuencia-absoluta" class="section level3">
+<h3>Densidad y Frecuencia absoluta:</h3>
+<ul>
+<li>El primer paso para determinar el valor del IVI, es conocer el número de individuos por especie y el número de sub parcelas en las cuales está presente esta. Esto podemos obtenerlo mediante el siguiente código.</li>
+</ul>
+<pre class="r"><code>data %&gt;%
+  group_by(especies) %&gt;% 
+  summarise(
+  n_individuos = n(),# número de individuos de la especie &quot;i&quot;.
+  n_suplot = n_distinct(parcela),#número de sub parcelas en las que esta presente la especie.
+  area_basal = sum(a_basal)# area basal total de la especie &quot;i&quot;.
+  )</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Especie</th>
+<th align="right">Indi. por especie</th>
+<th align="right">Frecuencia</th>
+<th align="right">Area basal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Abarema.macradenia</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">138.8730</td>
+</tr>
+<tr class="even">
+<td align="left">Acalypha.diversifolia</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">3251.2569</td>
+</tr>
+<tr class="odd">
+<td align="left">Acalypha.macrostachya</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">676.0793</td>
+</tr>
+<tr class="even">
+<td align="left">Adelia.triloba</td>
+<td align="right">92</td>
+<td align="right">27</td>
+<td align="right">131016.2501</td>
+</tr>
+<tr class="odd">
+<td align="left">Aegiphila.panamensis</td>
+<td align="right">23</td>
+<td align="right">18</td>
+<td align="right">34081.5222</td>
+</tr>
+<tr class="even">
+<td align="left">Alchornea.costaricensis</td>
+<td align="right">156</td>
+<td align="right">44</td>
+<td align="right">232131.1117</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="densidad-frecuencia-y-dominancia-relativa" class="section level3">
+<h3>Densidad, Frecuencia y Dominancia Relativa:</h3>
+<div id="densidad-relativa-dr" class="section level4">
+<h4>Densidad relativa: <code>DR</code></h4>
+<ul>
+<li>O abundancia relativa, es el número de individuos de una especie dividida entre el número total de individuos de la comunidad multiplicado por cien.</li>
+</ul>
+</div>
+<div id="frecuencia-relativa-fr" class="section level4">
+<h4>Frecuencia relativa: <code>FR</code></h4>
+<p>Es la frecuencia (número de sub parcelas en las cuales ocurre la especie) dividida por la suma de las frecuencias de todas las especies, multiplicado por cien.</p>
+</div>
+<div id="dominancia-relativa-dmr" class="section level4">
+<h4>Dominancia relativa: <code>DmR</code></h4>
+<p>La dominancia se mide en función al área basal (es el área en m² que ocupa un corte transversal del tronco) de cada una de las especies, se calcula dividiendo el área basal de la especie por la sumatoria de las áreas basales de todas las especies presentes en la parcela, multiplicándola por cien.</p>
+<ul>
+<li><p>Finalmente el valor de importancia: <code>IVI</code></p>
+<pre><code>               IVI = (DR + FR + DmR)/3</code></pre></li>
+</ul>
+<p>Las siguientes líneas nos permiten determinar cada uno de los valores antes mencionados. Para no desplegar toda la tabla solo se mostraran las diez especies con mayor valor de importancia.</p>
+<pre class="r"><code>data %&gt;%
+  group_by(especies) %&gt;% 
+  summarise(n_individuos = n(),
+            n_suplot = n_distinct(parcela),
+            area_basal = sum(a_basal)) %&gt;% 
+  mutate(dens_rela = (n_individuos/sum(n_individuos))*100,
+         frec_rela = (n_suplot/ sum(n_suplot))*100,
+         dom_rela = (area_basal/sum(area_basal))*100) %&gt;% 
+  rowwise() %&gt;% 
+  mutate(ivi = (sum(dens_rela, frec_rela, dom_rela)/3)) %&gt;% 
+  arrange(desc(ivi)) </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Especie</th>
+<th align="right">DR</th>
+<th align="right">FR</th>
+<th align="right">DmR</th>
+<th align="right">IVI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Faramea.occidentalis</td>
+<td align="right">8.002051</td>
+<td align="right">1.101564</td>
+<td align="right">8.052312</td>
+<td align="right">5.718642</td>
+</tr>
+<tr class="even">
+<td align="left">Trichilia.tuberculata</td>
+<td align="right">7.834273</td>
+<td align="right">1.101564</td>
+<td align="right">7.836390</td>
+<td align="right">5.590743</td>
+</tr>
+<tr class="odd">
+<td align="left">Alseis.blackiana</td>
+<td align="right">4.581256</td>
+<td align="right">1.101564</td>
+<td align="right">4.540783</td>
+<td align="right">3.407868</td>
+</tr>
+<tr class="even">
+<td align="left">Oenocarpus.mapora</td>
+<td align="right">3.672461</td>
+<td align="right">1.101564</td>
+<td align="right">3.617257</td>
+<td align="right">2.797094</td>
+</tr>
+<tr class="odd">
+<td align="left">Poulsenia.armata</td>
+<td align="right">3.518665</td>
+<td align="right">1.013439</td>
+<td align="right">3.606127</td>
+<td align="right">2.712744</td>
+</tr>
+<tr class="even">
+<td align="left">Quararibea.asterolepis</td>
+<td align="right">3.374190</td>
+<td align="right">1.079533</td>
+<td align="right">3.365504</td>
+<td align="right">2.606409</td>
+</tr>
+<tr class="odd">
+<td align="left">Hirtella.triandra</td>
+<td align="right">3.173789</td>
+<td align="right">1.101564</td>
+<td align="right">3.184884</td>
+<td align="right">2.486746</td>
+</tr>
+<tr class="even">
+<td align="left">Gustavia.superba</td>
+<td align="right">3.001352</td>
+<td align="right">1.079533</td>
+<td align="right">3.060574</td>
+<td align="right">2.380486</td>
+</tr>
+<tr class="odd">
+<td align="left">Virola.sebifera</td>
+<td align="right">2.875519</td>
+<td align="right">1.035470</td>
+<td align="right">2.833788</td>
+<td align="right">2.248259</td>
+</tr>
+<tr class="even">
+<td align="left">Protium.tenuifolium</td>
+<td align="right">1.775644</td>
+<td align="right">1.101564</td>
+<td align="right">1.765238</td>
+<td align="right">1.547482</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="clases-dimetricas" class="section level2">
+<h2>Clases dimétricas:</h2>
+<ul>
+<li>Para determinar las clases dimétricas, es necesario conocer el rango en el cual varia el DAP de los árboles, así podemos determinar el número de clases con la cual deseamos trabajar.</li>
+</ul>
+<pre class="r"><code>data %&gt;% summarise(Dap_min = min(dap),
+                   Dap_max = max(dap),
+                   Ramgo = Dap_max - Dap_min) </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Dap_min</th>
+<th align="right">Dap_max</th>
+<th align="right">Ramgo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">10.00074</td>
+<td align="right">59.999</td>
+<td align="right">49.99826</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Se puede ver que el DAP varía entre 10 y 59.7. El rango de los datos es 50, podemos determinar por ejemplo cinco clases dimétricas cada 10 cm:</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Intervalo</th>
+<th align="left">Clase</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">10 - 20</td>
+<td align="left">Clase 1</td>
+</tr>
+<tr class="even">
+<td align="left">20 - 30</td>
+<td align="left">Clase 2</td>
+</tr>
+<tr class="odd">
+<td align="left">30 - 40</td>
+<td align="left">Clase 3</td>
+</tr>
+<tr class="even">
+<td align="left">40 - 50</td>
+<td align="left">Clase 4</td>
+</tr>
+<tr class="odd">
+<td align="left">50 - 60</td>
+<td align="left">Clase 5</td>
+</tr>
+<tr class="even">
+<td align="left">…</td>
+<td align="left">Clase …</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Las siguientes líneas crean una nueva columna en el dataframe (base de datos), asignando cada una de las observaciones a una de las clases dimétricas:</li>
+</ul>
+<pre class="r"><code># Creamos un nuevo dataframe con la columna diam_class y la asignamos al objeto clase_diametrica.
+clase_diametrica &lt;- data %&gt;% 
+  mutate(
+    diam_class = case_when(
+      dap &gt;= 10 &amp; dap &lt; 20 ~ &quot;Clase_1&quot;,
+      dap &gt;= 20 &amp; dap &lt; 30 ~ &quot;Clase_2&quot;,
+      dap &gt;= 30 &amp; dap &lt; 40 ~ &quot;Clase_3&quot;,
+      dap &gt;= 40 &amp; dap &lt; 50 ~ &quot;Clase_4&quot;,
+      dap &gt;= 50 &amp; dap &lt; 60 ~ &quot;Clase_5&quot;,
+      is.na(dap) ~ &quot;sin DAP&quot; ))
+</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Sub parcela</th>
+<th align="left">Especie</th>
+<th align="right">DAP</th>
+<th align="right">Area basal</th>
+<th align="left">Clase diametrica</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alchornea.costaricensis</td>
+<td align="right">56.39995</td>
+<td align="right">1004.713</td>
+<td align="left">Clase_5</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alchornea.costaricensis</td>
+<td align="right">25.32447</td>
+<td align="right">1404.477</td>
+<td align="left">Clase_2</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">34.04346</td>
+<td align="right">2840.730</td>
+<td align="left">Clase_3</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">39.22115</td>
+<td align="right">1124.208</td>
+<td align="left">Clase_3</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">36.58114</td>
+<td align="right">1923.634</td>
+<td align="left">Clase_3</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">21.53010</td>
+<td align="right">1021.429</td>
+<td align="left">Clase_2</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">47.25786</td>
+<td align="right">2649.098</td>
+<td align="left">Clase_4</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">24.78828</td>
+<td align="right">2559.781</td>
+<td align="left">Clase_2</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">56.76481</td>
+<td align="right">1358.285</td>
+<td align="left">Clase_5</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">Alseis.blackiana</td>
+<td align="right">52.20535</td>
+<td align="right">169.278</td>
+<td align="left">Clase_5</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>La primera clase <em>(Clase 1)</em> dimétricas está conformada por todos los arboles con un DAP entre 10 y 20 cm, el código incluye en este grupo todos los arboles con un DAP mayor igual a 10 y menor a 20. (<code>dap &gt;= 10 &amp; dap &lt; 20 ~ &quot;Clase_1&quot;</code>).</p></li>
+<li><p>El siguiente código genera una tabla resumen con los valores mínimos, máximos, rango y número de individuos por cada clase dimétricas.</p></li>
+</ul>
+<pre class="r"><code>clase_diametrica %&gt;%  
+group_by(diam_class) %&gt;% 
+  summarise(min = min(dap),
+            max = max(dap), 
+            rango =max- min,
+            n = n()) </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Clase diametrica</th>
+<th align="right">Min_DAP</th>
+<th align="right">Max_DAP</th>
+<th align="right">Rango</th>
+<th align="right">N_individuos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Clase_1</td>
+<td align="right">10.00074</td>
+<td align="right">19.99919</td>
+<td align="right">9.998455</td>
+<td align="right">4236</td>
+</tr>
+<tr class="even">
+<td align="left">Clase_2</td>
+<td align="right">20.00033</td>
+<td align="right">29.99797</td>
+<td align="right">9.997644</td>
+<td align="right">4283</td>
+</tr>
+<tr class="odd">
+<td align="left">Clase_3</td>
+<td align="right">30.00355</td>
+<td align="right">39.99748</td>
+<td align="right">9.993932</td>
+<td align="right">4304</td>
+</tr>
+<tr class="even">
+<td align="left">Clase_4</td>
+<td align="right">40.00238</td>
+<td align="right">49.99175</td>
+<td align="right">9.989371</td>
+<td align="right">4370</td>
+</tr>
+<tr class="odd">
+<td align="left">Clase_5</td>
+<td align="right">50.00210</td>
+<td align="right">59.99900</td>
+<td align="right">9.996899</td>
+<td align="right">4264</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>La representación gráfica de las clases dimétricas la obtendremos mediante las siguientes líneas de código:</li>
+</ul>
+<pre class="r"><code>clase_diametrica %&gt;%
+  group_by(diam_class) %&gt;% 
+  summarise(min = min(dap),
+            max = max(dap), 
+            rango =max- min,
+            n = n()) %&gt;% 
+  ggplot(aes(diam_class, n)) +
+  geom_point(size = 5, color = &quot;red&quot;)+
+  geom_line(aes(c(1:5), n), linetype = &quot;dashed&quot;)+
+  theme_bw()+
+  scale_y_continuous(breaks=seq(75,150,5))+
+  theme(axis.text.x  = element_text(angle=0, vjust=0.5, 
+                                    size=11, face = &quot;bold&quot;),
+        axis.text.y.left  = element_text(angle = 0, vjust = .5,
+                                         size = 11, face = &quot;bold&quot;), 
+        axis.title.y = element_text(size = 14),
+        axis.title.x = element_text(size = 14),
+        plot.title = element_text(hjust = .5, face = &quot;bold&quot;))+
+  labs(x = &quot;Clase Diametrica&quot;, 
+       y = &quot;Número de individuos&quot;,
+       title = &quot;Estructura Dimétrica&quot;)</code></pre>
+<p><img src="/post/2018-10-05-indice_valor_importancia_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+</div>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/dataviz/">Dataviz</a>
+  
+  <a class="badge badge-light" href="/tags/plant-diversity/">Plant diversity</a>
+  
+  <a class="badge badge-light" href="/tags/data-management/">Data management</a>
+  
+</div>
+
+
+
+    
+
+
+
+
+
+
+<div class="media author-card" itemscope itemtype="http://schema.org/Person">
+  
+  <img class="portrait mr-3" src="/img/paul_efren.JPG" itemprop="image" alt="Avatar">
+  
+  <div class="media-body">
+    <h5 class="card-title" itemprop="name"><a href="/">Paul Efren Santos Andrade</a></h5>
+    <h6 class="card-subtitle">Plant ecology and R programming</h6>
+    
+    <ul class="network-icon" aria-hidden="true">
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="/#contact" >
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://twitter.com/PaulEfrenSantos" target="_blank" rel="noopener">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://github.com/PaulESantos" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/post/2018-09-22-curva_de_acumulacion/">Curvas de acumulación de especies</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-paulefrensa-rbind-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+  <p class="powered-by">
+    <a href="/privacy/">Privacy Policy</a>
+  </p>
+  
+
+  <p class="powered-by">
+    &copy; 2018 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+    <script id="dsq-count-scr" src="//https-paulefrensa-rbind-io.disqus.com/count.js" async></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.d037ee5294b166a79dec317c58aea9cc.js"></script>
+
+    
+
+  </body>
+</html>
+
