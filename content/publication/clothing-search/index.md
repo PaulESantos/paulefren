@@ -16,7 +16,7 @@ authors = ["Doughty C.E.", "Santos Andrade P.E.", "Goldsmith G.R.", "Blonder B."
 # 4 = Report
 # 5 = Book
 # 6 = Book section
-publication_types = ["1"]
+publication_types = ["2"]
 
 # Publication name and optional abbreviated version.
 publication = "In *Journal of Geophysical Research: Biogeosciences*, AGU - PUBLICATIONS."
@@ -34,7 +34,7 @@ selected = true
 #   E.g. `projects = ["deep-learning"]` references 
 #   `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects = ["internal-project"]
+projects = []
 
 # Tags (optional).
 #   Set `tags = []` for no tags, or use the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
