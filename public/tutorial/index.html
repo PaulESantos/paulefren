@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -295,75 +297,38 @@
 
 
 
-<div class="container-fluid docs">
-  <div class="row flex-xl-nowrap">
-    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
-      
 
 
 
 
-<form class="docs-search d-flex align-items-center">
-  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
-    <span><i class="fas fa-bars"></i></span>
-  </button>
+
+
+
+
+
+
+
 
   
-  <input name="q" type="search" class="form-control" id="search-query" placeholder="Search..." autocomplete="off">
-  
-</form>
 
-<nav class="collapse docs-links" id="docs-nav">
   
   
-  <div class="docs-toc-item active">
-    <a class="docs-toc-link" href="/tutorial/">Overview</a>
-
-  </div>
   
-  <div class="docs-toc-item">
-    <a class="docs-toc-link" href="/tutorial/example/">Example Topic</a>
-    <ul class="nav docs-sidenav">
-      
-      <li >
-        <a href="/tutorial/example/">Example Page</a>
-      </li>
-      
-    </ul>
     
-
-  </div>
   
+<div class="universal-wrapper pt-3">
+  <h1 itemprop="name">Overview</h1>
+
   
-</nav>
 
-    </div>
+  
+</div>
 
-    
-    <div class="d-none d-xl-block col-xl-2 docs-toc">
-      
-      <p class="docs-toc-title">On this page</p>
-      
 
-      
 
-      <ul class="nav toc-top">
-        <li><a href="#">Back to top</a></li>
-      </ul>
-
-      
-    </div>
-    
-
-    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
-
-      <article class="article" itemscope itemtype="http://schema.org/Article">
-
-        <div class="docs-article-container">
-          <h1 itemprop="name">Overview</h1>
-
-          <div class="article-style" itemprop="articleBody">
-            <p>This feature can be used for publishing content such as:</p>
+<div class="universal-wrapper">
+  
+  <div class="article-style" itemprop="articleBody"><p>This feature can be used for publishing content such as:</p>
 
 <ul>
 <li><strong>Project or software documentation</strong></li>
@@ -376,20 +341,28 @@
 <p>To disable this feature, either delete the parent folder, or set <code>draft = true</code> in the front matter of all its pages.</p>
 
 <p>After renaming or deleting the parent folder, you may wish to update any <code>[[menu.main]]</code> menu links to it in the <code>config.toml</code>.</p>
+</div>
+  
 
-          </div>
+  
+  
+  <div>
+    <h2><a href="/tutorial/example/">Example Page</a></h2>
+    <div class="article-style">
+      
+      In this tutorial, I&rsquo;ll share my top 10 tips for getting started with Academic:
+Tip 1 &hellip;
+Tip 2 &hellip;
+      
+    </div>
+  </div>
+  
 
-          
+  
 
-        </div>
-
-        <div class="body-footer">
-          Last updated on Sep 9, 2018
-        </div>
-
-      </article>
-
-      <footer class="site-footer">
+</div>
+<div class="container">
+  <footer class="site-footer">
   
   <p class="powered-by">
     <a href="/privacy/">Privacy Policy</a>
@@ -407,8 +380,31 @@
   </p>
 </footer>
 
+</div>
 
-    </main>
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -514,5 +510,6 @@
 
   </body>
 </html>
+
 
 
