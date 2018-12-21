@@ -55,7 +55,7 @@ enableGitInfo = false
 
   # Your details.
   name = "Paul Efren Santos Andrade"
-  role = "Plant ecology and R programming"
+  role = "Plant ecology & Data Science"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
@@ -109,7 +109,7 @@ enableGitInfo = false
 
   # Color theme.
   #   Choose from `default`, `ocean`, `forest`, `dark`, `apogee`, `1950s`, `coffee`, `cupcake`.
-  color_theme = "default"
+  color_theme = "custom"
   # Enable users to switch between day and night mode?
   day_night = true
 
