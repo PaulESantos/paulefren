@@ -66,16 +66,16 @@ enableGitInfo = false
 
   # Details for the Contact Widget
   email = "paulefrens@gmail.com"
-  #address = "Building 1 Room 1, Stanford University, California, 90210, USA"
-  #office_hours = """
+  address = ""
+  office_hours = ""
   #Monday 10:00 to 13:00\\
   #Wednesday 09:00 to 10:00\\
   #Otherwise email to book an appointment
   #"""
-  #phone = ""
-  #skype = ""
-  #telegram = ""
-  #keybase = ""  # Your keybase.io username.
+  phone = ""
+  skype = ""
+  telegram = ""
+  keybase = ""  # Your keybase.io username.
 
   # Enter an optional link for booking appointments (e.g. calendly.com).
   appointment_url = ""
@@ -124,7 +124,7 @@ enableGitInfo = false
   sharing_image = ""
 
   # Twitter username (without @). Used when a vistor shares your site on Twitter.
-  twitter = "@PaulEfrenSantos"
+  twitter = "PaulEfrenSantos"
 
   # Diplay a logo in navigation bar rather than title (optional).
   #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
@@ -188,7 +188,7 @@ enableGitInfo = false
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  custom_css = []
+  custom_css = ["custom-css.css"]
   custom_js  = []
 
   # Publication types.
@@ -236,7 +236,7 @@ enableGitInfo = false
     #   2 = APA
     #   3 = MLA
     #   4 = Stream
-    publication_format = 2
+    publication_format = 4
 
     # Talk list format.
     #   0 = Simple
@@ -265,7 +265,7 @@ enableGitInfo = false
   [[params.social]]
     icon = "envelope"
     icon_pack = "fas"
-    link = "#contact"  # For a direct email link, use "mailto:test@example.org".
+    link = "mailto:paulefrens@gmail.com"  # For a direct email link, use "mailto:test@example.org".
 
   [[params.social]]
     icon = "twitter"
@@ -324,7 +324,7 @@ enableGitInfo = false
 
 [[menu.main]]
 name = "CV"
-url = "#cv"
+url = "/bio/"
 weight = 4
 
 [[menu.main]]
