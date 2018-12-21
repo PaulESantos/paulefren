@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
+  
+    
+  
+    
     <url>
     
       <loc>/post/2018-11-26-data_wrangling_4/</loc>
@@ -94,6 +98,14 @@
     
       <loc>/publication/clothing-search/</loc>
       <lastmod>2017-10-26T00:00:00+11:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/bio/</loc>
+      <lastmod>2017-01-01T00:00:00+11:00</lastmod>
     </url>
     
   
