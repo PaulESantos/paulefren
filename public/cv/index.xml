@@ -1,44 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Cvs on DataScience &amp; Biology</title>
-    <link>/cv/</link>
-    <description>Recent content in Cvs on DataScience &amp; Biology</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +1000</lastBuildDate>
-    
-	<atom:link href="/cv/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title></title>
-      <link>/cv/cv/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +1000</pubDate>
-      
-      <guid>/cv/cv/</guid>
-      <description>Paul Efren Santos Andrade Contac Information:  Email paulefrens@gmail.com
- Twitter PaulEfrenSantos
-  EDUCATION:  2014 Bachelor on Biological Science. Universidad Nacional San Antonio Abad del Cusco.
- 2016 Biologist. Universidad Nacional San Antonio Abad del Cusco.
-  POST GRADUATE COURSES:  2013 Why and how to measure functional characters of plants? - A practical introduction, University of Oxford and Núcleo Diversus.
- 2018 lnternational Plant Functional Traits Course (PFTC3), University of Bergen, Norway, and the University of Arizona , USA.</description>
-    </item>
-    
-    <item>
-      <title>Curriculum Vitae</title>
-      <link>/cv/content/vitae/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/cv/content/vitae/</guid>
-      <description>Paul Efren Santos AndradeContac Information:Email paulefrens@gmail.com
-Twitter PaulEfrenSantos
-EDUCATION:2014 Bachelor on Biological Science. Universidad Nacional San Antonio Abad del Cusco.
-2016 Biologist. Universidad Nacional San Antonio Abad del Cusco.
-POST GRADUATE COURSES:2013 Why and how to measure functional characters of plants? - A practical introduction, University of Oxford and Núcleo Diversus.
-2018 lnternational Plant Functional Traits Course (PFTC3), University of Bergen, Norway, and the University of Arizona , USA.</description>
-    </item>
-    
-  </channel>
-</rss>

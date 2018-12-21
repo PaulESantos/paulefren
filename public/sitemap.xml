@@ -76,14 +76,6 @@
     
     <url>
     
-      <loc>/note/another-note/</loc>
-      <lastmod>2018-09-07T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>/post/2018-09-07-intervalos_de_confianza/</loc>
       <lastmod>2018-09-07T00:00:00+00:00</lastmod>
     </url>
@@ -182,6 +174,15 @@
     
     <url>
     
+      <loc>/</loc>
+      <lastmod>2017-10-15T00:00:00+11:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/tags/dataviz/</loc>
       <lastmod>2018-10-05T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -202,32 +203,6 @@
     
       <loc>/tags/demo/</loc>
       <lastmod>2016-04-27T00:00:00+10:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/categories/example/</loc>
-      <lastmod>2018-09-07T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/</loc>
-      <lastmod>2017-10-15T00:00:00+11:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/note/</loc>
-      <lastmod>2018-09-07T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -297,15 +272,6 @@
     
       <loc>/tags/</loc>
       <lastmod>2018-11-26T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/tutorial/</loc>
-      <lastmod>2018-09-07T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
