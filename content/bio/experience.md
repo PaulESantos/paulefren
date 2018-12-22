@@ -18,6 +18,7 @@ date_format = "January 2006"
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
+
 [[experience]]
   title = "Pre-professional Practices"
   company = "Zoological Society of Frankfurt - Ayuda para la Vida Silvestre Amenazada"
@@ -30,11 +31,11 @@ date_format = "January 2006"
 
 [[experience]]
   title = "Assistant Research"
-  company = "School of Geo Sciences the University of Edinburgh"
+  company = "University of Edinburgh"
   company_url = ""
   location = "Cusco - Peru"
   date_start = "2011-06-01"
   date_end = "2012-12-31"
-  description = """ **At the project: "Respiration of soil with the Multiplexer Licor along a gradient of elevation of the Andes to the Amazon"** """
+  description = """School of Geo Sciences the at the project: **"Respiration of soil with the Multiplexer Licor along a gradient of elevation of the Andes to the Amazon"**"""
 
 +++
