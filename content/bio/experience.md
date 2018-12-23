@@ -38,4 +38,12 @@ date_format = "January 2006"
   date_end = "2012-12-31"
   description = """School of Geo Sciences the at the project: **"Respiration of soil with the Multiplexer Licor along a gradient of elevation of the Andes to the Amazon"**"""
 
+[[experience]]
+  title = "Assistant Research"
+  company = "University of Edinburgh"
+  company_url = ""
+  location = "Cusco Peru"
+  date_start = "2013-06-01"
+  date_end = "2014-12-31"
+  description = """School of Geo Sciences the at the project: **"Respiration of soil with the Multiplexer Licor along a gradient of elevation of the Andes to the Amazon"**"""
 +++
