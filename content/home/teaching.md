@@ -15,6 +15,6 @@ weight = 60
 
 +++
 
-I am an instructor for the following courses at University X:
+I am an instructor for the following courses:
 
 - Introduction to Data Science – Programming with R. Universidad Nacional San Antonio Abad del Cusco. February 2018.
