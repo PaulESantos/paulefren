@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Plant diversity on DataScience &amp; Biology</title>
-    <link>/tags/plant-diversity/</link>
+    <link>https://paulefrensa.rbind.io/tags/plant-diversity/</link>
     <description>Recent content in Plant diversity on DataScience &amp; Biology</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;Paul Efren 2018</copyright>
     <lastBuildDate>Fri, 05 Oct 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/plant-diversity/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://paulefrensa.rbind.io/tags/plant-diversity/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Índice Valor Importancia</title>
-      <link>/post/2018-10-05-indice_valor_importancia/</link>
+      <link>https://paulefrensa.rbind.io/post/2018-10-05-indice_valor_importancia/</link>
       <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018-10-05-indice_valor_importancia/</guid>
+      <guid>https://paulefrensa.rbind.io/post/2018-10-05-indice_valor_importancia/</guid>
       <description>Los paquetes en R:tidyverse proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.#install.packages(&amp;quot;tidyverse&amp;quot;)#install.packages(&amp;quot;knitr&amp;quot;)library(tidyverse)library(knitr)La base de datos:Para este ejemplo modificamos la información de la base de datos BCI del paquete vegan.
 ParcelaEspecieDAPArea basal1Alchornea.costaricensis35.05894904.52681Alchornea.costaricensis16.504831640.84741Alseis.</description>
     </item>
     
     <item>
       <title>Curvas de acumulación de especies</title>
-      <link>/post/2018-09-22-curva_de_acumulacion/</link>
+      <link>https://paulefrensa.rbind.io/post/2018-09-22-curva_de_acumulacion/</link>
       <pubDate>Sat, 22 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018-09-22-curva_de_acumulacion/</guid>
+      <guid>https://paulefrensa.rbind.io/post/2018-09-22-curva_de_acumulacion/</guid>
       <description>Esta nos muestra el número de especies acumuladas conforme se incrementa el área de estudio (Unidad de esfuerzo), así el número de especies se incrementara hasta un punto en el cual no se registraran muevas especies.
 La paqueteria:Los paquetes o librerías permiten ampliar las capacidades de R para cumplir determinadas tareas. vegan provee herramientas básicas para el análisis de diversidad en estudios de ecología de comunidades. tidyverse proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.</description>
     </item>

@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on DataScience &amp; Biology</title>
-    <link>/categories/r/</link>
+    <link>https://paulefrensa.rbind.io/categories/r/</link>
     <description>Recent content in R on DataScience &amp; Biology</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;Paul Efren 2018</copyright>
     <lastBuildDate>Mon, 26 Nov 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://paulefrensa.rbind.io/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Data Wrangling Part 4</title>
-      <link>/post/2018-11-26-data_wrangling_4/</link>
+      <link>https://paulefrensa.rbind.io/post/2018-11-26-data_wrangling_4/</link>
       <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018-11-26-data_wrangling_4/</guid>
+      <guid>https://paulefrensa.rbind.io/post/2018-11-26-data_wrangling_4/</guid>
       <description>La base de datosContinuamos trabajando con el data.frame msleep, siempre con la intención de permitir la reproductibilidad del código.
 glimpse(msleep)## Observations: 83## Variables: 11## $ name &amp;lt;chr&amp;gt; &amp;quot;Cheetah&amp;quot;, &amp;quot;Owl monkey&amp;quot;, &amp;quot;Mountain beaver&amp;quot;, &amp;quot;Grea...## $ genus &amp;lt;chr&amp;gt; &amp;quot;Acinonyx&amp;quot;, &amp;quot;Aotus&amp;quot;, &amp;quot;Aplodontia&amp;quot;, &amp;quot;Blarina&amp;quot;, &amp;quot;Bo...## $ vore &amp;lt;chr&amp;gt; &amp;quot;carni&amp;quot;, &amp;quot;omni&amp;quot;, &amp;quot;herbi&amp;quot;, &amp;quot;omni&amp;quot;, &amp;quot;herbi&amp;quot;, &amp;quot;herbi...## $ order &amp;lt;chr&amp;gt; &amp;quot;Carnivora&amp;quot;, &amp;quot;Primates&amp;quot;, &amp;quot;Rodentia&amp;quot;, &amp;quot;Soricomorph...## $ conservation &amp;lt;chr&amp;gt; &amp;quot;lc&amp;quot;, NA, &amp;quot;nt&amp;quot;, &amp;quot;lc&amp;quot;, &amp;quot;domesticated&amp;quot;, NA, &amp;quot;vu&amp;quot;, N.</description>
     </item>
     
     <item>
       <title>Data Wrangling Part 3</title>
-      <link>/post/2018-11-20-data_wrangling_3/</link>
+      <link>https://paulefrensa.rbind.io/post/2018-11-20-data_wrangling_3/</link>
       <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018-11-20-data_wrangling_3/</guid>
+      <guid>https://paulefrensa.rbind.io/post/2018-11-20-data_wrangling_3/</guid>
       <description>Esta es la tercera parte de la serie Data Wrangling.
 Las librerias:library(tidyverse)La base de datos:Continuaremos trabajando con la información contenida en la base de datos msleep. Con la finalidad de facilitar la reproductibilidad del código usado en este tutorial.
 data(&amp;quot;msleep&amp;quot;)glimpse(msleep)## Observations: 83## Variables: 11## $ name &amp;lt;chr&amp;gt; &amp;quot;Cheetah&amp;quot;, &amp;quot;Owl monkey&amp;quot;, &amp;quot;Mountain beaver&amp;quot;, &amp;quot;Grea...## $ genus &amp;lt;chr&amp;gt; &amp;quot;Acinonyx&amp;quot;, &amp;quot;Aotus&amp;quot;, &amp;quot;Aplodontia&amp;quot;, &amp;quot;Blarina&amp;quot;, &amp;quot;Bo.</description>
@@ -35,10 +35,10 @@ data(&amp;quot;msleep&amp;quot;)glimpse(msleep)## Observations: 83## Variable
     
     <item>
       <title>Data Wrangling Part 1</title>
-      <link>/post/2018-11-12-data_wrangling_1/</link>
+      <link>https://paulefrensa.rbind.io/post/2018-11-12-data_wrangling_1/</link>
       <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018-11-12-data_wrangling_1/</guid>
+      <guid>https://paulefrensa.rbind.io/post/2018-11-12-data_wrangling_1/</guid>
       <description>La base de datos:La base de datos que usaremos es msleep es pate del paquete ggplot2, trabajar con esta permitirá que el código puede ser reproducido con facilidad.
 Para conocer más de acerca de la base de datos msleep, se puede consultar (pdf) o se puede obtener la ayuda de R ?msleep
 Uno de los primeros pasos cuando tenemos nuestros datos en R es evaluar la estructura de nuestra base de datos:</description>
@@ -46,40 +46,40 @@ Uno de los primeros pasos cuando tenemos nuestros datos en R es evaluar la estru
     
     <item>
       <title>Data Wrangling Part 2</title>
-      <link>/post/2018-11-12-data_wrangling_2/</link>
+      <link>https://paulefrensa.rbind.io/post/2018-11-12-data_wrangling_2/</link>
       <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018-11-12-data_wrangling_2/</guid>
+      <guid>https://paulefrensa.rbind.io/post/2018-11-12-data_wrangling_2/</guid>
       <description>La base de datos:Continuaremos usando trabajando con la base de datos msleep, para facilitar la reproductibilidad y experimentacion del codigo.
 library(tidyverse)glimpse(msleep)## Observations: 83## Variables: 11## $ name &amp;lt;chr&amp;gt; &amp;quot;Cheetah&amp;quot;, &amp;quot;Owl monkey&amp;quot;, &amp;quot;Mountain beaver&amp;quot;, &amp;quot;Grea...## $ genus &amp;lt;chr&amp;gt; &amp;quot;Acinonyx&amp;quot;, &amp;quot;Aotus&amp;quot;, &amp;quot;Aplodontia&amp;quot;, &amp;quot;Blarina&amp;quot;, &amp;quot;Bo...## $ vore &amp;lt;chr&amp;gt; &amp;quot;carni&amp;quot;, &amp;quot;omni&amp;quot;, &amp;quot;herbi&amp;quot;, &amp;quot;omni&amp;quot;, &amp;quot;herbi&amp;quot;, &amp;quot;herbi...## $ order &amp;lt;chr&amp;gt; &amp;quot;Carnivora&amp;quot;, &amp;quot;Primates&amp;quot;, &amp;quot;Rodentia&amp;quot;, &amp;quot;Soricomorph...## $ conservation &amp;lt;chr&amp;gt; &amp;quot;lc&amp;quot;, NA, &amp;quot;nt&amp;quot;, &amp;quot;lc&amp;quot;, &amp;quot;domesticated&amp;quot;, NA, &amp;quot;vu&amp;quot;, N.</description>
     </item>
     
     <item>
       <title>Índice Valor Importancia</title>
-      <link>/post/2018-10-05-indice_valor_importancia/</link>
+      <link>https://paulefrensa.rbind.io/post/2018-10-05-indice_valor_importancia/</link>
       <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018-10-05-indice_valor_importancia/</guid>
+      <guid>https://paulefrensa.rbind.io/post/2018-10-05-indice_valor_importancia/</guid>
       <description>Los paquetes en R:tidyverse proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.#install.packages(&amp;quot;tidyverse&amp;quot;)#install.packages(&amp;quot;knitr&amp;quot;)library(tidyverse)library(knitr)La base de datos:Para este ejemplo modificamos la información de la base de datos BCI del paquete vegan.
 ParcelaEspecieDAPArea basal1Alchornea.costaricensis35.05894904.52681Alchornea.costaricensis16.504831640.84741Alseis.</description>
     </item>
     
     <item>
       <title>Curvas de acumulación de especies</title>
-      <link>/post/2018-09-22-curva_de_acumulacion/</link>
+      <link>https://paulefrensa.rbind.io/post/2018-09-22-curva_de_acumulacion/</link>
       <pubDate>Sat, 22 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018-09-22-curva_de_acumulacion/</guid>
+      <guid>https://paulefrensa.rbind.io/post/2018-09-22-curva_de_acumulacion/</guid>
       <description>Esta nos muestra el número de especies acumuladas conforme se incrementa el área de estudio (Unidad de esfuerzo), así el número de especies se incrementara hasta un punto en el cual no se registraran muevas especies.
 La paqueteria:Los paquetes o librerías permiten ampliar las capacidades de R para cumplir determinadas tareas. vegan provee herramientas básicas para el análisis de diversidad en estudios de ecología de comunidades. tidyverse proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.</description>
     </item>
     
     <item>
       <title>Intervalos de Confianza</title>
-      <link>/post/2018-09-07-intervalos_de_confianza/</link>
+      <link>https://paulefrensa.rbind.io/post/2018-09-07-intervalos_de_confianza/</link>
       <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018-09-07-intervalos_de_confianza/</guid>
+      <guid>https://paulefrensa.rbind.io/post/2018-09-07-intervalos_de_confianza/</guid>
       <description>This is a modification of a blog written by Sean Kross, using tidyverse.
 Esta es una modificación de un blog escrito por Sean Kross1, utilizando tidyverse2.
 Imagina que estás buscando estimar el promedio de una alguna característica de una población.Conformada por 100 000 individuos.set.seed(2016-05-04)poblacion &amp;lt;- data_frame( individuo = seq(1,100000),caracteristica = runif(100000))IndividuoCaracteristicaIndividuoCaracteristica10.</description>

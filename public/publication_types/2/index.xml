@@ -2,32 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2 on DataScience &amp; Biology</title>
-    <link>/publication_types/2/</link>
+    <link>https://paulefrensa.rbind.io/publication_types/2/</link>
     <description>Recent content in 2 on DataScience &amp; Biology</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;Paul Efren 2018</copyright>
     <lastBuildDate>Mon, 19 Nov 2018 00:00:00 +1100</lastBuildDate>
     
-	<atom:link href="/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://paulefrensa.rbind.io/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tropical forest leaves may darken in response to climate change</title>
-      <link>/publication/person-re-id/</link>
+      <link>https://paulefrensa.rbind.io/publication/person-re-id/</link>
       <pubDate>Mon, 19 Nov 2018 00:00:00 +1100</pubDate>
       
-      <guid>/publication/person-re-id/</guid>
+      <guid>https://paulefrensa.rbind.io/publication/person-re-id/</guid>
       <description>#More detail can easily be written here using Markdown and $\rm \LaTeX$ math code.</description>
-    </item>
-    
-    <item>
-      <title>Can Leaf Spectroscopy Predict Leaf and Forest Traits Along a Peruvian Tropical Forest Elevation Gradient?</title>
-      <link>/publication/clothing-search/</link>
-      <pubDate>Thu, 26 Oct 2017 00:00:00 +1100</pubDate>
-      
-      <guid>/publication/clothing-search/</guid>
-      <description></description>
     </item>
     
   </channel>

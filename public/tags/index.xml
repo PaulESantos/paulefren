@@ -2,103 +2,76 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on DataScience &amp; Biology</title>
-    <link>/tags/</link>
+    <link>https://paulefrensa.rbind.io/tags/</link>
     <description>Recent content in Tags on DataScience &amp; Biology</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;Paul Efren 2018</copyright>
     <lastBuildDate>Mon, 26 Nov 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://paulefrensa.rbind.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Data management</title>
-      <link>/tags/data-management/</link>
+      <link>https://paulefrensa.rbind.io/tags/data-management/</link>
       <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/data-management/</guid>
+      <guid>https://paulefrensa.rbind.io/tags/data-management/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dataviz</title>
-      <link>/tags/dataviz/</link>
+      <link>https://paulefrensa.rbind.io/tags/dataviz/</link>
       <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/dataviz/</guid>
+      <guid>https://paulefrensa.rbind.io/tags/dataviz/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Deep Learning</title>
-      <link>/tags/deep-learning/</link>
+      <link>https://paulefrensa.rbind.io/tags/deep-learning/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +1000</pubDate>
       
-      <guid>/tags/deep-learning/</guid>
+      <guid>https://paulefrensa.rbind.io/tags/deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Demo</title>
-      <link>/tags/demo/</link>
+      <link>https://paulefrensa.rbind.io/tags/demo/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +1000</pubDate>
       
-      <guid>/tags/demo/</guid>
+      <guid>https://paulefrensa.rbind.io/tags/demo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Plant diversity</title>
-      <link>/tags/plant-diversity/</link>
+      <link>https://paulefrensa.rbind.io/tags/plant-diversity/</link>
       <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/plant-diversity/</guid>
+      <guid>https://paulefrensa.rbind.io/tags/plant-diversity/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R Markdown</title>
-      <link>/tags/r-markdown/</link>
+      <link>https://paulefrensa.rbind.io/tags/r-markdown/</link>
       <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/r-markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>leaf spectroscopy</title>
-      <link>/tags/leaf-spectroscopy/</link>
-      <pubDate>Thu, 26 Oct 2017 00:00:00 +1100</pubDate>
-      
-      <guid>/tags/leaf-spectroscopy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>leaf trait&#39;s</title>
-      <link>/tags/leaf-traits/</link>
-      <pubDate>Thu, 26 Oct 2017 00:00:00 +1100</pubDate>
-      
-      <guid>/tags/leaf-traits/</guid>
+      <guid>https://paulefrensa.rbind.io/tags/r-markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>plot</title>
-      <link>/tags/plot/</link>
+      <link>https://paulefrensa.rbind.io/tags/plot/</link>
       <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/plot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tropical forest</title>
-      <link>/tags/tropical-forest/</link>
-      <pubDate>Thu, 26 Oct 2017 00:00:00 +1100</pubDate>
-      
-      <guid>/tags/tropical-forest/</guid>
+      <guid>https://paulefrensa.rbind.io/tags/plot/</guid>
       <description></description>
     </item>
     
