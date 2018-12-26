@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bio on DataScience &amp; Biology</title>
-    <link>/bio/</link>
+    <link>https://paulefrensa.rbind.io/bio/</link>
     <description>Recent content in Bio on DataScience &amp; Biology</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;Paul Efren 2018</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +1100</lastBuildDate>
     
-	<atom:link href="/bio/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://paulefrensa.rbind.io/bio/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Skills</title>
-      <link>/bio/skills/</link>
+      <link>https://paulefrensa.rbind.io/bio/skills/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +1000</pubDate>
       
-      <guid>/bio/skills/</guid>
+      <guid>https://paulefrensa.rbind.io/bio/skills/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Experience</title>
-      <link>/bio/experience/</link>
+      <link>https://paulefrensa.rbind.io/bio/experience/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/bio/experience/</guid>
+      <guid>https://paulefrensa.rbind.io/bio/experience/</guid>
       <description></description>
     </item>
     
