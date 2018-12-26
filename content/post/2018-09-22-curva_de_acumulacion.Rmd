@@ -11,6 +11,7 @@ knitr::opts_chunk$set(collapse = TRUE)
 library(tidyverse)
 library(knitr)
 library(infer)
+library(diversity.tool)
 ```
 
 
@@ -134,45 +135,30 @@ El grafico que buscamos se obtiene mediante el siguiente código:
 plot(curva)
 ```
 
-### tidyverse - ggplot2
+### diversity.tool 
 
-Podemos producir un gráfico de calidad con la ayuda de las funciones del paquete `ggplot2–Elegant Graphics for Data Analysis`. Para cumplir esta tarea es necesario construir una base de datos nueva recuperando información resultante de la función `speccacum()`, estos resultados serán asignados como *curva*.
+Podemos producir un gráfico de mayor calidad con la ayuda de las funciones del paquete **ggplot2–Elegant Graphics for Data Analysis**. Para cumplir esta tarea será necesario instalar la librería **diversity.tool** en desarrollo desde **github**. La función `speccacumplot()`, retorna un gráfico con la estructura de ggplot2.
 
 
-```{r, echo=TRUE}
+La siguiente línea permite instalar la paquetería necesaria:
 
-curva <- data_frame(parcela = curva$sites,
-                    riqueza = curva$richness,
-                    des_sta = curva$sd) 
-curva
+```{r, eval=FALSE}
+devtools::install_github("PaulESantos/diversity.tool")
+library(diversity.tool)
 ```
 
-Una vez construida la base de datos podemos construir el grafico de la curva de acumulación mediante el siguiente código: 
+Podemos generar el grafico de con la siguiente función:
 
 ```{r, echo=TRUE}
-curva %>% 
- ggplot(aes(parcela, riqueza))+
-  geom_line(linetype = 1, size = .5, color = "red") +
-  geom_errorbar(aes(ymin = riqueza - des_sta, ymax = riqueza + des_sta),
-                width = 0, size = 1)+
-   geom_point(color = "red", size = 1.5)+
-   theme_bw()+
-   scale_y_continuous(name = "Número de especies")+
-   scale_x_continuous(name = "Unidad de esfuerzo")+
-   theme(axis.text.x  = element_text(angle = 0, 
-                                     vjust = 0.5, size = 14),
-         axis.text.y.left  = element_text(angle = 0, 
-                                     vjust = 0.5, size = 14),
-         axis.title.y = element_text(size = 18),
-         axis.title.x = element_text(size = 18),
-         legend.background = element_blank(),
-         legend.key = element_blank(),
-         legend.title = element_text(size=12, face="bold"),
-         plot.title = element_text(hjust = .5, 
-                                   face = "bold", size = 21),
-         legend.justification=c(0,1), 
-         legend.position=c(.8, 1))+
-   labs( color = "", fill="")+
-   ggtitle("Curva de acumulación")
+specaccumplot(BCI)
+```
+
+Esta función nos permite cambiar el método utilizado en el cálculo de la curva de acumulación, así como modificar las características del gráfico.
+
+```{r, echo=TRUE}
+BCI %>% 
+specaccumplot(method = "rarefaction" )+
+   ggtitle("Curva de acumulación")+
+   theme_minimal()
 ```
 

@@ -5346,54 +5346,22 @@ BCI[1:5, c(&amp;quot;Vachellia.melanoceras&amp;quot;, &amp;quot;Acalypha.diversi
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(curva)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2018-09-22-curva_de_acumulacion_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;tidyverse---ggplot2&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;tidyverse - ggplot2&lt;/h3&gt;
-&lt;p&gt;Podemos producir un gráfico de calidad con la ayuda de las funciones del paquete &lt;code&gt;ggplot2–Elegant Graphics for Data Analysis&lt;/code&gt;. Para cumplir esta tarea es necesario construir una base de datos nueva recuperando información resultante de la función &lt;code&gt;speccacum()&lt;/code&gt;, estos resultados serán asignados como &lt;em&gt;curva&lt;/em&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
-curva &amp;lt;- data_frame(parcela = curva$sites,
-                    riqueza = curva$richness,
-                    des_sta = curva$sd) 
-curva
-## # A tibble: 50 x 3
-##    parcela riqueza des_sta
-##      &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;
-##  1       1    90.8    6.93
-##  2       2   122.     7.19
-##  3       3   139.     7.00
-##  4       4   151.     6.64
-##  5       5   159.     6.25
-##  6       6   166.     5.89
-##  7       7   171.     5.59
-##  8       8   176.     5.34
-##  9       9   179.     5.13
-## 10      10   183.     4.95
-## # ... with 40 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Una vez construida la base de datos podemos construir el grafico de la curva de acumulación mediante el siguiente código:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;curva %&amp;gt;% 
- ggplot(aes(parcela, riqueza))+
-  geom_line(linetype = 1, size = .5, color = &amp;quot;red&amp;quot;) +
-  geom_errorbar(aes(ymin = riqueza - des_sta, ymax = riqueza + des_sta),
-                width = 0, size = 1)+
-   geom_point(color = &amp;quot;red&amp;quot;, size = 1.5)+
-   theme_bw()+
-   scale_y_continuous(name = &amp;quot;Número de especies&amp;quot;)+
-   scale_x_continuous(name = &amp;quot;Unidad de esfuerzo&amp;quot;)+
-   theme(axis.text.x  = element_text(angle = 0, 
-                                     vjust = 0.5, size = 14),
-         axis.text.y.left  = element_text(angle = 0, 
-                                     vjust = 0.5, size = 14),
-         axis.title.y = element_text(size = 18),
-         axis.title.x = element_text(size = 18),
-         legend.background = element_blank(),
-         legend.key = element_blank(),
-         legend.title = element_text(size=12, face=&amp;quot;bold&amp;quot;),
-         plot.title = element_text(hjust = .5, 
-                                   face = &amp;quot;bold&amp;quot;, size = 21),
-         legend.justification=c(0,1), 
-         legend.position=c(.8, 1))+
-   labs( color = &amp;quot;&amp;quot;, fill=&amp;quot;&amp;quot;)+
-   ggtitle(&amp;quot;Curva de acumulación&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;diversity.tool&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;diversity.tool&lt;/h3&gt;
+&lt;p&gt;Podemos producir un gráfico de mayor calidad con la ayuda de las funciones del paquete &lt;strong&gt;ggplot2–Elegant Graphics for Data Analysis&lt;/strong&gt;. Para cumplir esta tarea será necesario instalar la librería &lt;strong&gt;diversity.tool&lt;/strong&gt; en desarrollo desde &lt;strong&gt;github&lt;/strong&gt;. La función &lt;code&gt;speccacumplot()&lt;/code&gt;, retorna un gráfico con la estructura de ggplot2.&lt;/p&gt;
+&lt;p&gt;La siguiente línea permite instalar la paquetería necesaria:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;devtools::install_github(&amp;quot;PaulESantos/diversity.tool&amp;quot;)
+library(diversity.tool)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Podemos generar el grafico de con la siguiente función:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;specaccumplot(BCI)
+## Warning in cor(x &amp;gt; 0): the standard deviation is zero&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2018-09-22-curva_de_acumulacion_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Esta función nos permite cambiar el método utilizado en el cálculo de la curva de acumulación, así como modificar las características del gráfico.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;BCI %&amp;gt;% 
+specaccumplot(method = &amp;quot;rarefaction&amp;quot; )+
+   ggtitle(&amp;quot;Curva de acumulación&amp;quot;)+
+   theme_minimal()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-09-22-curva_de_acumulacion_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
