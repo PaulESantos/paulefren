@@ -61,7 +61,7 @@ library(tidyverse)glimpse(msleep)## Observations: 83## Variables: 11## $ nam
       
       <guid>/post/2018-10-05-indice_valor_importancia/</guid>
       <description>Los paquetes en R:tidyverse proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.#install.packages(&amp;quot;tidyverse&amp;quot;)#install.packages(&amp;quot;knitr&amp;quot;)library(tidyverse)library(knitr)La base de datos:Para este ejemplo modificamos la información de la base de datos BCI del paquete vegan.
-ParcelaEspecieDAPArea basal1Alchornea.costaricensis13.215071173.86201Alchornea.costaricensis34.30354366.48431Alseis.</description>
+ParcelaEspecieDAPArea basal1Alchornea.costaricensis35.05894904.52681Alchornea.costaricensis16.504831640.84741Alseis.</description>
     </item>
     
   </channel>
