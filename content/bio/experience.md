@@ -35,7 +35,7 @@ date_format = "January 2006"
   company_url = ""
   location = "Cusco Peru"
   date_start = "2011-06-01"
-  date_end = "2012-12-31"
+  date_end = "2012-12-28"
   description = """School of Geo Sciences the at the project: **"Respiration of soil with the Multiplexer Licor along a gradient of elevation of the Andes to the Amazon"**"""
 
 [[experience]]
@@ -44,6 +44,15 @@ date_format = "January 2006"
   company_url = ""
   location = "Cusco Peru"
   date_start = "2013-06-01"
-  date_end = "2014-12-31"
+  date_end = "2014-12-28"
   description = """School of Geo Sciences the at the project: **"Respiration of soil with the Multiplexer Licor along a gradient of elevation of the Andes to the Amazon"**"""
+  
+[[experience]]
+  title = "Intern"
+  company = "University of Arizona"
+  company_url = ""
+  location = "Colorado, USA"
+  date_start = "2018-06-01"
+  date_end = "2018-09-28"
+  description = """MACROECOLOGY LAB. Dr. Brian Enquist at the rmbl"""
 +++

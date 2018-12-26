@@ -43,13 +43,13 @@ weight = 1
   icon = "microphone-alt"
   icon_pack = "fas"
   name = "Speaker"
-  description = "I have presented original research at some conferences, at my university."
+  description = "I have presented original research at some conferences, at my university, about plant traits and data science."
   
 [[feature]]
   icon = "drafting-compass"
   icon_pack = "fas"
   name = "Data Visualization & Statistics"
-  description = "I love exploring, analyzing, and visualizing data. Lately, I enjoy visualizing."
+  description = "I love exploring, analyzing, and visualizing data."
 
 [[feature]]
   icon = "flask"
