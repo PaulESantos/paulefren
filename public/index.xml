@@ -29,6 +29,15 @@
     </item>
     
     <item>
+      <title>Other Research Experience</title>
+      <link>/bio/other_research_experience/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/bio/other_research_experience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Data Wrangling Part 4</title>
       <link>/post/2018-11-26-data_wrangling_4/</link>
       <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
@@ -5709,15 +5718,6 @@ Si tomamos varias muestras de una población, el promedio real de esta debería 
 
 &lt;p&gt;Further talk details can easily be added to this page using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>External Project</title>
-      <link>/project/external-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +1000</pubDate>
-      
-      <guid>/project/external-project/</guid>
-      <description></description>
     </item>
     
   </channel>

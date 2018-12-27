@@ -25,7 +25,7 @@ weight = 1
   icon = "r-project"
   icon_pack = "fab"
   name = "R user"
-  description = "I have been an avid R user since 2016. I have used R for complete my undegraduate tesis."
+  description = "I have been an avid R user since 2016. I have learned R to completed the data analysis of my undergraduate thesis and since then I help other students to learn R."
   
 # [[feature]]
 # icon = "apple-alt"
@@ -43,19 +43,19 @@ weight = 1
   icon = "microphone-alt"
   icon_pack = "fas"
   name = "Speaker"
-  description = "I have presented original research at some conferences, at my university, about plant traits and data science."
+  description = "I have presented original talks at some conferences at my university, talking about the plant functional traits and  R Data Science."
   
 [[feature]]
   icon = "drafting-compass"
   icon_pack = "fas"
-  name = "Data Visualization & Statistics"
-  description = "I love exploring, analyzing, and visualizing data."
+  name = "Data Science"
+  description = "I enjoy exploring, analyzing, and visualizing data. I attempt to develop some R tools for biological analysis"
 
 [[feature]]
   icon = "flask"
   icon_pack = "fas"
   name = "Scientist"
-  description = "I studied plant trait's and community ecology, I been part of the Plant Functional Trait Course 3."
+  description = "My research interests are plant functional traits and community ecology, I'm a collaborator of [ABERG](http://www.andesconservation.org/) group, recently I been part of the Plant Functional Trait Course - PFTC3."
 
 
 +++
