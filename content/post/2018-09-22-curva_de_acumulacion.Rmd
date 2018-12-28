@@ -150,14 +150,14 @@ library(diversity.tool)
 Podemos generar el grafico de con la siguiente función:
 
 ```{r, echo=TRUE, warning=FALSE}
-specaccumplot(BCI)
+specaccum_plot(BCI)
 ```
 
 Esta función nos permite cambiar el método utilizado en el cálculo de la curva de acumulación, así como modificar las características del gráfico.
 
 ```{r, echo=TRUE, warning=FALSE}
 BCI %>% 
-specaccumplot(method = "rarefaction" )+
+specaccum_plot(method = "rarefaction" )+
    ggtitle("Curva de acumulación")+
    theme_minimal()
 ```

@@ -128,11 +128,11 @@ BCI[1:5, c(&quot;Vachellia.melanoceras&quot;, &quot;Acalypha.diversifolia&quot;,
 <pre class="r"><code>devtools::install_github(&quot;PaulESantos/diversity.tool&quot;)
 library(diversity.tool)</code></pre>
 <p>Podemos generar el grafico de con la siguiente función:</p>
-<pre class="r"><code>specaccumplot(BCI)</code></pre>
+<pre class="r"><code>specaccum_plot(BCI)</code></pre>
 <p><img src="/post/2018-09-22-curva_de_acumulacion_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <p>Esta función nos permite cambiar el método utilizado en el cálculo de la curva de acumulación, así como modificar las características del gráfico.</p>
 <pre class="r"><code>BCI %&gt;% 
-specaccumplot(method = &quot;rarefaction&quot; )+
+specaccum_plot(method = &quot;rarefaction&quot; )+
    ggtitle(&quot;Curva de acumulación&quot;)+
    theme_minimal()</code></pre>
 <p><img src="/post/2018-09-22-curva_de_acumulacion_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
