@@ -28,7 +28,7 @@ abstract = "Tropical forest leaf albedo (reflectance) greatly impacts how much e
 abstract_short = ""
 
 # Is this a selected publication? (true/false)
-selected = true
+selected = false
 
 # Projects (optional).
 #   Associate this publication with one or more of your projects.

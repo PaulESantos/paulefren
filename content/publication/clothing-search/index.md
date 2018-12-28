@@ -26,7 +26,7 @@ publication_short = "In *JGR*"
 abstract = "High-resolution spectroscopy can be used to measure leaf chemical and structural traits. Such leaf traits are often highly correlated to other traits, such as photosynthesis, through the leaf economics spectrum. We measured VNIR (visible-near infrared) leaf reflectance (400–1,075 nm) of sunlit and shaded leaves in ~150 dominant species across ten, 1 ha plots along a 3,300 m elevation gradient in Peru (on 4,284 individual leaves). We used partial least squares (PLS) regression to compare leaf reflectance to chemical traits, such as nitrogen and phosphorus, structural traits, including leaf mass per area (LMA), branch wood density and leaf venation, and “higher-level” traits such as leaf photosynthetic capacity, leaf water repellency, and woody growth rates. Empirical models using leaf reflectance predicted leaf N and LMA (r2 > 30% and %RMSE < 30%), weakly predicted leaf venation, photosynthesis, and branch density (r2 between 10 and 35% and %RMSE between 10% and 65%), and did not predict leaf water repellency or woody growth rates (r2 < 5%). Prediction of higher-level traits such as photosynthesis and branch density is likely due to these traits correlations with LMA, a trait readily predicted with leaf spectroscopy."
 
 # Is this a selected publication? (true/false)
-selected = true
+selected = false
 
 # Projects (optional).
 #   Associate this publication with one or more of your projects.
