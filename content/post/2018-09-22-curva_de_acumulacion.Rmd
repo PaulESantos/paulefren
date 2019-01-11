@@ -143,6 +143,7 @@ Podemos producir un gráfico de mayor calidad con la ayuda de las funciones del 
 La siguiente línea permite instalar la paquetería necesaria:
 
 ```{r, eval=FALSE}
+install.packages("devtools")
 devtools::install_github("PaulESantos/diversity.tool")
 library(diversity.tool)
 ```
