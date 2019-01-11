@@ -166,17 +166,12 @@ La dominancia se mide en función al área basal  (es el área en m² que ocupa 
 Las siguientes líneas nos permiten determinar cada uno de los valores antes mencionados. Para no desplegar toda la tabla solo se mostraran las diez especies con mayor valor de importancia.
  
 ```{r eval=FALSE}
-data %>%
-  group_by(especies) %>% 
-  summarise(n_individuos = n(),
-            n_suplot = n_distinct(parcela),
-            area_basal = sum(a_basal)) %>% 
-  mutate(dens_rela = (n_individuos/sum(n_individuos))*100,
-         frec_rela = (n_suplot/ sum(n_suplot))*100,
-         dom_rela = (area_basal/sum(area_basal))*100) %>% 
-  rowwise() %>% 
-  mutate(ivi = (sum(dens_rela, frec_rela, dom_rela)/3)) %>% 
-  arrange(desc(ivi)) 
+install.packages("devtools") 
+devtools::install_github("PaulESantos/diversity.tool")
+library(diversity.tool)
+
+data %>% 
+  ivi_index()
 ```
 
 
