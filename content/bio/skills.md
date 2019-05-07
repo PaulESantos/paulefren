@@ -43,7 +43,7 @@ weight = 1
   icon = "microphone-alt"
   icon_pack = "fas"
   name = "Speaker"
-  description = "I have presented original talks at some conferences at my university, talking about the plant functional traits and  R Data Science."
+  description = "I have presented original talks at some conferences at my university, talking about the plant functional trait and  R Data Science."
   
 [[feature]]
   icon = "drafting-compass"
