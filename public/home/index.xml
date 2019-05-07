@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Homes on DataScience &amp; Biology</title>
+    <title>Homes on R Programming &amp; Biology</title>
     <link>/home/</link>
-    <description>Recent content in Homes on DataScience &amp; Biology</description>
+    <description>Recent content in Homes on R Programming &amp; Biology</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;Paul Efren 2018</copyright>
@@ -37,7 +37,7 @@
       
       <guid>/home/about/</guid>
       <description>Biography Hi! I’m a Plant Ecologist and  data enthusiast. I am a biologist from the Universidad Nacional de San Antonio Abad del Cusco - Peru.
-I have worked in tropical forest ecology since 2013. I have gained experience in conservation projects with Frankfurt Zoological Society. I also have collaborated extensively with the Andes Biodiversity and Ecosystem Research Group. ABERG working in the Andes and Amazon regions of Peru such as Manu National Park and surroundings.</description>
+I have worked in tropical forest ecology since 2013. I have gained experience in conservation projects with Frankfurt Zoological Society. I also have collaborated extensively with the Andes Biodiversity and Ecosystem Research Group ABERG working in the Andes and Amazon regions of Peru such as Manu National Park and surroundings.</description>
     </item>
     
     <item>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dataviz on DataScience &amp; Biology</title>
+    <title>Dataviz on R Programming &amp; Biology</title>
     <link>/tags/dataviz/</link>
-    <description>Recent content in Dataviz on DataScience &amp; Biology</description>
+    <description>Recent content in Dataviz on R Programming &amp; Biology</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;Paul Efren 2018</copyright>
@@ -19,7 +19,7 @@
       
       <guid>/post/2018-10-05-indice_valor_importancia/</guid>
       <description>Los paquetes en R:tidyverse proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.#install.packages(&amp;quot;tidyverse&amp;quot;)#install.packages(&amp;quot;knitr&amp;quot;)library(tidyverse)library(knitr)La base de datos:Para este ejemplo modificamos la información de la base de datos BCI del paquete vegan.
-ParcelaEspecieDAPArea basal1Alchornea.costaricensis30.481991025.02701Alchornea.costaricensis55.57851651.24271Alseis.</description>
+ParcelaEspecieDAPArea basal1Alchornea.costaricensis15.93544454.81431Alchornea.costaricensis10.585611994.34431Alseis.</description>
     </item>
     
     <item>

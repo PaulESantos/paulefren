@@ -87,8 +87,8 @@ library(tidyverse)glimpse(msleep)## Observations: 83## Variables: 11## $ nam
   
 
   
-  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="DataScience &amp; Biology">
-  <link rel="feed" href="/index.xml" type="application/rss+xml" title="DataScience &amp; Biology">
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="R Programming &amp; Biology">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="R Programming &amp; Biology">
   
 
   <link rel="manifest" href="/site.webmanifest">
@@ -109,9 +109,9 @@ library(tidyverse)glimpse(msleep)## Observations: 83## Variables: 11## $ nam
   <meta property="twitter:site" content="@PaulEfrenSantos">
   <meta property="twitter:creator" content="@PaulEfrenSantos">
   
-  <meta property="og:site_name" content="DataScience &amp; Biology">
+  <meta property="og:site_name" content="R Programming &amp; Biology">
   <meta property="og:url" content="/post/2018-11-12-data_wrangling_2/">
-  <meta property="og:title" content="Data Wrangling Part 2 | DataScience &amp; Biology">
+  <meta property="og:title" content="Data Wrangling Part 2 | R Programming &amp; Biology">
   <meta property="og:description" content="La base de datos:Continuaremos usando trabajando con la base de datos msleep, para facilitar la reproductibilidad y experimentacion del codigo.
 library(tidyverse)glimpse(msleep)## Observations: 83## Variables: 11## $ name &lt;chr&gt; &quot;Cheetah&quot;, &quot;Owl monkey&quot;, &quot;Mountain beaver&quot;, &quot;Grea...## $ genus &lt;chr&gt; &quot;Acinonyx&quot;, &quot;Aotus&quot;, &quot;Aplodontia&quot;, &quot;Blarina&quot;, &quot;Bo...## $ vore &lt;chr&gt; &quot;carni&quot;, &quot;omni&quot;, &quot;herbi&quot;, &quot;omni&quot;, &quot;herbi&quot;, &quot;herbi...## $ order &lt;chr&gt; &quot;Carnivora&quot;, &quot;Primates&quot;, &quot;Rodentia&quot;, &quot;Soricomorph...## $ conservation &lt;chr&gt; &quot;lc&quot;, NA, &quot;nt&quot;, &quot;lc&quot;, &quot;domesticated&quot;, NA, &quot;vu&quot;, N."><meta property="og:image" content="/img/paul_efren.JPG">
   <meta property="og:locale" content="en-us">
@@ -125,7 +125,7 @@ library(tidyverse)glimpse(msleep)## Observations: 83## Variables: 11## $ nam
 
   
 
-  <title>Data Wrangling Part 2 | DataScience &amp; Biology</title>
+  <title>Data Wrangling Part 2 | R Programming &amp; Biology</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -165,7 +165,7 @@ library(tidyverse)glimpse(msleep)## Observations: 83## Variables: 11## $ nam
   <div class="container">
 
     
-      <a class="navbar-brand" href="/">DataScience &amp; Biology</a>
+      <a class="navbar-brand" href="/">R Programming &amp; Biology</a>
       
       <button type="button" class="navbar-toggler" data-toggle="collapse"
               data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -979,6 +979,15 @@ En el ejemplo anterior pude llevar a confusiones la modificación de las unidade
 <pre class="r"><code>msleep %&gt;%
   select(name, sleep_total:awake) %&gt;%
   mutate_at(vars(contains(&quot;sleep&quot;)), funs(min = .*60))</code></pre>
+<pre><code>## Warning: funs() is soft deprecated as of dplyr 0.8.0
+## please use list() instead
+## 
+## # Before:
+## funs(name = f(.)
+## 
+## # After: 
+## list(name = ~f(.))
+## This warning is displayed once per session.</code></pre>
 <table>
 <thead>
 <tr class="header">
@@ -1162,7 +1171,7 @@ En el ejemplo anterior pude llevar a confusiones la modificación de las unidade
 </div>
 <div id="case_when" class="section level2">
 <h2><strong>case_when()</strong></h2>
-<p><code>case_when()</code> permite evaluar múltiples condicionales lógicos para crear nuevos niveles de una variable discreta. Para todos los valores que no son considerados en los condicionales la opción <code>TRUE ~ &quot;nuevo_nombre&quot;</code>, permite otorgarles una categoría.</p>
+<p><code>case_when()</code> permite evaluar múltiples condicionales lógicos para crear nuevos niveles de una variable discreta. Para todos los valores que no son considerados en los condicionales la opción <code>TRUE ~ "nuevo_nombre"</code>, permite otorgarles una categoría.</p>
 <pre class="r"><code>msleep %&gt;%
   select(name, sleep_total) %&gt;%
   mutate(
@@ -1415,7 +1424,7 @@ conservation_table</code></pre>
 <div id="spread---gather" class="section level2">
 <h2><strong>spread() - gather()</strong></h2>
 <p>La función <code>gather()</code> permite reunir múltiples columnas en una. En este ejemplo tenemos tres columnas que contienen información sobre el tiempo de sueño. Para realizar algunos análisis y construir gráficos puede ser necesario tener toda esta información en una sola columna.</p>
-<p>Esta función necesita como primer argumento el nombre de la nueva columna (<code>&quot;key&quot;</code>), seguido de un nombre para la columna que almacenara los valores de cada observación (<code>&quot;value&quot;</code>). Las columnas que no deseas unir debe de ser deseleccionadas mediante <code>-</code>.</p>
+<p>Esta función necesita como primer argumento el nombre de la nueva columna (<code>"key"</code>), seguido de un nombre para la columna que almacenara los valores de cada observación (<code>"value"</code>). Las columnas que no deseas unir debe de ser deseleccionadas mediante <code>-</code>.</p>
 <pre class="r"><code>msleep_g &lt;- msleep %&gt;%
   select(name, contains(&quot;sleep&quot;)) %&gt;%
   gather(key = &quot;sleep_measure&quot;, value = &quot;time&quot;, -name)

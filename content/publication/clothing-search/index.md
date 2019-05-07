@@ -1,7 +1,7 @@
 +++
 title = "Can Leaf Spectroscopy Predict Leaf and Forest Traits Along a Peruvian Tropical Forest Elevation Gradient?"
 date = 2017-10-26T00:00:00
-draft = true
+draft = false
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["Doughty C.E.", "Santos Andrade P.E.", "Goldsmith G.R.", "Blonder B.", "Shenkin A.", "Bentley L.P", "Chavana Bryant C.", "Huaraca Huasco W.", "Díaz S.", "Salinas N.", "Enquist B.J.", "Martin R.", "Asner G.P.", "Malhi Y."]
@@ -56,7 +56,7 @@ url_pdf = "https://docs.wixstatic.com/ugd/935b97_cb0feea4423e4ee0828fd63c37f3747
 #url_custom = [{name = "Custom Link", url = "http://example.org"}]
 
 # Digital Object Identifier (DOI)
-doi = ""
+doi = "10.1002/2017JG003883"
 
 # Does this page contain LaTeX math? (true/false)
 math = false

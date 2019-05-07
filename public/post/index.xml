@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on DataScience &amp; Biology</title>
+    <title>Posts on R Programming &amp; Biology</title>
     <link>/post/</link>
-    <description>Recent content in Posts on DataScience &amp; Biology</description>
+    <description>Recent content in Posts on R Programming &amp; Biology</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;Paul Efren 2018</copyright>
@@ -61,7 +61,7 @@ library(tidyverse)glimpse(msleep)## Observations: 83## Variables: 11## $ nam
       
       <guid>/post/2018-10-05-indice_valor_importancia/</guid>
       <description>Los paquetes en R:tidyverse proporciona herramientas para el manejo y análisis de datos, se compone de múltiples paquetes que tienen una gramática común.#install.packages(&amp;quot;tidyverse&amp;quot;)#install.packages(&amp;quot;knitr&amp;quot;)library(tidyverse)library(knitr)La base de datos:Para este ejemplo modificamos la información de la base de datos BCI del paquete vegan.
-ParcelaEspecieDAPArea basal1Alchornea.costaricensis30.481991025.02701Alchornea.costaricensis55.57851651.24271Alseis.</description>
+ParcelaEspecieDAPArea basal1Alchornea.costaricensis15.93544454.81431Alchornea.costaricensis10.585611994.34431Alseis.</description>
     </item>
     
     <item>
@@ -82,7 +82,7 @@ La paqueteria:Los paquetes o librerías permiten ampliar las capacidades de R p
       <guid>/post/2018-09-07-intervalos_de_confianza/</guid>
       <description>This is a modification of a blog written by Sean Kross, using tidyverse.
 Esta es una modificación de un blog escrito por Sean Kross1, utilizando tidyverse2.
-Imagina que estás buscando estimar el promedio de una alguna característica de una población.Conformada por 100 000 individuos.set.seed(2016-05-04)poblacion &amp;lt;- data_frame( individuo = seq(1,100000),caracteristica = runif(100000))IndividuoCaracteristicaIndividuoCaracteristica10.</description>
+Imagina que estás buscando estimar el promedio de una alguna característica de una población.## Warning: `data_frame()` is deprecated, use `tibble()`.## This warning is displayed once per session.Conformada por 100 000 individuos.set.seed(2016-05-04)poblacion &amp;lt;- data_frame( individuo = seq(1,100000),caracteristica = runif(100000))IndividuoCaracteristicaIndividuoCaracteristica10.</description>
     </item>
     
   </channel>

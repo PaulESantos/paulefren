@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R Markdown on DataScience &amp; Biology</title>
+    <title>R Markdown on R Programming &amp; Biology</title>
     <link>/tags/r-markdown/</link>
-    <description>Recent content in R Markdown on DataScience &amp; Biology</description>
+    <description>Recent content in R Markdown on R Programming &amp; Biology</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;Paul Efren 2018</copyright>
@@ -62,7 +62,7 @@ library(tidyverse)glimpse(msleep)## Observations: 83## Variables: 11## $ nam
       <guid>/post/2018-09-07-intervalos_de_confianza/</guid>
       <description>This is a modification of a blog written by Sean Kross, using tidyverse.
 Esta es una modificación de un blog escrito por Sean Kross1, utilizando tidyverse2.
-Imagina que estás buscando estimar el promedio de una alguna característica de una población.Conformada por 100 000 individuos.set.seed(2016-05-04)poblacion &amp;lt;- data_frame( individuo = seq(1,100000),caracteristica = runif(100000))IndividuoCaracteristicaIndividuoCaracteristica10.</description>
+Imagina que estás buscando estimar el promedio de una alguna característica de una población.## Warning: `data_frame()` is deprecated, use `tibble()`.## This warning is displayed once per session.Conformada por 100 000 individuos.set.seed(2016-05-04)poblacion &amp;lt;- data_frame( individuo = seq(1,100000),caracteristica = runif(100000))IndividuoCaracteristicaIndividuoCaracteristica10.</description>
     </item>
     
   </channel>

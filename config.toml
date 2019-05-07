@@ -9,7 +9,7 @@
 baseurl = "https://paulefrensa.rbind.io/"
 
 # Title of your site
-title = "DataScience & Biology"
+title = "R Programming & Biology"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.

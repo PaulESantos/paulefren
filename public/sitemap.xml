@@ -188,15 +188,6 @@
     
     <url>
     
-      <loc>/</loc>
-      <lastmod>2017-10-15T00:00:00+11:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>/tags/dataviz/</loc>
       <lastmod>2018-10-05T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -262,6 +253,15 @@
     
       <loc>/tags/r-markdown/</loc>
       <lastmod>2018-11-26T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/</loc>
+      <lastmod>2017-10-15T00:00:00+11:00</lastmod>
       <priority>0</priority>
     </url>
     

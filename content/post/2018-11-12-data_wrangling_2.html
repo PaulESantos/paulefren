@@ -538,6 +538,15 @@ En el ejemplo anterior pude llevar a confusiones la modificación de las unidade
 <pre class="r"><code>msleep %&gt;%
   select(name, sleep_total:awake) %&gt;%
   mutate_at(vars(contains(&quot;sleep&quot;)), funs(min = .*60))</code></pre>
+<pre><code>## Warning: funs() is soft deprecated as of dplyr 0.8.0
+## please use list() instead
+## 
+## # Before:
+## funs(name = f(.)
+## 
+## # After: 
+## list(name = ~f(.))
+## This warning is displayed once per session.</code></pre>
 <table>
 <thead>
 <tr class="header">
@@ -721,7 +730,7 @@ En el ejemplo anterior pude llevar a confusiones la modificación de las unidade
 </div>
 <div id="case_when" class="section level2">
 <h2><strong>case_when()</strong></h2>
-<p><code>case_when()</code> permite evaluar múltiples condicionales lógicos para crear nuevos niveles de una variable discreta. Para todos los valores que no son considerados en los condicionales la opción <code>TRUE ~ &quot;nuevo_nombre&quot;</code>, permite otorgarles una categoría.</p>
+<p><code>case_when()</code> permite evaluar múltiples condicionales lógicos para crear nuevos niveles de una variable discreta. Para todos los valores que no son considerados en los condicionales la opción <code>TRUE ~ "nuevo_nombre"</code>, permite otorgarles una categoría.</p>
 <pre class="r"><code>msleep %&gt;%
   select(name, sleep_total) %&gt;%
   mutate(
@@ -974,7 +983,7 @@ conservation_table</code></pre>
 <div id="spread---gather" class="section level2">
 <h2><strong>spread() - gather()</strong></h2>
 <p>La función <code>gather()</code> permite reunir múltiples columnas en una. En este ejemplo tenemos tres columnas que contienen información sobre el tiempo de sueño. Para realizar algunos análisis y construir gráficos puede ser necesario tener toda esta información en una sola columna.</p>
-<p>Esta función necesita como primer argumento el nombre de la nueva columna (<code>&quot;key&quot;</code>), seguido de un nombre para la columna que almacenara los valores de cada observación (<code>&quot;value&quot;</code>). Las columnas que no deseas unir debe de ser deseleccionadas mediante <code>-</code>.</p>
+<p>Esta función necesita como primer argumento el nombre de la nueva columna (<code>"key"</code>), seguido de un nombre para la columna que almacenara los valores de cada observación (<code>"value"</code>). Las columnas que no deseas unir debe de ser deseleccionadas mediante <code>-</code>.</p>
 <pre class="r"><code>msleep_g &lt;- msleep %&gt;%
   select(name, contains(&quot;sleep&quot;)) %&gt;%
   gather(key = &quot;sleep_measure&quot;, value = &quot;time&quot;, -name)
