@@ -18,7 +18,8 @@ copyright = "&copy;Paul Efren 2018"
 theme = "hugo-academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$",
+ "_cache$", ".knit.md$", ".utf8.md$"] #"_files$"
 preserveTaxonomyNames = true
 paginate = 10
 
@@ -62,7 +63,7 @@ enableGitInfo = false
   organizations = [ { name = "UNSAAC - CUSCO", url = "" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
-  avatar = "paul_efren.JPG"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
+  avatar = "paul.JPG"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
 
   # Details for the Contact Widget
   email = "paulefrens@gmail.com"
@@ -381,3 +382,8 @@ weight = 4
 #    name = "Wo"
 #    url = "#about"
 #    weight = 1
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
