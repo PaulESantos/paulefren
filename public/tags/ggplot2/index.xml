@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ggplot2 | Paul Efren</title>
+    <link>https://paulefrensa.rbind.io/tags/ggplot2/</link>
+      <atom:link href="https://paulefrensa.rbind.io/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
+    <description>ggplot2</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© PaulEfren 2021</copyright><lastBuildDate>Fri, 24 Jun 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://paulefrensa.rbind.io/img/forest.png</url>
+      <title>ggplot2</title>
+      <link>https://paulefrensa.rbind.io/tags/ggplot2/</link>
+    </image>
+    
+    <item>
+      <title>Code Your Graph Workshop</title>
+      <link>https://paulefrensa.rbind.io/talk/2016-ohsu-dataviz/</link>
+      <pubDate>Fri, 24 Jun 2016 00:00:00 +0000</pubDate>
+      <guid>https://paulefrensa.rbind.io/talk/2016-ohsu-dataviz/</guid>
+      <description>
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://paulefrensa.rbind.io/talk/2016-ohsu-dataviz/code-your-graph_hu9ebcd1d99c0a236c25b6db9f0e87e85d_160690_2000x2000_fit_q90_lanczos.jpg&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://paulefrensa.rbind.io/talk/2016-ohsu-dataviz/code-your-graph_hu9ebcd1d99c0a236c25b6db9f0e87e85d_160690_2000x2000_fit_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+</description>
+    </item>
+    
+  </channel>
+</rss>

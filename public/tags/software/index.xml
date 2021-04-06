@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>software | Paul Efren</title>
+    <link>https://paulefrensa.rbind.io/tags/software/</link>
+      <atom:link href="https://paulefrensa.rbind.io/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <description>software</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© PaulEfren 2021</copyright><lastBuildDate>Thu, 11 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://paulefrensa.rbind.io/img/forest.png</url>
+      <title>software</title>
+      <link>https://paulefrensa.rbind.io/tags/software/</link>
+    </image>
+    
+    <item>
+      <title>ppendemic</title>
+      <link>https://paulefrensa.rbind.io/project/ppendemic/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://paulefrensa.rbind.io/project/ppendemic/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

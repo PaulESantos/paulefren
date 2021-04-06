@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paul Efren</title>
+    <link>https://paulefrensa.rbind.io/authors/paul/</link>
+      <atom:link href="https://paulefrensa.rbind.io/authors/paul/index.xml" rel="self" type="application/rss+xml" />
+    <description>Paul Efren</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© PaulEfren 2021</copyright>
+    <image>
+      <url>https://paulefrensa.rbind.io/img/forest.png</url>
+      <title>Paul Efren</title>
+      <link>https://paulefrensa.rbind.io/authors/paul/</link>
+    </image>
+    
+    <item>
+      <title>Intervalos de Confianza</title>
+      <link>https://paulefrensa.rbind.io/post/new-year-new-blogdown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://paulefrensa.rbind.io/post/new-year-new-blogdown/</guid>
+      <description>&lt;p&gt;This is a modification of a blog written by &lt;strong&gt;Sean Kross&lt;/strong&gt;, using &lt;strong&gt;tidyverse&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Esta es una modificación de un blog escrito por &lt;strong&gt;Sean Kross&lt;/strong&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, utilizando &lt;strong&gt;tidyverse&lt;/strong&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+
+
+&lt;h2 id=&#34;data&#34;&gt;Data:&lt;a href=&#34;#data&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Imagina que estás buscando estimar  el promedio de una alguna característica de una población.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://paulefrensa.rbind.io/post/new-year-new-blogdown/index_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Conformada por 100 000 individuos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;set.seed(2016-05-04)
+poblacion &amp;lt;- tibble(individuo = seq(1,100000),
+                         caracteristica = runif(100000))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;New names:
+* individuo -&amp;gt; individuo...1
+* caracteristica -&amp;gt; caracteristica...2
+* individuo -&amp;gt; individuo...3
+* caracteristica -&amp;gt; caracteristica...4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Individuo&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Caracteristica&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Individuo&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Caracteristica&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.6770751&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;99995&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.2685845&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.2718245&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;99996&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.6156618&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.1031951&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;99997&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5487510&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;4&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.6260607&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;99998&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.9394554&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;5&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4148852&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;99999&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.2003218&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;6&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.1208850&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;100000&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.3245546&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Lo que estamos buscando es determinar el promedio  real de esta población &lt;strong&gt;0.4994207&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pero normalmente no podemos medir cada uno de los individuos de esta población. Entonces recurrimos a tomar muestras:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;muestra &amp;lt;- poblacion %&amp;gt;% sample_n(100) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;New names:
+* individuo -&amp;gt; individuo...1
+* caracteristica -&amp;gt; caracteristica...2
+* individuo -&amp;gt; individuo...3
+* caracteristica -&amp;gt; caracteristica...4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Individuo&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Caracteristica&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Individuo&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Caracteristica&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;25935&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.6259550&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;97415&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.6233856&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;81902&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.8895348&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;67751&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4995026&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;92418&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.6939808&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2396&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.1324094&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;97217&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.6266913&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;78110&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.2946156&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;15679&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.3646615&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;33854&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5986135&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;60239&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.0858186&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;37290&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5811122&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;Ahora con esta muestra podemos construir el &lt;strong&gt;intervalo de confianza&lt;/strong&gt; al  95%:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Funcion 
+ci &amp;lt;- function(x) {
+  ci &amp;lt;- 1.96 * (sd(x)/sqrt(length(x)))
+  return(ci) 
+}
+
+muestra %&amp;gt;% 
+  summarise(
+    Lim_inf = mean(caracteristica) - ci(caracteristica),
+    Promedio = mean(caracteristica),
+    Lim_sup = mean(caracteristica) + ci(caracteristica)) %&amp;gt;% 
+  kable()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Lim_inf&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Promedio&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Lim_sup&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4475891&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5028541&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5581192&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+&lt;h2 id=&#34;intervalo-de-confianza&#34;&gt;Intervalo de confianza?&lt;a href=&#34;#intervalo-de-confianza&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Si tomamos varias muestras de una población, el promedio real de esta debería ser contenido por el intervalo de confianza de la muestra.&lt;/p&gt;
+&lt;p&gt;Tomemos 10000 muestras de la población.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;poblacion %&amp;gt;% 
+  rep_sample_n(size = 100, reps = 10000) %&amp;gt;% 
+  group_by(replicate) %&amp;gt;% 
+  summarise(ci = ci(caracteristica),
+            mean = mean(caracteristica)) %&amp;gt;% 
+  kable()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Replica&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Promedio&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Lim_inf.&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Lim_sup.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4982383&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4376601&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5588165&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4391961&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.3857278&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4926644&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5200138&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4671503&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5728772&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;4&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5029914&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4464481&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5595348&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;5&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4905542&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4332180&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5478904&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;6&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5484101&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4901481&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.6066722&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;9995&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5042877&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4491597&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5594156&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;9996&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5070906&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4504482&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5637330&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;9997&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4899686&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4321288&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5478085&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;9998&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4953093&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4373808&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5532377&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;9999&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4822687&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4239676&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5405697&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;10000&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4602124&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.4009354&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;0.5194894&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;Cual es el porcentaje de muestras que capturan el promedio real de la población?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;replicas %&amp;gt;%
+  mutate(prom_real =
+        case_when(lim_inf &amp;lt; 0.4994207 &amp;amp; 0.4994207&amp;lt;lim_sup ~ 1, TRUE ~ 0)) %&amp;gt;%
+  summarise(mean(prom_real)) %&amp;gt;% 
+  kable()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;El &lt;strong&gt;0.95&lt;/strong&gt; porciento de las muestras captura el promedio real de la población.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;h2 id=&#34;visualización&#34;&gt;Visualización&lt;a href=&#34;#visualizaci%c3%b3n&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Visualización grafica de los intervalos de confianza.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;replicas %&amp;gt;% 
+  sample_n(100) %&amp;gt;% 
+  ggplot(aes(replicate, prom))+
+  geom_pointrange(aes(ymin =lim_inf, ymax =lim_sup), 
+                  size = 0, color = &amp;quot;#1B7837&amp;quot;)+
+  theme_bw()+
+  geom_hline(yintercept = mean(poblacion$caracteristica),
+             color = &amp;quot;red&amp;quot;, size = 1.2)+
+  labs(x = &amp;quot;Replicas&amp;quot;,
+       y = &amp;quot;&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://paulefrensa.rbind.io/post/new-year-new-blogdown/index_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+
+
+
+&lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;a href=&#34;#referencias&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Basado en &lt;strong&gt;A Short Intro to Confidence Intervals&lt;/strong&gt; por 
+&lt;a href=&#34;http://seankross.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sean Kross&lt;/a&gt;. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.tidyverse.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tidyverse&lt;/a&gt;. &lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tropical forest on R Programming &amp; Biology</title>
-    <link>/tags/tropical-forest/</link>
-    <description>Recent content in tropical forest on R Programming &amp; Biology</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy;Paul Efren 2018</copyright>
-    <lastBuildDate>Thu, 26 Oct 2017 00:00:00 +1100</lastBuildDate>
-    
-	<atom:link href="/tags/tropical-forest/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>tropical forest | Paul Efren</title>
+    <link>https://paulefrensa.rbind.io/tags/tropical-forest/</link>
+      <atom:link href="https://paulefrensa.rbind.io/tags/tropical-forest/index.xml" rel="self" type="application/rss+xml" />
+    <description>tropical forest</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© PaulEfren 2021</copyright><lastBuildDate>Thu, 26 Oct 2017 00:00:00 -0500</lastBuildDate>
+    <image>
+      <url>https://paulefrensa.rbind.io/img/forest.png</url>
+      <title>tropical forest</title>
+      <link>https://paulefrensa.rbind.io/tags/tropical-forest/</link>
+    </image>
     
     <item>
       <title>Can Leaf Spectroscopy Predict Leaf and Forest Traits Along a Peruvian Tropical Forest Elevation Gradient?</title>
-      <link>/publication/clothing-search/</link>
-      <pubDate>Thu, 26 Oct 2017 00:00:00 +1100</pubDate>
-      
-      <guid>/publication/clothing-search/</guid>
+      <link>https://paulefrensa.rbind.io/publication/2017-leaf-spectra/</link>
+      <pubDate>Thu, 26 Oct 2017 00:00:00 -0500</pubDate>
+      <guid>https://paulefrensa.rbind.io/publication/2017-leaf-spectra/</guid>
       <description></description>
     </item>
     
