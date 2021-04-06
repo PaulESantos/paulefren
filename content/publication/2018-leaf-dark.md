@@ -72,7 +72,8 @@ doi = "10.1038/s41559-018-0716-y"
 math = true
 
 # Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder. 
+# To use, add an image named `featured.jpg/png` 
+# to your page's folder. 
 [image]
   # Caption (optional)Image credit:[**Unsplash**](http://www.andesconservation.org/))"
   caption = ""

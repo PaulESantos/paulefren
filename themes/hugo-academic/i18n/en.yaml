@@ -7,7 +7,7 @@
   translation: Table of Contents
 
 - id: on_this_page
-  translation: On this page
+  translation: Contents
 
 - id: back_to_top
   translation: Back to top
@@ -28,6 +28,20 @@
 
 - id: figure
   translation: "Figure %d:"
+
+- id: edit_page
+  translation: Edit this page
+
+# Themes
+
+- id: theme_light
+  translation: Light
+
+- id: theme_dark
+  translation: Dark
+
+- id: theme_auto
+  translation: Automatic
 
 # Buttons
 
@@ -75,28 +89,32 @@
 - id: education
   translation: Education
 
+- id: user_profile_latest
+  translation: Latest
+
+# Accomplishments widget
+
+- id: see_certificate
+  translation: See certificate
+
 # Experience widget
 
 - id: present
   translation: Present
 
-# Publications widget
+# Pages widget
 
-- id: more_publications
-  translation: More Publications
-
-# Posts widget
-
-- id: continue_reading
-  translation: CONTINUE READING
+- id: more_pages
+  translation: See all
 
 - id: more_posts
-  translation: More Posts
-
-# Talks widget
+  translation: See all posts
 
 - id: more_talks
-  translation: More Talks
+  translation: See all talks
+
+- id: more_publications
+  translation: See all publications
 
 # Contact widget
 
@@ -138,20 +156,39 @@
 - id: location
   translation: Location
 
-# Filtering
+- id: pub_uncat
+  translation: Uncategorized
 
-- id: filter_by_type
-  translation: Filter by type
+- id: pub_conf
+  translation: Conference paper
 
-- id: filter_all
-  translation: All
+- id: pub_journal
+  translation: Journal article
+
+- id: pub_preprint
+  translation: Preprint
+
+- id: pub_report
+  translation: Report
+
+- id: pub_book
+  translation: Book
+
+- id: pub_book_section
+  translation: Book section
+
+- id: pub_thesis
+  translation: Thesis
+
+- id: pub_patent
+  translation: Patent
 
 # Project details
 
 - id: open_project_site
   translation: Go to Project Site
 
-# Default node titles
+# Content types for default archive page titles and search results
 
 - id: posts
   translation: Posts
@@ -164,6 +201,9 @@
 
 - id: projects
   translation: Projects
+
+- id: slides
+  translation: Slides
 
 # Search
 
