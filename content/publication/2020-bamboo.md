@@ -1,6 +1,6 @@
 +++
 title = "Reduced tree density and basal area in Andean forests are associated with bamboo dominance"
-date = 2020-11-19T00:00:00
+date = 2020-11-19
 draft = false
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
