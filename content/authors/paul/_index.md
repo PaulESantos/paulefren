@@ -15,7 +15,7 @@ education:
   courses:
   - course: MSc in Ecology & Environmental Management
     institution: Universidad Nacional San Antonio Abad
-    year: 2018 - ...
+    year: 2021
   - course: Degree in Biology
     institution: Universidad Nacional San Antonio Abad
     year: 2016
