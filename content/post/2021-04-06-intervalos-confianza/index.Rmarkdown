@@ -20,6 +20,17 @@ knitr::opts_chunk$set( collapse = TRUE, comment = NA)
 library(tidyverse)
 library(knitr)
 library(infer)
+library(kableExtra)
+```
+```{css}
+.main-container {
+    max-width: 100%;
+}
+
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
 ```
 
 
@@ -49,7 +60,8 @@ poblacion <- tibble(individuo = seq(1,100000),
 
 ```{r echo=FALSE}
 bind_rows(head(poblacion, n =3), tail(poblacion, n = 3)) %>% 
-  kable(col.names = c(individuo = "Individuo", caracteristica = "Caracteristica"))
+  kable(col.names = c(individuo = "Individuo", caracteristica = "Caracteristica")) %>% 
+  kableExtra::kable_styling(position = "center")
 ```
 
 - Lo que estamos buscando es determinar el promedio  real de esta población **`r mean(poblacion$caracteristica)`**.

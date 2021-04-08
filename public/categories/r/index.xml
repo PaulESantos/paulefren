@@ -37,17 +37,9 @@
 poblacion &amp;lt;- tibble(individuo = seq(1,100000),
                          caracteristica = runif(100000))
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;New names:
-* individuo -&amp;gt; individuo...1
-* caracteristica -&amp;gt; caracteristica...2
-* individuo -&amp;gt; individuo...3
-* caracteristica -&amp;gt; caracteristica...4
-&lt;/code&gt;&lt;/pre&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:right&#34;&gt;Individuo&lt;/th&gt;
-&lt;th style=&#34;text-align:right&#34;&gt;Caracteristica&lt;/th&gt;
 &lt;th style=&#34;text-align:right&#34;&gt;Individuo&lt;/th&gt;
 &lt;th style=&#34;text-align:right&#34;&gt;Caracteristica&lt;/th&gt;
 &lt;/tr&gt;
@@ -56,36 +48,24 @@ poblacion &amp;lt;- tibble(individuo = seq(1,100000),
 &lt;tr&gt;
 &lt;td style=&#34;text-align:right&#34;&gt;1&lt;/td&gt;
 &lt;td style=&#34;text-align:right&#34;&gt;0.6770751&lt;/td&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;99995&lt;/td&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;0.2685845&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:right&#34;&gt;2&lt;/td&gt;
 &lt;td style=&#34;text-align:right&#34;&gt;0.2718245&lt;/td&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;99996&lt;/td&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;0.6156618&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:right&#34;&gt;3&lt;/td&gt;
 &lt;td style=&#34;text-align:right&#34;&gt;0.1031951&lt;/td&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;99997&lt;/td&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;0.5487510&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;4&lt;/td&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;0.6260607&lt;/td&gt;
 &lt;td style=&#34;text-align:right&#34;&gt;99998&lt;/td&gt;
 &lt;td style=&#34;text-align:right&#34;&gt;0.9394554&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;5&lt;/td&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;0.4148852&lt;/td&gt;
 &lt;td style=&#34;text-align:right&#34;&gt;99999&lt;/td&gt;
 &lt;td style=&#34;text-align:right&#34;&gt;0.2003218&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;6&lt;/td&gt;
-&lt;td style=&#34;text-align:right&#34;&gt;0.1208850&lt;/td&gt;
 &lt;td style=&#34;text-align:right&#34;&gt;100000&lt;/td&gt;
 &lt;td style=&#34;text-align:right&#34;&gt;0.3245546&lt;/td&gt;
 &lt;/tr&gt;
