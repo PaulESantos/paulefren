@@ -14,9 +14,9 @@
     
     <item>
       <title>Intervalos de Confianza</title>
-      <link>https://paulefrensa.rbind.io/post/new-year-new-blogdown/</link>
+      <link>https://paulefrensa.rbind.io/1-01-01-new-year-new-blogdown/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://paulefrensa.rbind.io/post/new-year-new-blogdown/</guid>
+      <guid>https://paulefrensa.rbind.io/1-01-01-new-year-new-blogdown/</guid>
       <description>&lt;p&gt;This is a modification of a blog written by &lt;strong&gt;Sean Kross&lt;/strong&gt;, using &lt;strong&gt;tidyverse&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Esta es una modificación de un blog escrito por &lt;strong&gt;Sean Kross&lt;/strong&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, utilizando &lt;strong&gt;tidyverse&lt;/strong&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
@@ -29,7 +29,7 @@
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;Imagina que estás buscando estimar  el promedio de una alguna característica de una población.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://paulefrensa.rbind.io/post/new-year-new-blogdown/index_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://paulefrensa.rbind.io/1-01-01-new-year-new-blogdown/index_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Conformada por 100 000 individuos.&lt;/li&gt;
 &lt;/ul&gt;
@@ -320,7 +320,7 @@ muestra %&amp;gt;%
   labs(x = &amp;quot;Replicas&amp;quot;,
        y = &amp;quot;&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://paulefrensa.rbind.io/post/new-year-new-blogdown/index_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://paulefrensa.rbind.io/1-01-01-new-year-new-blogdown/index_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 
 
 

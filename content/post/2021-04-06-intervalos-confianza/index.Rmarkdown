@@ -48,8 +48,8 @@ poblacion <- tibble(individuo = seq(1,100000),
 ```
 
 ```{r echo=FALSE}
-bind_cols(head(poblacion), tail(poblacion)) %>% 
-  kable(col.names = c(individuo = "Individuo", caracteristica = "Caracteristica", individuo1 = "Individuo", caracteristica1 = "Caracteristica"))
+bind_rows(head(poblacion, n =3), tail(poblacion, n = 3)) %>% 
+  kable(col.names = c(individuo = "Individuo", caracteristica = "Caracteristica"))
 ```
 
 - Lo que estamos buscando es determinar el promedio  real de esta población **`r mean(poblacion$caracteristica)`**.

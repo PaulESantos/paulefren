@@ -1,7 +1,7 @@
 ---
 title: Intervalos de Confianza
 author: Paul Efren
-date: "06 April, 2021"
+date: "07 April, 2021"
 categories:
   - R
 tags:
@@ -39,24 +39,14 @@ poblacion <- tibble(individuo = seq(1,100000),
 ```
 
 
-```
-New names:
-* individuo -> individuo...1
-* caracteristica -> caracteristica...2
-* individuo -> individuo...3
-* caracteristica -> caracteristica...4
-```
-
-
-
-| Individuo| Caracteristica| Individuo| Caracteristica|
-|---------:|--------------:|---------:|--------------:|
-|         1|      0.6770751|     99995|      0.2685845|
-|         2|      0.2718245|     99996|      0.6156618|
-|         3|      0.1031951|     99997|      0.5487510|
-|         4|      0.6260607|     99998|      0.9394554|
-|         5|      0.4148852|     99999|      0.2003218|
-|         6|      0.1208850|    100000|      0.3245546|
+| Individuo| Caracteristica|
+|---------:|--------------:|
+|         1|      0.6770751|
+|         2|      0.2718245|
+|         3|      0.1031951|
+|     99998|      0.9394554|
+|     99999|      0.2003218|
+|    100000|      0.3245546|
 
 - Lo que estamos buscando es determinar el promedio  real de esta población **0.4994207**.
 

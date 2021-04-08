@@ -4,7 +4,7 @@ projects: [code-your-graph]
 authors: [Paul Efren Santos Andrade]
 abstract: Introducción a los conceptos básicos de la ecología funcional y su desarrollo en el Perú. 
 abstract_short: ""
-date: 2020-03-21T00:00:00
+date: 2020-06-06
 event: Charlas Informativas por el Día Mundial del Medio Ambiente
 event_url:
 image:
