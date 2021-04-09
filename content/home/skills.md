@@ -2,8 +2,8 @@
 # A Skills section created with the Featurette widget.
 widget = "featurette"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
-active = false  # Activate this widget? true/false
-weight = 30  # Order that this section will appear.
+active = true  # Activate this widget? true/false
+weight = 40  # Order that this section will appear.
 
 title = "Skills"
 subtitle = ""
@@ -18,18 +18,39 @@ subtitle = ""
   icon = "r-project"
   icon_pack = "fab"
   name = "R"
-  description = "90%"
+  description = "100%"
   
 [[feature]]
-  icon = "chart-line"
+  icon = "globe-africa"
   icon_pack = "fas"
-  name = "Statistics"
-  description = "100%"  
+  name = "Environmental data analysis"
+  description = "100%"
+  
+
+[[feature]]
+  icon = "leaf"
+  icon_pack = "fas"
+  name = "Leaf Trait"
+  description = "100%"
   
 [[feature]]
-  icon = "camera-retro"
+  icon = "tree"
   icon_pack = "fas"
-  name = "Photography"
-  description = "10%"
+  name = "Forest Biology"
+  description = "100%"
+
+[[feature]]
+  icon = "square-root-alt"
+  icon_pack = "fas"
+  name = "Math"
+  description = ""
+  
+  
+[[feature]]
+  icon = "mountain"
+  icon_pack = "fas"
+  name = "Adventuring"
+  description = ""
+
 
 +++
