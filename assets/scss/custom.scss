@@ -31,7 +31,7 @@
 
 .navbar {
   height: 70px;
-  background: $sta-menu-primary;
+  background: $sta-menu-primary; //color definido en theme*/
   background-image: url('/img/otis-redding.png');
   box-shadow: none;
   font-size: 18px;
@@ -61,7 +61,7 @@
       .navbar-nav {
         overflow-x: auto;
         white-space: nowrap;
-        background-image: url(/img/gradient.jpg);
+        background-image: url('/img/otis-redding.png');
         -webkit-overflow-scrolling: touch;
       }
     }
@@ -71,7 +71,7 @@
     display: flex;
 
     .nav-link {
-      color: rgba($sta-menu-text, .85);
+      color: rgba($sta-menu-text, .85); //color definido en theme*/
 
       &.active,
       &:hover,
@@ -81,20 +81,20 @@
 
       &.active {
         font-weight: 900 !important;
-        color: $sta-menu-text-active !important;
+        color: $sta-menu-text-active !important; //color definido en theme*/
       }
     }
   }
 
   .dropdown-menu {
-    font-size: #{$sta-font-size-small}px;
+    font-size: #{$sta-font-size-small}px; 
   }
 
   // Note: dedicated `dropdown-item-active` class to prevent ScrollSpy removing `active` class from language chooser.
   .dropdown-item.active,
   .dropdown-item-active {
     font-weight: bold;
-    color: $sta-menu-text-active !important;
+    color: $sta-menu-text-active !important;//color definido en theme*/
   }
 
 }
@@ -136,7 +136,7 @@
     left: 0;
     top: 50px;
     width: 80%; // antes 100% */
-    background-color: $sta-menu-primary;
+    background-color: $sta-menu-primary; //color definido en theme*/
     text-align: center !important;
   }
   #navbar-main .main-menu-item .nav-item {
@@ -153,7 +153,7 @@
 
  .card-simple {
   background: #fff; // este es blanco*/
-  box-shadow: none;
+  box-shadow: #0EAD69; //antes none */
   border: 0px solid rgba(0,0,0,.09); // negro*/
   border-radius: 3px;
   margin-top: 20px;
@@ -174,9 +174,9 @@
 }
 
 .dark .card-simple {
-  background: rgb(40, 42, 54);
-  box-shadow: 0 1px 4px rgba(0,0,0,.04);
-  border: 1px solid rgb(68, 71, 90);
+  background: rgb(40, 42, 54); //azul*/
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);//plomo*/
+  border: 1px solid rgb(68, 71, 90); //azul*/
 }
 
 .card {
@@ -186,12 +186,12 @@
   background: #fff; //blanco */
   box-shadow: none;
   transition: all 0.2s ease-out;
-  border: 0px solid rgba(0,0,0,.09);
+  border: 0px solid rgba(0,0,0,.09); /*negro*/
 }
 
 .card .card-image {
   display: block;
-  position: relative;
+  position: center;
   min-height: 100px;
 }
 
@@ -204,8 +204,8 @@
 
 .card h4 code {
   font-size: 0.93rem;
-  color:  #0EAD69; // antes #D90429 cambiado a  #0EAD69 */
-  background:  rgba(226, 226, 226, 0.315);
+  color:  #0EAD69; // antes #D90429 cambiado a  #0EAD69  verde*/
+  background:  rgba(226, 226, 226, 0.315); //casi blanco*/
 }
 
 .card h4 a {
@@ -224,7 +224,7 @@
 }
 
 .card .card-text p {
-  color: rgba(0,0,0,0.54);
+  color: rgba(0,0,0,0.54); // plomo */
   font-size: 0.75rem;
 }
 
@@ -237,8 +237,8 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 80%; //antes 100%*/
-  height: 80%; //antes 100%*/
+  width: 100%; //antes 100%*/
+  height: 100%; //antes 100%*/
   background: #fff; // blanco */
   content: " ";
   opacity: 0;
@@ -250,7 +250,7 @@
   position: absolute;
   left: 0;
   top: 50%;
-  width: 80%; //antes 100%*/
+  width: 100%; //antes 100%*/
   transform: translate(0, -50%);
   opacity: 0;
   transition: all 0.2s ease-out;
@@ -259,12 +259,12 @@
   content: '\f0c1';
   text-align: center;
   font-size: 3rem;
-  color: rgba(0,0,0,.09);
-  border: 0px solid rgba(0,0,0,.09);
+  color: rgba(255,130,130,.09); // negro*/
+  border: 0px solid rgba(255,130,130,.09)//rgba(0,0,0,.09);*/
 }
 
 .card:hover {
-  box-shadow: 6px 6px 2px 0 rgba(33, 150, 186, 0.808);
+  box-shadow: 6px 6px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card:hover .card-image.hover-overlay:before {
@@ -283,9 +283,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
   background: #fff; // blanco */
-  box-shadow: 8px 8px 0 0 #2196BA; //turqueza*/
+  box-shadow: 8px 8px 0 0 #0EAD69; // antes #2196BA turqueza*/
   transition: all 0.2s ease-out;
-  border: 1px solid #2196BA;//turqueza*/
+  border: 1px solid #0EAD69; // antes #2196BA turqueza*/
   border-radius: 10px;
   padding: 2rem;
   font-family: 'Work Sans';
@@ -430,6 +430,7 @@
   font-size: 28pt;
   font-family: 'Work Sans';
   font-weight: 900;
+  text-align: center;
 }
 
 .home-section, .wg-today-i-learned .container {
@@ -451,18 +452,18 @@
 
 .project-card {
   margin: 0; /* Set to Isotope's gutter size */
-  position: relative;
-  width: calc(33.3% - 6*0.16rem); /* Fluid 3 columns (inc. 20px gutter) */
+  position: relative; //* antes relative */
+ // width: calc(25% - 6*0.16rem); /* Fluid 3 columns (inc. 20px gutter) */
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 100px) {
   .project-card {
-    width: calc(50% - 4*0.24rem); /* Fluid 2 columns (inc. 20px gutter) */
+  //  width: calc(30% - 4*0.24rem); /* Fluid 2 columns (inc. 20px gutter) */
     padding-right: 5px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 100px) {
   .project-card {
-    width: 98%; /* 1 column */
+    width: 30%; /* 1 column antes 98% */
     padding-right: 5px;
   }
 }
@@ -480,7 +481,8 @@
 }
 
 .card-text .article-style p {
-  color: #797E77;
+  color: #797E77; 
+  text-align: center;// plomo color del texto de las cartas de proyectos*/
 }
 
 /*************************************************
@@ -581,11 +583,13 @@ code {
   color: #00cc00; // antes #2196BA - celeste cambiado a #00cc00- verde claro*/ 
   font-size: 0.8rem;
   background-color: #ffffff; //blanco*/
+  background: #ffffff;
 }
 
 pre {
   margin: 0 0 1rem 0;
-  background-color: #ffffff;  // antes rgb(248, 248, 248) cambiado a  #ffffff - blanco*?
+  background: #ffffff;
+  background-color: rgb(255, 0, 0);  // antes rgb(248, 248, 248) cambiado a  #ffffff - blanco*?
   /* Match default highlight theme. */
   border: 15px;
   font-size: 0.75rem;
@@ -595,6 +599,16 @@ pre {
 pre code {
   white-space: pre; /* Override Bootstrap to preserve line breaks in code. */
   overflow-x: auto;
+  background: #ffffff;
+  background-color: #ffffff; 
+}
+
+.hljs {
+	background: #ffffff; // code chunk background
+}
+// copy code button
+.element.style {
+  color: #00ff00;
 }
 
 

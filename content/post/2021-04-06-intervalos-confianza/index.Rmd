@@ -1,36 +1,24 @@
 ---
-title: Intervalos de Confianza
+title: "Intervalos de Confianza"
 author: Paul Efren
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 categories:
   - R
-tags:
-  - rmarkdown
-slug: new-year-new-blogdown
-authors:
-  - paul
-summary:
-image:
-  caption: ''
-  focal_point: ''
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set( collapse = TRUE, comment = NA)
+htmltools::tagList(
+  xaringanExtra::use_clipboard(
+    button_text = "<i class=\"fa fa-clipboard\"></i> Copy Code",
+    success_text = "<i class=\"fa fa-check\" style=\"color: #90BE6D\"></i> Copied!",
+  ),
+  rmarkdown::html_dependency_font_awesome()
+)
 library(tidyverse)
 library(knitr)
 library(infer)
-library(kableExtra)
-```
-```{css}
-.main-container {
-    max-width: 100%;
-}
-
-table.center {
-    margin-left:auto; 
-    margin-right:auto;
-  }
+library(gt)
 ```
 
 
@@ -60,8 +48,8 @@ poblacion <- tibble(individuo = seq(1,100000),
 
 ```{r echo=FALSE}
 bind_rows(head(poblacion, n =3), tail(poblacion, n = 3)) %>% 
-  kable(col.names = c(individuo = "Individuo", caracteristica = "Caracteristica")) %>% 
-  kableExtra::kable_styling(position = "center")
+  gt() %>% 
+  cols_label(individuo = "Individuo", caracteristica = "Característica") 
 ```
 
 - Lo que estamos buscando es determinar el promedio  real de esta población **`r mean(poblacion$caracteristica)`**.
@@ -73,8 +61,10 @@ muestra <- poblacion %>% sample_n(100)
 ```
 
 ```{r echo=FALSE}
-bind_cols(head(muestra), tail(muestra)) %>% 
-  kable(col.names = c(individuo = "Individuo", caracteristica = "Caracteristica", individuo1 = "Individuo", caracteristica1 = "Caracteristica"))
+bind_rows(head(muestra, n = 3), tail(muestra, n = 3)) %>% 
+  gt() %>% 
+  cols_label(individuo = "Individuo", 
+             caracteristica = "Característica") 
 ```
 
 - Ahora con esta muestra podemos construir el **intervalo de confianza** al  95%:
@@ -90,8 +80,7 @@ muestra %>%
   summarise(
     Lim_inf = mean(caracteristica) - ci(caracteristica),
     Promedio = mean(caracteristica),
-    Lim_sup = mean(caracteristica) + ci(caracteristica)) %>% 
-  kable()
+    Lim_sup = mean(caracteristica) + ci(caracteristica)) 
 ```
 
 ```{r echo=FALSE}
@@ -106,10 +95,10 @@ muestra %>%
     Lim_inf = mean(caracteristica) - ci(caracteristica),
     Promedio = mean(caracteristica),
     Lim_sup = mean(caracteristica) + ci(caracteristica)) %>%
-    kable()
+    gt()
 ```
 
-## Intervalo de confianza?
+## Intervalo de confianza
 
 Si tomamos varias muestras de una población, el promedio real de esta debería ser contenido por el intervalo de confianza de la muestra.
 
@@ -121,8 +110,7 @@ poblacion %>%
   rep_sample_n(size = 100, reps = 10000) %>% 
   group_by(replicate) %>% 
   summarise(ci = ci(caracteristica),
-            mean = mean(caracteristica)) %>% 
-  kable()
+            mean = mean(caracteristica))
 ```
 
 ```{r echo=FALSE}
@@ -133,7 +121,11 @@ replicas <- poblacion %>%
             lim_inf = prom - ci(caracteristica),
             lim_sup = prom + ci(caracteristica))
 bind_rows(head(replicas), tail(replicas)) %>% 
-  kable(col.names = c(replicate = "Replica",prom = "Promedio", lim_inf = "Lim_inf.", lim_sup= "Lim_sup."))
+  gt() %>% 
+  cols_label(replicate = "Replica",
+             prom = "Promedio",
+             lim_inf = "Lim_inf.", 
+             lim_sup= "Lim_sup.")
 ```
 
 - Cual es el porcentaje de muestras que capturan el promedio real de la población?
@@ -142,8 +134,7 @@ bind_rows(head(replicas), tail(replicas)) %>%
 replicas %>%
   mutate(prom_real =
         case_when(lim_inf < 0.4994207 & 0.4994207<lim_sup ~ 1, TRUE ~ 0)) %>%
-  summarise(mean(prom_real)) %>% 
-  kable()
+  summarise(mean(prom_real)) 
 ```
 
 ```{r echo=FALSE}

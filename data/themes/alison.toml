@@ -4,16 +4,36 @@ name = "alison"
 # Is theme light or dark?
 light = true
 
+#  # Primary
+#  primary = "#06805E"
+#  
+#  # Menu
+#  menu_primary = "#F0F7FA"
+#  menu_text = "#172A3A"
+#  menu_text_active = "#06805E"
+#  menu_title = "#172A3A"
+#  
+#  # Backgrounds
+#  background = "#F0F7FA"
+#  home_section_odd = "#F0F7FA"
+#  home_section_even = "#F0F7FA"
+
 # Primary
-primary = "#06805E"
+primary = "#06805E" #EF476F"
 
 # Menu
-menu_primary = "#F0F7FA"
-menu_text = "#172A3A"
-menu_text_active = "#06805E"
-menu_title = "#172A3A"
+menu_primary = "#F7F7F7" # encabezado
+menu_text = "#172A3A" #"#FCA311" texto del menu
+menu_text_active = "#0EAD69" # color del titulo del sitio cuando se le da clik
+menu_title =  "#172A3A" # "#118AB2" color del texto del titulo
 
 # Backgrounds
-background = "#F0F7FA"
-home_section_odd = "#F0F7FA"
-home_section_even = "#F0F7FA"
+background = "#F7F7F7" # color del fondo total
+home_section_odd =  "#F7F7F7" # fondo de las secciones
+home_section_even = "#F7F7F7" # fondo del titulo de las secciones
+
+# font = "rose"
+link =  "#0EAD69" #D90429" color de los elnaces web 
+link_hover =  "#ff3333" #"#ff3333"#118AB2"
+
+
