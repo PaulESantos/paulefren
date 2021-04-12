@@ -25,3 +25,8 @@ links:
 
 
 ---
+
+```{r, echo=FALSE}
+xaringanExtra::embed_xaringan("https://introecologiafuncional.netlify.app/", 
+                              ratio = "4:3")
+```
