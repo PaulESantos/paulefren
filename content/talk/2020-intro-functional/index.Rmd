@@ -1,0 +1,45 @@
+---
+title: "Introducción a la Ecología Basada en Rasgos Funciónales"
+authors:
+  - paul
+date: 2020-06-06T11:30:00
+slug: 2020-06-06-zoe-talk
+categories:
+  - Research
+tags:
+  - Functional ecology
+  - Leaf trait
+  - Ecologia funcional
+  - BIEN
+  - OpenTraits
+event: Charlas Informativas por el Día Mundial del Medio Ambiente
+event_url: 
+location: Virtual
+subtitle: ""
+summary: ""
+abstract: "Introducción a los conceptos básicos de la ecología funcional y su desarrollo en el Perú."
+date_end: 2020-06-06T13:00:00
+all_day: yes
+publishDate: '2020-06-06'
+featured: yes
+image:
+  caption: ''
+  focal_point: center
+  preview_only: no
+slides: ''
+projects: []
+links:
+- icon: images
+  icon_pack: fas
+  name: slides
+  url: https://introecologiafuncional.netlify.app
+
+---
+
+```{r echo=FALSE}
+xaringanExtra::embed_xaringan(
+  "https://introecologiafuncional.netlify.app",
+  ratio = "16:9")
+```
+
+![Banner for the ZOE talks](baner.jpg)

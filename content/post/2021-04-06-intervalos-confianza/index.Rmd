@@ -4,6 +4,9 @@ author: Paul Efren
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 categories:
   - R
+subtitle: Una breve introducción a los intervalos de confianza.
+summary: Una breve introducción a los intervalos de confianza.
+
 ---
 
 ```{r setup, include=FALSE}

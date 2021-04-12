@@ -1,0 +1,47 @@
+---
+title: "Introduction to Tidyverse"
+authors:
+  - paul
+date: 2020-03-22T14:00:00
+slug: 2020-06-06-pftc5
+categories:
+  - Research
+tags:
+  - Functional ecology
+  - OpenTraits
+  - R
+  - Open source
+event: Plant Functional Trait Course 5 - Peru
+event_url: https://plantfunctionaltraitscourses.w.uib.no
+location: Cusco, Peru
+subtitle: ""
+summary: ""
+abstract: "Introducción a los conceptos básicos de la ecología funcional y su desarrollo en el Perú."
+date_end: 2020-03-22T17:00:00
+all_day: yes
+publishDate: '2020-03-22'
+featured: yes
+image:
+  caption: ''
+  focal_point: center
+  preview_only: no
+slides: ''
+projects: []
+links:
+- icon: images
+  icon_pack: fas
+  name: slides
+  url: https://pftc5intrototidyverse.netlify.app
+- icon: github
+  icon_pack: fab
+  name: materials
+  url: https://github.com/PaulESantos/pftc5_tidy
+
+---
+
+```{r echo=FALSE}
+xaringanExtra::embed_xaringan(
+  "https://pftc5intrototidyverse.netlify.app",
+  ratio = "16:9")
+```
+![Trait Train Plant Functional Courses](traittrain.jpg)
