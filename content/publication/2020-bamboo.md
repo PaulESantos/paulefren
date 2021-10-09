@@ -49,8 +49,8 @@ slides = " "
 tags = []
 
 # Links (optional).
-url_pdf = ""
-url_preprint = "https://www.sciencedirect.com/science/article/abs/pii/S0378112720314171#!"
+url_pdf = "https://www.sciencedirect.com/science/article/abs/pii/S0378112720314171#!"
+url_preprint = ""
 url_code = ""
 url_dataset = ""
 url_project = ""

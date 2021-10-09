@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>1 on DataScience &amp; Biology</title>
-    <link>/publication_types/1/</link>
-    <description>Recent content in 1 on DataScience &amp; Biology</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Thu, 26 Oct 2017 00:00:00 +1100</lastBuildDate>
-    
-	<atom:link href="/publication_types/1/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>1 | Paul Efren</title>
+    <link>https://paulefrensa.rbind.io/publication_types/1/</link>
+      <atom:link href="https://paulefrensa.rbind.io/publication_types/1/index.xml" rel="self" type="application/rss+xml" />
+    <description>1</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Paul Efren 2021</copyright><lastBuildDate>Fri, 11 Dec 2020 00:00:00 -0500</lastBuildDate>
+    <image>
+      <url>https://paulefrensa.rbind.io/img/forest.png</url>
+      <title>1</title>
+      <link>https://paulefrensa.rbind.io/publication_types/1/</link>
+    </image>
     
     <item>
-      <title>Can Leaf Spectroscopy Predict Leaf and Forest Traits Along a Peruvian Tropical Forest Elevation Gradient?</title>
-      <link>/publication/clothing-search/</link>
-      <pubDate>Thu, 26 Oct 2017 00:00:00 +1100</pubDate>
-      
-      <guid>/publication/clothing-search/</guid>
+      <title>Assessing the sensitivity of evapotranspiration to shifts in plant traits, changing climate, and earlier snowmelt: Long-term observations from a 1,000m elevation gradient in the East River Watershed, Colorado, USA</title>
+      <link>https://paulefrensa.rbind.io/publication/2020-evapotranspiration/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 -0500</pubDate>
+      <guid>https://paulefrensa.rbind.io/publication/2020-evapotranspiration/</guid>
       <description></description>
     </item>
     

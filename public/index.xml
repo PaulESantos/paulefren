@@ -5,7 +5,7 @@
     <link>https://paulefrensa.rbind.io/</link>
       <atom:link href="https://paulefrensa.rbind.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Paul Efren</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© PaulEfren 2021</copyright><lastBuildDate>Thu, 19 Nov 2020 00:00:00 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Paul Efren 2021</copyright><lastBuildDate>Fri, 11 Dec 2020 00:00:00 -0500</lastBuildDate>
     <image>
       <url>https://paulefrensa.rbind.io/img/forest.png</url>
       <title>Paul Efren</title>
@@ -13,10 +13,26 @@
     </image>
     
     <item>
+      <title>Assessing the sensitivity of evapotranspiration to shifts in plant traits, changing climate, and earlier snowmelt: Long-term observations from a 1,000m elevation gradient in the East River Watershed, Colorado, USA</title>
+      <link>https://paulefrensa.rbind.io/publication/2020-evapotranspiration/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 -0500</pubDate>
+      <guid>https://paulefrensa.rbind.io/publication/2020-evapotranspiration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Reduced tree density and basal area in Andean forests are associated with bamboo dominance</title>
       <link>https://paulefrensa.rbind.io/publication/2020-bamboo/</link>
       <pubDate>Thu, 19 Nov 2020 00:00:00 -0500</pubDate>
       <guid>https://paulefrensa.rbind.io/publication/2020-bamboo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reduced tree density and basal area in Andean forests are associated with bamboo dominance</title>
+      <link>https://paulefrensa.rbind.io/publication/2020-traits/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 -0500</pubDate>
+      <guid>https://paulefrensa.rbind.io/publication/2020-traits/</guid>
       <description></description>
     </item>
     
@@ -30,18 +46,44 @@
     
     <item>
       <title>Introducción a la Ecología Basada en Rasgos Funciónales</title>
-      <link>https://paulefrensa.rbind.io/talk/2020-intro-functional/</link>
-      <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>https://paulefrensa.rbind.io/talk/2020-intro-functional/</guid>
-      <description></description>
+      <link>https://paulefrensa.rbind.io/talk/2020-06-06-zoe-talk/</link>
+      <pubDate>Sat, 06 Jun 2020 11:30:00 +0000</pubDate>
+      <guid>https://paulefrensa.rbind.io/talk/2020-06-06-zoe-talk/</guid>
+      <description>
+&lt;script src=&#34;https://paulefrensa.rbind.io/talk/2020-06-06-zoe-talk/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://paulefrensa.rbind.io/talk/2020-06-06-zoe-talk/index_files/fitvids/fitvids.min.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div class=&#34;shareagain&#34; style=&#34;min-width:300px;margin:1em auto;&#34;&gt;
+&lt;iframe src=&#34;https://introecologiafuncional.netlify.app&#34; width=&#34;1600&#34; height=&#34;900&#34; style=&#34;border:2px solid currentColor;&#34; loading=&#34;lazy&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;script&gt;fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});&lt;/script&gt;
+&lt;/div&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;baner.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Banner for the ZOE talks&lt;/p&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
       <title>Introduction to Tidyverse</title>
-      <link>https://paulefrensa.rbind.io/talk/2020-pftc5-intro/</link>
-      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://paulefrensa.rbind.io/talk/2020-pftc5-intro/</guid>
-      <description></description>
+      <link>https://paulefrensa.rbind.io/talk/2020-06-06-pftc5/</link>
+      <pubDate>Sun, 22 Mar 2020 14:00:00 +0000</pubDate>
+      <guid>https://paulefrensa.rbind.io/talk/2020-06-06-pftc5/</guid>
+      <description>
+&lt;script src=&#34;https://paulefrensa.rbind.io/talk/2020-06-06-pftc5/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://paulefrensa.rbind.io/talk/2020-06-06-pftc5/index_files/fitvids/fitvids.min.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div class=&#34;shareagain&#34; style=&#34;min-width:300px;margin:1em auto;&#34;&gt;
+&lt;iframe src=&#34;https://pftc5intrototidyverse.netlify.app&#34; width=&#34;1600&#34; height=&#34;900&#34; style=&#34;border:2px solid currentColor;&#34; loading=&#34;lazy&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;script&gt;fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});&lt;/script&gt;
+&lt;/div&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;traittrain.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Trait Train Plant Functional Courses&lt;/p&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>

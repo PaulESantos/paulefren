@@ -5,7 +5,15 @@
     <link>https://paulefrensa.rbind.io/authors/paul-efren-santos-andrade/</link>
       <atom:link href="https://paulefrensa.rbind.io/authors/paul-efren-santos-andrade/index.xml" rel="self" type="application/rss+xml" />
     <description>Paul Efren Santos-Andrade</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© PaulEfren 2021</copyright><lastBuildDate>Thu, 19 Nov 2020 00:00:00 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Paul Efren 2021</copyright><lastBuildDate>Fri, 11 Dec 2020 00:00:00 -0500</lastBuildDate>
+    <item>
+      <title>Assessing the sensitivity of evapotranspiration to shifts in plant traits, changing climate, and earlier snowmelt: Long-term observations from a 1,000m elevation gradient in the East River Watershed, Colorado, USA</title>
+      <link>https://paulefrensa.rbind.io/publication/2020-evapotranspiration/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 -0500</pubDate>
+      <guid>https://paulefrensa.rbind.io/publication/2020-evapotranspiration/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Reduced tree density and basal area in Andean forests are associated with bamboo dominance</title>
       <link>https://paulefrensa.rbind.io/publication/2020-bamboo/</link>
@@ -15,18 +23,10 @@
     </item>
     
     <item>
-      <title>Introducción a la Ecología Basada en Rasgos Funciónales</title>
-      <link>https://paulefrensa.rbind.io/talk/2020-intro-functional/</link>
-      <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>https://paulefrensa.rbind.io/talk/2020-intro-functional/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Introduction to Tidyverse</title>
-      <link>https://paulefrensa.rbind.io/talk/2020-pftc5-intro/</link>
-      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://paulefrensa.rbind.io/talk/2020-pftc5-intro/</guid>
+      <title>Reduced tree density and basal area in Andean forests are associated with bamboo dominance</title>
+      <link>https://paulefrensa.rbind.io/publication/2020-traits/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 -0500</pubDate>
+      <guid>https://paulefrensa.rbind.io/publication/2020-traits/</guid>
       <description></description>
     </item>
     
