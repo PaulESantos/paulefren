@@ -5,7 +5,7 @@
     <link>https://paulefrensa.rbind.io/publication/</link>
       <atom:link href="https://paulefrensa.rbind.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© PaulEfren 2021</copyright><lastBuildDate>Thu, 19 Nov 2020 00:00:00 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Paul Efren 2021</copyright><lastBuildDate>Fri, 11 Dec 2020 00:00:00 -0500</lastBuildDate>
     <image>
       <url>https://paulefrensa.rbind.io/img/forest.png</url>
       <title>Publications</title>
@@ -13,10 +13,26 @@
     </image>
     
     <item>
+      <title>Assessing the sensitivity of evapotranspiration to shifts in plant traits, changing climate, and earlier snowmelt: Long-term observations from a 1,000m elevation gradient in the East River Watershed, Colorado, USA</title>
+      <link>https://paulefrensa.rbind.io/publication/2020-evapotranspiration/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 -0500</pubDate>
+      <guid>https://paulefrensa.rbind.io/publication/2020-evapotranspiration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Reduced tree density and basal area in Andean forests are associated with bamboo dominance</title>
       <link>https://paulefrensa.rbind.io/publication/2020-bamboo/</link>
       <pubDate>Thu, 19 Nov 2020 00:00:00 -0500</pubDate>
       <guid>https://paulefrensa.rbind.io/publication/2020-bamboo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reduced tree density and basal area in Andean forests are associated with bamboo dominance</title>
+      <link>https://paulefrensa.rbind.io/publication/2020-traits/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 -0500</pubDate>
+      <guid>https://paulefrensa.rbind.io/publication/2020-traits/</guid>
       <description></description>
     </item>
     
