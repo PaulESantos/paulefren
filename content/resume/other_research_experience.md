@@ -26,12 +26,8 @@ date_format = "January 2006"
   location = "Remote - Arizona USA"
   date_start = "2021-06-01"
   date_end = "2021-08-31"
-<<<<<<< HEAD
   description = """A summer internship with Brian J. Enquist at [Macroecology Lab The University of Arizona | The Santa Fe Institute](https://brianjenquist.wordpress.com/).
-=======
-  description = """A summer internship with the Enquist Lab = [Macroecology Lab The University of Arizona | The Santa Fe Institute]](https://brianjenquist.wordpress.com/).
->>>>>>> dcb78371a1b4fd96275751c2be946c615a773311
-  """  
+"""  
 
 
 [[experience]]
