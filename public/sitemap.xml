@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://paulefrensa.rbind.io/</loc>
+    <lastmod>2023-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paulefrensa.rbind.io/project/ppendemic/</loc>
+    <lastmod>2023-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paulefrensa.rbind.io/project/</loc>
+    <lastmod>2023-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paulefrensa.rbind.io/tags/r/</loc>
+    <lastmod>2023-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paulefrensa.rbind.io/tags/software/</loc>
+    <lastmod>2023-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://paulefrensa.rbind.io/tags/</loc>
+    <lastmod>2023-08-21T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://paulefrensa.rbind.io/publication_types/1/</loc>
     <lastmod>2020-12-14T00:00:00-05:00</lastmod>
   </url><url>
@@ -45,9 +63,6 @@
     <lastmod>2020-12-14T00:00:00-05:00</lastmod>
   </url><url>
     <loc>https://paulefrensa.rbind.io/authors/nicola-falco/</loc>
-    <lastmod>2020-12-14T00:00:00-05:00</lastmod>
-  </url><url>
-    <loc>https://paulefrensa.rbind.io/</loc>
     <lastmod>2020-12-14T00:00:00-05:00</lastmod>
   </url><url>
     <loc>https://paulefrensa.rbind.io/authors/paul-efren-santos-andrade/</loc>
@@ -101,19 +116,16 @@
     <loc>https://paulefrensa.rbind.io/authors/william-farfan-rios/</loc>
     <lastmod>2020-11-19T00:00:00-05:00</lastmod>
   </url><url>
-    <loc>https://paulefrensa.rbind.io/project/ppendemic/</loc>
+    <loc>https://paulefrensa.rbind.io/project/mtsta/</loc>
     <lastmod>2020-06-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paulefrensa.rbind.io/project/</loc>
+    <loc>https://paulefrensa.rbind.io/project/peruflorads43/</loc>
     <lastmod>2020-06-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paulefrensa.rbind.io/tags/r/</loc>
+    <loc>https://paulefrensa.rbind.io/project/perutimber/</loc>
     <lastmod>2020-06-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://paulefrensa.rbind.io/tags/software/</loc>
-    <lastmod>2020-06-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://paulefrensa.rbind.io/tags/</loc>
+    <loc>https://paulefrensa.rbind.io/project/redbookperu/</loc>
     <lastmod>2020-06-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://paulefrensa.rbind.io/talk/</loc>

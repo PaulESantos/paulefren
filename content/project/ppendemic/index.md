@@ -1,10 +1,10 @@
 ---
-date: "2020-06-11T00:00:00Z"
+date: "2023-08-21T00:00:00Z"
 external_link: https://github.com/PaulESantos/ppendemic
 image:
   caption: '[Hex by Allison Horst](https://www.allisonhorst.com/)'
   focal_point: Smart
-summary: An R data package with to access the information of the The red book of endemic plants of Peru data.
+summary: Introducing a novel and updated database showcasing Peru's endemic plants. This meticulously compiled and revised botanical collection encompasses a remarkable assemblage of over 7249 distinct species.
 tags:
 - R
 - software
