@@ -1,0 +1,77 @@
+project:
+  type: website
+  post-render: 
+    - "cp -rnv static/. _site" # source: https://github.com/quarto-dev/quarto-cli/discussions/4162#discussioncomment-4831352
+
+website:
+  title: "Paul Efren"
+  site-url: https://paulefrensa.rbind.io/
+  description: "Plant Ecologist and R programming data enthusiast"
+  favicon: assets/paul/logo_pesa.svg
+  page-navigation: true
+  back-to-top-navigation: true
+  twitter-card: true
+  comments: 
+    utterances: 
+      repo: PaulESantos/paulefren 
+      label: utterances
+      theme: body-light
+      issue-term: title
+ 
+  navbar:
+    logo: assets/paul/logo_pesa.svg
+    tools:
+    - icon: github
+      href: https://www.github.com/PaulESantos/paulefren
+    right:
+      - text: About
+        aria-label: "About Me"
+        href: about/index.qmd
+      - text: Blog
+        aria-label: "Blog Posts"
+        href: blog/index.qmd
+      - text: Talks
+        aria-label: "Talks"
+        href: talk/index.qmd  
+      - text: Publications
+        aria-label: "Publications"
+        href: publication/index.qmd
+      - text: Projects
+        aria-label: "Project Portfolio"
+        href: project/index.qmd
+  
+  page-footer:  
+    left: >-
+     &#169; 2023 Paul Efren Santos Andrade &#8729; Made with [Quarto](https://quarto.org)
+    center: |
+      <a class="link-dark me-1" href="https://github.com/PaulEsantos" title="github" target="_blank" rel="noopener">{{< fa brands github >}}</a>
+      <a class="link-dark me-1" href="https://orcid.org/0000-0002-6635-0375" title="orcid" target="_blank" rel="noopener">{{< ai orcid >}}</a>
+      <a class="link-dark me-1" href="https://linkedin.com/in/paulesantosandrade" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a>
+
+    right: 
+      - text: "Contact"
+        aria-label: "Contact Form"
+        href: "contact.qmd"
+      - text: "License"
+        aria-label: "License Details"
+        href: license.qmd
+
+format: 
+  html:
+    theme:
+      light:
+        - cosmo
+        - assets/paul-theme-light.scss
+      dark: 
+        - cosmo
+        - assets/paul-theme-dark.scss
+    highlight-style:
+      light: a11y-light
+      dark: a11y-dark
+    code-link: true
+    pagetitle: "{{< meta title >}} | Paul Efren Santos Andrade"
+
+execute: 
+  freeze: auto
+
+include-in-header: assets/umami.html

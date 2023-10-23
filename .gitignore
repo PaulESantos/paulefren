@@ -2,7 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
-/public/
 .DS_Store
-/resources/
 Thumbs.db
+/public/
+/resources/
+/.quarto/
