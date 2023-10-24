@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: 508cda6f-23ac-424e-9886-0bf488715bc2
+      url: 'https://paulefrensa.rbind.io/'
