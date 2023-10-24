@@ -1,0 +1,11 @@
+---
+comments: false
+date: "2021-06-01T10:00:00+00:00"
+title: "Feedback"
+---
+
+I value your input on my site's content and the materials I've provided. If you encounter any issues, please don't hesitate to reach out through my [contact form](/contact), and I'll respond promptly.
+
+Thank you for visiting my site and taking the time to read this page. Your feedback is immensely appreciated!
+
+Travel back to the [home page](/).

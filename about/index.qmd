@@ -1,0 +1,167 @@
+---
+title: "Paul Efren"
+subtitle: Biologist | Plant ecologist | R programming,<br> ABERG
+image: sidebar/paul.JPG
+image-alt: "Landscapes view of the Kosnipata valley."
+about:
+  template: trestles
+  image-width: 14em
+  image-shape: round
+  id: hero-heading
+  links:
+    - icon: github
+      aria-label: GitHub
+      href: https://github.com/PaulESantos
+    - text: "{{< ai orcid >}}"
+      href: https://orcid.org/0000-0002-6635-0375
+    - icon: linkedin
+      aria-label: "LinkedIn"
+      href: https://linkedin.com/in/paulesantosandrade
+listing: 
+- id: blog
+  contents: 
+    - "../blog/*/index.qmd"
+    - "../blog/*/index.markdown"
+  sort: date desc
+  type: grid
+  grid-columns: 1
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [title, subtitle, image]
+  max-items: 1
+  image-height: "200"
+- id: talk
+  contents: 
+    - "../talk/*/index.qmd"
+    - "../talk/*/index.markdown"
+  sort: date desc
+  type: grid
+  grid-columns: 1
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [title, subtitle, image]
+  max-items: 1
+  image-height: "200"
+- id: publication
+  contents: 
+    - "../publication/*/index.qmd"
+    - "../publication/*/index.markdown"
+  sort: date desc
+  type: grid
+  grid-columns: 1
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [title, image]
+  max-items: 1
+  image-height: "200"
+  image-placeholder: ../publication/featured.jpg
+- id: project
+  contents: 
+    - "../project/*/index.qmd"
+    - "../project/*/index.markdown"
+  sort: date desc
+  type: grid
+  grid-columns: 1
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [title, subtitle, image]
+  max-items: 1
+  image-height: "200"
+format: 
+  html: 
+    page-layout: full
+
+header-includes: >
+  <link rel="stylesheet" href="../assets/about.css">
+resources:
+  - ../assets/about.css
+---
+
+::: {#hero-heading}
+
+I'm an enthusiastic data analyst and researcher with a strong background in the Andes Biodiversity and Ecosystem Research Group [ABERG](https://www.andesconservation.org/). My research is centered around plant ecology and code development.
+
+I've actively participated in projects across the Andes-Amazon gradient, providing valuable insights into the complexities of global change. To delve deeper into my research interests, explore my [publications](/publication).
+
+If you have any questions or wish to get in touch, don't hesitate to send me a message. {{< fa feather-pointed >}}
+
+:::
+
+## About me
+
+::: {.grid}
+
+::: {.g-col-6 #about-me-1}
+
+I'm a biologist on a journey to become proficient in informatics, with a keen interest in data management and biodiversity.
+
+I find joy in leveraging [R](https://www.r-project.org/about.html) to streamline my data science workflow and conduct biodiversity data analysis. I also take pride in developing and maintaining various R packages, such as:
+
+- [ppendemic](https://paulesantos.github.io/ppendemic/)
+- [redbookperu](https://paulesantos.github.io/redbookperu/)
+- [avesperu](https://github.com/PaulESantos/avesperu/)
+
+Since 2013, I've been actively involved in tropical forest ecology. During this time, I've gained extensive experience through collaborations with the Andes Biodiversity and Ecosystem Research Group [ABERG](https://www.andesconservation.org/) in the Andes and Amazon regions of Peru.
+
+:::
+
+::: {.g-col-6 #about-me-2}
+
+My contributions have encompassed a wide range of projects, including the evaluation of:
+
+ - Plant trait ecology.
+ - Carbon and forest dynamics.
+ - CO2 and methane fluxes.
+ 
+My educational background includes a:
+
+<ul class="fa-ul">
+   <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span> Master's in Ecology & Environmental Management (graduated)∙ Universidad Nacional San Antonio Abad ∙ 2021</li>
+   <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span>Biologist ∙ Universidad Nacional San Antonio Abad ∙ 2016</li>
+   <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span>B.S. in Biology ∙ Universidad Nacional San Antonio Abad ∙ 2012</li>
+</ul>
+
+You could find my CV: [Spanish](https://paulesantos.github.io/cv_spa/) - [English](https://paulesantos.github.io/cv/)
+
+:::
+
+:::
+<!-- end grid -->
+
+## ...
+
+:::: {.grid}
+
+::: {.g-col-3}
+#### Blog
+::: {#blog}
+:::
+[See all &rarr;](../blog){.about-links .subtitle}
+:::
+
+::: {.g-col-3}
+#### Talks
+::: {#talk}
+:::
+[See all &rarr;](../talk){.about-links .subtitle}
+:::
+
+::: {.g-col-3}
+#### Publications
+::: {#publication}
+:::
+[See all &rarr;](../publication){.about-links .subtitle}
+:::
+
+::: {.g-col-3}
+#### Projects
+::: {#project}
+:::
+[See all &rarr;](../project){.about-links .subtitle}
+:::
+
+::::

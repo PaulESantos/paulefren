@@ -1,0 +1,35 @@
+---
+title: "ppendemic"
+subtitle: "A Glimpse at the Diversity of Peru's Endemic Plants"
+excerpt: "ppendemic - A Glimpse at the Diversity of Peru's Endemic Plants"
+date: 2023-10-22
+author: "Paul Efren"
+slug: ppendemic
+alias:
+  - /project/ppendemic/
+featured: true
+draft: false
+tags:
+- R package
+- Endemic peruvian flora
+- Diversity
+categories:
+- R package
+- Endemic peruvian flora
+- Diversity
+# layout options: single or single-sidebar
+layout: single
+links:
+- icon: images
+  icon_pack: fas
+  name: Website
+  url: https://paulesantos.github.io/ppendemic/
+- icon: github
+  icon_pack: fab
+  name: Code
+  url: https://github.com/PaulESantos/ppendemic/
+---
+
+## ppendemic
+
+Introducing a novel and updated database showcasing Peru’s endemic plants. This meticulously compiled and revised botanical collection encompasses a remarkable assemblage of over 7249 distinct species.

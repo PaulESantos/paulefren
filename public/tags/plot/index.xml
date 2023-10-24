@@ -1,27 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>plot on R Programming &amp; Biology</title>
-    <link>/tags/plot/</link>
-    <description>Recent content in plot on R Programming &amp; Biology</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy;Paul Efren 2018</copyright>
-    <lastBuildDate>Fri, 07 Sep 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/plot/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Intervalos de Confianza</title>
-      <link>/post/2018-09-07-intervalos_de_confianza/</link>
-      <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018-09-07-intervalos_de_confianza/</guid>
-      <description>This is a modification of a blog written by Sean Kross, using tidyverse.
-Esta es una modificación de un blog escrito por Sean Kross1, utilizando tidyverse2.
-Imagina que estás buscando estimar el promedio de una alguna característica de una población.## Warning: `data_frame()` is deprecated, use `tibble()`.## This warning is displayed once per session.Conformada por 100 000 individuos.set.seed(2016-05-04)poblacion &amp;lt;- data_frame( individuo = seq(1,100000),caracteristica = runif(100000))IndividuoCaracteristicaIndividuoCaracteristica10.</description>
-    </item>
-    
-  </channel>
-</rss>

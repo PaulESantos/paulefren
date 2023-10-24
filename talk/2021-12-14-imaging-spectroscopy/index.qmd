@@ -1,0 +1,40 @@
+---
+title: "Evaluating the effect of sampling scale to quantify different components of plant biodiversity with imaging spectroscopy"
+author: 
+  - Sandra M Duran
+  - Nicola Falco
+  - name: Paul Efren Santos Andrade
+    orcid: 0000-0002-6635-0375
+  - Jesus N Pinto Ledezma
+  - Haruko M Wainwright
+  - Heidi Steltzer 
+  - Eoin Brodie
+  - Brian Joseph Enquist
+  - Jeannine Cavender-Bares
+date: '2021-12-14'
+slug: agu-fall-meeting-2021
+categories:
+  - Ecology
+  - Spectroscopy
+  - Biodiversity
+description: 'AGU Fall Meeting 2021'
+subtitle: ''
+abstract: ''
+links:
+- icon: file-richtext-fill
+  name: AGU Fall Meeting 2021
+  url: https://agu.confex.com/agu/fm21/meetingapp.cgi/Paper/988337
+filters:
+  - lightbox
+lightbox: auto
+
+---
+
+
+![Poster](featured.png)
+
+
+## Abstract
+
+Declines in biodiversity have increased the need for better monitoring and quantification of biodiversity. Remote sensing has been used to assess the extent of natural ecosystems and has become an efficient approach to quantify plant biodiversity at larger spatial scales. Imaging spectroscopy have made it possible to quantify plant diversity at high spatial resolution, and has expanded the range of detectable biochemical and physiological plant properties and allowed the quantification of functional traits. Nonetheless, it remains unclear what the most appropriate spatial resolution for remote detection of diversity is, and how the spatial resolution affects distinct diversity components. We quantified three diversity components of plant communities at three different scales in alpine meadows along the East River watershed in Colorado. Our evaluation of scale focuses on variation in the spatial grain (or pixel) rather than the extent of the study area. Specifically, we estimated spectral, functional, and phylogenetic diversity from imaging spectroscopy at the level of leaf, canopy, and from airborne imaging. Diversity for the three components--i.e., functional, phylogenetic, and spectral--was estimated using distance-based metrics. We also evaluated the relationship between diversity metrics derived from spectra and from field-based methods with the long term aim of discerning the most generalizable metrics across scales. Overall, our results in Colorado showed a strong scale-dependency on the relationship between field-based diversity indices and diversity metrics from reflectance as has been found in experimental systems. Spectral diversity calculated at the leaf-level correlates strongly with spectral diversity at the canopy level, but only weakly predicts spectral diversity calculated from airborne imagery (1 m resolution). Three diversity metrics were able to explain variation in plant responses to changes in temperature, precipitation and evapotranspiration along the elevation gradient. Our findings highlight the importance of assessing the scale dependency of diversity metrics derived from spectra to understand plant responses to environmental gradients and improve the remote detection of diversity from imaging spectroscopy.
+

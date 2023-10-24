@@ -1,0 +1,43 @@
+---
+title: "Assessing how long-term shifts in species and functional composition have impacted carbon and water cycling the southern Rocky Mountains"
+author: 
+  - Julia Chacon-Labella
+  - Connor Wilson
+  - Lindsay Backhaus
+  - name: Paul Efren Santos Andrade
+    orcid: 0000-0002-6635-0375
+  - Sandra Milena Duran
+  - Alex Brummer
+  - Amanda Henderson
+  - Lorah Seltzer
+  - Nicola Falco
+  - Haruko M. Wainwright
+  - Eoin Brodie
+  - Charles F. Williams
+  - Susan S. Hubbard
+  - Vigdis Vandvik
+  - Brian Joseph Enquist
+  - Kenneth Hurst Williams
+date: '2020-12-14'
+slug: agu-fall-meeting-2020
+categories:
+  - Ecology
+  - Climate Change
+description: 'AGU Fall Meeting 2020'
+subtitle: ''
+abstract: ''
+links:
+- icon: file-richtext-fill
+  name: Conference Presentation
+  url: https://agu.confex.com/agu/fm20/meetingapp.cgi/Paper/762601
+filters:
+  - lightbox
+lightbox: auto
+---
+
+## Abstract
+
+Alpine communities of the Rocky Mountains show a directional shift in temperature and vapor pressure deficit with increasingly hotter and drier growing seasons. In much of the Western and Southwestern United States, the growing season is characterized by an early drought that occurs after snowmelt and lasts until the start of the summer monsoon season. Climate change models predict an increase in the length and severity of this dry period, due to a reduction in precipitations, rise of temperatures, earlier snowmelt dates and shifts in the North American monsoon. Here we integrated several efforts to characterize ~70 years of changes in plant community diversity, functional traits, and ecosystem functioning. First, to investigate the patterns and causes of temporal changes in montane plant communities, we used a resampled dataset of 121 transects surveyed from 1948 to 1952 in the East River Basin near Crested Butte, Colorado. We combined these data, long-term climate data and another biodiversity dataset of ~ 15 years of community composition monitoring across a 1,000m elevational gradient. To understand how variability in the timing and strength of the early season drought, temperature, and VPD affects ecosystem carbon exchange through potential shifts in biodiversity and traits, we used a long-term ( ~ 17 year) dataset of peak carbon and water flux measures of vegetation along the same elevational gradient. We test the hypothesis that (i) changing climate, in particular temperature, and (ii) shifts in snowmelt date drive shifts in diversity of plant traits linked to temperature. We next assessed the hypothesis that (iii) shifts in these traits would influence ecosystem carbon and water exchange. Our results show strong shifts in species and trait composition with time and elevation. In the 17 years of monitoring ecosystem functioning we find a strong signal of increased temperatures and minimum VPD. Our results suggest that increasing VPD as well as shifts in plant trait composition together have large effects on the carbon and water budgets in Western mountain watersheds. As plant water use influences recharge rates and productivity in the watershed these results suggest that over the past ~70 years but especially in the last decade climate driven shifts in vegetation have impacted ecosystem and watershed functioning.
+
+![RMBL Gothic, CO](featured.png)
+

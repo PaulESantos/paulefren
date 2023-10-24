@@ -1,0 +1,41 @@
+---
+title: "Tropical forest leaves may darken in response to climate change"
+author: 
+  - Christopher E. Doughty
+  - name: Paul Efren Santos Andrade
+    orcid: 0000-0002-6635-0375
+  - Alexander Shenkin
+  - Gregory R. Goldsmith
+  - Lisa P. Bentley
+  - Benjamin Blonder
+  - Sandra Díaz
+  - Norma Salinas
+  - Brian J. Enquist
+  - Roberta E. Martin
+  - Gregory P. Asner
+  - Yadvinder Malhi
+date: '2018-11-18'
+slug: nee-paper-2018
+categories:
+  - Spectroscopy
+  - NIR
+  - Forest structure
+  - Tropical forests
+description: 'Nature Ecology & Evolution Volume 2, pages 1918–1924 (2018)'
+subtitle: ''
+abstract: ''
+links:
+- icon: file-richtext-fill
+  name: Researsh Paper
+  url: https://www.nature.com/articles/s41559-018-0716-y
+filters:
+  - lightbox
+lightbox: auto
+---
+
+## Abstract
+
+Tropical forest leaf albedo (reflectance) greatly impacts how much energy the planet absorbs; however; little is known about how it might be impacted by climate change. Here, we measure leaf traits and leaf albedo at ten 1-ha plots along a 3,200-m elevation gradient in Peru. Leaf mass per area (LMA) decreased with warmer temperatures along the elevation gradient; the distribution of LMA was positively skewed at all sites indicating a shift in LMA towards a warmer climate and future reduced tropical LMA. Reduced LMA was significantly (P < 0.0001) correlated with reduced leaf near-infrared (NIR) albedo; community-weighted mean NIR albedo significantly (P < 0.01) decreased as temperature increased. A potential future 2 °C increase in tropical temperatures could reduce lowland tropical leaf LMA by 6–7 g m−2 (5–6%) and reduce leaf NIR albedo by 0.0015–0.002 units. Reduced NIR albedo means that leaves are darker and absorb more of the Sun’s energy. Climate simulations indicate this increased absorbed energy will warm tropical forests more at high CO2 conditions with proportionately more energy going towards heating and less towards evapotranspiration and cloud formation.
+
+![Climate simulations](featured.png){fig-alt="Simulations of CLM 4.0 coupled with CAM-4.0 for 100 years averaging over the last 50 years, for which we reduced tropical NIR leaf albedo by 0.2 (subtracting a run at 0.35 from a run at 0.55) at 700 ppm atmospheric CO2 concentrations. a, Change in direct reflected NIR surface albedo (W m−2). b, Change in latent heat fluxes (W m−2). c, Change in maximum daily 2 m air temperature (K). d, Change in precipitation (mm month−1). e, Change in photosynthesis (µmol m−2 s−1). f, Change in percentage cloud cove"}
+

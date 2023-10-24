@@ -1,0 +1,50 @@
+---
+title: "Can Leaf Spectroscopy Predict Leaf and Forest Traits Along a Peruvian Tropical Forest Elevation Gradient?"
+author: 
+  - Christopher E. Doughty
+  - name: Paul Efren Santos Andrade
+    orcid: 0000-0002-6635-0375
+  - G. R. Goldsmith
+  - B. Blonder
+  - A. Shenkin
+  - L. P. Bentley
+  - C. Chavana-Bryant
+  - W. Huaraca-Huasco
+  - S. Díaz
+  - N. Salinas
+  - B. J. Enquist
+  - R. Martin
+  - G. P. Asner
+  - Y. Malhi
+date: '2017-10-26'
+slug: jgr-paper-2017
+categories:
+  - Leaf Spectroscopy
+  - Leaf traits
+  - Forest structure
+  - Tropical forests
+description: 'Journal of Geophysical Research: Biogeosciences Volume 122, Issue11 November 2017 Pages 2952-2965'
+subtitle: ''
+abstract: ''
+links:
+- icon: file-richtext-fill
+  name: Researsh Paper
+  url: https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2017JG003883
+filters:
+  - lightbox
+lightbox: auto
+---
+
+## Abstract
+High-resolution spectroscopy can be used to measure leaf chemical and structural traits. Such leaf traits are often highly correlated to other traits, such as photosynthesis, through the leaf economics spectrum. We measured VNIR (visible-near infrared) leaf reflectance (400–1,075 nm) of sunlit and shaded leaves in ~150 dominant species across ten, 1 ha plots along a 3,300 m elevation gradient in Peru (on 4,284 individual leaves). We used partial least squares (PLS) regression to compare leaf reflectance to chemical traits, such as nitrogen and phosphorus, structural traits, including leaf mass per area (LMA), branch wood density and leaf venation, and “higher-level” traits such as leaf photosynthetic capacity, leaf water repellency, and woody growth rates. Empirical models using leaf reflectance predicted leaf N and LMA (r2 > 30% and %RMSE < 30%), weakly predicted leaf venation, photosynthesis, and branch density (r2 between 10 and 35% and %RMSE between 10% and 65%), and did not predict leaf water repellency or woody growth rates (r2<5%). Prediction of higher-level traits such as photosynthesis and branch density is likely due to these traits correlations with LMA, a trait readily predicted with leaf spectroscopy.
+
+## Key Points
+
+- Empirical models using leaf reflectance strongly predicted leaf chemical and structural properties along a tropical elevation gradient
+
+- These models also predicted “higher-level” traits such as photosynthesis and branch density
+
+- Interspecific variation in leaf reflectance properties far exceeds intraspecific variation in both sunlit and shade leaves
+
+![Leaf reflectance](featured.jpg){fig-alt="Leaf reflectance interspecific (difference between mean tree spectra) coefficient of variation (dashed lines) (SD/mean) and intraspecific (difference between leaves on the same tree) variation (solid lines) for sunlit (black lines) and shaded (grey lines) leaves."}
+

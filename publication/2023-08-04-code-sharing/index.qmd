@@ -1,0 +1,42 @@
+---
+title: "Code sharing increases citations, but remains uncommon"
+author: 
+  - Christopher E. Doughty
+  - name: Paul Efren Santos Andrade
+    orcid: 0000-0002-6635-0375
+  - Luna Lei
+  - George Barbosa
+  - Brad Boyle
+  - Matiss Castorena
+  - Brian Enquist
+  - Xiao Feng
+  - Jamie Kass
+  - Hannah Owens
+  - Daniel Park
+  - Andrea Paz
+  - Gonzalo Pinilla-Buitrago
+  - Cory Merow
+  - Adam Wilson
+ate: '2023-08-04'
+slug: square-paper-2023
+categories:
+  - Code sharing
+  - Data sharing
+  - Open science
+description: 'This is a preprint at Reasearch Square'
+subtitle: ''
+abstract: ''
+links:
+- icon: file-richtext-fill
+  name: Researsh Paper - PrePrint
+  url: https://www.researchsquare.com/article/rs-3222221/v1
+filters:
+  - lightbox
+lightbox: auto
+---
+
+## Abstract
+Biologists increasingly rely on computer code, reinforcing the importance of published code for transparency, reproducibility, training, and a basis for further work. Here we conduct a literature review examining temporal trends in code sharing in ecology and evolution publications since 2010, and test for an influence of code sharing on citation rate. We find that scientists are overwhelmingly (95%) failing to publish their code and that there has been no significant improvement over time, but we also find evidence that code sharing can considerably improve citations, particularly when combined with open access publication.
+
+![Code sharing trend](featured.png){fig-alt="Temporal trend of code-sharing since 2010. Sample size was 77 papers per year, 1,001 total. The line shows the non-significant trend of code-sharing over time"}
+

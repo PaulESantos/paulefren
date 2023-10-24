@@ -1,0 +1,47 @@
+[
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/2023-10-22-rango-abundancia/index.html"
+    ]
+  },
+  {
+    "listing": "/about/index.html",
+    "items": [
+      "/blog/2023-10-22-rango-abundancia/index.html",
+      "/talk/2021-12-14-imaging-spectroscopy/index.html",
+      "/talk/2020-12-12-agu-chacon-rmbl/index.html",
+      "/publication/2023-08-04-code-sharing/index.html",
+      "/publication/2022-05-18-bauman-tree-mortality/index.html",
+      "/publication/2021-11-06-bauman-growth sensitivity/index.html",
+      "/publication/2021-01-15-fadrique-bamboo/index.html",
+      "/publication/2018-11-18-leaves-darken/index.html",
+      "/publication/2017-10-26-leaves-signatures/index.html",
+      "/project/2023-10-22-ppendemic/index.html"
+    ]
+  },
+  {
+    "listing": "/publication/index.html",
+    "items": [
+      "/publication/2023-08-04-code-sharing/index.html",
+      "/publication/2022-05-18-bauman-tree-mortality/index.html",
+      "/publication/2021-11-06-bauman-growth sensitivity/index.html",
+      "/publication/2021-01-15-fadrique-bamboo/index.html",
+      "/publication/2018-11-18-leaves-darken/index.html",
+      "/publication/2017-10-26-leaves-signatures/index.html"
+    ]
+  },
+  {
+    "listing": "/project/index.html",
+    "items": [
+      "/project/2023-10-22-ppendemic/index.html"
+    ]
+  },
+  {
+    "listing": "/talk/index.html",
+    "items": [
+      "/talk/2021-12-14-imaging-spectroscopy/index.html",
+      "/talk/2020-12-12-agu-chacon-rmbl/index.html"
+    ]
+  }
+]

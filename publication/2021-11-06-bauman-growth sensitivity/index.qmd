@@ -1,0 +1,50 @@
+---
+title: "Tropical tree growth sensitivity to climate is driven by species intrinsic growth rate and leaf traits"
+author: 
+  - David Bauman
+  - Claire Fortunel
+  - Lucas A. Cernusak
+  - Lisa Patrick Bentley
+  - Sean M. McMahon
+  - Sami W. Rifai
+  - Jesús Aguirre-Gutiérrez
+  - Imma Oliveras Menor
+  - Matt Bradford
+  - Susan G. W. Laurance
+  - Guillaume Delhaye
+  - Michael F. Hutchinson
+  - Raymond Dempsey
+  - Brandon E. McNellis
+  - name: Paul Efren Santos Andrade
+    orcid: 0000-0002-6635-0375
+  - Hugo R. Ninantay-Rivera
+  - Jimmy R. Chambi Paucar 
+  - Oliver L. Phillips
+  - Yadvinder Malhi
+date: '2021-11-06'
+slug: GBC-2021
+categories:
+  - Climate anomalies 
+  - Climate change
+  - Functional traits
+  - Tree vital rates
+  - Forest ecology
+  - Vapour pressure deficit (VPD)
+description: 'Global Change Biology'
+subtitle: ''
+abstract: ''
+links:
+- icon: file-richtext-fill
+  name: Researsh Paper
+  url: https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.15982
+filters:
+  - lightbox
+lightbox: auto
+---
+
+## Abstract
+
+A better understanding of how climate affects growth in tree species is essential for improved predictions of forest dynamics under climate change. Long-term climate averages (mean climate) drive spatial variations in species’ baseline growth rates, whereas deviations from these averages over time (anomalies) can create growth variation around the local baseline. However, the rarity of long-term tree census data spanning climatic gradients has so far limited our understanding of their respective role, especially in tropical systems. Furthermore, tree growth sensitivity to climate is likely to vary widely among species, and the ecological strategies underlying these differences remain poorly understood. Here, we utilize an exceptional dataset of 49 years of growth data for 509 tree species across 23 tropical rainforest plots along a climatic gradient to examine how multiannual tree growth responds to both climate means and anomalies, and how species’ functional traits mediate these growth responses to climate. We show that anomalous increases in atmospheric evaporative demand and solar radiation consistently reduced tree growth. Drier forests and fast-growing species were more sensitive to water stress anomalies. In addition, species traits related to water use and photosynthesis partly explained differences in growth sensitivity to both climate means and anomalies. Our study demonstrates that both climate means and anomalies shape tree growth in tropical forests and that species traits can provide insights into understanding these demographic responses to climate change, offering a promising way forward to forecast tropical forest dynamics under different climate trajectories.
+
+![Effect of climate](featured.jpg){fig-alt=""}
+

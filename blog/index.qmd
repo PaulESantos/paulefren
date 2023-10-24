@@ -1,0 +1,34 @@
+---
+title: "R codding for fun"
+description: |
+  This is my blog where I practice sharing my curiosity about R.<br>
+  It includes notes and tutorials for my future self and hopefully also for you.
+listing: 
+  contents: 
+    - "**/index.qmd"
+    - "**/index.markdown"
+    - "**/index.md"
+  sort: "date desc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [title, author, categories, date, image]
+  image-placeholder: sidebar.jpg
+  image-align: right
+  page-size: 5
+  feed:
+    categories: [R]
+citation: false
+toc: false
+comments: false
+format: 
+  html: 
+    page-layout: full
+title-block-banner: false
+
+header-includes: >
+  <link rel="stylesheet" href="../assets/listing-default.css">
+resources:
+  - ../assets/listing-default.css 
+---

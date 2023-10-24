@@ -1,0 +1,49 @@
+---
+title: "Tropical tree mortality has increased with rising atmospheric water stress"
+author: 
+  - David Bauman
+  - Claire Fortunel
+  - Guillaume Delhaye
+  - Yadvinder Malhi
+  - Lucas A. Cernusak
+  - Lisa Patrick Bentley
+  - Sami W. Rifai
+  - Jesús Aguirre-Gutiérrez
+  - Imma Oliveras Menor
+  - Oliver L. Phillips
+  - Brandon E. McNellis
+  - Matt Bradford
+  - Susan G. W. Laurance
+  - Michael F. Hutchinson
+  - Raymond Dempsey
+  - name: Paul Efren Santos Andrade
+    orcid: 0000-0002-6635-0375
+  - Hugo R. Ninantay-Rivera
+  - Jimmy R. Chambi Paucar 
+  - Sean M. McMahon 
+date: '2022-05-18'
+slug: nature-paper-2022
+categories:
+  - Climate-change ecology
+  - Community ecology
+  - Forest ecology
+  - Population dynamics
+  - Tropical ecology
+description: 'Nature article 2022'
+subtitle: ''
+abstract: ''
+links:
+- icon: file-richtext-fill
+  name: Researsh Paper
+  url: https://www.nature.com/articles/s41586-022-04737-7#citeas
+filters:
+  - lightbox
+lightbox: auto
+---
+
+## Abstract
+
+Evidence exists that tree mortality is accelerating in some regions of the tropics1,2, with profound consequences for the future of the tropical carbon sink and the global anthropogenic carbon budget left to limit peak global warming below 2 °C. However, the mechanisms that may be driving such mortality changes and whether particular species are especially vulnerable remain unclear3,4,5,6,7,8. Here we analyse a 49-year record of tree dynamics from 24 old-growth forest plots encompassing a broad climatic gradient across the Australian moist tropics and find that annual tree mortality risk has, on average, doubled across all plots and species over the last 35 years, indicating a potential halving in life expectancy and carbon residence time. Associated losses in biomass were not offset by gains from growth and recruitment. Plots in less moist local climates presented higher average mortality risk, but local mean climate did not predict the pace of temporal increase in mortality risk. Species varied in the trajectories of their mortality risk, with the highest average risk found nearer to the upper end of the atmospheric vapour pressure deficit niches of species. A long-term increase in vapour pressure deficit was evident across the region, suggesting that thresholds involving atmospheric water stress, driven by global warming, may be a primary cause of increasing tree mortality in moist tropical forests.
+
+![Temporal increase of tree mortality risk](featured.png){fig-alt=""}
+
