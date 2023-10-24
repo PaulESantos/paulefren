@@ -6,8 +6,8 @@
       version="2.0">
 <channel>
 <title>Paul Efren</title>
-<link>https://paulefrensa.rbind.io/blog/index.html</link>
-<atom:link href="https://paulefrensa.rbind.io/blog/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://enchanting-peony-a9e99c.netlify.app/blog/index.html</link>
+<atom:link href="https://enchanting-peony-a9e99c.netlify.app/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>This is my blog where I practice sharing my curiosity about R.&lt;br&gt;
 It includes notes and tutorials for my future self and hopefully also for you.
 </description>
@@ -16,7 +16,7 @@ It includes notes and tutorials for my future self and hopefully also for you.
 <item>
   <title>Curvas Rango-Abundancia</title>
   <dc:creator>Paul Santos - Andrade</dc:creator>
-  <link>https://paulefrensa.rbind.io/blog/2023-10-22-rango-abundancia/index.html</link>
+  <link>https://enchanting-peony-a9e99c.netlify.app/blog/2023-10-22-rango-abundancia/index.html</link>
   <description><![CDATA[ 
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
@@ -73,14 +73,14 @@ It includes notes and tutorials for my future self and hopefully also for you.
 
 </div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-santos - andrade2023" class="csl-entry quarto-appendix-citeas">
 Santos - Andrade, Paul. 2023. <span>“Curvas Rango-Abundancia.”</span>
-October 22, 2023. <a href="https://paulefrensa.rbind.io//blog/2023-10-22-rango-abundancia">https://paulefrensa.rbind.io//blog/2023-10-22-rango-abundancia</a>.
+October 22, 2023. <a href="https://enchanting-peony-a9e99c.netlify.app/blog/2023-10-22-rango-abundancia">https://enchanting-peony-a9e99c.netlify.app/blog/2023-10-22-rango-abundancia</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>Ecologia de comunidades</category>
   <category>Curvas Rango-Abundancia</category>
-  <guid>https://paulefrensa.rbind.io/blog/2023-10-22-rango-abundancia/index.html</guid>
+  <guid>https://enchanting-peony-a9e99c.netlify.app/blog/2023-10-22-rango-abundancia/index.html</guid>
   <pubDate>Sun, 22 Oct 2023 05:00:00 GMT</pubDate>
-  <media:content url="https://paulefrensa.rbind.io/blog/2023-10-22-rango-abundancia/featured.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://enchanting-peony-a9e99c.netlify.app/blog/2023-10-22-rango-abundancia/featured.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>

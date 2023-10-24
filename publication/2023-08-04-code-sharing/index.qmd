@@ -1,7 +1,7 @@
 ---
 title: "Code sharing increases citations, but remains uncommon"
 author: 
-  - Christopher E. Doughty
+  - Brian Maitner
   - name: Paul Efren Santos Andrade
     orcid: 0000-0002-6635-0375
   - Luna Lei
