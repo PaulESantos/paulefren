@@ -19,7 +19,7 @@ $code-block-theme-dark-threshhold: 40% !default;
 // $code-bg, $code-color, $code-padding
 $code-color: #7d12ba !default;
 
-$blue: #0d6efd !default;
+$blue: #0d6efd!default; //#8cd98c v #0d6efd
 $primary: $blue !default;
 $link-color: $primary !default;
 $gray-200: #e9ecef !default;
@@ -44,8 +44,8 @@ $callout-margin-bottom: 1.25rem !default;
 $theme-name: if(variable-exists(theme), $theme, "");
 $navbar-default: if(
   variable-exists(theme),
-  if(variable-exists(primary), $primary, #517699),
-  #517699
+  if(variable-exists(primary), $primary, #8cd98c),
+  #8cd98c//#517699
 );
 
 // If the user provides a navbar-bg, we ned to ignore the
