@@ -5,14 +5,14 @@
 // Rules: https://github.com/quarto-dev/quarto-cli/src/resources/formats/html/bootstrap/_bootstrap-rules.scss
 
 // Colors: Quarto variables
-$primary:                   #558000;
-$secondary:                  #006600;
+$primary:                   #164B60;//#558000;
+$secondary:                 #5E6073;//#006600;
 // Colors: custom variables
-$primary-dark:                 #adad85;
-$secondary-light:              #adad85;
-$accent:                       #adad85; 
-$accent-light:               #adad85;
-$accent-dark:                  #adad85;
+$primary-dark:                 #186F65;
+$secondary-light:              #B5CB80;
+$accent:                       #B5CB99; 
+$accent-light:                 #CEDEBD;
+$accent-dark:                  #435334;
 
 // Body
 $body-color:                 $primary-dark;
