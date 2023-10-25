@@ -88,7 +88,7 @@
     "href": "contact.html",
     "title": "Send me a message ",
     "section": "",
-    "text": "Send me a message \nFeel free to use this form for collaboration inquiries, questions about blog content, and feedback on my packages. I will try to respond as soon as possible.\n  \n\n\n\n\n\n\n\n\nFull Name \nEmail Address \nMessage\n\n\nSend message\n\n\n\n\n\n\n\n\n Back to top"
+    "text": "::: {.grid}\n\n\nSend me a message \nFeel free to use this form for collaboration inquiries, questions about blog content, and feedback on my packages. I will try to respond as soon as possible.\n  \n\n\n\n\n\n\n::: {.g-col-6 #form}\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\n\n=======\n\n\n\n\n\n\n\n\nb928f4eb89def7e2478d55c534072450cd756067\n\n\n\n\n\n\n\nFull Name \nEmail Address \nMessage\n\n\nSend message\n\n\n:::\n::: \n\n\n\n Back to top"
   },
   {
     "objectID": "index.html",
@@ -123,7 +123,7 @@
     "href": "project/index.html",
     "title": "Projects",
     "section": "",
-    "text": "ppendemic\n\n\n\nR package\n\n\nEndemic peruvian flora\n\n\nDiversity\n\n\n\n\nOct 22, 2023\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "ppendemic\n\n\n\nR package\n\n\nEndemic peruvian flora\n\n\nDiversity\n\n\n\n\nOct 22, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nredbookperu\n\n\n\nR package\n\n\nEndemic peruvian flora\n\n\nDiversity\n\n\nRed Book\n\n\n\n\nAug 12, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nperutimber\n\n\n\nR package\n\n\nAmazon diversity\n\n\nDiversity\n\n\n\n\nAug 12, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nperuflorads43\n\n\n\nR package\n\n\nPeruvian diversity\n\n\nDiversity\n\n\n\n\nAug 12, 2023\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "publication/2017-10-26-leaves-signatures/index.html",
@@ -257,5 +257,82 @@
     "title": "Talks & workshops",
     "section": "",
     "text": "Evaluating the effect of sampling scale to quantify different components of plant biodiversity with imaging spectroscopy\n\n\n\n\n\n\n\nEcology\n\n\nSpectroscopy\n\n\nBiodiversity\n\n\n \n\n\n\n\nDec 14, 2021\n\n\nSandra M Duran, Nicola Falco, Paul Efren Santos Andrade, Jesus N Pinto Ledezma, Haruko M Wainwright, Heidi Steltzer, Eoin Brodie, Brian Joseph Enquist, Jeannine Cavender-Bares\n\n\n\n\n\n\n  \n\n\n\n\nAssessing how long-term shifts in species and functional composition have impacted carbon and water cycling the southern Rocky Mountains\n\n\n\n\n\n\n\nEcology\n\n\nClimate Change\n\n\n \n\n\n\n\nDec 14, 2020\n\n\nJulia Chacon-Labella, Connor Wilson, Lindsay Backhaus, Paul Efren Santos Andrade, Sandra Milena Duran, Alex Brummer, Amanda Henderson, Lorah Seltzer, Nicola Falco, Haruko M. Wainwright, Eoin Brodie, Charles F. Williams, Susan S. Hubbard, Vigdis Vandvik, Brian Joseph Enquist, Kenneth Hurst Williams\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "project/2023-10-22-redbookperu/index.html",
+    "href": "project/2023-10-22-redbookperu/index.html",
+    "title": "redbookperu",
+    "section": "",
+    "text": "The R package redbookperu serves as a valuable resource for accessing information presented in the publication The Red Book of Endemic Plants of Peru. This package facilitates the exploration and analysis of data related to national endemism, a critical concept for assessing and prioritizing strategies for biodiversity conservation. The publication, authored by a collaborative effort involving 43 individuals from 2003 to 2005, delves into the Peruvian endemism, primarily associated with the Andes. It identifies a total of 5,507 taxa restricted to Peru, constituting approximately 27.9% of the country’s flora. Notably, redbookperu allows easy access to this valuable information, to contribute to ongoing efforts aimed at monitoring and protecting Peru’s endemic plant species"
+  },
+  {
+    "objectID": "project/2023-10-22-redbookperu/index.html#redbookperu",
+    "href": "project/2023-10-22-redbookperu/index.html#redbookperu",
+    "title": "redbookperu",
+    "section": "",
+    "text": "The R package redbookperu serves as a valuable resource for accessing information presented in the publication The Red Book of Endemic Plants of Peru. This package facilitates the exploration and analysis of data related to national endemism, a critical concept for assessing and prioritizing strategies for biodiversity conservation. The publication, authored by a collaborative effort involving 43 individuals from 2003 to 2005, delves into the Peruvian endemism, primarily associated with the Andes. It identifies a total of 5,507 taxa restricted to Peru, constituting approximately 27.9% of the country’s flora. Notably, redbookperu allows easy access to this valuable information, to contribute to ongoing efforts aimed at monitoring and protecting Peru’s endemic plant species"
+  },
+  {
+    "objectID": "project/2023-10-22-ppendemic/index.html#acknowledgments",
+    "href": "project/2023-10-22-ppendemic/index.html#acknowledgments",
+    "title": "ppendemic",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\n\nFeatured photo by Carlos Magdalena ID:1128071 - Masdevallia veitchiana."
+  },
+  {
+    "objectID": "project/2023-10-23-perutimber/index.html",
+    "href": "project/2023-10-23-perutimber/index.html",
+    "title": "perutimber",
+    "section": "",
+    "text": "The perutimber serves as a valuable resource for accessing information presented in the paper Catálogo de las especies forestales maderables de la Amazonía y la Yunga Peruana. This paper explores the rich diversity of timber-yielding tree species in the Amazon and Yungas regions of Peru, where taxonomic knowledge remains relatively nascent. The study’s primary goal is to consolidate scattered taxonomic information on these timber species and compare it with field observations, while also proposing a group of species with potential future timber applications. The final list comprises 1,311 species, drawing from the Peruvian tree catalog, specialized literature documenting timber species, the official list of forest species, and field observations gathered over the past 15 years. Notably, the Fabaceae family accounts for the largest number of species at 156, with Loreto being the region with the highest species count at 927, thus recognized as the region with the most extensive territorial coverage."
+  },
+  {
+    "objectID": "project/2023-10-23-perutimber/index.html#perutimber",
+    "href": "project/2023-10-23-perutimber/index.html#perutimber",
+    "title": "perutimber",
+    "section": "",
+    "text": "The perutimber serves as a valuable resource for accessing information presented in the paper Catálogo de las especies forestales maderables de la Amazonía y la Yunga Peruana. This paper explores the rich diversity of timber-yielding tree species in the Amazon and Yungas regions of Peru, where taxonomic knowledge remains relatively nascent. The study’s primary goal is to consolidate scattered taxonomic information on these timber species and compare it with field observations, while also proposing a group of species with potential future timber applications. The final list comprises 1,311 species, drawing from the Peruvian tree catalog, specialized literature documenting timber species, the official list of forest species, and field observations gathered over the past 15 years. Notably, the Fabaceae family accounts for the largest number of species at 156, with Loreto being the region with the highest species count at 927, thus recognized as the region with the most extensive territorial coverage."
+  },
+  {
+    "objectID": "project/2023-10-23-perutimber/index.html#citation",
+    "href": "project/2023-10-23-perutimber/index.html#citation",
+    "title": "perutimber",
+    "section": "Citation",
+    "text": "Citation\n\nIf you use perutimber in a publication, please cite the original paper:\n\nVásquez Martínez, R., & Rojas Gonzáles, R. D. P. . (2022). Catálogo de las especies forestales maderables de la Amazonía y la Yunga Peruana. Revista Forestal Del Perú, 37(3), 5-138. https://doi.org/10.21704/rfp.v37i3.1956"
+  },
+  {
+    "objectID": "project/2023-10-22-redbookperu/index.html#citation",
+    "href": "project/2023-10-22-redbookperu/index.html#citation",
+    "title": "redbookperu",
+    "section": "Citation",
+    "text": "Citation\n\nIf you use redbookperu in a publication, please cite the original paper:\n\nLeón, B., Roque, J., Ulloa, C., Jorgensen, P.M., Pitman, N., Cano, A. (2006). The Red Book of Endemic Plants of Peru. Revista Peruana De Biología 13 (2) https://revistasinvestigacion.unmsm.edu.pe/index.php/rpb/article/view/1782"
+  },
+  {
+    "objectID": "project/2023-10-24-peruflorads43/index.html",
+    "href": "project/2023-10-24-peruflorads43/index.html",
+    "title": "peruflorads43",
+    "section": "",
+    "text": "Peru’s commitment to biodiversity conservation is evident through the passage of Supreme Decree No. 043-2006-AG, which categorizes threatened plant species. This legislation addresses the protection of diverse ecosystems and species, aligning with international agreements like the Convention on Biological Diversity (CBD). However, accessing and comprehending the wealth of data within this law can be complex.\nThat’s where peruflorads43 comes into play. Our versatile R package not only provides a streamlined and user-friendly interface to explore, analyze, and draw insights from the extensive list of categorized plant species but also goes a step further. peruflorads43 empowers researchers, conservationists, and policymakers to navigate the plant listed on this decree, all while seamlessly updating the plant list with the most recent valid names.\nWith peruflorads43, you can efficiently query, and analyze data related to the conservation status of Peru’s plant species, identifying those in critical need of protection. It facilitates the application of this legal framework in practice, supporting both scientific research and practical conservation efforts."
+  },
+  {
+    "objectID": "project/2023-10-24-peruflorads43/index.html#perutimber",
+    "href": "project/2023-10-24-peruflorads43/index.html#perutimber",
+    "title": "perutimber",
+    "section": "",
+    "text": "The perutimber serves as a valuable resource for accessing information presented in the paper Catálogo de las especies forestales maderables de la Amazonía y la Yunga Peruana. This paper explores the rich diversity of timber-yielding tree species in the Amazon and Yungas regions of Peru, where taxonomic knowledge remains relatively nascent. The study’s primary goal is to consolidate scattered taxonomic information on these timber species and compare it with field observations, while also proposing a group of species with potential future timber applications. The final list comprises 1,311 species, drawing from the Peruvian tree catalog, specialized literature documenting timber species, the official list of forest species, and field observations gathered over the past 15 years. Notably, the Fabaceae family accounts for the largest number of species at 156, with Loreto being the region with the highest species count at 927, thus recognized as the region with the most extensive territorial coverage."
+  },
+  {
+    "objectID": "project/2023-10-24-peruflorads43/index.html#citation",
+    "href": "project/2023-10-24-peruflorads43/index.html#citation",
+    "title": "perutimber",
+    "section": "Citation",
+    "text": "Citation\n\nIf you use perutimber in a publication, please cite the original paper:\n\nVásquez Martínez, R., & Rojas Gonzáles, R. D. P. . (2022). Catálogo de las especies forestales maderables de la Amazonía y la Yunga Peruana. Revista Forestal Del Perú, 37(3), 5-138. https://doi.org/10.21704/rfp.v37i3.1956"
+  },
+  {
+    "objectID": "project/2023-10-24-peruflorads43/index.html#peruflorads43",
+    "href": "project/2023-10-24-peruflorads43/index.html#peruflorads43",
+    "title": "peruflorads43",
+    "section": "",
+    "text": "Peru’s commitment to biodiversity conservation is evident through the passage of Supreme Decree No. 043-2006-AG, which categorizes threatened plant species. This legislation addresses the protection of diverse ecosystems and species, aligning with international agreements like the Convention on Biological Diversity (CBD). However, accessing and comprehending the wealth of data within this law can be complex.\nThat’s where peruflorads43 comes into play. Our versatile R package not only provides a streamlined and user-friendly interface to explore, analyze, and draw insights from the extensive list of categorized plant species but also goes a step further. peruflorads43 empowers researchers, conservationists, and policymakers to navigate the plant listed on this decree, all while seamlessly updating the plant list with the most recent valid names.\nWith peruflorads43, you can efficiently query, and analyze data related to the conservation status of Peru’s plant species, identifying those in critical need of protection. It facilitates the application of this legal framework in practice, supporting both scientific research and practical conservation efforts."
   }
 ]

@@ -1,0 +1,42 @@
+---
+title: "perutimber"
+subtitle: "Catalogue of the Timber Forest Species of the Peruvian Amazon"
+excerpt: "perutimber - Catalogue of the Timber Forest Species of the Peruvian Amazon"
+date: 2023-08-12
+author: "Paul Efren Santos Andrade"
+slug: perutimber
+alias:
+  - /project/perutimber/
+featured: true
+draft: false
+tags:
+- R package
+- Amazon diversity
+- Diversity
+categories:
+- R package
+- Amazon diversity
+- Diversity
+# layout options: single or single-sidebar
+layout: single
+links:
+- icon: images
+  icon_pack: fas
+  name: Website
+  url: https://paulesantos.github.io/perutimber/
+- icon: github
+  icon_pack: fab
+  name: Code
+  url: https://github.com/PaulESantos/perutimber/
+---
+
+## perutimber <a href='https://paulesantos.github.io/perutimber/'><img src='featured.jpg' align="right" height="250" width="200" alt='Catalogue of the Timber Forest Species of the Peruvian Amazon.'/></a>
+
+The `perutimber` serves as a valuable resource for accessing information presented in the paper `Catálogo de las especies forestales maderables de la Amazonía y la Yunga Peruana`. This paper explores the rich diversity of timber-yielding tree species in the Amazon and Yungas regions of Peru, where taxonomic knowledge remains relatively nascent. The study's primary goal is to consolidate scattered taxonomic information on these timber species and compare it with field observations, while also proposing a group of species with potential future timber applications. The final list comprises 1,311 species, drawing from the Peruvian tree catalog, specialized literature documenting timber species, the official list of forest species, and field observations gathered over the past 15 years. Notably, the Fabaceae family accounts for the largest number of species at 156, with Loreto being the region with the highest species count at 927, thus recognized as the region with the most extensive territorial coverage.
+
+## Citation
+
+- If you use `perutimber` in a publication, please cite the original paper:
+
+Vásquez Martínez, R., & Rojas Gonzáles, R. D. P. . (2022). Catálogo de las especies forestales maderables de la Amazonía y la Yunga Peruana. Revista Forestal Del Perú, 37(3), 5-138. [https://doi.org/10.21704/rfp.v37i3.1956](https://doi.org/10.21704/rfp.v37i3.1956)
+

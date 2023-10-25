@@ -1,0 +1,42 @@
+---
+title: "peruflorads43"
+subtitle: "Reviewed Official Classification of Endangered Wild Flora Species in Peru"
+excerpt: "peruflorads43 - Reviewed Official Classification of Endangered Wild Flora Species in Peru"
+date: 2023-08-12
+author: "Paul Efren Santos Andrade"
+slug: peruflorads43
+alias:
+  - /project/peruflorads43/
+featured: true
+draft: false
+tags:
+- R package
+- Peruvian diversity
+- Diversity
+categories:
+- R package
+- Peruvian diversity
+- Diversity
+# layout options: single or single-sidebar
+layout: single
+links:
+- icon: images
+  icon_pack: fas
+  name: Website
+  url: https://paulesantos.github.io/peruflorads43/
+- icon: github
+  icon_pack: fab
+  name: Code
+  url: https://github.com/PaulESantos/peruflorads43/
+---
+
+## peruflorads43 <a href='https://paulesantos.github.io/peruflorads43/'><img src='featured.jpg' align="right" height="250" width="200" alt='Endangered Wild Flora Species in Peru.'/></a>
+
+Peru's commitment to biodiversity conservation is evident through the passage of `Supreme Decree No. 043-2006-AG`, which categorizes threatened plant species. This legislation addresses the protection of diverse ecosystems and species, aligning with international agreements like the Convention on Biological Diversity (CBD). However, accessing and comprehending the wealth of data within this law can be complex.
+
+That's where `peruflorads43` comes into play. Our versatile R package not only provides a streamlined and user-friendly interface to explore, analyze, and draw insights from the extensive list of categorized plant species but also goes a step further. `peruflorads43` empowers researchers, conservationists, and policymakers to navigate the plant listed on this decree, all while seamlessly updating the plant list with the most recent valid names.
+
+With `peruflorads43`, you can efficiently query, and analyze data related to the conservation status of Peru's plant species, identifying those in critical need of protection. It facilitates the application of this legal framework in practice, supporting both scientific research and practical conservation efforts.
+
+
+

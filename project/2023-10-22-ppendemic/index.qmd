@@ -30,6 +30,12 @@ links:
   url: https://github.com/PaulESantos/ppendemic/
 ---
 
-## ppendemic
+## ppendemic <a href='https://paulesantos.github.io/ppendemic/'><img src='featured.jpg' align="right" height="250" width="200" alt='A new List of Endemic Plants of Peru.' caption="asadad"/></a>
 
 Introducing a novel and updated database showcasing Peru’s endemic plants. This meticulously compiled and revised botanical collection encompasses a remarkable assemblage of over 7249 distinct species.
+
+
+## Acknowledgments {.appendix}
+
+Featured photo by Carlos Magdalena ID:1128071 - Masdevallia veitchiana.
+
