@@ -8,7 +8,7 @@ author:
   - Vigdis Vandvik
   - Brian J. Enquist
   - William Farfan-Rios
-ate: '2022-02-01'
+date: '2022-02-01'
 slug: fieldguide-paper-1452
 categories:
   - Field guide
