@@ -53,7 +53,7 @@
     "href": "blog/2023-10-22-rango-abundancia/index.html#aplicaciones-de-la-técnica-de-rango-abundancia",
     "title": "Curvas Rango-Abundancia",
     "section": "Aplicaciones de la Técnica de Rango-Abundancia",
-    "text": "Aplicaciones de la Técnica de Rango-Abundancia\n\nEvaluación de la Diversidad: La técnica de rango-abundancia permite una evaluación rápida de la diversidad de especies en una comunidad vegetal. La pendiente de la curva y su forma general pueden indicar la equitabilidad y la presencia de especies dominantes.\nEvaluación de Impacto Ambiental: Esta técnica es útil para detectar cambios en la estructura de la comunidad vegetal debido a impactos ambientales, como la degradación del suelo, el cambio climático o la invasión de especies exóticas. Por ejemplo, un estudio en [mencionar lugar] detectó cambios significativos en la curva de rango-abundancia tras un período de sequía prolongada.\nComparación de Comunidades: Se utiliza para comparar la estructura de las comunidades vegetales en diferentes lugares o a lo largo del tiempo. Esto es especialmente valioso en estudios de ecología de restauración y monitoreo a largo plazo. [Ejemplo: Un estudio en [mencionar lugar] comparó la riqueza de especies de dos áreas de restauración y encontró diferencias notables en las curvas de rango-abundancia].\nPriorización de Especies para Conservación: La identificación de especies raras pero críticas en la comunidad vegetal se simplifica con esta técnica, lo que puede ayudar a priorizar esfuerzos de conservación."
+    "text": "Aplicaciones de la Técnica de Rango-Abundancia\n\nEvaluación de la Diversidad: La técnica de rango-abundancia permite una evaluación rápida de la diversidad de especies en una comunidad vegetal. La pendiente de la curva y su forma general pueden indicar la equitabilidad y la presencia de especies dominantes.\nEvaluación de Impacto Ambiental: Esta técnica es útil para detectar cambios en la estructura de la comunidad vegetal debido a impactos ambientales, como la degradación del suelo, el cambio climático o la invasión de especies exóticas.\nComparación de Comunidades: Se utiliza para comparar la estructura de las comunidades vegetales en diferentes lugares o a lo largo del tiempo. Esto es especialmente valioso en estudios de ecología de restauración y monitoreo a largo plazo.\nPriorización de Especies para Conservación: La identificación de especies raras pero críticas en la comunidad vegetal se simplifica con esta técnica, lo que puede ayudar a priorizar esfuerzos de conservación."
   },
   {
     "objectID": "blog/2023-10-22-rango-abundancia/index.html#ventajas-de-la-técnica-de-rango-abundancia",
@@ -88,7 +88,7 @@
     "href": "contact.html",
     "title": "Send me a message ",
     "section": "",
-    "text": "::: {.grid}\n\n\nSend me a message \nFeel free to use this form for collaboration inquiries, questions about blog content, and feedback on my packages. I will try to respond as soon as possible.\n  \n\n\n\n\n\n\n::: {.g-col-6 #form}\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\n\n=======\n\n\n\n\n\n\n\n\nb928f4eb89def7e2478d55c534072450cd756067\n\n\n\n\n\n\n\nFull Name \nEmail Address \nMessage\n\n\nSend message\n\n\n:::\n::: \n\n\n\n Back to top"
+    "text": "Send me a message \nFeel free to use this form for collaboration inquiries, questions about blog content, and feedback on my packages. I will try to respond as soon as possible.\n  \n\n\n\n\n\n\n\n\nFull Name \nEmail Address \nMessage\n\n\nSend message\n\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "index.html",
@@ -334,5 +334,12 @@
     "title": "peruflorads43",
     "section": "",
     "text": "Peru’s commitment to biodiversity conservation is evident through the passage of Supreme Decree No. 043-2006-AG, which categorizes threatened plant species. This legislation addresses the protection of diverse ecosystems and species, aligning with international agreements like the Convention on Biological Diversity (CBD). However, accessing and comprehending the wealth of data within this law can be complex.\nThat’s where peruflorads43 comes into play. Our versatile R package not only provides a streamlined and user-friendly interface to explore, analyze, and draw insights from the extensive list of categorized plant species but also goes a step further. peruflorads43 empowers researchers, conservationists, and policymakers to navigate the plant listed on this decree, all while seamlessly updating the plant list with the most recent valid names.\nWith peruflorads43, you can efficiently query, and analyze data related to the conservation status of Peru’s plant species, identifying those in critical need of protection. It facilitates the application of this legal framework in practice, supporting both scientific research and practical conservation efforts."
+  },
+  {
+    "objectID": "index.html#r-import-manual-redirects-manual_redirects---readrread_tablehereherestatic-_manualredirects.txt-col_names-false-dplyrmutateredirect-paste0x1-x2-x3-manual_redirects---manual_redirectsredirect",
+    "href": "index.html#r-import-manual-redirects-manual_redirects---readrread_tablehereherestatic-_manualredirects.txt-col_names-false-dplyrmutateredirect-paste0x1-x2-x3-manual_redirects---manual_redirectsredirect",
+    "title": "Paul Efren, Blgo.",
+    "section": "{r import-manual-redirects} ##   ##  manual_redirects <- ##    readr::read_table(here::here(\"static\", \"_manualredirects.txt\"), ##                      col_names = FALSE) |>  ##    dplyr::mutate(redirect = paste0(X1, \" \", X2, \" \", X3)) ##   ##  manual_redirects <- manual_redirects$redirect ##",
+    "text": "{r import-manual-redirects} ##   ##  manual_redirects &lt;- ##    readr::read_table(here::here(\"static\", \"_manualredirects.txt\"), ##                      col_names = FALSE) |&gt;  ##    dplyr::mutate(redirect = paste0(X1, \" \", X2, \" \", X3)) ##   ##  manual_redirects &lt;- manual_redirects$redirect ##"
   }
 ]

@@ -36,13 +36,12 @@ Feel free to use this form for collaboration inquiries, questions about blog con
 
 ::: {.g-col-6 #form}
 
-<<<<<<< HEAD
-<form action="https://formspree.io/f/xvojlbgd" method="POST" accept-charset="utf-8">
-=======
-<form action=https://formspree.io/f/xvojlbgd" method="POST" accept-charset="utf-8">
->>>>>>> b928f4eb89def7e2478d55c534072450cd756067
 
-
+<form
+  action="https://formspree.io/f/xvojlbgd"
+  method="POST"
+  accept-charset="utf-8">
+  
 <label for="full-name">Full Name</label>
 <input type="text" name="name" id="full-name" class="form-control" placeholder="First and Last" required>
 
