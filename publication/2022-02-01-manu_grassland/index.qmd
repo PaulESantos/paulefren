@@ -25,7 +25,7 @@ links:
 - icon: file-pdf
   icon_pack: fas
   name: Field Guide (Accessible PDF)
-  url: publication/2022-02-01-manu_grasland/1452_peru_plants_grasslands_manu.pdf 
+  url: publication/2022-02-01-manu_grassland/1452_peru_plants_grasslands_manu.pdf
 filters:
   - lightbox
 lightbox: auto

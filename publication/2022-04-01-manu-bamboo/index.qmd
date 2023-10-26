@@ -1,0 +1,30 @@
+---
+title: "Cusco - Bamboos of Kosñipata"
+author: 
+  - Belen Fadrique
+  - name: Paul Efren Santos Andrade
+    orcid: 0000-0002-6635-0375
+  - Lynn Clark
+ate: '2022-04-01'
+slug: fieldguide-paper-1454
+categories:
+  - Field guide
+  - Bamboos
+  - Manu 
+  - Plants
+description: 'Field guide of the Bamboos of Kosñipata, Manu, Peru'
+subtitle: ''
+abstract: ''
+links:
+- icon: file-richtext-fill
+  name: Field Guide
+  url: https://fieldguides.fieldmuseum.org/guides/guide/1454
+filters:
+  - lightbox
+lightbox: auto
+---
+
+
+
+![Bamboos of Kosñipata Field Guide](featured.png){fig-alt="Manu Bamboos Field Guide"}
+
