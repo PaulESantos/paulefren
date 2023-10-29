@@ -44,7 +44,7 @@ $table-group-separator-color: lighten($primary, 40%);
 $table-caption-color:         $body-secondary;
 
 // Code blocks
-$code-block-bg:              #ff3399; // 2b2b2b
+$code-block-bg:              #6699cc; // 2b2b2b
 $code-block-border:          $body-bg;
 
 // Inline code
@@ -237,10 +237,10 @@ pre code {
 
 // Listing cards
 .card {
-  background: #ff3399 !important;
+  background: #6699cc !important;
   border: none;
   border-radius: 4px;
-  box-shadow: 1px 1px 10px #ff7733 !important;
+  box-shadow: 1px 1px 10px #80bfff !important;
 }
 
 .card-img {
