@@ -1,5 +1,5 @@
 - source: project
   netlify:
-    - id: f11e1d0b-f8ab-43b3-bb7e-08ef96059af4
-      url: 'https://paulefrensa.rbind.io/'
+    - id: "f11e1d0b-f8ab-43b3-bb7e-08ef96059af4"
+      url: "https://paulefrensa.rbind.io"
   
