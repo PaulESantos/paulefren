@@ -1,12 +1,12 @@
 ---
-title: "Paul Efren, Blgo."
-pagetitle: "Paul Efren, blgo."
+title: "Paul Efren"
+pagetitle: "Paul Efren"
 subtitle: "Biologist | Plant ecologist | R programming"
 image: assets/paul/home.jpg
 image-alt: "Kosnipata Valley view."
 
 twitter-card:
-    title: Paul Efren, Blgo.
+    title: Paul Efren
     description: |
      I'm a plant ecologist researcher and dedicated R coder, utilizing programming and data science to support and advance biodiversity research.
     image: assets/paul/home.jpg
