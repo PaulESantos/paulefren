@@ -1,0 +1,44 @@
+---
+title: "Plant trait and vegetation data along a 1314 m elevation gradient with fire history in Puna grasslands of Perú"
+author: 
+  - Halbritter, A. H.
+  - Vandvik, V.
+  - Cotner, S.
+  - Farfan‑Rios, W.
+  - Maitner, B. S.
+  - Michaletz, S. T.
+  - Menor, I. O.
+  - Telford, R.J.
+  - Ccahuana, A.
+  - Cruz, R.
+  - Bravo, J. S.
+  - name: Paul Efren Santos Andrade
+    orcid: 0000-0002-6635-0375
+  - Bustamante, L. L. V.
+  - Plant Functional Traits Courses group
+date: '2024-01-16'
+slug: trait_paper
+categories:
+  - Leaf trait
+  - Puna
+  - Andean grasland
+  - Functional ecology
+  - Open science
+description: 'This is an accepted at Scientific Data.'
+subtitle: ''
+abstract: ''
+links:
+- icon: file-richtext-fill
+  name: Researsh Paper - Accepted
+  url: 
+filters:
+  - lightbox
+lightbox: auto
+---
+
+## Abstract
+Alpine grassland vegetation supports globally important biodiversity and ecosystems that are increasingly threatened by climate warming and other environmental changes. Trait-based approaches can support understanding of vegetation responses to global change drivers and consequences for ecosystem functioning. In six sites along a 1314 m elevational gradient in Puna grasslands in the Peruvian Andes, we collected datasets on vascular plant composition, plant functional traits, biomass, ecosystem fluxes, and climate data over three years. The data were collected in the wet and dry season and from plots with different fire histories. We selected traits associated with plant resource use, growth, and life history strategies (leaf area, leaf dry/wet mass, leaf thickness, specific leaf area, leaf dry matter content, leaf C, N, P content, C and N isotopes). The trait dataset contains 3,665 plant records from 145 taxa, 54,036 trait measurements (increasing the trait data coverage of the regional flora by 420%) covering 14 traits and 121 plant taxa (ca. 40% of which have no previous publicly available trait data) across 33 families.
+
+
+![Code sharing trend](featured.jpg){fig-alt="Experimental sites and treatments along an elevational gradient in the Puna grasslands in Perú. The inset table shows the datasets that are available for each site (green to reddish boxes), treatment (yellow, brown, and blue squares within sites), and season (dark dropped vs. lighter faded rectangles within squares)."}
+---
