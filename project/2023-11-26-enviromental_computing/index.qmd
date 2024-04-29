@@ -1,0 +1,38 @@
+---
+title: "Environmental Computing"
+subtitle: ""
+excerpt: "EnvironmentalComputingSp"
+date: 2023-23-11
+author: "Paul Efren Santos Andrade"
+slug: environmentalcomputing 
+alias:
+  - /project/environmentalcomputing/
+featured: true
+draft: false
+tags:
+- R package
+- Ecology
+categories:
+- R package
+- R programing
+- Ecology
+# layout options: single or single-sidebar
+layout: single
+links:
+- icon: images
+  icon_pack: fas
+  name: Website
+  url: https://environmentalcomputingsp.netlify.app/
+---
+
+## Environmental Computing <a href='https://environmentalcomputingsp.netlify.app/'><img src='featured.png' align="right" height="250" width="200" alt='Environmental Computing'/></a>
+
+En esta sección, te presento la traducción al español del sitio web "Environmental Computing". Aquí encontrarás una detallada guía sobre cómo utilizar el lenguaje de programación R para la gestión y análisis de datos ambientales. Explorarás técnicas avanzadas de manipulación, análisis y visualización de datos, especialmente diseñadas para profesionales en el campo de las ciencias biológicas y ambientales. Este proyecto representa un recurso esencial para el desarrollo de habilidades clave y garantiza la reproducibilidad en los procesos de gestión de datos. Sumérgete en este valioso recurso para potenciar tu trabajo en el ámbito ambiental.
+
+
+In this section, I present to you the Spanish translation of the website "Environmental Computing". Here you will find a detailed guide on how to use the R programming language for the management and analysis of environmental data. You will explore advanced techniques for data manipulation, analysis, and visualization, specially designed for professionals in the fields of biological and environmental sciences. This project represents an essential resource for the development of key skills and ensures reproducibility in data management processes. Dive into this valuable resource to enhance your work in the environmental field.
+
+## Environmental Computing
+
+- Feel free to explore the original website [here](https://environmentalcomputing.net/)
+

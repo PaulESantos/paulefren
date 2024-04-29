@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="This is my blog where I practice sharing my curiosity about R.  It includes notes and tutorials for my future self and hopefully also for you.">
+<meta name="author" content="Paul Efren Santos Andrade">
+<meta name="dcterms.date" content="2024-11-11">
 
-<title>R codding for fun | Paul Efren Santos Andrade</title>
+<title>Environmental Computing | Paul Efren Santos Andrade</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,29 +25,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../assets/paul/logo_pesa.svg" rel="icon" type="image/svg+xml">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/paul/logo_pesa.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,89 +73,32 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-categories','listing-date','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <!-- umami cloud -->
 
 <script async="" src="https://analytics.umami.is/script.js" data-website-id="82a5656d-bdab-40a5-a8d5-92080a10b504" data-do-not-track="true">
 
 </script>
-<link rel="stylesheet" href="../assets/listing-default.css">
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="alternate" type="application/rss+xml" title="Paul Efren" href="index.xml" data-external="1"><meta name="twitter:title" content="R codding for fun | Paul Efren Santos Andrade">
-<meta name="twitter:description" content="This is my blog where I practice sharing my curiosity about R. It includes notes and tutorials for my future self and hopefully also for you.">
-<meta name="twitter:image" content="https://paulefrensa.rbind.io/blog/2023-10-22-rango-abundancia/featured.jpg">
+<meta name="twitter:title" content="Environmental Computing | Paul Efren Santos Andrade">
+<meta name="twitter:description" content="Plant Ecologist and R programming data enthusiast">
+<meta name="twitter:image" content="https://paulefrensa.rbind.io/project/2023-11-26-enviromental_computing/featured.png">
+<meta name="twitter:image-height" content="600">
+<meta name="twitter:image-width" content="518">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/paul/logo_pesa.svg" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/paul/logo_pesa.svg" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Paul Efren</span>
     </a>
   </div>
@@ -167,23 +109,23 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about/index.html"> 
+    <a class="nav-link" href="../../about/index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../talk/index.html"> 
+    <a class="nav-link" href="../../talk/index.html"> 
 <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../publication/index.html"> 
+    <a class="nav-link" href="../../publication/index.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../project/index.html"> 
+    <a class="nav-link" href="../../project/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
@@ -196,12 +138,49 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns">
+<div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
+<h1 class="title">Environmental Computing</h1>
+    <div class="quarto-categories">
+        <div class="quarto-category">R package</div>
+        <div class="quarto-category">R programing</div>
+        <div class="quarto-category">Ecology</div>
+      </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Paul Efren Santos Andrade </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 11, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+<a href="https://environmentalcomputingsp.netlify.app/" class="btn btn-secondary text-capitalize"><i class="bi bi-images me-1"></i> Website</a>
+</div>
+
+</header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
 <!-- 
@@ -210,78 +189,24 @@ window.Quarto = {
 -->
 <!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
 <!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
-<header id="title-block-header" class="quarto-title-block default page-columns">
-<div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
-<h1 class="title">R codding for fun</h1>
-</div>
-
-<div>
-  <div id="title-block-title-desc" class="description pt-4">
-    <p>This is my blog where I practice sharing my curiosity about R.<br> It includes notes and tutorials for my future self and hopefully also for you.</p>
-  </div>
-</div>
-
-
-<div class="quarto-title-meta column-page">
-
-    
-  
-    
-  </div>
-  
 
 
 
-</header>
+<section id="environmental-computing" class="level2">
+<h2 class="anchored" data-anchor-id="environmental-computing">Environmental Computing <a href="https://environmentalcomputingsp.netlify.app/"><img src="featured.png" align="right" height="250" width="200" alt="Environmental Computing"></a></h2>
+<p>En esta sección, te presento la traducción al español del sitio web “Environmental Computing”. Aquí encontrarás una detallada guía sobre cómo utilizar el lenguaje de programación R para la gestión y análisis de datos ambientales. Explorarás técnicas avanzadas de manipulación, análisis y visualización de datos, especialmente diseñadas para profesionales en el campo de las ciencias biológicas y ambientales. Este proyecto representa un recurso esencial para el desarrollo de habilidades clave y garantiza la reproducibilidad en los procesos de gestión de datos. Sumérgete en este valioso recurso para potenciar tu trabajo en el ámbito ambiental.</p>
+<p>In this section, I present to you the Spanish translation of the website “Environmental Computing”. Here you will find a detailed guide on how to use the R programming language for the management and analysis of environmental data. You will explore advanced techniques for data manipulation, analysis, and visualization, specially designed for professionals in the fields of biological and environmental sciences. This project represents an essential resource for the development of key skills and ensures reproducibility in data management processes. Dive into this valuable resource to enhance your work in the environmental field.</p>
+</section>
+<section id="environmental-computing-1" class="level2">
+<h2 class="anchored" data-anchor-id="environmental-computing-1">Environmental Computing</h2>
+<ul>
+<li>Feel free to explore the original website <a href="https://environmentalcomputing.net/">here</a></li>
+</ul>
 
 
+</section>
 
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="R,Ecologia de comunidades,Curvas Rango-Abundancia" data-listing-date-sort="1697950800000" data-listing-file-modified-sort="1714013017018" data-listing-date-modified-sort="1697950800000" data-listing-reading-time-sort="3" data-listing-word-count-sort="553">
-<div class="thumbnail">
-<p><a href="../blog/2023-10-22-rango-abundancia/index.html" class="no-external"></a></p><a href="../blog/2023-10-22-rango-abundancia/index.html" class="no-external">
-<p><img src="../blog/2023-10-22-rango-abundancia/featured.jpg" class="thumbnail-image"></p>
-</a><p><a href="../blog/2023-10-22-rango-abundancia/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/2023-10-22-rango-abundancia/index.html" class="no-external">Curvas Rango-Abundancia</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/2023-10-22-rango-abundancia/index.html" class="no-external">Notas de Ecología de Comunidades Vegetales. </a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Ecologia de comunidades'); return false;">
-Ecologia de comunidades
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Curvas Rango-Abundancia'); return false;">
-Curvas Rango-Abundancia
-</div>
-</div>
-</div>
-<div class="metadata">
-<a href="../blog/2023-10-22-rango-abundancia/index.html" class="no-external">
-<div class="listing-date">
-Oct 22, 2023
-</div>
-<div class="listing-author">
-Paul Santos - Andrade
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section></div></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -835,6 +760,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<script src="https://utteranc.es/client.js" repo="PaulESantos/paulefren" issue-term="title" theme="body-light" crossorigin="anonymous" async="">
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -847,12 +774,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../contact.html">
+    <a class="nav-link" href="../../contact.html">
 <p>Contact</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../license.html">
+    <a class="nav-link" href="../../license.html">
 <p>License</p>
 </a>
   </li>  

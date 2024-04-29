@@ -6,17 +6,17 @@
       version="2.0">
 <channel>
 <title>Paul Efren</title>
-<link>https://paulefrensa.rbind.io/blog/index.html</link>
+<link>https://paulefrensa.rbind.io/blog/</link>
 <atom:link href="https://paulefrensa.rbind.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>This is my blog where I practice sharing my curiosity about R.&lt;br&gt;
 It includes notes and tutorials for my future self and hopefully also for you.
 </description>
-<generator>quarto-1.3.450</generator>
+<generator>quarto-1.4.553</generator>
 <lastBuildDate>Sun, 22 Oct 2023 05:00:00 GMT</lastBuildDate>
 <item>
   <title>Curvas Rango-Abundancia</title>
   <dc:creator>Paul Santos - Andrade</dc:creator>
-  <link>https://paulefrensa.rbind.io/blog/2023-10-22-rango-abundancia/index.html</link>
+  <link>https://paulefrensa.rbind.io/blog/2023-10-22-rango-abundancia/</link>
   <description><![CDATA[ 
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
@@ -26,6 +26,7 @@ It includes notes and tutorials for my future self and hopefully also for you.
 -->
 <!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
 <!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
+
 
 
 <section id="introducción" class="level2">
@@ -71,14 +72,14 @@ It includes notes and tutorials for my future self and hopefully also for you.
 <hr>
 
 
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-santos - andrade2023" class="csl-entry quarto-appendix-citeas">
+</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-santos - andrade2023" class="csl-entry quarto-appendix-citeas">
 Santos - Andrade, Paul. 2023. <span>“Curvas Rango-Abundancia.”</span>
 October 22, 2023. <a href="https://paulefrensa.rbind.io//blog/2023-10-22-rango-abundancia">https://paulefrensa.rbind.io//blog/2023-10-22-rango-abundancia</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>Ecologia de comunidades</category>
   <category>Curvas Rango-Abundancia</category>
-  <guid>https://paulefrensa.rbind.io/blog/2023-10-22-rango-abundancia/index.html</guid>
+  <guid>https://paulefrensa.rbind.io/blog/2023-10-22-rango-abundancia/</guid>
   <pubDate>Sun, 22 Oct 2023 05:00:00 GMT</pubDate>
   <media:content url="https://paulefrensa.rbind.io/blog/2023-10-22-rango-abundancia/featured.jpg" medium="image" type="image/jpeg"/>
 </item>
