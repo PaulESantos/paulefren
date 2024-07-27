@@ -1,23 +1,218 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
-      xmlns:media="http://search.yahoo.com/mrss/" 
-      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-      xmlns:dc="http://purl.org/dc/elements/1.1/" 
-      version="2.0">
-<channel>
-<title>Paul Efren</title>
-<link>https://paulefrensa.rbind.io/blog/#category=R</link>
-<atom:link href="https://paulefrensa.rbind.io/blog/index-r.xml" rel="self" type="application/rss+xml"/>
-<description>This is my blog where I practice sharing my curiosity about R.&lt;br&gt;
-It includes notes and tutorials for my future self and hopefully also for you.
-</description>
-<generator>quarto-1.4.553</generator>
-<lastBuildDate>Sat, 27 Jul 2024 05:00:00 GMT</lastBuildDate>
-<item>
-  <title>Taxonomic Name Resolution Service - TNRS</title>
-  <dc:creator>Paul Santos Andrade</dc:creator>
-  <link>https://paulefrensa.rbind.io/blog/2024-07-27-tnrs/</link>
-  <description><![CDATA[ <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html --><!-- 
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.553">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Paul Santos Andrade">
+<meta name="dcterms.date" content="2024-07-27">
+<title>Taxonomic Name Resolution Service - TNRS | Paul Efren Santos Andrade</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/paul/logo_pesa.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><!-- umami cloud --><script async="" src="https://analytics.umami.is/script.js" data-website-id="82a5656d-bdab-40a5-a8d5-92080a10b504" data-do-not-track="true">
+</script><link href="../../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="../../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+<meta name="twitter:title" content="Taxonomic Name Resolution Service - TNRS | Paul Efren Santos Andrade">
+<meta name="twitter:description" content="Herramienta para la estandarización asistida de nombres científicos de plantas.">
+<meta name="twitter:image" content="https://paulefrensa.rbind.io/blog/2024-07-27-tnrs/featured.png">
+<meta name="twitter:image-height" content="424">
+<meta name="twitter:image-width" content="890">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/paul/logo_pesa.svg" alt="" class="navbar-logo"></a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Paul Efren</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../about/index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talk/index.html"> 
+<span class="menu-text">Talks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publication/index.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../project/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+</ul>
+</div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://www.github.com/PaulESantos/paulefren" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns"><div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
+<h1 class="title">Taxonomic Name Resolution Service - TNRS</h1>
+<p class="subtitle lead"></p>
+<p>Herramienta para la estandarización asistida de nombres científicos de plantas.</p>
+    <div class="quarto-categories">
+        <div class="quarto-category">R</div>
+        <div class="quarto-category">Ecologia de comunidades</div>
+        <div class="quarto-category">Taxon</div>
+      </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Paul Santos Andrade </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 27, 2024</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">July 27, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+
+</header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li>
+<a href="#introducci%C3%B3n" id="toc-introducción" class="nav-link active" data-scroll-target="#introducci%C3%B3n">Introducción</a>
+  <ul class="collapse">
+<li><a href="#usando-tnrs" id="toc-usando-tnrs" class="nav-link" data-scroll-target="#usando-tnrs">Usando TNRS</a></li>
+  </ul>
+</li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html --><!-- 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title"> 
 --><!-- <header id="title-block-header" class="quarto-title-block default page-columns"> --><!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> --><section id="introducción" class="level2"><h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
@@ -34,44 +229,14 @@ It includes notes and tutorials for my future self and hopefully also for you.
 <section id="usando-tnrs" class="level3"><h3 class="anchored" data-anchor-id="usando-tnrs">Usando TNRS</h3>
 <p>TNRS toma como entrada un vector con los nombres científicos o un ‘data.frame’ que contiene dos columnas: número de fila (ID) y nombre científico (taxon).</p>
 <div class="cell">
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">(</span><span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">TNRS</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">)</span></span>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">TNRS</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Primero, tomaremos un conjunto de datos como ejemplo, esta tiene</span></span>
-<span><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># dos columnas: número de fila (ID) y nombre científico (taxon).</span></span>
+<span><span class="co"># Primero, tomaremos un conjunto de datos como ejemplo, esta tiene</span></span>
+<span><span class="co"># dos columnas: número de fila (ID) y nombre científico (taxon).</span></span>
 <span></span>
-<span><span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">fulldata</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">tnrs_testfile</span></span>
+<span><span class="va">fulldata</span> <span class="op">&lt;-</span> <span class="va">tnrs_testfile</span></span>
 <span></span>
-<span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">tibble</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;"><a href="https://tibble.tidyverse.org/reference/as_tibble.html">as_tibble</a></span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">(</span><span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">fulldata</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">)</span></span></code></pre></div>
+<span><span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html">as_tibble</a></span><span class="op">(</span><span class="va">fulldata</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -79,62 +244,20 @@ font-style: inherit;">)</span></span></code></pre></div>
   </script>
 </div>
 </div>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Tenga en cuenta que en el ejemplo los nombres científicos se</span></span>
-<span><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># presentan bajo diferentes formatos, que a veces incluyen:</span></span>
-<span><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Solo nombre científico</span></span>
-<span><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Solo género</span></span>
-<span><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Familia y género</span></span>
-<span><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Familia, nombre científico y autor</span></span>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Tenga en cuenta que en el ejemplo los nombres científicos se</span></span>
+<span><span class="co"># presentan bajo diferentes formatos, que a veces incluyen:</span></span>
+<span><span class="co"># Solo nombre científico</span></span>
+<span><span class="co"># Solo género</span></span>
+<span><span class="co"># Familia y género</span></span>
+<span><span class="co"># Familia, nombre científico y autor</span></span>
 <span></span>
-<span><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># La función a utilizar es `TNRS()`:</span></span>
+<span><span class="co"># La función a utilizar es `TNRS()`:</span></span>
 <span></span>
-<span><span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">results</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;"><a href="https://rdrr.io/pkg/TNRS/man/TNRS.html">TNRS</a></span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">(</span>taxonomic_names <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">fulldata</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">)</span></span>
+<span><span class="va">results</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/TNRS/man/TNRS.html">TNRS</a></span><span class="op">(</span>taxonomic_names <span class="op">=</span> <span class="va">fulldata</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Inspección de los resultados</span></span>
+<span><span class="co"># Inspección de los resultados</span></span>
 <span></span>
-<span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">tibble</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;"><a href="https://tibble.tidyverse.org/reference/as_tibble.html">as_tibble</a></span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">(</span><span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">results</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">)</span></span></code></pre></div>
+<span><span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html">as_tibble</a></span><span class="op">(</span><span class="va">results</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -142,67 +265,21 @@ font-style: inherit;">)</span></span></code></pre></div>
   </script>
 </div>
 </div>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># El resultado es un data.frame que incluye la información referente</span></span>
-<span><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># a cada uno de los nombres ingresados, la valoración de la coincidencia</span></span>
-<span><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># (similitud del nombre ingresado y el nombre coincidente), el nombre</span></span>
-<span><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># coincidente, el estado del nombre coincidente y el nombre aceptado.</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># El resultado es un data.frame que incluye la información referente</span></span>
+<span><span class="co"># a cada uno de los nombres ingresados, la valoración de la coincidencia</span></span>
+<span><span class="co"># (similitud del nombre ingresado y el nombre coincidente), el nombre</span></span>
+<span><span class="co"># coincidente, el estado del nombre coincidente y el nombre aceptado.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>La función TNRS proporciona información detallada sobre el proceso de emparejamiento de los nombres que se desean validar. Los resultados incluyen varias columnas relevantes para entender el estado y la validez de los nombres científicos ingresados. A continuación, se muestra cómo seleccionar las columnas clave utilizando dplyr:</p>
 <div class="cell">
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">results</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span>  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">dplyr</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;"><a href="https://tibble.tidyverse.org/reference/as_tibble.html">as_tibble</a></span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">(</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span>  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">dplyr</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">(</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">Name_submitted</span>,</span>
-<span>                 <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">Accepted_name</span>,</span>
-<span>                 <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">Accepted_name_author</span>,</span>
-<span>                 <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">Accepted_family</span>,</span>
-<span>                 <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">Accepted_name_rank</span>,</span>
-<span>                 <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">Taxonomic_status</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">results</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html">as_tibble</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span> <span class="va">Name_submitted</span>,</span>
+<span>                 <span class="va">Accepted_name</span>,</span>
+<span>                 <span class="va">Accepted_name_author</span>,</span>
+<span>                 <span class="va">Accepted_family</span>,</span>
+<span>                 <span class="va">Accepted_name_rank</span>,</span>
+<span>                 <span class="va">Taxonomic_status</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -222,86 +299,587 @@ font-style: inherit;">)</span></span></code></pre></div>
 </ul>
 
 
-</section></section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-santos andrade2024" class="csl-entry quarto-appendix-citeas">
+</section></section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-santos andrade2024" class="csl-entry quarto-appendix-citeas" role="listitem">
 Santos Andrade, Paul. 2024. <span>“Taxonomic Name Resolution Service -
 TNRS.”</span> July 27, 2024. <a href="https://paulefrensa.rbind.io//blog/2024-07-27-tnrs">https://paulefrensa.rbind.io//blog/2024-07-27-tnrs</a>.
-</div></div></section></div> ]]></description>
-  <category>R</category>
-  <category>Ecologia de comunidades</category>
-  <category>Taxon</category>
-  <guid>https://paulefrensa.rbind.io/blog/2024-07-27-tnrs/</guid>
-  <pubDate>Sat, 27 Jul 2024 05:00:00 GMT</pubDate>
-  <media:content url="https://paulefrensa.rbind.io/blog/2024-07-27-tnrs/featured.png" medium="image" type="image/png" height="69" width="144"/>
-</item>
-<item>
-  <title>Curvas Rango-Abundancia</title>
-  <dc:creator>Paul Santos - Andrade</dc:creator>
-  <link>https://paulefrensa.rbind.io/blog/2023-10-22-rango-abundancia/</link>
-  <description><![CDATA[ 
+</div></div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/paulefrensa\.rbind\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><script src="https://utteranc.es/client.js" repo="PaulESantos/paulefren" issue-term="title" theme="boxy-light" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2023 Paul Efren Santos Andrade ∙ Made with <a href="https://quarto.org">Quarto</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p><a class="link-dark me-1" href="https://github.com/PaulEsantos" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0002-6635-0375" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/paulesantosandrade" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item">
+    <a class="nav-link" href="../../contact.html">
+<p>Contact</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">
+<p>License</p>
+</a>
+  </li>  
+</ul>
+</div>
+  </div>
+</footer>
 
-<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<!-- 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title"> 
--->
-<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
-<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
 
-
-
-<section id="introducción" class="level2">
-<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
-<p>El estudio de las comunidades vegetales es esencial para desentrañar la complejidad de los ecosistemas terrestres, contribuyendo a la comprensión de la biodiversidad, la ecología y la conservación. En esta revisión, nos sumergiremos más profundamente en el uso de la técnica de rango-abundancia como una herramienta valiosa para analizar la estructura de estas comunidades. Además de explorar sus aplicaciones, ventajas y limitaciones, presentaremos ejemplos concretos y estudios de caso para ilustrar su aplicabilidad en diferentes contextos.</p>
-</section>
-<section id="concepto-de-la-técnica-de-rango-abundancia" class="level2">
-<h2 class="anchored" data-anchor-id="concepto-de-la-técnica-de-rango-abundancia">Concepto de la Técnica de Rango-Abundancia</h2>
-<p>La técnica de rango-abundancia se basa en la clasificación de las especies dentro de una comunidad vegetal según su abundancia relativa en el ecosistema. En su forma más simple, las especies se ordenan según su frecuencia o abundancia, de mayor a menor, creando un gráfico de rango-abundancia. Este gráfico muestra las especies en un eje y su abundancia relativa en el otro. La forma de la curva de rango-abundancia proporciona información valiosa sobre la diversidad y estructura de la comunidad.</p>
-</section>
-<section id="aplicaciones-de-la-técnica-de-rango-abundancia" class="level2">
-<h2 class="anchored" data-anchor-id="aplicaciones-de-la-técnica-de-rango-abundancia">Aplicaciones de la Técnica de Rango-Abundancia</h2>
-<ol type="1">
-<li><p><strong>Evaluación de la Diversidad</strong>: La técnica de rango-abundancia permite una evaluación rápida de la diversidad de especies en una comunidad vegetal. La pendiente de la curva y su forma general pueden indicar la equitabilidad y la presencia de especies dominantes.</p></li>
-<li><p><strong>Evaluación de Impacto Ambiental</strong>: Esta técnica es útil para detectar cambios en la estructura de la comunidad vegetal debido a impactos ambientales, como la degradación del suelo, el cambio climático o la invasión de especies exóticas.</p></li>
-<li><p><strong>Comparación de Comunidades</strong>: Se utiliza para comparar la estructura de las comunidades vegetales en diferentes lugares o a lo largo del tiempo. Esto es especialmente valioso en estudios de ecología de restauración y monitoreo a largo plazo.</p></li>
-<li><p><strong>Priorización de Especies para Conservación</strong>: La identificación de especies raras pero críticas en la comunidad vegetal se simplifica con esta técnica, lo que puede ayudar a priorizar esfuerzos de conservación.</p></li>
-</ol>
-</section>
-<section id="ventajas-de-la-técnica-de-rango-abundancia" class="level2">
-<h2 class="anchored" data-anchor-id="ventajas-de-la-técnica-de-rango-abundancia">Ventajas de la Técnica de Rango-Abundancia</h2>
-<ol type="1">
-<li><p><strong>Sencillez</strong>: La técnica de rango-abundancia es fácil de implementar y no requiere equipos costosos ni un tiempo de muestreo prolongado.</p></li>
-<li><p><strong>Síntesis de Datos</strong>: Proporciona una visión general de la estructura de la comunidad vegetal en una sola figura, lo que facilita la comunicación de resultados a un público amplio.</p></li>
-<li><p><strong>Sensibilidad a Cambios</strong>: Es sensible a cambios en la abundancia relativa de especies, lo que la convierte en una herramienta valiosa para el monitoreo ambiental y la detección de perturbaciones.</p></li>
-</ol>
-<p><strong>Limitaciones de la Técnica de Rango-Abundancia</strong></p>
-<ol type="1">
-<li><p><strong>Omisión de Datos Detallados</strong>: A pesar de su utilidad, la técnica de rango-abundancia no proporciona información detallada sobre la biología, interacciones o fenología de las especies.</p></li>
-<li><p><strong>Falta de Consideración de la Distribución Espacial</strong>: No tiene en cuenta la distribución espacial de las especies en la comunidad.</p></li>
-<li><p><strong>Sesgo por Muestreo</strong>: La calidad de los datos puede verse influenciada por la cantidad de muestreo y la selección de sitios de muestreo.</p></li>
-</ol>
-</section>
-<section id="conclusión" class="level2">
-<h2 class="anchored" data-anchor-id="conclusión">Conclusión</h2>
-<p>La técnica de rango-abundancia es una herramienta valiosa en el estudio de comunidades vegetales. Esta revisión ha buscado ampliar la comprensión de su aplicabilidad mediante ejemplos y estudios de caso concretos. A pesar de sus limitaciones, su simplicidad y sensibilidad a los cambios la hacen relevante en la conservación y la ecología de comunidades vegetales, especialmente cuando se combina con otras técnicas y métodos para obtener una comprensión completa de estos ecosistemas.</p>
-</section>
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
-
-<p>Featured photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Pawel Czerwinski</a> on <a href="https://unsplash.com/photos/green-leafed-plant-clip-art-lWBZ01XRRoI?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a>.</p>
-<hr>
-
-
-</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-santos - andrade2023" class="csl-entry quarto-appendix-citeas">
-Santos - Andrade, Paul. 2023. <span>“Curvas Rango-Abundancia.”</span>
-October 22, 2023. <a href="https://paulefrensa.rbind.io//blog/2023-10-22-rango-abundancia">https://paulefrensa.rbind.io//blog/2023-10-22-rango-abundancia</a>.
-</div></div></section></div> ]]></description>
-  <category>R</category>
-  <category>Ecologia de comunidades</category>
-  <category>Curvas Rango-Abundancia</category>
-  <guid>https://paulefrensa.rbind.io/blog/2023-10-22-rango-abundancia/</guid>
-  <pubDate>Sun, 22 Oct 2023 05:00:00 GMT</pubDate>
-  <media:content url="https://paulefrensa.rbind.io/blog/2023-10-22-rango-abundancia/featured.jpg" medium="image" type="image/jpeg"/>
-</item>
-</channel>
-</rss>
+</body></html>

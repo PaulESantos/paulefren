@@ -1,0 +1,101 @@
+---
+title: 'Taxonomic Name Resolution Service - TNRS'
+author: Paul Santos Andrade
+date: '2024-07-27'
+date-modified: '2024-07-27'
+image: featured.png
+categories:
+  - R
+  - Ecologia de comunidades
+  - Taxon 
+subtitle: >
+  Herramienta para la estandarización asistida de nombres científicos de plantas.
+description: ''
+filters:
+   - include-code-files
+code-annotations: below
+df-print: paged
+---
+
+## Introducción
+
+La investigación en biodiversidad a gran escala a menudo requiere la combinación de diferentes tipos de datos, como información de ocurrencias, genética y características, procedentes de diversas fuentes públicas y privadas. Un desafío significativo en esta tarea es la discrepancia en las listas taxonómicas y las variantes ortográficas de los nombres de especies, lo que obliga a los investigadores a dedicar muchas horas a la **anotación manual**. Para agilizar la investigación en biodiversidad, es crucial mantener una taxonomía consistente de nombres de especies y ofrecer herramientas para superar estos desafíos.
+
+Numerosas herramientas han sido publicadas en los últimos años, incluyendo acceso en línea a varias bases de datos, emparejamiento de listas y manipulación de datos para una diversidad de taxones y tipos de datos. Sin embargo, al homogenizar los diferentes conjuntos de datos, la pérdida de datos sigue siendo un problema si se utiliza el emparejamiento exacto o se selecciona una sola lista taxonómica entre las varias reconocidas. El uso de combinaciones de diferentes herramientas para superar este desafío puede ser lento, difícil de reproducir y computacionalmente intensivo.
+
+El Servicio de Resolución de Nombres Taxonómicos, conocido como **TNRS (Taxonomic Name Resolution Service)**, se divide en tres partes generales:
+
+1. Análisis de nombres: donde los nombres de entrada se procesan para corregir problemas de formato y obtener un formato de entrada estandarizado.
+
+2. Emparejamiento de nombres: donde los nombres analizados se cruzan con una lista taxonómica, a menudo con la ayuda de un **emparejamiento parcial** para tener en cuenta errores ortográficos y variaciones.
+
+3. Resolución de nombres: donde los nombres emparejados se resuelven a una especie aceptada, basándose en las relaciones presentes en una lista taxonómica.
+
+
+En la última década, han surgido numerosas herramientas de alta calidad para la resolución de nombres, cada uno enfocado en un aspecto diferente de este flujo de trabajo. Por ejemplo, el Global Name Parser se centra en el análisis de nombres científicos en diferentes elementos semánticos. Alternativamente, **Taxamatch** proporciona algoritmos eficientes para el emparejamiento de nombres, manejando errores ortográficos mientras empareja jerárquicamente género, especie, autoría y rango a una lista taxonómica. Finalmente, aplicaciones como **TNRS** ofrecen una funcionalidad extensa para los tres pasos, proporcionando múltiples listas taxonómicas para la resolución de nombres e identificación de especies aceptadas, e incluso identificando la mejor coincidencia entre estas diferentes listas.
+
+TNRS es una herramienta diseñada para ayudar en la estandarización y validación automatizada de los nombres científicos de plantas. Facilita la corrección de errores ortográficos, permite la validación con una lista estándar y la resolución de sinonimias con el nombre aceptado actualmente. TNRS puede procesar muchos nombres a la vez, lo que ahorra horas de corrección manual de nombres, la cual es tediosa y propensa a errores. Para los nombres que no se pueden resolver automáticamente, TNRS presenta una lista de posibilidades y proporciona herramientas para investigar y seleccionar el nombre adecuado.
+
+### Usando TNRS
+
+TNRS toma como entrada un vector con los nombres científicos o un 'data.frame' que contiene dos columnas: número de fila (ID) y nombre científico (taxon).
+
+
+```{r}
+library(TNRS)
+
+# Primero, tomaremos un conjunto de datos como ejemplo, esta tiene
+# dos columnas: número de fila (ID) y nombre científico (taxon).
+
+fulldata <- tnrs_testfile
+
+tibble::as_tibble(fulldata)
+
+# Tenga en cuenta que en el ejemplo los nombres científicos se
+# presentan bajo diferentes formatos, que a veces incluyen:
+# Solo nombre científico
+# Solo género
+# Familia y género
+# Familia, nombre científico y autor
+
+# La función a utilizar es `TNRS()`:
+
+results <- TNRS(taxonomic_names = fulldata)
+
+# Inspección de los resultados
+
+tibble::as_tibble(results)
+
+# El resultado es un data.frame que incluye la información referente
+# a cada uno de los nombres ingresados, la valoración de la coincidencia
+# (similitud del nombre ingresado y el nombre coincidente), el nombre
+# coincidente, el estado del nombre coincidente y el nombre aceptado.
+
+
+```
+
+La función TNRS proporciona información detallada sobre el proceso de emparejamiento de los nombres que se desean validar. Los resultados incluyen varias columnas relevantes para entender el estado y la validez de los nombres científicos ingresados. A continuación, se muestra cómo seleccionar las columnas clave utilizando dplyr:
+
+```{r}
+results |> 
+  dplyr::as_tibble() |> 
+  dplyr::select( Name_submitted,
+                 Accepted_name,
+                 Accepted_name_author,
+                 Accepted_family,
+                 Accepted_name_rank,
+                 Taxonomic_status)
+```
+Estas columnas incluyen:
+
+- Name_submitted: El nombre científico que fue ingresado originalmente.
+
+- Accepted_name: El nombre aceptado después del proceso de validación.
+
+- Accepted_name_author: El autor del nombre aceptado.
+
+- Accepted_family: La familia a la que pertenece el nombre aceptado.
+
+- Accepted_name_rank: El rango taxonómico del nombre aceptado.
+
+- Taxonomic_status: El estado taxonómico del nombre, indicando si es un nombre aceptado o un sinónimo.
