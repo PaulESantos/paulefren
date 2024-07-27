@@ -232,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Biologists increasingly rely on computer code, reinforcing the importance of published code for transparency, reproducibility, training, and a basis for further work. Here we conduct a literature review examining temporal trends in code sharing in ecology and evolution publications since 2010, and test for an influence of code sharing on citation rate. We find that scientists are overwhelmingly (95%) failing to publish their code and that there has been no significant improvement over time, but we also find evidence that code sharing can considerably improve citations, particularly when combined with open access publication.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="featured.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Code sharing trend"><img src="featured.png" class="img-fluid figure-img" alt="Temporal trend of code-sharing since 2010. Sample size was 77 papers per year, 1,001 total. The line shows the non-significant trend of code-sharing over time"></a></p>
+<p><a href="featured.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Code sharing trend"><img src="featured.png" class="img-fluid figure-img" alt="Temporal trend of code-sharing since 2010. Sample size was 77 papers per year, 1,001 total. The line shows the non-significant trend of code-sharing over time"></a></p>
 <figcaption>Code sharing trend</figcaption>
 </figure>
 </div>
@@ -824,7 +824,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
