@@ -326,7 +326,7 @@
     "href": "project/index.html",
     "title": "Projects",
     "section": "",
-    "text": "Environmental Computing\n\n\n\nR package\n\nR programing\n\nEcology\n\n\n\n\nNov 11, 2024\n\n\n\n\n\n\n\n\n\n\n\navesperu\n\n\n\nR package\n\nAmazon diversity\n\nDiversity\n\nPeru birds\n\n\n\n\nJul 27, 2024\n\n\n\n\n\n\n\n\n\n\n\nppendemic\n\n\n\nR package\n\nEndemic peruvian flora\n\nDiversity\n\n\n\n\nOct 22, 2023\n\n\n\n\n\n\n\n\n\n\n\nredbookperu\n\n\n\nR package\n\nEndemic peruvian flora\n\nDiversity\n\nRed Book\n\n\n\n\nAug 12, 2023\n\n\n\n\n\n\n\n\n\n\n\nperutimber\n\n\n\nR package\n\nAmazon diversity\n\nDiversity\n\n\n\n\nAug 12, 2023\n\n\n\n\n\n\n\n\n\n\n\nperuflorads43\n\n\n\nR package\n\nPeruvian diversity\n\nDiversity\n\n\n\n\nAug 12, 2023\n\n\n\n\n\n\nNo matching items\n Back to top"
+    "text": "reptiledbr\n\n\n\nR package\n\nBiodiversity\n\nTaxonomy\n\nReptiles\n\n\n\n\nJan 7, 2025\n\n\n\n\n\n\n\n\n\n\n\nperumammals\n\n\n\nR package\n\nBiodiversity\n\nTaxonomy\n\nPeru mammals\n\n\n\n\nJan 7, 2025\n\n\n\n\n\n\n\n\n\n\n\nEnvironmental Computing\n\n\n\nR package\n\nR programing\n\nEcology\n\n\n\n\nNov 11, 2024\n\n\n\n\n\n\n\n\n\n\n\navesperu\n\n\n\nR package\n\nAmazon diversity\n\nDiversity\n\nPeru birds\n\n\n\n\nJul 27, 2024\n\n\n\n\n\n\n\n\n\n\n\nppendemic\n\n\n\nR package\n\nEndemic peruvian flora\n\nDiversity\n\n\n\n\nOct 22, 2023\n\n\n\n\n\n\n\n\n\n\n\nredbookperu\n\n\n\nR package\n\nEndemic peruvian flora\n\nDiversity\n\nRed Book\n\n\n\n\nAug 12, 2023\n\n\n\n\n\n\n\n\n\n\n\nperutimber\n\n\n\nR package\n\nAmazon diversity\n\nDiversity\n\n\n\n\nAug 12, 2023\n\n\n\n\n\n\n\n\n\n\n\nperuflorads43\n\n\n\nR package\n\nPeruvian diversity\n\nDiversity\n\n\n\n\nAug 12, 2023\n\n\n\n\n\n\nNo matching items\n Back to top"
   },
   {
     "objectID": "publication/2018-11-18-leaves-darken/index.html",
@@ -418,5 +418,54 @@
     "title": "fluxible: An R package to process ecosystem gas fluxes from closed-loop chambers in an automated and reproducible way",
     "section": "",
     "text": "Measuring ecosystem gas fluxes quantifies how resources are allocated in ecosystems and is essential for predicting future global warming. Fluxes measured with closed-loop chambers require extensive post-processing, which is often inconsistent among studies. The fluxible R package provides an automated and reproducible workflow to convert raw gas concentration data into quality-checked flux estimates. It includes modules for metadata matching, model fitting, quality assessment, plotting, and flux calculation, supporting linear, quadratic and exponential models. We validate fluxible using LI-COR datasets and demonstrate high correlation with SoilFluxPro outputs. The workflow improves transparency, comparability and integration with Open Science practices."
+  },
+  {
+    "objectID": "project/2026-01-06-perumammals/index.html",
+    "href": "project/2026-01-06-perumammals/index.html",
+    "title": "perumammals",
+    "section": "",
+    "text": "The perumammals R package provides a curated and standardized taxonomic backbone for the mammals of Peru, designed to support ecological, environmental, and conservation research.\nThe package is based primarily on:\n\nPacheco et al. (2021) Lista actualizada de la diversidad de los mamíferos del Perú y una propuesta para su actualización doi:10.15381/rpb.v28i4.21019\n\n\n\n✔ complete taxonomic list of Peruvian mammals\n✔ endemism categories\n✔ occurrence by ecoregions\n✔ standardized nomenclature\n✔ validation tools for scientific names\n✔ exact and fuzzy matching procedures\n✔ lightweight workflow integration\nThis package is intended as a dependable national reference, improving consistency and traceability of mammal names in:\n\necological analyses\n\nbiodiversity informatics\n\nenvironmental impact studies\n\nconservation planning\n\nmuseum and collection data cleaning\n\n\n\n\nTaxonomic instability leads to:\n\nduplicated species in databases\n\nmismatched names between studies\n\nuncertain endemism estimates\n\nerroneous conservation evaluations\n\nperumammals helps solve this by providing:\n\ncurated backbone\n\nreproducible validation tools\n\ntransparent taxonomic sources"
+  },
+  {
+    "objectID": "project/2026-01-06-perumammals/index.html#perumammals",
+    "href": "project/2026-01-06-perumammals/index.html#perumammals",
+    "title": "perumammals",
+    "section": "",
+    "text": "The perumammals R package provides a curated and standardized taxonomic backbone for the mammals of Peru, designed to support ecological, environmental, and conservation research.\nThe package is based primarily on:\n\nPacheco et al. (2021) Lista actualizada de la diversidad de los mamíferos del Perú y una propuesta para su actualización doi:10.15381/rpb.v28i4.21019\n\n\n\n✔ complete taxonomic list of Peruvian mammals\n✔ endemism categories\n✔ occurrence by ecoregions\n✔ standardized nomenclature\n✔ validation tools for scientific names\n✔ exact and fuzzy matching procedures\n✔ lightweight workflow integration\nThis package is intended as a dependable national reference, improving consistency and traceability of mammal names in:\n\necological analyses\n\nbiodiversity informatics\n\nenvironmental impact studies\n\nconservation planning\n\nmuseum and collection data cleaning\n\n\n\n\nTaxonomic instability leads to:\n\nduplicated species in databases\n\nmismatched names between studies\n\nuncertain endemism estimates\n\nerroneous conservation evaluations\n\nperumammals helps solve this by providing:\n\ncurated backbone\n\nreproducible validation tools\n\ntransparent taxonomic sources"
+  },
+  {
+    "objectID": "project/2026-01-06-perumammals/index.html#citation",
+    "href": "project/2026-01-06-perumammals/index.html#citation",
+    "title": "perumammals",
+    "section": "Citation",
+    "text": "Citation\nIf you use perumammals in research or publications, please cite:\nPacheco, V. et al. (2021).\nLista actualizada de la diversidad de los mamíferos del Perú y una propuesta para su actualización.\nRevista Peruana de Biología 28(4)\ndoi:10.15381/rpb.v28i4.21019\nYou may also cite the package directly:\nSantos Andrade, P.E. (2024). perumammals: Taxonomic backbone and name validation tools for mammals of Peru.\nR package version 0.0.0.1.\nhttps://paulesantos.github.io/perumammals/"
+  },
+  {
+    "objectID": "project/2025-07-09-reptiledbr/index.html",
+    "href": "project/2025-07-09-reptiledbr/index.html",
+    "title": "reptiledbr",
+    "section": "",
+    "text": "The reptiledbr R package provides access to a curated and standardized checklist of reptile species, along with tools for taxonomic validation and name matching. The package is designed to support research, biodiversity assessment, environmental consulting, conservation planning, and data cleaning workflows that require reliable reptile species information.\nReptile taxonomy is highly dynamic, with frequent revisions, synonymizations, and species splitting. reptiledbr addresses these challenges by offering:\n\na curated checklist of reptile species\nstandardized taxonomic backbone\ninformation on distribution and endemism when available\ntools for validating and correcting scientific names\nexact and fuzzy matching routines to resolve spelling variants and synonyms\n\nThis package contributes to improving consistency in:\n\nbiodiversity informatics\necological and biogeographic analyses\nenvironmental impact assessments\nmuseum and herbarium database curation"
+  },
+  {
+    "objectID": "project/2025-07-09-reptiledbr/index.html#perutimber",
+    "href": "project/2025-07-09-reptiledbr/index.html#perutimber",
+    "title": "avesperu",
+    "section": "",
+    "text": "The avesperu package opens the door to Peru’s extraordinary birds, encompassing a dataset of 1,901 species, highlighting its status as one of the world’s most diverse bird-rich countries. This comprehensive R package now leverages the meticulously updated “List of the Birds of Peru” by M. A. Plenge, which has been revised and expanded to reflect the latest data as of 06 - 03 - 2024. However, it’s important to recognize that avian taxonomy is dynamic, undergoing significant changes over time.\nThe species list adheres to the taxonomic classification endorsed by the South American Checklist Committee (SACC), which assigns species codes reflecting various aspects such as residency status, endemism, migratory behavior, vagrancy, introductions, extirpation, and hypothetical presence. As of now, SACC is in the process of recognizing certain subspecies as full species, a development that will inevitably alter the species count.\nOf particular note, the “H” category, representing hypothetical species, now holds the fifth position in South America’s ranking, following Argentina, Bolivia, Colombia, and Ecuador. However, this ranking may potentially decrease further with the publication of well-documented records, underscoring the ongoing evolution and refinement of avian taxonomy."
+  },
+  {
+    "objectID": "project/2025-07-09-reptiledbr/index.html#citation",
+    "href": "project/2025-07-09-reptiledbr/index.html#citation",
+    "title": "reptiledbr",
+    "section": "Citation",
+    "text": "Citation\nIf you use reptiledbr in publications or reports, please cite the package:\nSantos Andrade, P. E.\nreptiledbr: Tools for access and validation of reptile species lists.\nR package website: https://paulesantos.github.io/reptiledbr/"
+  },
+  {
+    "objectID": "project/2025-07-09-reptiledbr/index.html#reptiledbr",
+    "href": "project/2025-07-09-reptiledbr/index.html#reptiledbr",
+    "title": "reptiledbr",
+    "section": "",
+    "text": "The reptiledbr R package provides access to a curated and standardized checklist of reptile species, along with tools for taxonomic validation and name matching. The package is designed to support research, biodiversity assessment, environmental consulting, conservation planning, and data cleaning workflows that require reliable reptile species information.\nReptile taxonomy is highly dynamic, with frequent revisions, synonymizations, and species splitting. reptiledbr addresses these challenges by offering:\n\na curated checklist of reptile species\nstandardized taxonomic backbone\ninformation on distribution and endemism when available\ntools for validating and correcting scientific names\nexact and fuzzy matching routines to resolve spelling variants and synonyms\n\nThis package contributes to improving consistency in:\n\nbiodiversity informatics\necological and biogeographic analyses\nenvironmental impact assessments\nmuseum and herbarium database curation"
   }
 ]

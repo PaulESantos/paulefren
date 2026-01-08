@@ -1,0 +1,91 @@
+---
+title: "perumammals"
+subtitle: "Taxonomic backbone and name validation tools for mammals of Peru"
+excerpt: "perumammals – Curated checklist and name validation tools for Peruvian mammals"
+date: 2025-01-07
+author: "Paul Efren Santos Andrade"
+slug: perumammals
+alias:
+  - /project/perumammals/
+featured: true
+draft: false
+tags:
+- R package
+- Mammal diversity
+- Taxonomy
+- Peru mammals
+categories:
+- R package
+- Biodiversity
+- Taxonomy
+- Peru mammals
+layout: single
+
+links:
+- icon: images
+  icon_pack: fas
+  name: Website
+  url: https://paulesantos.github.io/perumammals/
+- icon: github
+  icon_pack: fab
+  name: Code
+  url: https://github.com/PaulESantos/perumammals/
+---
+
+## perumammals <a href='https://paulesantos.github.io/perumammals/'><img src='logo_perumammals.png' align="right" height="250" width="200" alt='Taxonomic backbone and validation tools for Peruvian mammals.'/></a>
+
+The `perumammals` R package provides a curated and standardized **taxonomic backbone for the mammals of Peru**, designed to support ecological, environmental, and conservation research.
+
+The package is based primarily on:
+
+- Pacheco et al. (2021) *Lista actualizada de la diversidad de los mamíferos del Perú y una propuesta para su actualización* doi:10.15381/rpb.v28i4.21019  
+
+### What the package contains
+
+✔ complete taxonomic list of Peruvian mammals  
+✔ endemism categories  
+✔ occurrence by ecoregions  
+✔ standardized nomenclature  
+✔ validation tools for scientific names  
+✔ exact and fuzzy matching procedures  
+✔ lightweight workflow integration  
+
+This package is intended as a **dependable national reference**, improving consistency and traceability of mammal names in:
+
+- ecological analyses  
+- biodiversity informatics  
+- environmental impact studies  
+- conservation planning  
+- museum and collection data cleaning  
+
+### Why it matters
+
+Taxonomic instability leads to:
+
+- duplicated species in databases  
+- mismatched names between studies  
+- uncertain endemism estimates  
+- erroneous conservation evaluations  
+
+`perumammals` helps solve this by providing:
+
+- curated backbone  
+- reproducible validation tools  
+- transparent taxonomic sources  
+
+---
+
+## Citation
+
+If you use `perumammals` in research or publications, please cite:
+
+**Pacheco, V. et al. (2021).**  
+Lista actualizada de la diversidad de los mamíferos del Perú y una propuesta para su actualización.  
+*Revista Peruana de Biología 28(4)*  
+doi:10.15381/rpb.v28i4.21019
+
+You may also cite the package directly:
+
+Santos Andrade, P.E. (2024). **perumammals: Taxonomic backbone and name validation tools for mammals of Peru.**  
+R package version 0.0.0.1.  
+https://paulesantos.github.io/perumammals/

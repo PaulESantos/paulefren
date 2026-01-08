@@ -1,0 +1,61 @@
+---
+title: "reptiledbr"
+subtitle: "Access to the checklist of reptile species"
+excerpt: "reptiledbr — Access to standardized reptile species lists and taxonomic tools"
+date: 2025-01-07
+author: "Paul Efren Santos Andrade"
+slug: reptiledbr
+alias:
+  - /project/reptiledbr/
+featured: true
+draft: false
+tags:
+- R package
+- Reptile diversity
+- Taxonomy
+- Biodiversity
+categories:
+- R package
+- Biodiversity
+- Taxonomy
+- Reptiles
+layout: single
+
+links:
+- icon: images
+  icon_pack: fas
+  name: Website
+  url: https://paulesantos.github.io/reptiledbr/
+- icon: github
+  icon_pack: fab
+  name: Code
+  url: https://github.com/PaulESantos/reptiledbr/
+---
+
+## reptiledbr <a href='https://paulesantos.github.io/reptiledbr/'><img src='reptiledbr_logo-01.png' align="right" height="250" width="200" alt='Access to reptile species checklist.'/></a>
+
+The `reptiledbr` R package provides access to a curated and standardized checklist of **reptile species**, along with tools for taxonomic validation and name matching. The package is designed to support research, biodiversity assessment, environmental consulting, conservation planning, and data cleaning workflows that require reliable reptile species information.
+
+Reptile taxonomy is highly dynamic, with frequent revisions, synonymizations, and species splitting. `reptiledbr` addresses these challenges by offering:
+
+- a curated checklist of reptile species
+- standardized taxonomic backbone
+- information on distribution and endemism when available
+- tools for validating and correcting scientific names
+- exact and fuzzy matching routines to resolve spelling variants and synonyms
+
+This package contributes to improving consistency in:
+
+- biodiversity informatics
+- ecological and biogeographic analyses
+- environmental impact assessments
+- museum and herbarium database curation
+
+## Citation
+
+If you use `reptiledbr` in publications or reports, please cite the package:
+
+**Santos Andrade, P. E.**  
+reptiledbr: Tools for access and validation of reptile species lists.  
+R package website: https://paulesantos.github.io/reptiledbr/
+
