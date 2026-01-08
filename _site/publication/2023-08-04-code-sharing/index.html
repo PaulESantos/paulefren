@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -21,10 +21,10 @@
 <meta name="author" content="Gonzalo Pinilla-Buitrago">
 <meta name="author" content="Cory Merow">
 <meta name="author" content="Adam Wilson">
-<meta name="dcterms.date" content="2023-08-04">
-<meta name="description" content="This is a preprint at Reasearch Square">
+<meta name="dcterms.date" content="2024-08-27">
+<meta name="description" content="Ecology and Evolution">
 
-<title>Code sharing increases citations, but remains uncommon | Paul Efren Santos Andrade</title>
+<title>Code sharing increases citations, but remains uncommon | Paul Efren Santos Andrade – Paul Efren</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,9 +61,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -99,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta name="twitter:title" content="Code sharing increases citations, but remains uncommon | Paul Efren Santos Andrade">
-<meta name="twitter:description" content="This is a preprint at Reasearch Square">
+<meta name="twitter:description" content="Ecology and Evolution">
 <meta name="twitter:image" content="https://paulefrensa.rbind.io/publication/2023-08-04-code-sharing/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -119,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -146,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
     <a href="https://www.github.com/PaulESantos/paulefren" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
@@ -166,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div id="title-block-title-desc" class="description pt-4">
-    This is a preprint at Reasearch Square
+    Ecology and Evolution
   </div>
 </div>
 
@@ -197,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 4, 2023</p>
+      <p class="date">August 27, 2024</p>
     </div>
   </div>
   
@@ -207,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-<a href="https://www.researchsquare.com/article/rs-3222221/v1" class="btn btn-secondary text-capitalize"><i class="bi bi-file-richtext-fill me-1"></i> Researsh Paper - PrePrint</a>
+<a href="https://onlinelibrary.wiley.com/doi/epdf/10.1002/ece3.70030" class="btn btn-secondary text-capitalize"><i class="bi bi-file-richtext-fill me-1"></i> Researsh Paper</a>
 </div>
 
 </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -227,20 +224,233 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="abstract" class="level2">
-<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>Biologists increasingly rely on computer code, reinforcing the importance of published code for transparency, reproducibility, training, and a basis for further work. Here we conduct a literature review examining temporal trends in code sharing in ecology and evolution publications since 2010, and test for an influence of code sharing on citation rate. We find that scientists are overwhelmingly (95%) failing to publish their code and that there has been no significant improvement over time, but we also find evidence that code sharing can considerably improve citations, particularly when combined with open access publication.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="featured.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Code sharing trend"><img src="featured.png" class="img-fluid figure-img" alt="Temporal trend of code-sharing since 2010. Sample size was 77 papers per year, 1,001 total. The line shows the non-significant trend of code-sharing over time"></a></p>
-<figcaption>Code sharing trend</figcaption>
-</figure>
-</div>
+<section id="compartir-código-en-ecología-y-evolución-aumenta-las-tasas-de-citación-pero-sigue-siendo-poco-común" class="level2">
+<h2 class="anchored" data-anchor-id="compartir-código-en-ecología-y-evolución-aumenta-las-tasas-de-citación-pero-sigue-siendo-poco-común">Compartir código en ecología y evolución aumenta las tasas de citación pero sigue siendo poco común</h2>
+<section id="resumen" class="level4">
+<h4 class="anchored" data-anchor-id="resumen">Resumen</h4>
+<p>Los biólogos dependen cada vez más del código informático para recopilar y analizar sus datos, lo que refuerza la importancia del código publicado para la transparencia, la reproducibilidad, la formación y como base para trabajos futuros. Aquí, realizamos una revisión de la literatura para estimar las tendencias temporales en la compartición de código en publicaciones de ecología y evolución desde 2010, y probamos si la compartición de código influye en la tasa de citación. Encontramos que el código rara vez se publica (solo en el 6% de los artículos), con poca mejora a lo largo del tiempo. También encontramos que puede haber incentivos para publicar código: Las publicaciones que comparten código tienden a tener un bajo impacto inicialmente, pero acumulan citas más rápidamente, compensando este déficit. Los estudios que además cumplen con otros criterios de ciencia abierta, como la publicación de acceso abierto o el compartir datos, tienen tasas de citación aún más altas, con las publicaciones que cumplen con los tres criterios (compartición de código, compartición de datos y publicación de acceso abierto) tendiendo a tener el mayor número de citas y la tasa más alta de acumulación de citas.</p>
+<p><strong>Palabras clave</strong>: compartir código, acceso abierto, datos abiertos, ciencia abierta, software R, reproducibilidad</p>
+</section>
+<section id="introducción" class="level4">
+<h4 class="anchored" data-anchor-id="introducción">1 | INTRODUCCIÓN</h4>
+<p>La reproducibilidad y la transparencia son pilares fundamentales de una ciencia rigurosa, madura y reconocida (Freedman et al., 2015; McNutt, 2014; Munafò et al., 2017; Nosek et al., 2015; “Reality check on reproducibility”, 2016). Aunque las definiciones pueden variar según las disciplinas o cambiar con el tiempo (Baker, 2016), la reproducibilidad se refiere comúnmente a la capacidad de repetir análisis anteriores y obtener resultados consistentes. La transparencia se refiere al grado o extensión en que los detalles del trabajo, especialmente los métodos y resultados, están documentados y comunicados abiertamente, permitiendo así interpretaciones alternativas (Drescher &amp; Edwards, 2019; Wagenmakers et al., 2021). En el caso de los scripts de programación, el espectro de reproducibilidad comienza con el código público, archivado de manera permanente (Parker et al., 2016; Peng, 2011). En ecología y evolución, el código (principalmente en el lenguaje de programación estadística R; Lai et al., 2019; R Core Team, 2023) se ha convertido en la base de la mayoría de los análisis (Feng et al., 2020), y los beneficios de compartir código son cada vez más reconocidos (Munafò et al., 2017; Parker, Forstmeier, et al., 2016). Un código claro y reutilizable, liberado bajo una licencia permisiva (Stodden, 2009), no solo garantiza una mejor reproducibilidad de los análisis, sino que también puede aumentar el impacto de las publicaciones (por ejemplo, mayor adopción de métodos, más citas) y reducir los esfuerzos duplicados, permitiendo que la ciencia progrese de manera más efectiva (McNutt, 2014; Munafò et al., 2017; Nosek et al., 2015; “Reality check on reproducibility”, 2016). Además, un código bien documentado facilita el proceso de revisión por pares, proporciona un recurso educativo valioso (Busjahn &amp; Schulte, 2013), y mejora nuestra capacidad para acreditar a los desarrolladores, ya que los datos sobre el uso de software y paquetes pueden extraerse directamente del código publicado (Merow, Boyle, et al., 2023).</p>
+<p>¿Ha influido la creciente apreciación del compartir código en las prácticas de compartir código a lo largo del tiempo? Evidencias recientes sugieren que los biólogos pueden ser reacios a compartir código. Un estudio centrado en publicaciones en revistas de ecología con políticas que obligaban o alentaban a compartir código encontró que el 73% no compartía código (Culina et al., 2020), mientras que un estudio enfocado en publicaciones que utilizan modelos basados en agentes encontró que el 81% no proporcionaba código (Barton et al., 2022). Los indicadores de ciencia abierta de PLOS también sugieren que compartir código es raro, con un 92% de las publicaciones en Ciencias Agrícolas y Biológicas que no comparten código (en comparación, el 49% no comparte datos; Public Library of Science, 2023). Aunque algunos artículos incluyen la declaración “código disponible bajo petición”, esta promesa a menudo no se cumple (Stodden et al., 2018). Donde se publica el código, también puede no ser reutilizable debido a problemas de licencias (Stodden, 2009). La resistencia a compartir y reutilizar el código puede surgir de la falta de familiaridad con las mejores prácticas de compartición, inseguridad sobre la calidad del código, miedos al mal uso o apropiación no solicitada de ideas, y costos excesivos de preparación (Cadwallader &amp; Hrynaszkiewicz, 2022; Gomes et al., 2022). Sin embargo, se ha argumentado que muchos de los problemas percibidos con el compartir código provienen de malentendidos sobre sus riesgos y beneficios (Gomes et al., 2022). Para comprender mejor cómo han cambiado las prácticas de compartir código a lo largo del tiempo y si realmente mejorar las tasas de citación, nosotros (1) estimamos las tendencias en el compartimiento de código en R para artículos de ecología y evolución publicados entre 2010 y 2022 y (2) probamos si la tasa de citación fue mayor para los artículos que compartieron código. Nos centramos en R porque se ha convertido en el lenguaje de codificación dominante en ecología y evolución (Lai et al., 2019).</p>
+</section>
+<section id="materiales-y-métodos" class="level4">
+<h4 class="anchored" data-anchor-id="materiales-y-métodos">2 | MATERIALES Y MÉTODOS</h4>
+<section id="recolección-de-datos" class="level5">
+<h5 class="anchored" data-anchor-id="recolección-de-datos">2.1 | Recolección de datos</h5>
+<section id="lista-de-publicaciones-en-ecología-y-evolución-que-citan-r" class="level6">
+<h6 class="anchored" data-anchor-id="lista-de-publicaciones-en-ecología-y-evolución-que-citan-r">2.1.1 | Lista de publicaciones en ecología y evolución que citan R</h6>
+<p>Para generar una lista de artículos en ecología y evolución que probablemente hicieron uso del lenguaje de programación R (R Core Team, 2023), realizamos una consulta en la base de datos Scopus (https://www.scopus.com) utilizando el paquete rscopus de R (Muschelli, 2019). Buscamos en Scopus (realizado el 19 de agosto de 2022) artículos de revistas revisados por pares que: (1) incluyeran las palabras “ecología” o “evolución” en una búsqueda de “todos los campos” (que busca en los títulos de los artículos, palabras clave, resúmenes y títulos de las revistas); (2) se publicaran en revistas dentro del área temática de “ciencias agrícolas y biológicas”; (3) se publicaran después del 1 de enero de 2010; (4) estuvieran escritos en inglés (ya que actualmente es el idioma dominante de publicación en ecología y evolución; Mauranen et al., 2010); y (5) incluyeran una cita de R en su lista de referencias.</p>
+</section>
+<section id="comprobación-de-la-disponibilidad-de-código-y-datos" class="level6">
+<h6 class="anchored" data-anchor-id="comprobación-de-la-disponibilidad-de-código-y-datos">2.1.2 | Comprobación de la disponibilidad de código y datos</h6>
+<p>Evaluamos manualmente un subconjunto elegido al azar de las publicaciones en nuestra lista general. Seleccionamos un total de 1001 artículos, distribuidos uniformemente a lo largo del período de tiempo (77 por año durante 13 años). Los artículos que citaban R pero no lo utilizaban (o no estaba claro si lo utilizaban; n = 3) fueron descartados y reemplazados por un artículo seleccionado al azar del mismo año. Para cada publicación en este subconjunto, identificamos manualmente si la publicación compartía algún código en R, ya sea como información suplementaria o a través de un enlace (por ejemplo, a un repositorio de Github). Para cada artículo, (i) verificamos la presencia de código en material suplementario, (ii) revisamos las publicaciones en busca de declaraciones de disponibilidad de código y datos, (iii) buscamos en las publicaciones términos asociados con el código (es decir, “código”, “suplemento”, “apéndice”, “R”, “script”, “Github”), y (iv) buscamos URL en las publicaciones. Los artículos se puntuaron con una variable binaria que indicaba si compartían código en R o no. No distinguimos entre publicaciones que compartían suficiente código para la reproducción y aquellas que no lo hacían. Tampoco intentamos volver a ejecutar el código ni evaluar su reproducibilidad, y solo registramos la presencia de cualquier código, incluso si estaba incompleto. Donde se incluyó el código, registramos la licencia bajo la cual se proporcionaba el código, o la falta de esta. También evaluamos si las publicaciones eran de acceso abierto y si compartían datos abiertos para comprender la importancia del código abierto en relación con estos otros componentes de acceso abierto. La información de acceso abierto fue proporcionada por el paquete rscopus de R (Muschelli, 2019). Los datos abiertos se puntuaron como una variable binaria que indicaba si los autores compartían o no el conjunto completo de datos brutos subyacentes a los análisis. Para controlar las diferencias en las tasas de citación entre revistas, descargamos información sobre el factor de impacto utilizando el paquete scholar de R (Keirstead, 2016) el 16 de junio de 2023. Para estimar la proporción de publicaciones que usan R pero no lo citan adecuadamente, seleccionamos 130 publicaciones al azar distribuidas uniformemente a lo largo del período de tiempo. Estas publicaciones fueron seleccionadas utilizando criterios idénticos a los de las publicaciones que citaron R, excepto que no incluían R en su lista de referencias.</p>
+</section>
+</section>
+<section id="verificación-de-las-citas-del-código" class="level5">
+<h5 class="anchored" data-anchor-id="verificación-de-las-citas-del-código">2.2 | Verificación de las citas del código</h5>
+<p>Cuando el código se compartió en un lugar citable, como un DOI o URL (n = 33), evaluamos si el código en sí fue citado mediante una consulta en la base de datos Scopus para la URL (y DOI, cuando correspondiera) utilizando el paquete rscopus de R (Muschelli, 2019). Se excluyeron las publicaciones donde el código se compartió en apéndices o información suplementaria (n = 22), ya que no había forma de distinguir las citas del código de las citas de la publicación en sí.</p>
+</section>
+<section id="análisis" class="level5">
+<h5 class="anchored" data-anchor-id="análisis">2.3 | Análisis</h5>
+<p>Todos los análisis se realizaron en R versión 4.3.0 (R Core Team, 2023). Todos los scripts de R subyacentes a estos análisis están disponibles en: https://github.com/bmaitner/R_citations y a través de Zenodo (Maitner &amp; Lei, 2024). Para el procesamiento de datos, utilizamos los paquetes de R stringdist versión 0.9.12 (van der Loo, 2014), tidyverse versión 2.0.0 (Wickham et al., 2019), googledrive versión 2.1.1 (D’Agostino McGowan &amp; Bryan, 2023) y googlesheets4 versión 1.1.1 (Bryan, 2023); para los análisis, los paquetes bbmle versión 1.0.25.1 (Bolker &amp; R Development Core Team, 2022), DHARMa versión 0.4.6 (Hartig, 2022), MuMIn versión 1.47.5 (Barton, 2023), rscopus versión 0.6.6 (Muschelli, 2019), rsq versión 2.6 (Zhang, 2018), scholar versión 0.2.4 (Keirstead, 2016), y stats versión 4.3.0 (R Core Team, 2023); para la creación de gráficos, los paquetes ggplot2 versión 3.4.4 (Wickham, 2016), ggpmisc versión 0.5.5 (Aphalo, 2022) y questionr versión 0.7.8 para identificar todos los paquetes de R utilizados.</p>
+<section id="proporción-de-artículos-que-comparten-código-a-lo-largo-del-tiempo" class="level6">
+<h6 class="anchored" data-anchor-id="proporción-de-artículos-que-comparten-código-a-lo-largo-del-tiempo">2.3.1 | Proporción de artículos que comparten código a lo largo del tiempo</h6>
+<p>Probamos una tendencia en el compartir código a lo largo del tiempo modelando el compartir código (binario, sí/no) como una función del año (relativo a 2010) utilizando un modelo lineal generalizado. La modelización se realizó utilizando la función glm del paquete stats de R (R Core Team, 2023) con una distribución de error binomial. De manera similar, probamos tendencias temporales en otros dos componentes de ciencia abierta, publicación de acceso abierto (binario) y datos abiertos (binario). También probamos si los artículos de acceso abierto o con datos abiertos eran desproporcionadamente más propensos a compartir código utilizando pruebas de chi-cuadrado a través de la función chisq.test en el paquete stats de R (R Core Team, 2023).</p>
+</section>
+<section id="impacto-del-compartir-código-en-las-citas" class="level6">
+<h6 class="anchored" data-anchor-id="impacto-del-compartir-código-en-las-citas">2.3.2 | Impacto del compartir código en las citas</h6>
+<p>Además, modelamos la relación entre el compartir código y el número de citas utilizando modelos lineales generalizados en R. Modelamos la variable dependiente (número acumulado de citas de cada artículo hasta 2022) utilizando una distribución de Poisson, que modela el número de eventos independientes que ocurren dentro de un período de tiempo (Bolker, 2008). Además de la variable predictora de compartir código (binaria, sí/no), incluimos otras variables que se hipotetizó que influirían en el número de citas. El compartir datos (binario, sí/no) puede aumentar el número de citas, ya que los lectores pueden citar artículos como fuentes de datos (Christensen et al., 2019; Piwowar et al., 2007). El acceso abierto (binario, sí/no) también puede aumentar el número de citas al llegar a un conjunto más amplio de lectores (Tang et al., 2017). Las publicaciones acumulan citas con el tiempo, por lo que el número de citas debería aumentar con la antigüedad de la publicación (continuo, 1-13 años). Finalmente, las publicaciones en revistas de mayor impacto pueden ser más propensas a ser leídas y citadas, y por lo tanto, se espera que el factor de impacto de la revista (continuo, 0-11.633) esté positivamente asociado con el número de citas. Además de los efectos principales, consideramos dos clases de interacciones: (1) interacciones entre la antigüedad de la publicación y otros efectos principales, que son apropiadas si un efecto principal modifica la tasa a la que una publicación acumula citas con el tiempo; y (2) interacciones entre criterios de ciencia abierta (es decir, acceso abierto, código abierto y datos abiertos), que son apropiadas si hay efectos sinérgicos de cumplir con múltiples criterios de acceso abierto. Comparamos 11 modelos (incluyendo un modelo nulo) que diferían en complejidad y que representaban diferentes hipótesis sobre los factores que influyen en las citas (Tabla 1). Las variables continuas fueron escaladas y centradas. El pseudo-R2 del modelo global para el mejor modelo fue calculado utilizando la función r.squaredGLMM en el paquete rsq (Zhang, 2018).</p>
+</section>
+</section>
+</section>
+<section id="resultados" class="level4">
+<h4 class="anchored" data-anchor-id="resultados">3 | RESULTADOS</h4>
+<p>Identificamos 28,227 artículos que cumplían con nuestros criterios de búsqueda. De este conjunto de artículos, seleccionamos al azar 1001 artículos (el número más cercano a 1000 que es divisible por 13) distribuidos uniformemente a lo largo del período temporal (13 años) para un total de 77 artículos por año. En general, el código R estaba disponible solo para 55 de los 1001 artículos examinados (5.5%; Figura 1). Cuando se compartió, el código se encontraba más a menudo en la Información Suplementaria (40%), seguido por Github (22%), Figshare (11%) u otros repositorios (37%). La mayoría del código (67%) no incluía una licencia. Donde se incluía una licencia, casi siempre era permisiva o copyleft (por ejemplo, CC0, CC-BY, GPL y MIT), con solo una publicación que incluía una licencia propietaria. Las publicaciones de acceso abierto tenían el doble de probabilidades de compartir código que las publicaciones de acceso cerrado (8.5% frente a 4.24%, Χ2 = 7.2576, p = .008599). Las publicaciones con datos abiertos tenían 12 veces más probabilidades de compartir código que las publicaciones con datos cerrados (26.5% frente a 2.2%, Χ2 = 133.36, p = 9.999e-05). Entre el conjunto de publicaciones que no citaban R, el 6.2% mencionaba el uso de R en el texto. De los 33 artículos que compartieron código a través de DOIs o URLs potencialmente citables, no pudimos encontrar citas del código en sí.</p>
+</section>
+<section id="tabla-1-modelos-candidatos-de-número-de-citas" class="level4">
+<h4 class="anchored" data-anchor-id="tabla-1-modelos-candidatos-de-número-de-citas">Tabla 1: Modelos candidatos de número de citas</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 82%">
+<col style="width: 5%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>ID</strong></th>
+<th><strong>Modelos</strong></th>
+<th><strong>df</strong></th>
+<th><strong>ΔAIC</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Citaciones ~ Factor de impacto × Antigüedad + Código compartido × Antigüedad + Acceso abierto × Antigüedad + Datos compartidos × Antigüedad + Datos compartidos × Código compartido + Código compartido × Acceso abierto + Acceso abierto × Datos compartidos</td>
+<td>13</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Citaciones ~ Factor de impacto × Antigüedad + Código compartido × Antigüedad + Datos compartidos × Antigüedad + Datos compartidos × Código compartido</td>
+<td>9</td>
+<td>834.0</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Citaciones ~ Factor de impacto × Antigüedad + Código compartido × Antigüedad + Acceso abierto × Antigüedad + Acceso abierto × Código compartido</td>
+<td>9</td>
+<td>907.5</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Citaciones ~ Factor de impacto × Antigüedad + Código compartido × Antigüedad + Acceso abierto × Código compartido</td>
+<td>8</td>
+<td>913.0</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Citaciones ~ Factor de impacto × Antigüedad + Código compartido × Antigüedad + Acceso abierto × Antigüedad + Datos compartidos × Antigüedad</td>
+<td>10</td>
+<td>937.8</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Citaciones ~ Código compartido + Datos compartidos + Acceso abierto + Antigüedad + Factor de impacto</td>
+<td>6</td>
+<td>1116.9</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Citaciones ~ Factor de impacto × Antigüedad + Código compartido × Antigüedad + Acceso abierto × Antigüedad</td>
+<td>8</td>
+<td>1181.5</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Citaciones ~ Factor de impacto × Antigüedad + Código compartido × Antigüedad</td>
+<td>6</td>
+<td>1339.7</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Citaciones ~ Factor de impacto × Antigüedad</td>
+<td>4</td>
+<td>1973.8</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Citaciones ~ Antigüedad</td>
+<td>2</td>
+<td>5824.3</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>Citaciones ~ 1</td>
+<td>1</td>
+<td>13721.6</td>
+</tr>
+</tbody>
+</table>
+<section id="compartir-código-a-lo-largo-del-tiempo" class="level5">
+<h5 class="anchored" data-anchor-id="compartir-código-a-lo-largo-del-tiempo">3.1 | Compartir código a lo largo del tiempo</h5>
+<p>La proporción de publicaciones que comparten código ha aumentado significativamente (p = .00157) a lo largo del tiempo (Figura 1, Tabla 2), con un incremento promedio del 0.6% anual durante este período. Una prueba de Durbin-Watson no indicó autocorrelación temporal en los residuos (DW = 1.7544, p = .6475). Observamos que los años 2021 y 2022 mostraron cambios notables hacia una mayor frecuencia de compartición (aunque 2013 mostró un nivel similar de compartición de código), pero el porcentaje de compartición de código ha estado consistentemente por debajo del 20% en la última década, y ha permanecido inferior al porcentaje de artículos de acceso abierto o que comparten datos (Figura 1). Durante este mismo período, la proporción de publicaciones que incluían datos también aumentó significativamente (p = 1.48e-06; Figura 1), mientras que la proporción de publicaciones de acceso abierto no cambió significativamente (p = .926; Figura 1).</p>
+</section>
+<section id="impacto-del-compartir-código-en-las-citas-1" class="level5">
+<h5 class="anchored" data-anchor-id="impacto-del-compartir-código-en-las-citas-1">3.2 | Impacto del compartir código en las citas</h5>
+<p>Nuestro mejor modelo de predicción del número de citas (ID 1; Tabla 1) tuvo un puntaje AIC sustancialmente mejor que nuestros otros modelos candidatos (ΔAIC ≥834.0). El factor de impacto (β = .326398, p &lt; 2e-16), la antigüedad (β = .626261, p &lt; 2e-16), y el acceso abierto (β = .069522, p = .000628), todos mostraron asociaciones positivas y significativas con el número de citas, mientras que la disponibilidad de código (β = −1.425857, p &lt; 2e-16) y la disponibilidad de datos (β = −.07596, p = .025014) mostraron asociaciones negativas y significativas (Tabla 3). Las interacciones entre la antigüedad y la disponibilidad de código (β = .562521, p &lt; 2e-16) y la disponibilidad de datos (β = .212861, p &lt; 2e-16) fueron positivas y significativas, mientras que las interacciones entre la antigüedad y el factor de impacto (β = .001585, p = .803079) y el acceso abierto (β = .022175, p = .20503) no fueron significativas. Las interacciones por pares entre los tres criterios de ciencia abierta fueron todas positivas y significativas: disponibilidad de código y disponibilidad de datos (β = 1.468237, p &lt; 2e-16), disponibilidad de código y acceso abierto (β = 1.454602, p &lt; 2e-16), y acceso abierto y disponibilidad de datos (β = .174743, p = 5.08e-05). El modelo global tuvo un pseudo-R2 de .93.</p>
+</section>
+</section>
+<section id="tabla-2-coeficientes-estimados-para-los-modelos-de-tendencias-temporales-en-el-compartir-código-datos-y-acceso-abierto-a-lo-largo-del-tiempo" class="level4">
+<h4 class="anchored" data-anchor-id="tabla-2-coeficientes-estimados-para-los-modelos-de-tendencias-temporales-en-el-compartir-código-datos-y-acceso-abierto-a-lo-largo-del-tiempo">Tabla 2: Coeficientes estimados para los modelos de tendencias temporales en el compartir código, datos y acceso abierto a lo largo del tiempo</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 28%">
+<col style="width: 14%">
+<col style="width: 16%">
+<col style="width: 10%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Respuestas</strong></th>
+<th><strong>Parámetros</strong></th>
+<th><strong>Estimaciones</strong></th>
+<th><strong>Error estándar</strong></th>
+<th><strong>Valor z</strong></th>
+<th><strong>Valor p</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Compartir código</td>
+<td>Intercepto</td>
+<td>-3.68612</td>
+<td>0.32626</td>
+<td>-11.298</td>
+<td>&lt;2e-16***</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Año (relativo a 2010)</td>
+<td>0.12443</td>
+<td>0.03936</td>
+<td>3.161</td>
+<td>.00157**</td>
+</tr>
+<tr class="odd">
+<td>Compartir datos</td>
+<td>Intercepto</td>
+<td>-2.68284</td>
+<td>0.21073</td>
+<td>-12.731</td>
+<td>&lt;2e-16***</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Año (relativo a 2010)</td>
+<td>0.12561</td>
+<td>0.02609</td>
+<td>4.814</td>
+<td>1.48e-06***</td>
+</tr>
+<tr class="odd">
+<td>Acceso abierto</td>
+<td>Intercepto</td>
+<td>-0.88778</td>
+<td>0.13130</td>
+<td>-6.761</td>
+<td>1.37e-11***</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Año (relativo a 2010)</td>
+<td>0.00172</td>
+<td>0.01855</td>
+<td>0.093</td>
+<td>.926</td>
+</tr>
+</tbody>
+</table>
+<p>*<strong>p &lt; .001, </strong>p &lt; .01.</p>
+</section>
+<section id="discusión" class="level4">
+<h4 class="anchored" data-anchor-id="discusión">4 | DISCUSIÓN</h4>
+<p>Encontramos que la literatura científica en ecología y evolución todavía está muy lejos del nivel de compartición de código necesario para una reproducibilidad y transparencia adecuadas, a pesar de la tendencia creciente en la compartición de código en los últimos 12 años. Esta baja tasa de compartición de código sin duda obstaculiza el progreso científico y probablemente tiene consecuencias financieras de gran alcance, ya que la falta de reproducibilidad significa que los análisis deben ser continuamente repetidos para tareas comunes (Freedman et al., 2015). Además, nuestros resultados indican que la falta de compartición de código también puede reducir el impacto académico de los científicos, dado que compartir código lleva a una mayor tasa de acumulación de citas (es decir, una interacción significativa entre el año y la compartición de código; p &lt; 2e-16; Tabla 3). El efecto positivo de compartir código se incrementa cuando también se cumplen otros criterios de ciencia abierta, como lo demuestra las interacciones positivas y significativas entre acceso abierto y compartición de código (p &lt; 2e-16; Tabla 3) y entre compartición de datos y compartición de código (p &lt; 2e-16; Tabla 3), con publicaciones que cumplen con los tres criterios de ciencia abierta (compartición de código, compartición de datos y acceso abierto) teniendo las tasas de citación más altas (“Totalmente abierto”, Figura 2).</p>
+<p>Sorprendentemente, nuestro modelo encontró efectos negativos de compartir código y compartir datos en el número de citas, a pesar de los impactos positivos de compartir código y datos en la tasa de citación (es decir, interacciones significativas entre compartición de código o datos y la antigüedad). Una posible causa de esta discrepancia podría ser que los científicos podrían ser menos propensos a compartir el código y los datos subyacentes de publicaciones que esperan sean impactantes, si están planeando estudios relacionados utilizando el mismo código o datos. Alternativamente, esta discrepancia podría deberse al aumento de la disponibilidad de código con el tiempo, lo que resulta en que una proporción desproporcionada de los artículos que comparten código sean relativamente recientes, y por lo tanto, tengan pocas citas. Tampoco encontramos soporte para una interacción significativa entre la antigüedad de la publicación y el factor de impacto, lo que sugiere que, aunque el factor de impacto puede afectar el número total de citas, no afecta fuertemente la tasa de citación. Tampoco encontramos evidencia de un efecto interactivo significativo de la antigüedad de la publicación y el acceso abierto en el número de citas. Esta falta de efecto del acceso abierto en la tasa de citación, así como la falta de cambio en el porcentaje de publicaciones de acceso abierto a lo largo del tiempo (Figura 1), puede estar impulsada por cambios en el estado de acceso abierto de las publicaciones a lo largo de los años. A medida que las revistas cambian al acceso abierto, muchos artículos que inicialmente se publicaron con acceso cerrado han sido convertidos a acceso abierto después de diferentes períodos de tiempo, lo que podría degradar la señal del acceso abierto en el número de citas.</p>
+<p>Nuestros resultados sugieren que los científicos y las revistas que adopten la compartición de código podrían tener un mayor impacto, incluso si las publicaciones son de acceso cerrado. Por ejemplo, nuestro modelo predice que un científico que publica un artículo compartiendo código y datos en una revista con un factor de impacto de 3 tendrá aproximadamente el doble de citas después de 11 años (64.1 vs 29.0) que si hubieran publicado sin compartir código y datos (Figura 2). Sin embargo, si este mismo artículo también se publica en acceso abierto, nuestro modelo predice que tendrá el doble de citas después de solo 3 años (17.1 vs 7.6, Figura 2). Además, aunque los artículos en revistas de alto impacto pueden esperarse que reciban más citas en general que aquellos en revistas de bajo impacto (aunque nótese que la interacción entre el factor de impacto y la antigüedad no fue significativa), nuestro modelo sugiere que compartir código puede compensar esta diferencia, particularmente cuando se combina con otros factores de ciencia abierta. Para el tercer año posterior a la publicación, se predice que una publicación completamente abierta en una revista de bajo impacto (percentil 10, factor de impacto = 1.3) tendrá más citas que una publicación completamente cerrada en una revista de alto impacto (percentil 90, factor de impacto = 4.7) (12.3 vs 10.6, Figura 3). Para publicaciones en revistas de bajo impacto que comparten código y cumplen con solo uno de los otros criterios de ciencia abierta (acceso abierto o compartición de datos), se predice que la publicación completamente cerrada en una revista de alto impacto será superada en el undécimo año (45.8 y 42.6 vs 40.5; Figura 3).</p>
+<p>Nuestro hallazgo de un efecto significativo de compartir código en la tasa de citación es sorprendente dado que la mayoría del código no tenía licencia para su reutilización. Las licencias de software juegan un papel crítico (y a menudo subestimado) en la compartición de código: las licencias permisivas (por ejemplo, MIT) fomentan la reutilización, mientras que las licencias restrictivas o propietarias pueden permitir la transparencia metodológica, pero limitan o impiden la reutilización del código publicado (Stodden, 2009). Es importante destacar que, cuando se publica código sin una licencia, el autor retiene los derechos de autor (Stodden, 2009). El hallazgo de un efecto significativo de compartir código en la tasa de citación a pesar de la rareza de las licencias de software permisivas podría indicar que los beneficios de citación para las publicaciones que comparten código se deben a (1) el código siendo reutilizado sin la licencia adecuada, o (2) la disponibilidad del código aumentando las citas en ausencia de reutilización del código. Esto último podría suceder si la disponibilidad del código aumentara la confianza en los hallazgos de una publicación. Dada la creciente importancia del código en ecología y evolución (Feng et al., 2020), tanto los científicos como las organizaciones financiadoras necesitan considerar más cuidadosamente las licencias de software. Es importante considerar las licencias tanto para los científicos que desean que su código esté disponible libremente y se beneficien de las citas resultantes de la reutilización, como para los científicos que desean adoptar la transparencia sin permitir el uso de su código.</p>
+<p>Notamos que hay importantes limitaciones en nuestro estudio. Las bajas tasas de compartición de código y compartición de datos limitaron nuestro tamaño de muestra, lo que probablemente afectó la precisión del modelo. Estos tamaños de muestra bajos podrían ayudar a explicar el número anormalmente alto de publicaciones que compartieron código en 2013 (Figura 1). Además, estas bajas tasas de compartición llevaron a un gran desequilibrio en nuestra variable principal de interés, compartir código (55 que compartieron frente a 946 que no lo hicieron). También notamos que, aunque tratamos la compartición de código y la compartición de datos como variables binarias, hay una enorme variación en la cantidad y calidad de los datos y el código que se comparten. Mientras que algunas publicaciones incluyen solo datos resumidos o código de ejemplo, otras incluyen código y datos bien documentados, y esta variación podría impactar en el número de citas. Algunas de las variables que examinamos podrían cambiar con el tiempo, lo que podría debilitar las inferencias: los datos y el código archivados pueden perderse, las publicaciones pueden volverse de acceso abierto, y los factores de impacto cambian con el tiempo. Nuestra búsqueda se limitó a publicaciones en inglés, por lo que estas tendencias podrían no ser válidas para publicaciones en otros idiomas (Konno et al., 2020), aunque se podría esperar que compartan código incluso con menos frecuencia (Serwadda et al., 2018). Además, nuestro trabajo se centró en artículos que citaron R, y no cuenta para el pequeño porcentaje de artículos que mencionan el uso de R pero no lo citan. Por lo tanto, nuestros resultados podrían sobrestimar la proporción total de publicaciones en todo el mundo que comparten código. Finalmente, nuestro trabajo se centró en un lenguaje de programación, R, que podría no ser ampliamente representativo.</p>
+<p>Para crear un entorno propicio para la reproducibilidad y la transparencia, hacemos un llamado a los científicos, patrocinadores de financiamiento, editores y a las instituciones para que promuevan la compartición de código y reconozcan su papel como una contribución valiosa y necesaria para el proceso científico. Los patrocinadores de financiamiento importantes están comenzando a exigir enfoques de ciencia abierta (por ejemplo, el Horizonte Europa de la UE: https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en, y el Año de la Ciencia Abierta de EE. UU.: https://open.science.gov/). Las revistas científicas también pueden jugar un papel significativo en esta transformación (McNutt, 2014; Mislan et al., 2016; Nosek et al., 2015; “Reality check on reproducibility”, 2016). Mínimamente, las revistas deberían facilitar la deposición del código en un repositorio estable y proporcionar un enlace a ese repositorio (Mislan et al., 2016; idealmente en formatos legibles por humanos y por máquinas; Peng, 2011). Desafortunadamente, incluso cuando los financiadores y las revistas exigen la compartición de datos y código, el cumplimiento a menudo sigue siendo bajo (Culina et al., 2020). Soluciones más ambiciosas podrían incluir la incorporación de enlaces entre el texto de los métodos y el código correspondiente, la contratación de editores de código dedicados para ayudar a mejorar el estilo y la claridad del código (similar a los Editores de Datos empleados por The American Naturalist), o la incorporación de cuadernos computacionales (por ejemplo, RMarkdown, Quarto, Jupyter; Peng, 2011). Estas medidas mejorarán la transparencia en los informes y proporcionarán a los revisores y lectores la información crítica necesaria para reproducir y validar los hallazgos del estudio. La adopción de estos principios y prácticas servirá para promover la integración del código abierto en el panorama científico, mejorando la verificabilidad y el impacto de nuestra investigación.</p>
+<p>Dada la creciente lista de razones para compartir código, animamos a los científicos a adoptar el código abierto y la ciencia abierta en general. Aunque mantener un código bien documentado en un repositorio público controlado por versiones (por ejemplo, Github) y un archivo público con instrucciones para su uso (por ejemplo, Zenodo) es lo ideal para compartir código, otras opciones que requieren menos esfuerzo pueden al menos asegurar la distribución del código a otros investigadores interesados en usarlo. Los avances recientes en inteligencia artificial (por ejemplo, ChatGPT) han hecho más fácil documentar scripts, lo que reduce el costo para los autores de compartir código documentado (Merow, Serra-Díaz, et al., 2023). Finalmente, enfatizamos que a medida que aumenta la compartición de código, nuestras prácticas de atribución deben mantenerse al día, tanto para la transparencia científica como para acreditar a los desarrolladores (Merow, Boyle, et al., 2023).</p>
 
 
-<div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">Code sharing trend</span>
-</div>
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -423,18 +633,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -466,7 +665,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/paulefrensa\.rbind\.io\/");
@@ -474,7 +695,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -824,31 +1045,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
-    }
-  });
-
-};
-          </script>
 
 
 
