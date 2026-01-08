@@ -1,0 +1,54 @@
+---
+title: "fluxible: An R package to process ecosystem gas fluxes from closed-loop chambers in an automated and reproducible way"
+author: 
+  - Gaudard, J.
+  - Telford, R. J.
+  - Chacon-Labella, J.
+  - Dawson, H. R.
+  - Enquist, B. J.
+  - Töpper, J. P.
+  - Trepel, J.
+  - Vandvik, V.
+  - Baumane, M.
+  - Birkeli, K.
+  - Holle, M. J. M.
+  - Hupp, J. R.
+  - Satriawan, T. W.
+  - Halbritter, A. H.
+  - name: Paul Efren Santos-Andrade
+    orcid: 0000-0002-6635-0375
+date: '2025'
+slug: fluxible_package
+categories:
+  - Ecosystem fluxes
+  - R package
+  - Greenhouse gases
+  - Closed-loop chambers
+  - Reproducible workflow
+description: 'Article accepted in Methods in Ecology and Evolution describing the R package fluxible for automated processing of ecosystem gas flux data.'
+subtitle: ''
+abstract: >
+  Measuring ecosystem gas fluxes is fundamental for understanding ecosystem
+  carbon and greenhouse gas dynamics. However, raw chamber data require extensive
+  processing, and heterogeneous workflows reduce transparency and comparability
+  across studies. The fluxible R package provides a fully reproducible and automated
+  workflow to process gas concentration time-series from closed-loop chambers into
+  analysis-ready flux estimates. The package implements multiple regression models
+  (linear, quadratic, exponential), objective model-quality diagnostics, visual inspection
+  tools, and flexible unit conversion supporting different chamber configurations.
+  We validate fluxible using independent datasets and compare it with existing software,
+  showing strong agreement and improved transparency. The package facilitates
+  harmonised analysis of CO2, CH4 and N2O fluxes and integration into Open Science pipelines.
+links:
+- icon: file-richtext-fill
+  name: Journal article (Open Access)
+  url: https://doi.org/10.1111/2041-210X.70161
+filters:
+  - lightbox
+lightbox: auto
+---
+
+## Abstract
+
+Measuring ecosystem gas fluxes quantifies how resources are allocated in ecosystems and is essential for predicting future global warming. Fluxes measured with closed-loop chambers require extensive post-processing, which is often inconsistent among studies. The **fluxible** R package provides an automated and reproducible workflow to convert raw gas concentration data into quality-checked flux estimates. It includes modules for metadata matching, model fitting, quality assessment, plotting, and flux calculation, supporting linear, quadratic and exponential models. We validate fluxible using LI-COR datasets and demonstrate high correlation with SoilFluxPro outputs. The workflow improves transparency, comparability and integration with Open Science practices.
+
