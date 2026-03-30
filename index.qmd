@@ -1,14 +1,14 @@
 ---
 title: "Paul Efren"
 pagetitle: "Paul Efren"
-subtitle: "Biologist | Plant ecologist | R programming"
+subtitle: "Biologo | Ecologia vegetal | Herramientas reproducibles en R para biodiversidad"
 image: assets/paul/home.jpg
 image-alt: "Kosnipata Valley view."
 
 twitter-card:
     title: Paul Efren
     description: |
-     I'm a plant ecologist researcher and dedicated R coder, utilizing programming and data science to support and advance biodiversity research.
+     Desarrollo herramientas reproducibles en R para taxonomia, biodiversidad y datos abiertos del Peru.
     image: assets/paul/home.jpg
 
 about:
@@ -43,12 +43,133 @@ include-in-header: assets/umami.html
 
 ::: {#hero-heading}
 
-I'm a passionate plant ecologist and a dedicated R programming enthusiast.<br>My **research** revolves around the fascinating world of plant traits and innovative code development. In my coding **projects**, I strive to establish a meaningful connection between open-source tools and effective data management, aiming to support fellow researchers in their endeavors.
+Desarrollo paquetes y flujos de trabajo en **R** para organizar, validar y analizar datos de biodiversidad del Peru.<br>Mi trabajo conecta **taxonomia**, **listas nacionales**, **datos espaciales** y **ecologia reproducible** para apoyar investigacion, conservacion y gestion ambiental.
 
-[More about me &rarr;](/about){.about-links .subtitle}
+[Ver proyectos &rarr;](project/index.qmd){.about-links .subtitle}
+
+::: {.hero-actions}
+[Publicaciones](publication/index.qmd){.btn .btn-primary}
+[Sobre mi](about/index.qmd){.btn .btn-outline-primary}
+[Contacto](contact.qmd){.btn .btn-outline-secondary}
+:::
 
 :::
 <!-- hero-heading -->
+
+## Que desarrollo
+
+::: {.grid .home-cards}
+
+::: {.g-col-4 .home-card}
+### Paquetes para biodiversidad
+
+Construyo herramientas para acceder, limpiar y estandarizar informacion biologica de Peru. Aqui entran proyectos como [perumammals](project/2026-01-06-perumammals/index.qmd), [reptiledbr](project/2025-07-09-reptiledbr/index.qmd), [avesperu](project/2024-07-27-avesperu/index.qmd) y [ppendemic](project/2023-10-22-ppendemic/index.qmd).
+:::
+
+::: {.g-col-4 .home-card}
+### Datos abiertos y fuentes oficiales
+
+Trabajo con listados nacionales, decretos, datos espaciales y estadisticas ambientales para convertir fuentes dispersas en recursos reutilizables. Este enfoque tambien se refleja en [peruflorads43](project/2023-10-24-peruflorads43/index.qmd), [redbookperu](project/2023-10-22-redbookperu/index.qmd) y repositorios como [rsdot](https://github.com/PaulESantos/rsdot) y [rsniffs](https://github.com/PaulESantos/rsniffs).
+:::
+
+::: {.g-col-4 .home-card}
+### Ecologia reproducible
+
+Ademas de investigar ecologia vegetal, traduzco problemas complejos a flujos de trabajo claros, documentados y reutilizables. Eso incluye recursos como [Environmental Computing](project/2023-11-26-enviromental_computing/index.qmd) y proyectos orientados a taxonomia, validacion de nombres y analisis de datos.
+:::
+
+:::
+
+## Proyectos destacados
+
+::: {.grid .home-cards}
+
+::: {.g-col-6 .home-card}
+### perumammals
+
+Base taxonomica y herramientas de validacion para mamiferos del Peru, con enfoque en consistencia, trazabilidad y uso en investigacion y conservacion.
+
+[Ver proyecto](project/2026-01-06-perumammals/index.qmd){.btn .btn-sm .btn-outline-primary}
+[GitHub](https://github.com/PaulESantos/perumammals){.btn .btn-sm .btn-link}
+:::
+
+::: {.g-col-6 .home-card}
+### reptiledbr
+
+Paquete en R para consultar y validar listas de reptiles, pensado para limpieza de datos, evaluaciones de biodiversidad y flujos de trabajo taxonomicos.
+
+[Ver proyecto](project/2025-07-09-reptiledbr/index.qmd){.btn .btn-sm .btn-outline-primary}
+[GitHub](https://github.com/PaulESantos/reptiledbr){.btn .btn-sm .btn-link}
+:::
+
+::: {.g-col-6 .home-card}
+### avesperu
+
+Acceso programatico a la lista actualizada de aves del Peru, util para consultas taxonomicas, estandarizacion de nombres y trabajo con diversidad nacional.
+
+[Ver proyecto](project/2024-07-27-avesperu/index.qmd){.btn .btn-sm .btn-outline-primary}
+[GitHub](https://github.com/PaulESantos/avesperu){.btn .btn-sm .btn-link}
+:::
+
+::: {.g-col-6 .home-card}
+### ppendemic
+
+Compilacion actualizada de plantas endemicas del Peru para analisis floristicos, validacion de nombres y trabajo aplicado en conservacion.
+
+[Ver proyecto](project/2023-10-22-ppendemic/index.qmd){.btn .btn-sm .btn-outline-primary}
+[GitHub](https://github.com/PaulESantos/ppendemic){.btn .btn-sm .btn-link}
+:::
+
+:::
+
+## Mas trabajo en GitHub
+
+Algunos proyectos tienen sitio propio y otros se desarrollan directamente en GitHub. Entre los repositorios publicos que mejor explican el tipo de trabajo que hago estan:
+
+::: {.grid .home-cards}
+
+::: {.g-col-6 .home-card}
+### rsdot
+
+Acceso programatico a datos espaciales de la SDOT-PCM del Peru, pensado para integrar capas oficiales en analisis y flujos reproducibles.
+
+[Repositorio](https://github.com/PaulESantos/rsdot){.btn .btn-sm .btn-outline-primary}
+:::
+
+::: {.g-col-6 .home-card}
+### rsniffs
+
+Herramientas para acceder a datos estadisticos forestales y de fauna silvestre del sistema SNIFFS, con enfoque en consulta y procesamiento reproducible.
+
+[Repositorio](https://github.com/PaulESantos/rsniffs){.btn .btn-sm .btn-outline-primary}
+:::
+
+::: {.g-col-6 .home-card}
+### iresa
+
+Trabajo orientado al Indice Regional de Sostenibilidad Ambiental del Peru, enfocado en organizar informacion util para analisis territoriales y comparativos.
+
+[Repositorio](https://github.com/PaulESantos/iresa){.btn .btn-sm .btn-outline-primary}
+:::
+
+::: {.g-col-6 .home-card}
+### citesr
+
+Herramienta para consultar listados CITES por especie y apoyar procesos de validacion, evaluacion y reporte.
+
+[Repositorio](https://github.com/PaulESantos/citesr){.btn .btn-sm .btn-outline-primary}
+:::
+
+:::
+
+## Para quien es util este trabajo
+
+Este sitio esta pensado para personas que trabajan con biodiversidad y necesitan datos mas limpios, taxonomias mas consistentes y herramientas reproducibles:
+
+- investigadores y estudiantes
+- consultores ambientales
+- equipos de conservacion
+- personas que trabajan con listados oficiales, especies y datos espaciales en Peru
 
 ```{r write-redirects}
 
@@ -74,16 +195,24 @@ posts <- purrr::map(folders, list_paths) |> purrr::list_rbind()
 posts <- 
   posts |> 
   dplyr::mutate(
-    # extract the year-slugs
-    short_path = stringr::str_remove(path, "(?!\\d{4}-)\\d{2}-\\d{2}-(?!\\d)"),
-    # create short paths
-    short_path = paste0(folder, "/", short_path),
-    # create lines to insert to a netlify _redirect file
-    redirects = paste0("/", short_path, " ", "/", folder, "/", path)
+    slug_path = stringr::str_remove(path, "^\\d{4}-\\d{2}-\\d{2}-"),
+    legacy_year_path = stringr::str_replace(path, "^(\\d{4})-\\d{2}-\\d{2}-", "\\1-"),
+    target_path = paste0("/", folder, "/", path),
+    redirects = purrr::pmap(
+      list(
+        paste0("/", folder, "/", slug_path),
+        paste0("/", folder, "/", legacy_year_path),
+        target_path
+      ),
+      \(slug_redirect, legacy_redirect, target_redirect) c(
+        paste(slug_redirect, target_redirect),
+        paste(legacy_redirect, target_redirect)
+      )
+    )
     )
 
 # extract redirects
-redirects <- posts$redirects
+redirects <- purrr::list_c(posts$redirects)
 
 # combine with manual redirects
 redirects_combined <- c(redirects)

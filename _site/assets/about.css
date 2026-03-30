@@ -32,13 +32,13 @@
 /* mobile query up for screens up to ~992px wide */
 @media screen and (max-width: 991.98px) {
   /* wrap lately section */
-  #lately .grid {
+  #lately {
     display: flex;
     flex-wrap: wrap;
   }
   
   /* listings */
-  #blog, #talks, #publications, #projects {
+  #blog, #talk, #publication, #project {
     flex-basis: 40% !important;
     flex-grow: 1;
   }
@@ -53,19 +53,19 @@
 @media screen and (max-width: 576px) {
 
   /* wrap about me section */
-  #about-me .grid {
+  #about-me {
     display: flex;
     flex-wrap: wrap;
   }
 
   /* wrap lately section */
-  #lately .grid {
+  #lately {
     display: flex;
     flex-wrap: wrap;
   }
 
   /* listings */
-  #blog, #talks, #publications, #projects {
+  #blog, #talk, #publication, #project {
     flex-basis: 100% !important;
   }
 

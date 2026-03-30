@@ -1,7 +1,6 @@
 ---
-pagetitle: Paul Efren - Contact
-# title: Send me a note
-name: Contact Form
+pagetitle: Paul Efren - Contacto
+name: Contacto
 page-layout: article
 format: 
   html: 
@@ -19,9 +18,9 @@ resources:
 
 ::: {.g-col-5 #note}
 
-# Send me a message {{< fa leaf >}}
+# Hablemos {{< fa leaf >}}
 
-Feel free to use this form for collaboration inquiries, questions about blog content, and feedback on my packages. I will try to respond as soon as possible.
+Usa este formulario si quieres conversar sobre colaboraciones, paquetes en R, datos de biodiversidad o ideas de trabajo. Intentare responder lo antes posible.
 
 
 <a class="link-dark me-1" href="https://github.com/PaulESantos" title="github" target="_blank"rel="noopener">{{< fa brands github >}}</a>
@@ -42,16 +41,16 @@ Feel free to use this form for collaboration inquiries, questions about blog con
   method="POST"
   accept-charset="utf-8">
   
-<label for="full-name">Full Name</label>
-<input type="text" name="name" id="full-name" class="form-control" placeholder="First and Last" required>
+<label for="full-name">Nombre completo</label>
+<input type="text" name="name" id="full-name" class="form-control" placeholder="Tu nombre y apellido" required>
 
-<label for="email-address">Email Address</label>
-<input type="email" name="_replyto" id="email-address" class="form-control" placeholder="your@email.here" required>
+<label for="email-address">Correo electronico</label>
+<input type="email" name="_replyto" id="email-address" class="form-control" placeholder="tu@email.com" required>
 
-<label for="message">Message</label>
-  <textarea rows="6" name="message" id="message" class="form-control" placeholder="Writte a message..." required></textarea>
+<label for="message">Mensaje</label>
+  <textarea rows="6" name="message" id="message" class="form-control" placeholder="Escribe tu mensaje..." required></textarea>
 
-<button type="submit" class="btn btn-primary mt-4">Send message</button>
+<button type="submit" class="btn btn-primary mt-4">Enviar mensaje</button>
 </form>
 :::
 

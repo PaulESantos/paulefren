@@ -5,19 +5,19 @@
 // Rules: https://github.com/quarto-dev/quarto-cli/src/resources/formats/html/bootstrap/_bootstrap-rules.scss
 
 // Colors: Quarto variables
-$primary:                    #F0F0F0;
-$secondary:                  #F0F0F0;
+$primary:                    #ECF3E0;
+$secondary:                  #AFC98B;
 // Colors: custom variables
-$primary-dark:                 #F0F0F0;
-$secondary-light:              #B5CB80;
-$accent:                       #B5CB99; 
-$accent-light:                 #CEDEBD;
-$accent-dark:                  #1B9C85;
+$primary-dark:                 #ECF3E0;
+$secondary-light:              #D7E8AF;
+$accent:                       #5C7A5A;
+$accent-light:                 #314536;
+$accent-dark:                  #8EBB73;
 
 // Body
 $body-color:                 $primary-dark;
-$body-bg:                    #3e5c76;
-$body-secondary:             #3e5c76;//#495579; // 6c757d
+$body-bg:                    #18251D;
+$body-secondary:             #18251D;
 
 // Fonts
 
@@ -44,12 +44,12 @@ $table-group-separator-color: lighten($primary, 40%);
 $table-caption-color:         $body-secondary;
 
 // Code blocks
-$code-block-bg:              #6699cc; // 2b2b2b
+$code-block-bg:              #22362A;
 $code-block-border:          $body-bg;
 
 // Inline code
-$code-color:                  $body-bg;
-$code-bg:                     $accent;
+$code-color:                  $primary;
+$code-bg:                     $accent-light;
 
 // Table of contents
 $toc-color:                   $link-color;
@@ -257,15 +257,6 @@ pre code {
   background-position: center;
   color: white; 
   box-shadow: inset 0 0 0 1000px rgba(0,38,66,0.75);
-}
-
-// make nav bar be centered in mobile
-.fixed-top {
-  position: absolute;
-}
-
-.aa-DetachedOverlay {
-  position: absolute;
 }
 
 // links in description

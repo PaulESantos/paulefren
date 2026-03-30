@@ -1,8 +1,8 @@
 ---
 title: "Environmental Computing"
-subtitle: ""
-excerpt: "EnvironmentalComputingSp"
-date: 2023-23-11
+subtitle: "Version en espanol del material Environmental Computing"
+excerpt: "Environmental Computing - Recursos en espanol para analisis ambiental reproducible con R"
+date: 2023-11-26
 author: "Paul Efren Santos Andrade"
 slug: environmentalcomputing 
 alias:
@@ -10,12 +10,13 @@ alias:
 featured: true
 draft: false
 tags:
-- R package
-- Ecology
+- Formacion
+- R
+- Ecologia
 categories:
-- R package
-- R programing
-- Ecology
+- Formacion
+- R
+- Ecologia
 # layout options: single or single-sidebar
 layout: single
 links:
@@ -27,12 +28,18 @@ links:
 
 ## Environmental Computing <a href='https://environmentalcomputingsp.netlify.app/'><img src='featured.png' align="right" height="250" width="200" alt='Environmental Computing'/></a>
 
-En esta sección, te presento la traducción al español del sitio web "Environmental Computing". Aquí encontrarás una detallada guía sobre cómo utilizar el lenguaje de programación R para la gestión y análisis de datos ambientales. Explorarás técnicas avanzadas de manipulación, análisis y visualización de datos, especialmente diseñadas para profesionales en el campo de las ciencias biológicas y ambientales. Este proyecto representa un recurso esencial para el desarrollo de habilidades clave y garantiza la reproducibilidad en los procesos de gestión de datos. Sumérgete en este valioso recurso para potenciar tu trabajo en el ámbito ambiental.
+Este proyecto presenta una version en espanol del sitio web `Environmental Computing`, un recurso pensado para aprender a usar R en la gestion, analisis y visualizacion de datos ambientales.
 
+El valor de este trabajo esta en acercar contenidos tecnicos a una audiencia hispanohablante que necesita desarrollar habilidades practicas para:
 
-In this section, I present to you the Spanish translation of the website "Environmental Computing". Here you will find a detailed guide on how to use the R programming language for the management and analysis of environmental data. You will explore advanced techniques for data manipulation, analysis, and visualization, specially designed for professionals in the fields of biological and environmental sciences. This project represents an essential resource for the development of key skills and ensures reproducibility in data management processes. Dive into this valuable resource to enhance your work in the environmental field.
+- manipular datos ambientales
+- analizar informacion biologica de forma reproducible
+- generar visualizaciones utiles para investigacion y reporte
+- fortalecer capacidades en ciencias biologicas y ambientales
 
-## Environmental Computing
+Es un proyecto orientado a formacion y transferencia de conocimiento, complementario a los paquetes y herramientas que desarrollo en este sitio.
 
-- Feel free to explore the original website [here](https://environmentalcomputing.net/)
+## Environmental Computing original
+
+- Puedes explorar el sitio original [aqui](https://environmentalcomputing.net/)
 

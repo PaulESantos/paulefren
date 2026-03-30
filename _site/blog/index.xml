@@ -8,8 +8,8 @@
 <title>Paul Efren</title>
 <link>https://paulefrensa.rbind.io/blog/</link>
 <atom:link href="https://paulefrensa.rbind.io/blog/index.xml" rel="self" type="application/rss+xml"/>
-<description>This is my blog where I practice sharing my curiosity about R.&lt;br&gt;
-It includes notes and tutorials for my future self and hopefully also for you.
+<description>Notas, tutoriales y apuntes sobre R, taxonomia y trabajo reproducible con datos de biodiversidad.&lt;br&gt;
+Es un espacio para documentar ideas utiles para mi trabajo y para otras personas que enfrentan problemas similares.
 </description>
 <generator>quarto-1.8.25</generator>
 <lastBuildDate>Sat, 27 Jul 2024 05:00:00 GMT</lastBuildDate>
@@ -34,7 +34,7 @@ It includes notes and tutorials for my future self and hopefully also for you.
 <section id="usando-tnrs" class="level3"><h3 class="anchored" data-anchor-id="usando-tnrs">Usando TNRS</h3>
 <p>TNRS toma como entrada un vector con los nombres científicos o un ‘data.frame’ que contiene dos columnas: número de fila (ID) y nombre científico (taxon).</p>
 <div class="cell">
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
@@ -72,7 +72,7 @@ font-style: inherit;">(</span><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">fulldata</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">)</span></span></code></pre></div>
+font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -80,7 +80,7 @@ font-style: inherit;">)</span></span></code></pre></div>
   </script>
 </div>
 </div>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Tenga en cuenta que en el ejemplo los nombres científicos se</span></span>
 <span><span class="co" style="color: #5E5E5E;
@@ -135,7 +135,7 @@ font-style: inherit;">(</span><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">results</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">)</span></span></code></pre></div>
+font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -143,7 +143,7 @@ font-style: inherit;">)</span></span></code></pre></div>
   </script>
 </div>
 </div>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># El resultado es un data.frame que incluye la información referente</span></span>
 <span><span class="co" style="color: #5E5E5E;
@@ -154,11 +154,11 @@ background-color: null;
 font-style: inherit;"># (similitud del nombre ingresado y el nombre coincidente), el nombre</span></span>
 <span><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># coincidente, el estado del nombre coincidente y el nombre aceptado.</span></span></code></pre></div>
+font-style: inherit;"># coincidente, el estado del nombre coincidente y el nombre aceptado.</span></span></code></pre></div></div>
 </div>
 <p>La función TNRS proporciona información detallada sobre el proceso de emparejamiento de los nombres que se desean validar. Los resultados incluyen varias columnas relevantes para entender el estado y la validez de los nombres científicos ingresados. A continuación, se muestra cómo seleccionar las columnas clave utilizando dplyr:</p>
 <div class="cell">
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">results</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -203,7 +203,7 @@ font-style: inherit;">Accepted_name_rank</span>,</span>
 background-color: null;
 font-style: inherit;">Taxonomic_status</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">)</span></span></code></pre></div>
+font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -223,9 +223,9 @@ font-style: inherit;">)</span></span></code></pre></div>
 </ul>
 
 
-</section></section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-santos andrade2024" class="csl-entry quarto-appendix-citeas">
+</section></section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reutilización</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-santos_andrade2024" class="csl-entry quarto-appendix-citeas">
 Santos Andrade, Paul. 2024. <span>“Taxonomic Name Resolution Service -
-TNRS.”</span> July 27, 2024. <a href="https://paulefrensa.rbind.io//blog/2024-07-27-tnrs">https://paulefrensa.rbind.io//blog/2024-07-27-tnrs</a>.
+TNRS.”</span> July 27, 2024. <a href="https://paulefrensa.rbind.io/blog/2024-07-27-tnrs/">https://paulefrensa.rbind.io/blog/2024-07-27-tnrs/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>Ecologia de comunidades</category>
@@ -239,6 +239,7 @@ TNRS.”</span> July 27, 2024. <a href="https://paulefrensa.rbind.io//blog/2024-
   <dc:creator>Paul Santos - Andrade</dc:creator>
   <link>https://paulefrensa.rbind.io/blog/2023-10-22-rango-abundancia/</link>
   <description><![CDATA[ 
+
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
 <!-- 
@@ -286,16 +287,17 @@ TNRS.”</span> July 27, 2024. <a href="https://paulefrensa.rbind.io//blog/2024-
 <p>La técnica de rango-abundancia es una herramienta valiosa en el estudio de comunidades vegetales. Esta revisión ha buscado ampliar la comprensión de su aplicabilidad mediante ejemplos y estudios de caso concretos. A pesar de sus limitaciones, su simplicidad y sensibilidad a los cambios la hacen relevante en la conservación y la ecología de comunidades vegetales, especialmente cuando se combina con otras técnicas y métodos para obtener una comprensión completa de estos ecosistemas.</p>
 </section>
 
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
-
-<p>Featured photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Pawel Czerwinski</a> on <a href="https://unsplash.com/photos/green-leafed-plant-clip-art-lWBZ01XRRoI?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a>.</p>
-<hr>
+<section id="featured-photo-by-pawel-czerwinski-on-unsplash." class="level2">
+<h2 class="anchored" data-anchor-id="featured-photo-by-pawel-czerwinski-on-unsplash.">Featured photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Pawel Czerwinski</a> on <a href="https://unsplash.com/photos/green-leafed-plant-clip-art-lWBZ01XRRoI?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a>.</h2>
 
 
-</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-santos - andrade2023" class="csl-entry quarto-appendix-citeas">
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a><div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
+
+</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reutilización</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Cómo citar</h2><div><div class="quarto-appendix-secondary-label">Por favor, cita este trabajo como:</div><div id="ref-santos_-_andrade2023" class="csl-entry quarto-appendix-citeas">
 Santos - Andrade, Paul. 2023. <span>“Curvas Rango-Abundancia.”</span>
-October 22, 2023. <a href="https://paulefrensa.rbind.io//blog/2023-10-22-rango-abundancia">https://paulefrensa.rbind.io//blog/2023-10-22-rango-abundancia</a>.
+October 22, 2023. <a href="https://paulefrensa.rbind.io/blog/2023-10-22-rango-abundancia/">https://paulefrensa.rbind.io/blog/2023-10-22-rango-abundancia/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>Ecologia de comunidades</category>

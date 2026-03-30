@@ -1,22 +1,22 @@
 ---
 title: "ppendemic"
-subtitle: "A Glimpse at the Diversity of Peru's Endemic Plants"
-excerpt: "ppendemic - A Glimpse at the Diversity of Peru's Endemic Plants"
+subtitle: "Base de datos actualizada de plantas endemicas del Peru"
+excerpt: "ppendemic - Base de datos y herramientas para explorar plantas endemicas del Peru"
 date: 2023-10-22
-author: "Paul Efren"
+author: "Paul Efren Santos Andrade"
 slug: ppendemic
 alias:
   - /project/ppendemic/
 featured: true
 draft: false
 tags:
-- R package
-- Endemic peruvian flora
-- Diversity
+- Paquete de R
+- Flora endemica del Peru
+- Biodiversidad
 categories:
-- R package
-- Endemic peruvian flora
-- Diversity
+- Paquete de R
+- Flora endemica
+- Peru
 # layout options: single or single-sidebar
 layout: single
 links:
@@ -30,8 +30,16 @@ links:
   url: https://github.com/PaulESantos/ppendemic/
 ---
 
-## ppendemic <a href='https://paulesantos.github.io/ppendemic/'><img src='featured.png' align="right" height="250" width="200" alt='A new List of Endemic Plants of Peru.' caption="asadad"/></a>
+## ppendemic <a href='https://paulesantos.github.io/ppendemic/'><img src='featured.png' align="right" height="250" width="200" alt='Lista actualizada de plantas endemicas del Peru.'/></a>
 
-Introducing a novel and updated database showcasing Peru’s endemic plants. This meticulously compiled and revised botanical collection encompasses a remarkable assemblage of over 7815 distinct species.
+`ppendemic` reune una base de datos actualizada de plantas endemicas del Peru y la pone a disposicion en un formato util para consulta, analisis y trabajo reproducible.
+
+El proyecto resume una compilacion botanica revisada con mas de 7,800 especies, pensada para personas que necesitan:
+
+- consultar rapidamente la flora endemica del pais
+- integrar nombres y listados en analisis floristicos
+- apoyar procesos de priorizacion y conservacion
+
+Es un proyecto orientado a hacer mas accesible y reutilizable una parte central de la diversidad botanica del Peru.
 
 

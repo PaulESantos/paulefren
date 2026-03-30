@@ -1,12 +1,16 @@
+lang: es
+
 project:
   type: website
+  pre-render:
+    - "powershell -NoProfile -ExecutionPolicy Bypass -File scripts\\pre-render-clean.ps1"
   post-render: 
-    - "cp -rnv static/. _site" # source: https://github.com/quarto-dev/quarto-cli/discussions/4162#discussioncomment-4831352
+    - "powershell -NoProfile -Command \"if (Test-Path 'static') { Copy-Item -Path 'static\\\\*' -Destination '_site' -Recurse -Force }\""
 
 website:
   title: "Paul Efren"
   site-url: https://paulefrensa.rbind.io/
-  description: "Plant Ecologist and R programming data enthusiast"
+  description: "Ecologia vegetal, taxonomia aplicada y herramientas reproducibles en R para biodiversidad en Peru"
   favicon: assets/paul/logo_pesa.svg
   page-navigation: true
   back-to-top-navigation: true
@@ -24,36 +28,42 @@ website:
     - icon: github
       href: https://www.github.com/PaulESantos/paulefren
     right:
-      - text: About
-        aria-label: "About Me"
+      - text: Inicio
+        aria-label: "Inicio"
+        href: index.qmd
+      - text: Sobre mi
+        aria-label: "Sobre mi"
         href: about/index.qmd
       - text: Blog
-        aria-label: "Blog Posts"
+        aria-label: "Blog"
         href: blog/index.qmd
-      - text: Talks
-        aria-label: "Talks"
+      - text: Charlas
+        aria-label: "Charlas"
         href: talk/index.qmd  
-      - text: Publications
-        aria-label: "Publications"
+      - text: Publicaciones
+        aria-label: "Publicaciones"
         href: publication/index.qmd
-      - text: Projects
-        aria-label: "Project Portfolio"
+      - text: Proyectos
+        aria-label: "Portafolio de proyectos"
         href: project/index.qmd
+      - text: Contacto
+        aria-label: "Contacto"
+        href: contact.qmd
   
   page-footer:  
     left: >-
-     &#169; 2023 Paul Efren Santos Andrade &#8729; Made with [Quarto](https://quarto.org)
+     &#169; 2026 Paul Efren Santos Andrade &#8729; Sitio hecho con [Quarto](https://quarto.org)
     center: |
       <a class="link-dark me-1" href="https://github.com/PaulEsantos" title="github" target="_blank" rel="noopener">{{< fa brands github >}}</a>
       <a class="link-dark me-1" href="https://orcid.org/0000-0002-6635-0375" title="orcid" target="_blank" rel="noopener">{{< ai orcid >}}</a>
       <a class="link-dark me-1" href="https://linkedin.com/in/paulesantosandrade" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a>
 
     right: 
-      - text: "Contact"
-        aria-label: "Contact Form"
+      - text: "Contacto"
+        aria-label: "Formulario de contacto"
         href: "contact.qmd"
-      - text: "License"
-        aria-label: "License Details"
+      - text: "Licencia"
+        aria-label: "Detalles de licencia"
         href: license.qmd
 
 format: 

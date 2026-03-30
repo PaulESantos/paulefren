@@ -20,6 +20,7 @@ appendix-cite-as: display
 # Wrap overflow code
 format: 
   html: 
+    css: ../assets/blog-post.css
     code-overflow: wrap
     template-partials: 
       - ../_partials/title-block-link-buttons/title-block.html

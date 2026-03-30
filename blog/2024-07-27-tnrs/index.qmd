@@ -14,7 +14,7 @@ description: ''
 filters:
    - include-code-files
 code-annotations: below
-df-print: paged
+df-print: kable
 ---
 
 ## Introducción
@@ -49,7 +49,9 @@ library(TNRS)
 
 fulldata <- tnrs_testfile
 
-tibble::as_tibble(fulldata)
+fulldata |>
+  tibble::as_tibble() |>
+  knitr::kable()
 
 # Tenga en cuenta que en el ejemplo los nombres científicos se
 # presentan bajo diferentes formatos, que a veces incluyen:
@@ -64,7 +66,9 @@ results <- TNRS(taxonomic_names = fulldata)
 
 # Inspección de los resultados
 
-tibble::as_tibble(results)
+results |>
+  tibble::as_tibble() |>
+  knitr::kable()
 
 # El resultado es un data.frame que incluye la información referente
 # a cada uno de los nombres ingresados, la valoración de la coincidencia
@@ -84,7 +88,8 @@ results |>
                  Accepted_name_author,
                  Accepted_family,
                  Accepted_name_rank,
-                 Taxonomic_status)
+                 Taxonomic_status) |>
+  knitr::kable()
 ```
 Estas columnas incluyen:
 

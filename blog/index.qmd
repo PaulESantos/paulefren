@@ -1,8 +1,8 @@
 ---
-title: "R codding for fun"
+title: "Blog sobre R y biodiversidad"
 description: |
-  This is my blog where I practice sharing my curiosity about R.<br>
-  It includes notes and tutorials for my future self and hopefully also for you.
+  Notas, tutoriales y apuntes sobre R, taxonomia y trabajo reproducible con datos de biodiversidad.<br>
+  Es un espacio para documentar ideas utiles para mi trabajo y para otras personas que enfrentan problemas similares.
 listing: 
   contents: 
     - "**/index.qmd"

@@ -1,6 +1,6 @@
 ---
 title: "Paul Efren"
-subtitle: Biologist | Plant ecologist | R programming,<br> ABERG
+subtitle: Biologo | Ecologia vegetal | Herramientas en R para biodiversidad<br>ABERG
 image: sidebar/paul.JPG
 image-alt: "Landscapes view of the Kosnipata valley."
 about:
@@ -83,85 +83,90 @@ resources:
 
 ::: {#hero-heading}
 
-I'm an enthusiastic data analyst and researcher with a strong background in the Andes Biodiversity and Ecosystem Research Group [ABERG](https://www.andesconservation.org/). My research is centered around plant ecology and code development.
+Trabajo en la interseccion entre **ecologia vegetal**, **taxonomia aplicada** y **desarrollo de herramientas en R** para biodiversidad. Mi experiencia se ha construido en investigacion a lo largo del gradiente Andes-Amazonia y en la creacion de recursos abiertos para consultar, validar y analizar datos biologicos del Peru.
 
-I've actively participated in projects across the Andes-Amazon gradient, providing valuable insights into the complexities of global change. To delve deeper into my research interests, explore my [publications](/publication).
-
-If you have any questions or wish to get in touch, don't hesitate to send me a message. {{< fa feather-pointed >}}
+En este sitio muestro publicaciones cientificas, notas de trabajo, charlas y proyectos enfocados en nombres cientificos, listas nacionales, datos abiertos y flujos de trabajo reproducibles. Si quieres conversar sobre colaboraciones, paquetes o datos, puedes [escribirme](../contact.qmd). {{< fa feather-pointed >}}
 
 :::
 
-## About me
+## Sobre mi
 
-::: {.grid}
+::: {.grid #about-me}
 
 ::: {.g-col-6 #about-me-1}
 
-I'm a biologist on a journey to become proficient in informatics, with a keen interest in data management and biodiversity.
+Soy biologo y trabajo con informacion biologica, taxonomica y ambiental para convertirla en herramientas utiles para investigacion, gestion y conservacion.
 
-I find joy in leveraging [R](https://www.r-project.org/about.html) to streamline my data science workflow and conduct biodiversity data analysis. I also take pride in developing and maintaining various R packages, such as:
+Uso [R](https://www.r-project.org/about.html) como lenguaje principal para construir paquetes, limpiar datos, documentar flujos de trabajo y mejorar la reproducibilidad del analisis. Una parte importante de mi trabajo consiste en transformar fuentes complejas en recursos abiertos y faciles de usar.
+
+Entre los proyectos publicos que desarrollo destacan:
 
 - [ppendemic](https://paulesantos.github.io/ppendemic/)
 - [redbookperu](https://paulesantos.github.io/redbookperu/)
 - [avesperu](https://github.com/PaulESantos/avesperu/)
+- [perumammals](https://github.com/PaulESantos/perumammals)
+- [reptiledbr](https://github.com/PaulESantos/reptiledbr)
+- [rsdot](https://github.com/PaulESantos/rsdot)
 
-Since 2013, I've been actively involved in tropical forest ecology. During this time, I've gained extensive experience through collaborations with the Andes Biodiversity and Ecosystem Research Group [ABERG](https://www.andesconservation.org/) in the Andes and Amazon regions of Peru.
+Desde 2013 participo en proyectos de ecologia de bosques tropicales y biodiversidad en colaboracion con el Andes Biodiversity and Ecosystem Research Group [ABERG](https://www.andesconservation.org/) en los Andes y la Amazonia del Peru.
 
 :::
 
 ::: {.g-col-6 #about-me-2}
 
-My contributions have encompassed a wide range of projects, including the evaluation of:
+Las lineas de trabajo que mas desarrollo son:
 
- - Plant trait ecology.
- - Carbon and forest dynamics.
- - CO2 and methane fluxes.
+ - ecologia de plantas y rasgos funcionales
+ - dinamica de bosques y cambio global
+ - taxonomia aplicada y validacion de nombres
+ - datos abiertos, listas nacionales y biodiversidad del Peru
+ - formacion y documentacion para trabajo reproducible en R
  
-My educational background includes a:
+Mi formacion incluye:
 
 <ul class="fa-ul">
-   <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span> Master's in Ecology & Environmental Management (graduated)∙ Universidad Nacional San Antonio Abad ∙ 2021</li>
-   <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span>Biologist ∙ Universidad Nacional San Antonio Abad ∙ 2016</li>
-   <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span>B.S. in Biology ∙ Universidad Nacional San Antonio Abad ∙ 2012</li>
+   <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span> Maestria en Ecologia y Gestion Ambiental · Universidad Nacional San Antonio Abad · 2021</li>
+   <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span> Biologo · Universidad Nacional San Antonio Abad · 2016</li>
+   <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span> Bachiller en Biologia · Universidad Nacional San Antonio Abad · 2012</li>
 </ul>
 
-You could find my CV: [Spanish](https://paulesantos.github.io/cv_spa/) - [English](https://paulesantos.github.io/cv/)
+CV: [Espanol](https://paulesantos.github.io/cv_spa/) - [English](https://paulesantos.github.io/cv/)
 
 :::
 
 :::
 <!-- end grid -->
 
-## ...
+## Contenido reciente
 
-:::: {.grid}
+:::: {.grid #lately}
 
 ::: {.g-col-3}
 #### Blog
 ::: {#blog}
 :::
-[See all &rarr;](../blog){.about-links .subtitle}
+[Ver todo &rarr;](../blog){.about-links .subtitle}
 :::
 
 ::: {.g-col-3}
-#### Talks
+#### Charlas
 ::: {#talk}
 :::
-[See all &rarr;](../talk){.about-links .subtitle}
+[Ver todo &rarr;](../talk){.about-links .subtitle}
 :::
 
 ::: {.g-col-3}
-#### Publications
+#### Publicaciones
 ::: {#publication}
 :::
-[See all &rarr;](../publication){.about-links .subtitle}
+[Ver todo &rarr;](../publication){.about-links .subtitle}
 :::
 
 ::: {.g-col-3}
-#### Projects
+#### Proyectos
 ::: {#project}
 :::
-[See all &rarr;](../project){.about-links .subtitle}
+[Ver todo &rarr;](../project){.about-links .subtitle}
 :::
 
 ::::

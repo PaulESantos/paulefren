@@ -6,4 +6,4 @@ title: "404"
 
 It might have been removed, renamed, or has mysteriously disappeared.
 
-Head back to the [homepage](/) to try finding it again, or try using the search feature.
+Head back to the [homepage](index.qmd) to try finding it again, or try using the search feature.

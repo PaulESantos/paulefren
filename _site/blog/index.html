@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="This is my blog where I practice sharing my curiosity about R.  It includes notes and tutorials for my future self and hopefully also for you.">
+<meta name="description" content="Notas, tutoriales y apuntes sobre R, taxonomia y trabajo reproducible con datos de biodiversidad.  Es un espacio para documentar ideas utiles para mi trabajo y para otras personas que enfrentan problemas similares.">
 
-<title>R codding for fun | Paul Efren Santos Andrade – Paul Efren</title>
+<title>Blog sobre R y biodiversidad | Paul Efren Santos Andrade – Paul Efren</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -46,9 +46,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-4f0e06b242da9f6f8ffe3bf4e2601da9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5d7b5d8f8805f79eb83a6b12c18cdfc9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-82c308be6a39ba223c9905608ae5544a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-5d7b5d8f8805f79eb83a6b12c18cdfc9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-63fc5929e1acc83eff2e2a7cf7833fe2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-133fabc73b600f748b29b481af8272ad.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-63fc5929e1acc83eff2e2a7cf7833fe2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
@@ -67,17 +67,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
 <script>
@@ -146,8 +146,8 @@ window.Quarto = {
 };
 </script>
 
-<link rel="alternate" type="application/rss+xml" title="Paul Efren" href="index.xml" data-external="1"><meta name="twitter:title" content="R codding for fun | Paul Efren Santos Andrade">
-<meta name="twitter:description" content="This is my blog where I practice sharing my curiosity about R. It includes notes and tutorials for my future self and hopefully also for you.">
+<link rel="alternate" type="application/rss+xml" title="Paul Efren" href="index.xml" data-external="1"><meta name="twitter:title" content="Blog sobre R y biodiversidad | Paul Efren Santos Andrade">
+<meta name="twitter:description" content="Notas, tutoriales y apuntes sobre R, taxonomia y trabajo reproducible con datos de biodiversidad. Es un espacio para documentar ideas utiles para mi trabajo y para otras personas que enfrentan problemas similares.">
 <meta name="twitter:image" content="https://paulefrensa.rbind.io/blog/2024-07-27-tnrs/featured.png">
 <meta name="twitter:image-height" content="424">
 <meta name="twitter:image-width" content="890">
@@ -331,15 +331,19 @@ window.Quarto = {
     <span class="navbar-title">Paul Efren</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../about/index.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">Sobre mi</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
@@ -347,21 +351,25 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../talk/index.html"> 
-<span class="menu-text">Talks</span></a>
+<span class="menu-text">Charlas</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../publication/index.html"> 
-<span class="menu-text">Publications</span></a>
+<span class="menu-text">Publicaciones</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../project/index.html"> 
-<span class="menu-text">Projects</span></a>
+<span class="menu-text">Proyectos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contacto</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
     <a href="https://www.github.com/PaulESantos/paulefren" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -384,12 +392,12 @@ window.Quarto = {
 <!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
 <header id="title-block-header" class="quarto-title-block default page-columns">
 <div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
-<h1 class="title">R codding for fun</h1>
+<h1 class="title">Blog sobre R y biodiversidad</h1>
 </div>
 
 <div>
   <div id="title-block-title-desc" class="description pt-4">
-    <p>This is my blog where I practice sharing my curiosity about R.<br> It includes notes and tutorials for my future self and hopefully also for you.</p>
+    <p>Notas, tutoriales y apuntes sobre R, taxonomia y trabajo reproducible con datos de biodiversidad.<br> Es un espacio para documentar ideas utiles para mi trabajo y para otras personas que enfrentan problemas similares.</p>
   </div>
 </div>
 
@@ -436,7 +444,7 @@ window.Quarto = {
 <div class="metadata">
 <a href="../blog/2024-07-27-tnrs/index.html" class="no-external">
 <div class="listing-date">
-Jul 27, 2024
+27 jul 2024
 </div>
 <div class="listing-author">
 Paul Santos Andrade
@@ -467,7 +475,7 @@ Paul Santos Andrade
 <div class="metadata">
 <a href="../blog/2023-10-22-rango-abundancia/index.html" class="no-external">
 <div class="listing-date">
-Oct 22, 2023
+22 oct 2023
 </div>
 <div class="listing-author">
 Paul Santos - Andrade
@@ -476,8 +484,8 @@ Paul Santos - Andrade
 </div>
 </div>
 </div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section></div></main> <!-- /main -->
+<div class="listing-no-matching d-none">No hay resultados</div>
+</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reutilización</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -516,12 +524,12 @@ Paul Santos - Andrade
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiado");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiado");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -895,7 +903,7 @@ Paul Santos - Andrade
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2023 Paul Efren Santos Andrade ∙ Made with <a href="https://quarto.org">Quarto</a></p>
+<p>© 2026 Paul Efren Santos Andrade ∙ Sitio hecho con <a href="https://quarto.org">Quarto</a></p>
 </div>   
     <div class="nav-footer-center">
 <p><a class="link-dark me-1" href="https://github.com/PaulEsantos" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0002-6635-0375" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/paulesantosandrade" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></p>
@@ -904,12 +912,12 @@ Paul Santos - Andrade
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
     <a class="nav-link" href="../contact.html">
-<p>Contact</p>
+<p>Contacto</p>
 </a>
   </li>  
     <li class="nav-item">
     <a class="nav-link" href="../license.html">
-<p>License</p>
+<p>Licencia</p>
 </a>
   </li>  
 </ul>

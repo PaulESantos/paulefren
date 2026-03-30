@@ -1,7 +1,7 @@
 ---
 title: "peruflorads43"
-subtitle: "Reviewed Official Classification of Endangered Wild Flora Species in Peru"
-excerpt: "peruflorads43 - Reviewed Official Classification of Endangered Wild Flora Species in Peru"
+subtitle: "Clasificacion oficial revisada de flora silvestre amenazada del Peru"
+excerpt: "peruflorads43 - Acceso y revision de la clasificacion oficial de flora silvestre amenazada del Peru"
 date: 2023-08-12
 author: "Paul Efren Santos Andrade"
 slug: peruflorads43
@@ -10,13 +10,13 @@ alias:
 featured: true
 draft: false
 tags:
-- R package
-- Peruvian diversity
-- Diversity
+- Paquete de R
+- Flora amenazada
+- Peru
 categories:
-- R package
-- Peruvian diversity
-- Diversity
+- Paquete de R
+- Flora amenazada
+- Conservacion
 # layout options: single or single-sidebar
 layout: single
 links:
@@ -30,13 +30,18 @@ links:
   url: https://github.com/PaulESantos/peruflorads43/
 ---
 
-## peruflorads43 <a href='https://paulesantos.github.io/peruflorads43/'><img src='logo.png' align="right" height="250" width="200" alt='Endangered Wild Flora Species in Peru.'/></a>
+## peruflorads43 <a href='https://paulesantos.github.io/peruflorads43/'><img src='logo.png' align="right" height="250" width="200" alt='Flora silvestre amenazada del Peru.'/></a>
 
-Peru's commitment to biodiversity conservation is evident through the passage of `Supreme Decree No. 043-2006-AG`, which categorizes threatened plant species. This legislation addresses the protection of diverse ecosystems and species, aligning with international agreements like the Convention on Biological Diversity (CBD). However, accessing and comprehending the wealth of data within this law can be complex.
+`peruflorads43` ayuda a consultar y analizar de forma mas clara la informacion asociada al `Decreto Supremo No. 043-2006-AG`, que categoriza especies amenazadas de flora silvestre en el Peru. El objetivo es convertir una fuente legal y tecnica en un recurso util para trabajo reproducible.
 
-That's where `peruflorads43` comes into play. Our versatile R package not only provides a streamlined and user-friendly interface to explore, analyze, and draw insights from the extensive list of categorized plant species but also goes a step further. `peruflorads43` empowers researchers, conservationists, and policymakers to navigate the plant listed on this decree, all while seamlessly updating the plant list with the most recent valid names.
+El paquete permite:
 
-With `peruflorads43`, you can efficiently query, and analyze data related to the conservation status of Peru's plant species, identifying those in critical need of protection. It facilitates the application of this legal framework in practice, supporting both scientific research and practical conservation efforts.
+- explorar la lista oficial de especies categoricas
+- trabajar con nombres actualizados y validos
+- integrar la norma en analisis, reportes y evaluaciones
+- acercar la informacion legal a investigacion y conservacion aplicada
+
+Es una herramienta especialmente util para investigadores, consultores y personas que necesitan conectar normativa, taxonomia y datos de biodiversidad en un mismo flujo de trabajo.
 
 
 

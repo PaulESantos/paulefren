@@ -1,7 +1,7 @@
 ---
-title: "Publications" 
+title: "Publicaciones" 
 description: |
-  Here you can find all my publications.
+  Articulos, datasets y otros productos cientificos. Se conserva el titulo original en ingles de cada publicacion.
 listing: 
   contents: 
     - "**/index.qmd"

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.25">
@@ -38,9 +38,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-4f0e06b242da9f6f8ffe3bf4e2601da9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ff3cf521f3788d1f062114c437f97969.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4b7197f4a1c83bdd499e94e5bafb349d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-ff3cf521f3788d1f062114c437f97969.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1700a7c072daec5fbef4134beb9836f0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-b72409304d121ab7796db91c08fcde56.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-1700a7c072daec5fbef4134beb9836f0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
@@ -58,22 +58,22 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script><!-- umami cloud --><script async="" src="https://analytics.umami.is/script.js" data-website-id="82a5656d-bdab-40a5-a8d5-92080a10b504" data-do-not-track="true">
 </script><link rel="stylesheet" href="assets/index.css">
 <meta name="twitter:title" content="Paul Efren">
-<meta name="twitter:description" content="I’m a plant ecologist researcher and dedicated R coder, utilizing programming and data science to support and advance biodiversity research.">
+<meta name="twitter:description" content="Desarrollo herramientas reproducibles en R para taxonomia, biodiversidad y datos abiertos del Peru.">
 <meta name="twitter:image" content="https://paulefrensa.rbind.io/assets/paul/home.jpg">
 <meta name="twitter:image:alt" content="Kosnipata Valley view.">
 <meta name="twitter:card" content="summary_large_image">
@@ -251,15 +251,19 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Paul Efren</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
 <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./about/index.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">Sobre mi</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./blog/index.html"> 
@@ -267,21 +271,25 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./talk/index.html"> 
-<span class="menu-text">Talks</span></a>
+<span class="menu-text">Charlas</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./publication/index.html"> 
-<span class="menu-text">Publications</span></a>
+<span class="menu-text">Publicaciones</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./project/index.html"> 
-<span class="menu-text">Projects</span></a>
+<span class="menu-text">Proyectos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./contact.html"> 
+<span class="menu-text">Contacto</span></a>
   </li>  
 </ul>
 </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
     <a href="https://www.github.com/PaulESantos/paulefren" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
@@ -295,7 +303,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="entity-contents">
       <header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">Paul Efren</h1>
-<p class="subtitle lead">Biologist | Plant ecologist | R programming</p>
+<p class="subtitle lead">Biologo | Ecologia vegetal | Herramientas reproducibles en R para biodiversidad</p>
 </div>
 <div class="quarto-title-meta column-page">
   </div>
@@ -313,8 +321,11 @@ ul.task-list li input[type="checkbox"] {
   </a>
 </div>
       <div class="about-contents"><div id="hero-heading">
-<p>I’m a passionate plant ecologist and a dedicated R programming enthusiast.<br>My <strong>research</strong> revolves around the fascinating world of plant traits and innovative code development. In my coding <strong>projects</strong>, I strive to establish a meaningful connection between open-source tools and effective data management, aiming to support fellow researchers in their endeavors.</p>
-<p><a href=".\about" class="about-links subtitle">More about me →</a></p>
+<p>Desarrollo paquetes y flujos de trabajo en <strong>R</strong> para organizar, validar y analizar datos de biodiversidad del Peru.<br>Mi trabajo conecta <strong>taxonomia</strong>, <strong>listas nacionales</strong>, <strong>datos espaciales</strong> y <strong>ecologia reproducible</strong> para apoyar investigacion, conservacion y gestion ambiental.</p>
+<p><a href="./project/index.html" class="about-links subtitle">Ver proyectos →</a></p>
+<div class="hero-actions">
+<p><a href="./publication/index.html" class="btn btn-primary">Publicaciones</a> <a href="./about/index.html" class="btn btn-outline-primary">Sobre mi</a> <a href="./contact.html" class="btn btn-outline-secondary">Contacto</a></p>
+</div>
 </div></div>
     </div>
     <img src="assets/paul/home.jpg" alt="Kosnipata Valley view." class="about-image
@@ -323,11 +334,61 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 <!-- hero-heading -->
+<section id="que-desarrollo" class="level2"><h2 data-anchor-id="que-desarrollo">Que desarrollo</h2>
+<div class="grid home-cards">
+<section id="paquetes-para-biodiversidad" class="level3 g-col-4 home-card"><h3 data-anchor-id="paquetes-para-biodiversidad">Paquetes para biodiversidad</h3>
+<p>Construyo herramientas para acceder, limpiar y estandarizar informacion biologica de Peru. Aqui entran proyectos como <a href="./project/2026-01-06-perumammals/index.html">perumammals</a>, <a href="./project/2025-07-09-reptiledbr/index.html">reptiledbr</a>, <a href="./project/2024-07-27-avesperu/index.html">avesperu</a> y <a href="./project/2023-10-22-ppendemic/index.html">ppendemic</a>.</p>
+</section><section id="datos-abiertos-y-fuentes-oficiales" class="level3 g-col-4 home-card"><h3 data-anchor-id="datos-abiertos-y-fuentes-oficiales">Datos abiertos y fuentes oficiales</h3>
+<p>Trabajo con listados nacionales, decretos, datos espaciales y estadisticas ambientales para convertir fuentes dispersas en recursos reutilizables. Este enfoque tambien se refleja en <a href="./project/2023-10-24-peruflorads43/index.html">peruflorads43</a>, <a href="./project/2023-10-22-redbookperu/index.html">redbookperu</a> y repositorios como <a href="https://github.com/PaulESantos/rsdot">rsdot</a> y <a href="https://github.com/PaulESantos/rsniffs">rsniffs</a>.</p>
+</section><section id="ecologia-reproducible" class="level3 g-col-4 home-card"><h3 data-anchor-id="ecologia-reproducible">Ecologia reproducible</h3>
+<p>Ademas de investigar ecologia vegetal, traduzco problemas complejos a flujos de trabajo claros, documentados y reutilizables. Eso incluye recursos como <a href="./project/2023-11-26-enviromental_computing/index.html">Environmental Computing</a> y proyectos orientados a taxonomia, validacion de nombres y analisis de datos.</p>
+</section>
+</div>
+</section><section id="proyectos-destacados" class="level2"><h2 data-anchor-id="proyectos-destacados">Proyectos destacados</h2>
+<div class="grid home-cards">
+<section id="perumammals" class="level3 g-col-6 home-card"><h3 data-anchor-id="perumammals">perumammals</h3>
+<p>Base taxonomica y herramientas de validacion para mamiferos del Peru, con enfoque en consistencia, trazabilidad y uso en investigacion y conservacion.</p>
+<p><a href="./project/2026-01-06-perumammals/index.html" class="btn btn-sm btn-outline-primary">Ver proyecto</a> <a href="https://github.com/PaulESantos/perumammals" class="btn btn-sm btn-link">GitHub</a></p>
+</section><section id="reptiledbr" class="level3 g-col-6 home-card"><h3 data-anchor-id="reptiledbr">reptiledbr</h3>
+<p>Paquete en R para consultar y validar listas de reptiles, pensado para limpieza de datos, evaluaciones de biodiversidad y flujos de trabajo taxonomicos.</p>
+<p><a href="./project/2025-07-09-reptiledbr/index.html" class="btn btn-sm btn-outline-primary">Ver proyecto</a> <a href="https://github.com/PaulESantos/reptiledbr" class="btn btn-sm btn-link">GitHub</a></p>
+</section><section id="avesperu" class="level3 g-col-6 home-card"><h3 data-anchor-id="avesperu">avesperu</h3>
+<p>Acceso programatico a la lista actualizada de aves del Peru, util para consultas taxonomicas, estandarizacion de nombres y trabajo con diversidad nacional.</p>
+<p><a href="./project/2024-07-27-avesperu/index.html" class="btn btn-sm btn-outline-primary">Ver proyecto</a> <a href="https://github.com/PaulESantos/avesperu" class="btn btn-sm btn-link">GitHub</a></p>
+</section><section id="ppendemic" class="level3 g-col-6 home-card"><h3 data-anchor-id="ppendemic">ppendemic</h3>
+<p>Compilacion actualizada de plantas endemicas del Peru para analisis floristicos, validacion de nombres y trabajo aplicado en conservacion.</p>
+<p><a href="./project/2023-10-22-ppendemic/index.html" class="btn btn-sm btn-outline-primary">Ver proyecto</a> <a href="https://github.com/PaulESantos/ppendemic" class="btn btn-sm btn-link">GitHub</a></p>
+</section>
+</div>
+</section><section id="mas-trabajo-en-github" class="level2"><h2 data-anchor-id="mas-trabajo-en-github">Mas trabajo en GitHub</h2>
+<p>Algunos proyectos tienen sitio propio y otros se desarrollan directamente en GitHub. Entre los repositorios publicos que mejor explican el tipo de trabajo que hago estan:</p>
+<div class="grid home-cards">
+<section id="rsdot" class="level3 g-col-6 home-card"><h3 data-anchor-id="rsdot">rsdot</h3>
+<p>Acceso programatico a datos espaciales de la SDOT-PCM del Peru, pensado para integrar capas oficiales en analisis y flujos reproducibles.</p>
+<p><a href="https://github.com/PaulESantos/rsdot" class="btn btn-sm btn-outline-primary">Repositorio</a></p>
+</section><section id="rsniffs" class="level3 g-col-6 home-card"><h3 data-anchor-id="rsniffs">rsniffs</h3>
+<p>Herramientas para acceder a datos estadisticos forestales y de fauna silvestre del sistema SNIFFS, con enfoque en consulta y procesamiento reproducible.</p>
+<p><a href="https://github.com/PaulESantos/rsniffs" class="btn btn-sm btn-outline-primary">Repositorio</a></p>
+</section><section id="iresa" class="level3 g-col-6 home-card"><h3 data-anchor-id="iresa">iresa</h3>
+<p>Trabajo orientado al Indice Regional de Sostenibilidad Ambiental del Peru, enfocado en organizar informacion util para analisis territoriales y comparativos.</p>
+<p><a href="https://github.com/PaulESantos/iresa" class="btn btn-sm btn-outline-primary">Repositorio</a></p>
+</section><section id="citesr" class="level3 g-col-6 home-card"><h3 data-anchor-id="citesr">citesr</h3>
+<p>Herramienta para consultar listados CITES por especie y apoyar procesos de validacion, evaluacion y reporte.</p>
+<p><a href="https://github.com/PaulESantos/citesr" class="btn btn-sm btn-outline-primary">Repositorio</a></p>
+</section>
+</div>
+</section><section id="para-quien-es-util-este-trabajo" class="level2"><h2 data-anchor-id="para-quien-es-util-este-trabajo">Para quien es util este trabajo</h2>
+<p>Este sitio esta pensado para personas que trabajan con biodiversidad y necesitan datos mas limpios, taxonomias mas consistentes y herramientas reproducibles:</p>
+<ul>
+<li>investigadores y estudiantes</li>
+<li>consultores ambientales</li>
+<li>equipos de conservacion</li>
+<li>personas que trabajan con listados oficiales, especies y datos espaciales en Peru</li>
+</ul>
 
 
 
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -358,12 +419,12 @@ ul.task-list li input[type="checkbox"] {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiado");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiado");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -737,7 +798,7 @@ ul.task-list li input[type="checkbox"] {
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2023 Paul Efren Santos Andrade ∙ Made with <a href="https://quarto.org">Quarto</a></p>
+<p>© 2026 Paul Efren Santos Andrade ∙ Sitio hecho con <a href="https://quarto.org">Quarto</a></p>
 </div>   
     <div class="nav-footer-center">
 <p><a class="link-dark me-1" href="https://github.com/PaulEsantos" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0002-6635-0375" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/paulesantosandrade" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></p>
@@ -746,12 +807,12 @@ ul.task-list li input[type="checkbox"] {
       <ul class="footer-items list-unstyled">
 <li class="nav-item">
     <a class="nav-link" href="./contact.html">
-<p>Contact</p>
+<p>Contacto</p>
 </a>
   </li>  
     <li class="nav-item">
     <a class="nav-link" href="./license.html">
-<p>License</p>
+<p>Licencia</p>
 </a>
   </li>  
 </ul>
