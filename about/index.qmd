@@ -4,7 +4,7 @@ subtitle: Biologo | Ecologia vegetal | Herramientas en R para biodiversidad<br>A
 image: sidebar/paul.JPG
 image-alt: "Landscapes view of the Kosnipata valley."
 about:
-  template: trestles
+  template: jolla
   image-width: 14em
   image-shape: round
   id: hero-heading
@@ -73,7 +73,7 @@ listing:
   image-height: "200"
 format: 
   html: 
-    page-layout: full
+    page-layout: article
 
 header-includes: >
   <link rel="stylesheet" href="../assets/about.css">
