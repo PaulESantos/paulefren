@@ -66,8 +66,10 @@ website:
         aria-label: "Detalles de licencia"
         href: license.qmd
 
-format: 
+format:
   html:
+    grid:
+      body-width: 1000px
     theme:
       light:
         - cosmo
@@ -85,3 +87,4 @@ execute:
   freeze: auto
 
 include-in-header: assets/umami.html
+
