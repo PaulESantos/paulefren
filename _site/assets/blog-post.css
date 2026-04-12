@@ -1,0 +1,71 @@
+:root {
+  --blog-code-bg: rgba(246, 248, 240, 0.96);
+  --blog-code-border: rgba(76, 97, 56, 0.18);
+  --blog-code-shadow: 0 10px 28px rgba(39, 76, 58, 0.08);
+  --blog-output-rule: rgba(107, 127, 63, 0.42);
+  --blog-table-head: rgba(212, 227, 174, 0.32);
+}
+
+body.quarto-light main .cell {
+  margin: 1.5rem 0 2rem;
+}
+
+body.quarto-light main .cell .sourceCode {
+  background: var(--blog-code-bg);
+  border: 1px solid var(--blog-code-border);
+  border-radius: 10px;
+  box-shadow: var(--blog-code-shadow);
+  padding: 0.2rem 0.25rem;
+}
+
+body.quarto-light main .cell pre.sourceCode {
+  background: transparent;
+  border: 0;
+}
+
+body.quarto-light main .cell .cell-output-display,
+body.quarto-light main .cell .cell-output-stdout {
+  margin-top: 0.95rem;
+}
+
+body.quarto-light main .cell .cell-output-stdout pre {
+  background: transparent;
+  border: 0;
+  border-left: 3px solid var(--blog-output-rule);
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0.2rem 0 0.2rem 1rem;
+}
+
+body.quarto-light main .cell .table {
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid var(--blog-code-border);
+  box-shadow: 0 8px 24px rgba(39, 76, 58, 0.06);
+  font-size: 0.92rem;
+}
+
+body.quarto-light main .cell .table thead th {
+  background: var(--blog-table-head);
+  border-bottom-width: 1px;
+}
+
+body.quarto-light main .cell .table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+body.quarto-dark {
+  --blog-code-bg: rgba(34, 54, 42, 0.95);
+  --blog-code-border: rgba(175, 201, 139, 0.18);
+  --blog-code-shadow: none;
+  --blog-output-rule: rgba(175, 201, 139, 0.48);
+  --blog-table-head: rgba(92, 122, 90, 0.38);
+}
+
+body.quarto-dark main .cell .table {
+  background: rgba(24, 37, 29, 0.82);
+}
+
+body.quarto-dark main .cell .table tbody tr:last-child td {
+  border-bottom: 0;
+}
